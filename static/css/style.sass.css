@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 body {
+  background: white;
   color: #383737;
   display: flex;
   flex-direction: column;
@@ -127,7 +128,7 @@ section {
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      margin: 2%;
+      margin: 1em 2%;
       padding: 1em;
       text-align: center; }
       #numbers ul li strong {
