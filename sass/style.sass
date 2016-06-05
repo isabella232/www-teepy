@@ -1,2 +1,324 @@
-html
-  background: red
+$yellow: #faba49
+$grey: #383737
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+body
+  color: $grey
+  display: flex
+  flex-direction: column
+  font-family: Raleway
+  margin: 0
+  line-height: 1.618em
+
+h1
+  text-align: center
+
+h2
+  font-weight: normal
+
+nav
+  ul
+    display: flex
+    flex-wrap: wrap
+    font-weight: bold
+    justify-content: center
+    padding: 0
+
+    li
+      display: block
+      padding: 1em
+
+      a
+        color: inherit
+        text-decoration: inherit
+
+section
+  padding: 2em
+
+#advantages, #features, #numbers, #plus
+  h2
+    text-align: center
+
+    &:after
+      color: $yellow
+      content: '−'
+      display: block
+      font-size: 2.5em
+      line-height: 0.8em
+
+#introduction
+  background: $yellow
+
+  > *
+    margin-left: auto
+    margin-right: auto
+    max-width: 600px
+    padding-right: 600px
+
+  p
+    color: white
+    font-weight: bold
+    margin-top: 2em
+    margin-bottom: 2em
+
+#advantages
+  max-width: 900px
+  margin: auto
+
+  ul
+    justify-content: center
+    display: flex
+    flex-wrap: wrap
+    padding: 0
+
+    li
+      align-items: center
+      border: 2px solid lightgrey
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      height: 270px
+      margin: 12px
+      padding: 1em
+      text-align: center
+      width: 270px
+
+      &:before
+        background: lightgrey
+        display: block
+        content: ''
+        height: 150px
+        width: 100%
+
+      &:hover
+        background: $grey
+        border-color: $grey
+        color: white
+
+#features
+  background: $grey
+  color: white
+
+  > *
+    margin-left: auto
+    margin-right: auto
+    max-width: 600px
+    padding-right: 600px
+
+  h2
+    max-width: none
+    padding: 0
+
+  dt
+    font-weight: bold
+    margin-top: 1.618em
+
+  dd
+    margin: 0
+
+#numbers
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  p:first-of-type
+    background: white
+    line-height: 1.2em
+    margin: 2em 0 2em 5em
+    padding: 0.1em 0.3em
+    width: 18em
+
+    strong
+      color: $yellow
+      font-weight: normal
+      line-height: 0
+      position: absolute
+      z-index: -1
+      font-size: 6em
+      margin-left: -1em
+
+  ul
+    display: flex
+    flex-wrap: wrap
+    max-width: 900px
+    margin: auto
+    padding: 0
+
+    li
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      margin: 2%
+      padding: 1em
+      text-align: center
+
+      strong
+        font-size: 3em
+        line-height: 2em
+
+      &:nth-child(1), &:nth-child(2), &:nth-child(3)
+        width: 29.3%
+
+        strong
+          background: lightgrey
+          line-height: 200px
+          vertical-align: center
+
+      &:nth-child(4)
+        background: $yellow
+        width: 96%
+
+      &:nth-child(5), &:nth-child(6)
+        background: $yellow
+        width: 46%
+
+  p:last-of-type
+    font-size: 0.8em
+
+#plus
+  dl
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    max-width: 1150px
+    margin: auto
+    padding: 0
+    position: relative
+
+    &:before
+      background: lightgrey
+      content: ''
+      height: 1px
+      left: 0
+      position: absolute
+      top: 50%
+      width: 100%
+
+    dt
+      border-left: 1px solid lightgrey
+      border-right: 1px solid lightgrey
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      height: 400px
+      line-height: 80px
+      margin: 0 -0.5px
+      padding: 1em
+      text-align: center
+      width: 400px
+
+      &:before
+        background: lightgrey
+        display: block
+        content: ''
+        height: 220px
+        width: 100%
+
+      &:hover
+        border-color: lightgrey
+        color: white
+
+        &:before
+          height: 170px
+
+        + dd
+          background: $grey
+          padding-top: 250px
+          opacity: 1
+
+    dd
+      box-sizing: border-box
+      color: white
+      height: 400px
+      margin-left: -398px
+      opacity: 0
+      padding: 300px 3em 0
+      position: absolute
+      text-align: center
+      width: 398px
+      z-index: -1
+
+  p
+    background: lightgrey
+    box-sizing: border-box
+    line-height: 3em
+    max-width: 1000px
+    margin: 2em auto
+    padding: 3em 14%
+    text-align: center
+
+    a
+      display: block
+
+#contact
+  align-items: center
+  background: $grey
+  color: white
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  strong
+    color: $yellow
+
+  article
+    line-height: 2.5em
+    max-width: 600px
+    margin: 0
+    flex: 1
+
+    &:first-child
+      h2
+        padding-right: 30%
+
+      &:before
+        background: lightgrey
+        content: ''
+        display: block
+        height: 100px
+        width: 300px
+
+    &:last-child
+      h2
+        font-size: 1em
+        font-weight: bold
+
+      label
+        display: none
+
+      input, select
+        background: white
+        box-sizing: border-box
+        border: none
+        display: block
+        margin: 1em 0
+        padding: 1em
+        width: 100%
+
+        &[type=submit]
+          background: $yellow
+          margin-left: auto
+          width: 50%
+
+footer
+  background: $yellow
+
+  ul
+    display: flex
+    flex-wrap: wrap
+    max-width: 1200px
+    margin: auto
+    padding: 2em 0
+
+    li
+      display: block
+      line-height: 2em
+      margin-right: 2em
+
+      &:first-child
+        width: 100%
+
+      a
+        color: inherit
+        text-decoration: inherit
