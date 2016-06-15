@@ -46,12 +46,14 @@ section {
   /*padding: 2em*/ }
 
 #advantages h2, #features h2, #numbers h2, #plus h2 {
+  font-size: 2.5em;
+  font-weight: 300;
   text-align: center; }
   #advantages h2:after, #features h2:after, #numbers h2:after, #plus h2:after {
     color: #faba49;
     content: '−';
     display: block;
-    font-size: 2.5em;
+    font-size: 2em;
     line-height: 0.8em; }
 
 #introduction {
@@ -90,30 +92,41 @@ section {
       #introduction ul li a:hover {
         color: #525050; }
   #introduction p {
+    background: #383737;
     color: white;
-    font-weight: bold;
-    margin-top: 2em;
-    margin-bottom: 2em; }
+    font-size: 1.5em;
+    padding: 1em;
+    margin: -2em auto 2em;
+    padding-right: 0;
+    text-align: center;
+    width: 30%; }
+    #introduction p strong {
+      display: block; }
 
 #advantages {
-  max-width: 900px;
-  margin: auto; }
+  background: #fff;
+  margin: 2em auto;
+  max-width: 1200px; }
   #advantages ul {
-    justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 0; }
     #advantages ul li {
       align-items: center;
-      border: 2px solid lightgrey;
+      border: 1px solid #e3e3e3;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      height: 270px;
+      height: 300px;
       margin: 12px;
       padding: 1em;
       text-align: center;
-      width: 270px; }
+      transition: background 0.3s, border-color 0.3s;
+      width: 300px; }
+      #advantages ul li strong {
+        font-size: 1.2em;
+        font-weight: 600; }
       #advantages ul li:before {
         background: lightgrey;
         display: block;
