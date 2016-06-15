@@ -1,35 +1,49 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,500,600,700,200);
 body {
-  background: white;
+  background: #f5f5f5;
   color: #383737;
   display: flex;
   flex-direction: column;
-  font-family: Raleway;
+  font-family: Work Sans;
   margin: 0;
   line-height: 1.618em; }
 
 h1 {
-  text-align: center; }
+  background: url(../images/logo.svg) #fff no-repeat 10% center;
+  background-size: 10%;
+  font-size: 0;
+  height: 145px;
+  margin: 1em 0 0 0;
+  padding-left: 4em; }
 
 h2 {
   font-weight: normal; }
 
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  font-weight: bold;
-  justify-content: center;
-  padding: 0; }
-  nav ul li {
-    display: block;
-    padding: 1em; }
-    nav ul li a {
-      color: inherit;
-      text-decoration: inherit; }
+nav {
+  background: #383737;
+  order: -1; }
+  nav ul {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    justify-content: center;
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      display: block; }
+      nav ul li:hover a {
+        color: #faba49; }
+      nav ul li a {
+        color: inherit;
+        display: block;
+        padding: 1em;
+        text-decoration: inherit;
+        transition: color 0.3s; }
 
 section {
-  padding: 2em; }
+  /*padding: 2em*/ }
 
 #advantages h2, #features h2, #numbers h2, #plus h2 {
   text-align: center; }
@@ -41,13 +55,40 @@ section {
     line-height: 0.8em; }
 
 #introduction {
-  background: #faba49; }
+  background: #fff;
+  position: relative; }
   #introduction > * {
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
     padding-right: 40%; }
+  #introduction h2 {
+    font-size: 3em;
+    margin: 0 0 1em 2em;
+    line-height: 1.5em; }
+  #introduction ul {
+    background: #faba49;
+    font-size: 1.3em;
+    line-height: 2em;
+    list-style: none;
+    max-width: none;
+    padding: 2em 40% 2em 7em; }
+    #introduction ul:after {
+      bottom: 4em;
+      content: url(../images/computer.png);
+      display: block;
+      position: absolute;
+      right: 0; }
+    #introduction ul li:before {
+      content: url(../images/check.svg);
+      display: inline-block;
+      margin-right: 0.5em;
+      width: 15px; }
+    #introduction ul li a {
+      color: inherit; }
+      #introduction ul li a:hover {
+        color: #525050; }
   #introduction p {
     color: white;
     font-weight: bold;

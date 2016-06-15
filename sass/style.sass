@@ -1,41 +1,56 @@
 $yellow: #faba49
 $grey: #383737
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,500,600,700,200);
 
 body
-  background: white
+  background: #f5f5f5
   color: $grey
   display: flex
   flex-direction: column
-  font-family: Raleway
+  font-family: Work Sans
   margin: 0
   line-height: 1.618em
 
 h1
-  text-align: center
+  background: url(../images/logo.svg) #fff no-repeat 10% center
+  background-size: 10%
+  font-size: 0
+  height: 145px
+  margin: 1em 0 0 0
+  padding-left: 4em
 
 h2
   font-weight: normal
 
 nav
+  background: $grey
+  order: -1
+
   ul
+    color: #fff
     display: flex
     flex-wrap: wrap
-    font-weight: bold
+    font-weight: 500
     justify-content: center
+    margin: 0
     padding: 0
 
     li
       display: block
-      padding: 1em
+
+      &:hover a
+        color: $yellow
 
       a
         color: inherit
+        display: block
+        padding: 1em
         text-decoration: inherit
+        transition: color 0.3s
 
 section
-  padding: 2em
+  /*padding: 2em*/
 
 #advantages, #features, #numbers, #plus
   h2
@@ -49,7 +64,8 @@ section
       line-height: 0.8em
 
 #introduction
-  background: $yellow
+  background: #fff
+  position: relative
 
   > *
     box-sizing: border-box
@@ -57,6 +73,39 @@ section
     margin-right: auto
     max-width: 1200px
     padding-right: 40%
+
+  h2
+    font-size: 3em
+    margin: 0 0 1em 2em
+    line-height: 1.5em
+
+  ul
+    background: $yellow
+    font-size: 1.3em
+    line-height: 2em
+    list-style: none
+    max-width: none
+    padding: 2em 40% 2em 7em
+
+    &:after
+      bottom: 4em
+      content: url(../images/computer.png)
+      display: block
+      position: absolute
+      right: 0
+
+    li
+      &:before
+        content: url(../images/check.svg)
+        display: inline-block
+        margin-right: 0.5em
+        width: 15px
+
+      a
+        color: inherit
+
+        &:hover
+          color: lighten($grey, 10%)
 
   p
     color: white
