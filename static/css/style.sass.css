@@ -43,7 +43,7 @@ nav {
         transition: color 0.3s; }
 
 section {
-  /*padding: 2em*/ }
+  padding: 25px; }
 
 #advantages h2, #features h2, #numbers h2, #plus h2 {
   font-size: 2.5em;
@@ -152,8 +152,10 @@ section {
         content: url(../images/rationalization.svg); }
 
 #features {
-  background: #383737;
-  color: white; }
+  background: #fff;
+  color: #383737;
+  margin: 0 auto;
+  max-width: 1200px; }
   #features > * {
     box-sizing: border-box;
     margin-left: auto;
@@ -161,12 +163,22 @@ section {
     max-width: 1200px;
     padding-right: 40%; }
   #features h2 {
+    background: url(../images/computer2.png) #faba49 no-repeat 120% 100%;
+    color: #383737;
+    line-height: 1.5em;
+    margin: -25px;
     max-width: none;
-    padding: 0; }
+    padding: 2em 16em 2em 2em;
+    text-align: left; }
+    #features h2:after {
+      color: #383737; }
   #features dt {
-    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: 600;
     margin-top: 1.618em; }
   #features dd {
+    font-size: 1.1em;
+    line-height: 2em;
     margin: 0; }
 
 #numbers {

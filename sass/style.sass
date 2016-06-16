@@ -50,7 +50,7 @@ nav
         transition: color 0.3s
 
 section
-  /*padding: 2em*/
+  padding: 25px
 
 #advantages, #features, #numbers, #plus
   h2
@@ -183,8 +183,10 @@ section
 
 
 #features
-  background: $grey
-  color: white
+  background: #fff
+  color: $grey
+  margin: 0 auto
+  max-width: 1200px
 
   > *
     box-sizing: border-box
@@ -194,14 +196,25 @@ section
     padding-right: 40%
 
   h2
+    background: url(../images/computer2.png) $yellow no-repeat 120% 100%
+    color: $grey
+    line-height: 1.5em
+    margin: -25px
     max-width: none
-    padding: 0
+    padding: 2em 16em 2em 2em
+    text-align: left
+
+    &:after
+      color: $grey
 
   dt
-    font-weight: bold
+    font-size: 1.5em
+    font-weight: 600
     margin-top: 1.618em
 
   dd
+    font-size: 1.1em
+    line-height: 2em
     margin: 0
 
 #numbers
