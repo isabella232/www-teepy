@@ -48,6 +48,7 @@ section {
 #advantages h2, #features h2, #numbers h2, #plus h2 {
   font-size: 2.5em;
   font-weight: 300;
+  margin: 2em 0 0 0;
   text-align: center; }
   #advantages h2:after, #features h2:after, #numbers h2:after, #plus h2:after {
     color: #faba49;
@@ -128,15 +129,27 @@ section {
         font-size: 1.2em;
         font-weight: 600; }
       #advantages ul li:before {
-        background: lightgrey;
         display: block;
         content: '';
-        height: 150px;
-        width: 100%; }
+        height: 110px;
+        margin-top: 2em;
+        width: 30%; }
       #advantages ul li:hover {
         background: #383737;
         border-color: #383737;
         color: white; }
+      #advantages ul li#acceleration:before {
+        content: url(../images/accelerate.svg); }
+      #advantages ul li#simplification:before {
+        content: url(../images/simplify.svg); }
+      #advantages ul li#recoverate:before {
+        content: url(../images/recoverate.svg); }
+      #advantages ul li#time:before {
+        content: url(../images/time.svg); }
+      #advantages ul li#optimization:before {
+        content: url(../images/optimization.svg); }
+      #advantages ul li#rationalization:before {
+        content: url(../images/rationalization.svg); }
 
 #features {
   background: #383737;

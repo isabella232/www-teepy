@@ -56,6 +56,7 @@ section
   h2
     font-size: 2.5em
     font-weight: 300
+    margin: 2em 0 0 0
     text-align: center
 
     &:after
@@ -151,16 +152,35 @@ section
         font-weight: 600
 
       &:before
-        background: lightgrey
         display: block
         content: ''
-        height: 150px
-        width: 100%
+        height: 110px
+        margin-top: 2em
+        width: 30%
 
       &:hover
         background: $grey
         border-color: $grey
         color: white
+
+      &#acceleration:before
+        content: url(../images/accelerate.svg)
+
+      &#simplification:before
+        content: url(../images/simplify.svg)
+
+      &#recoverate:before
+        content: url(../images/recoverate.svg)
+
+      &#time:before
+        content: url(../images/time.svg)
+
+      &#optimization:before
+        content: url(../images/optimization.svg)
+
+      &#rationalization:before
+        content: url(../images/rationalization.svg)
+
 
 #features
   background: $grey
