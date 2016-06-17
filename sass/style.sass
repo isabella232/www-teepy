@@ -254,7 +254,6 @@ section
       margin: 0.5em
 
   h3
-    /*flex: 1*/
     font-weight: 500
     margin: 0 -25px
     max-width: 300px
@@ -317,20 +316,36 @@ section
           background: darken($yellow, 10%)
 
 
-  p:last-of-type
-    font-size: 0.8em
+  p
     text-align: center
     width: 100%
 
-    a
-      color: #00a071
-      text-decoration: none
-      transition: color 0.3s
+    &:nth-of-type(2)
+      font-size: 0.8em
 
-      &:hover
-        color: lighten(#00a071, 5%)
+      a
+        color: #00a071
+        text-decoration: none
+        transition: color 0.3s
+
+        &:hover
+          color: lighten(#00a071, 5%)
+
+    &:nth-of-type(3)
+      font-size: 2.2em
+      line-height: 1.5em
+
+      strong
+        color: $yellow
+        display: block
+        font-weight: 600
 
 #plus
+  background: #fff
+  box-sizing: border-box
+  margin: 0 auto
+  max-width: 1200px
+
   dl
     display: flex
     flex-wrap: wrap
@@ -350,11 +365,13 @@ section
       width: 100%
 
     dt
-      border-left: 1px solid lightgrey
+      /*border-left: 1px solid lightgrey*/
       border-right: 1px solid lightgrey
       box-sizing: border-box
       display: flex
       flex-direction: column
+      font-size: 1.2em
+      font-weight: 500
       height: 400px
       line-height: 80px
       margin: 0 -0.5px
@@ -369,29 +386,13 @@ section
         height: 220px
         width: 100%
 
-      &:hover
-        border-color: lightgrey
-        color: white
-
-        &:before
-          height: 170px
-
-        + dd
-          background: $grey
-          padding-top: 250px
-          opacity: 1
-
     dd
       box-sizing: border-box
-      color: white
       height: 400px
       margin-left: -398px
-      opacity: 0
       padding: 300px 3em 0
-      position: absolute
       text-align: center
       width: 398px
-      z-index: -1
 
   p
     background: lightgrey
