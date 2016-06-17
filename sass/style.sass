@@ -254,9 +254,11 @@ section
       margin: 0.5em
 
   h3
-    flex: 1
+    /*flex: 1*/
     font-weight: 500
-    padding: 4em 0
+    margin: 0 -25px
+    max-width: 300px
+    padding: 3em 1em
 
   ul
     align-items: center
@@ -270,32 +272,63 @@ section
       box-sizing: border-box
       display: flex
       flex-direction: column
-      margin: 1em 2%
       padding: 1em
       text-align: center
 
       strong
-        font-size: 3em
+        font-size: 2.5em
+        font-weight: 400
         line-height: 2em
 
-      &:nth-child(1), &:nth-child(2), &:nth-child(3)
-        width: 29.3%
+    &#brake
+      li
+        margin: 1em 2%
+
+        &:nth-child(1), &:nth-child(2), &:nth-child(3)
+          width: 29.3%
+
+        &:nth-child(1) strong
+            background: url(../images/circle1.svg) no-repeat center
+            color: #499cfb
+            padding: 1em
+
+        &:nth-child(2) strong
+          background: url(../images/circle2.svg) no-repeat center
+          color: #fb6e62
+          padding: 1em
+
+        &:nth-child(3) strong
+          background: url(../images/circle3.svg) no-repeat center
+          color: $yellow
+          padding: 1em
+
+    &#wait
+      align-items: stretch
+
+      li
+        background: $yellow
+        width: 33.3%
 
         strong
-          background: lightgrey
-          line-height: 200px
-          vertical-align: center
+        &:nth-child(2)
+          background: darken($yellow, 5%)
 
-      &:nth-child(4)
-        background: $yellow
-        width: 96%
+        &:nth-child(3)
+          background: darken($yellow, 10%)
 
-      &:nth-child(5), &:nth-child(6)
-        background: $yellow
-        width: 46%
 
   p:last-of-type
     font-size: 0.8em
+    text-align: center
+    width: 100%
+
+    a
+      color: #00a071
+      text-decoration: none
+      transition: color 0.3s
+
+      &:hover
+        color: lighten(#00a071, 5%)
 
 #plus
   dl

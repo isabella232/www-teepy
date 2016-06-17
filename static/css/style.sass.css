@@ -214,9 +214,11 @@ section {
       font-weight: normal;
       margin: 0.5em; }
   #numbers h3 {
-    flex: 1;
+    /*flex: 1*/
     font-weight: 500;
-    padding: 4em 0; }
+    margin: 0 -25px;
+    max-width: 300px;
+    padding: 3em 1em; }
   #numbers ul {
     align-items: center;
     display: flex;
@@ -228,26 +230,47 @@ section {
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      margin: 1em 2%;
       padding: 1em;
       text-align: center; }
       #numbers ul li strong {
-        font-size: 3em;
+        font-size: 2.5em;
+        font-weight: 400;
         line-height: 2em; }
-      #numbers ul li:nth-child(1), #numbers ul li:nth-child(2), #numbers ul li:nth-child(3) {
+    #numbers ul#brake li {
+      margin: 1em 2%; }
+      #numbers ul#brake li:nth-child(1), #numbers ul#brake li:nth-child(2), #numbers ul#brake li:nth-child(3) {
         width: 29.3%; }
-        #numbers ul li:nth-child(1) strong, #numbers ul li:nth-child(2) strong, #numbers ul li:nth-child(3) strong {
-          background: lightgrey;
-          line-height: 200px;
-          vertical-align: center; }
-      #numbers ul li:nth-child(4) {
+      #numbers ul#brake li:nth-child(1) strong {
+        background: url(../images/circle1.svg) no-repeat center;
+        color: #499cfb;
+        padding: 1em; }
+      #numbers ul#brake li:nth-child(2) strong {
+        background: url(../images/circle2.svg) no-repeat center;
+        color: #fb6e62;
+        padding: 1em; }
+      #numbers ul#brake li:nth-child(3) strong {
+        background: url(../images/circle3.svg) no-repeat center;
+        color: #faba49;
+        padding: 1em; }
+    #numbers ul#wait {
+      align-items: stretch; }
+      #numbers ul#wait li {
         background: #faba49;
-        width: 96%; }
-      #numbers ul li:nth-child(5), #numbers ul li:nth-child(6) {
-        background: #faba49;
-        width: 46%; }
+        width: 33.3%; }
+        #numbers ul#wait li:nth-child(2) {
+          background: #f9b130; }
+        #numbers ul#wait li:nth-child(3) {
+          background: #f9a717; }
   #numbers p:last-of-type {
-    font-size: 0.8em; }
+    font-size: 0.8em;
+    text-align: center;
+    width: 100%; }
+    #numbers p:last-of-type a {
+      color: #00a071;
+      text-decoration: none;
+      transition: color 0.3s; }
+      #numbers p:last-of-type a:hover {
+        color: #00ba83; }
 
 #plus dl {
   display: flex;
