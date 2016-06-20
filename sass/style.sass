@@ -52,7 +52,7 @@ nav
 section
   padding: 25px
 
-#advantages, #features, #numbers, #plus
+#advantages, #features, #numbers, #plus, #offer
   h2
     font-size: 2.5em
     font-weight: 300
@@ -445,6 +445,43 @@ section
       text-decoration: none
 
 
+#offer
+  background: #fff
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin: 0 auto 2em
+  min-width: 1200px
+
+  h2
+    line-height: 1.5em
+    margin-top: 0
+
+    strong
+      color: $yellow
+      display: block
+      font-weight: 500
+
+    &:before
+      content: url(../images/logo.svg)
+      display: block
+      margin: 0 auto
+      width: 150px
+
+  ul
+    font-size: 1.3em
+    line-height: 2.5em
+    margin: 0 auto
+    padding-left: 0
+
+    li a
+      color: #00a071
+      text-decoration: none
+      transition: color 0.3s
+
+      &:hover
+        color: lighten(#00a071, 5%)
 
 #contact
   align-items: center

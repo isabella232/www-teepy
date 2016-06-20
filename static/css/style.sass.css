@@ -45,12 +45,12 @@ nav {
 section {
   padding: 25px; }
 
-#advantages h2, #features h2, #numbers h2, #plus h2 {
+#advantages h2, #features h2, #numbers h2, #plus h2, #offer h2 {
   font-size: 2.5em;
   font-weight: 300;
   margin: 2em 0 0 0;
   text-align: center; }
-  #advantages h2:after, #features h2:after, #numbers h2:after, #plus h2:after {
+  #advantages h2:after, #features h2:after, #numbers h2:after, #plus h2:after, #offer h2:after {
     color: #faba49;
     content: '−';
     display: block;
@@ -368,6 +368,38 @@ section {
       margin: 1em 0 0 0;
       padding: 0.5em 1em;
       text-decoration: none; }
+
+#offer {
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto 2em;
+  min-width: 1200px; }
+  #offer h2 {
+    line-height: 1.5em;
+    margin-top: 0; }
+    #offer h2 strong {
+      color: #faba49;
+      display: block;
+      font-weight: 500; }
+    #offer h2:before {
+      content: url(../images/logo.svg);
+      display: block;
+      margin: 0 auto;
+      width: 150px; }
+  #offer ul {
+    font-size: 1.3em;
+    line-height: 2.5em;
+    margin: 0 auto;
+    padding-left: 0; }
+    #offer ul li a {
+      color: #00a071;
+      text-decoration: none;
+      transition: color 0.3s; }
+      #offer ul li a:hover {
+        color: #00ba83; }
 
 #contact {
   align-items: center;
