@@ -282,8 +282,9 @@ section {
 #plus {
   background: #fff;
   box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 1200px; }
+  margin: 0 auto 2em;
+  max-width: 1200px;
+  padding-bottom: 0; }
   #plus dl {
     display: flex;
     flex-wrap: wrap;
@@ -301,42 +302,72 @@ section {
       top: 50%;
       width: 100%; }
     #plus dl dt {
-      /*border-left: 1px solid lightgrey*/
       border-right: 1px solid lightgrey;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       font-size: 1.2em;
       font-weight: 500;
-      height: 400px;
-      line-height: 80px;
+      height: 300px;
+      line-height: 60px;
       margin: 0 -0.5px;
       padding: 1em;
       text-align: center;
       width: 400px; }
       #plus dl dt:before {
-        background: lightgrey;
         display: block;
-        content: '';
-        height: 220px;
-        width: 100%; }
+        margin: 0 auto;
+        height: 100px;
+        width: 80px; }
+      #plus dl dt:nth-of-type(2), #plus dl dt:nth-of-type(4) {
+        border-right: none; }
+      #plus dl dt#security:before {
+        content: url(../images/security.svg); }
+      #plus dl dt#web:before {
+        content: url(../images/web.svg); }
+      #plus dl dt#responsive:before {
+        content: url(../images/responsive.svg);
+        width: 100px; }
+      #plus dl dt#pharmacy:before {
+        content: url(../images/pharmacy.svg); }
     #plus dl dd {
       box-sizing: border-box;
-      height: 400px;
+      height: 300px;
       margin-left: -398px;
-      padding: 300px 3em 0;
+      padding: 170px 3em 0;
       text-align: center;
       width: 398px; }
   #plus p {
-    background: lightgrey;
+    background: #faba49;
     box-sizing: border-box;
-    line-height: 3em;
-    max-width: 1000px;
-    margin: 2em auto;
-    padding: 3em 14%;
-    text-align: center; }
-    #plus p a {
+    line-height: 2em;
+    font-size: 1.5em;
+    margin: 2em -25px 0;
+    padding: 2em 2em 0 2em;
+    text-align: center;
+    position: relative; }
+    #plus p:before {
+      content: "";
+      background: #fff;
+      display: block;
+      height: 40px;
+      left: 0;
+      margin: 0 auto;
+      position: absolute;
+      right: 0;
+      transform: rotate(45deg);
+      top: -25px;
+      -webkit-transform: rotate(45deg);
+      width: 50px; }
+    #plus p strong {
       display: block; }
+    #plus p a {
+      background: #383737;
+      color: #fff;
+      display: inline-block;
+      margin: 1em 0 0 0;
+      padding: 0.5em 1em;
+      text-decoration: none; }
 
 #contact {
   align-items: center;
