@@ -45,12 +45,12 @@ nav {
 section {
   padding: 25px; }
 
-#advantages h2, #features h2, #numbers h2, #plus h2, #offer h2 {
+#advantages h2, #features h2, #numbers h2, #plus h2, #offer h2, #contact h2 {
   font-size: 2.5em;
   font-weight: 300;
   margin: 2em 0 0 0;
   text-align: center; }
-  #advantages h2:after, #features h2:after, #numbers h2:after, #plus h2:after, #offer h2:after {
+  #advantages h2:after, #features h2:after, #numbers h2:after, #plus h2:after, #offer h2:after, #contact h2:after {
     color: #faba49;
     content: '−';
     display: block;
@@ -402,44 +402,63 @@ section {
         color: #00ba83; }
 
 #contact {
-  align-items: center;
+  /*align-items: center*/
   background: #383737;
   color: white;
   display: flex;
+  /*flex-direction: column*/
   flex-wrap: wrap;
   justify-content: center; }
+  #contact h2 {
+    flex: 1 100%;
+    margin-top: 1em; }
   #contact strong {
     color: #faba49; }
   #contact article {
     line-height: 2.5em;
-    max-width: 600px;
-    margin: 0;
-    flex-grow: 1; }
-    #contact article:first-child h2 {
-      padding-right: 30%; }
-    #contact article:first-child:before {
-      background: lightgrey;
-      content: '';
-      display: block;
-      height: 100px;
-      width: 300px; }
-    #contact article:last-child h2 {
-      font-size: 1em;
-      font-weight: bold; }
-    #contact article:last-child label {
+    margin: 0 2em;
+    max-width: 600px; }
+    #contact article h3 {
+      font-size: 1.3em;
+      font-weight: 600;
+      margin: 0; }
+    #contact article ul {
+      font-size: 1.1em;
+      list-style: none;
+      margin: 0;
+      padding-left: 0; }
+    #contact article:last-of-type ul li {
+      border: 1px solid #faba49;
+      margin: 0.5em 0;
+      padding: 0.5em 1em;
+      text-align: center; }
+      #contact article:last-of-type ul li:hover {
+        background: #faba49; }
+  #contact form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em 15em; }
+    #contact form label {
       display: none; }
-    #contact article:last-child input, #contact article:last-child select {
-      background: white;
-      box-sizing: border-box;
+    #contact form input, #contact form textarea {
       border: none;
-      display: block;
+      font-family: Work Sans;
       margin: 1em 0;
-      padding: 1em;
+      outline: none;
+      padding: 1em; }
+    #contact form textarea {
+      height: 5em;
       width: 100%; }
-      #contact article:last-child input[type=submit], #contact article:last-child select[type=submit] {
+    #contact form input {
+      flex: 1 100%; }
+      #contact form input[type="submit"] {
         background: #faba49;
-        margin-left: auto;
-        width: 50%; }
+        cursor: pointer;
+        flex: 0;
+        font-weight: 600;
+        transition: background 0.3s; }
+        #contact form input[type="submit"]:hover {
+          background: #fbc362; }
 
 footer {
   background: #faba49; }
