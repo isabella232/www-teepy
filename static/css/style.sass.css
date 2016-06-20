@@ -462,20 +462,8 @@ section {
 
 footer {
   background: #faba49; }
-  footer ul {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-    padding: 2em 0; }
-    footer ul li {
-      display: block;
-      line-height: 2em;
-      margin: 0 1em; }
-      footer ul li:first-child {
-        width: 100%; }
-      footer ul li a {
-        color: inherit;
-        text-decoration: inherit; }
+  footer a {
+    color: inherit;
+    text-decoration: inherit; }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */
