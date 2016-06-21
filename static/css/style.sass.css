@@ -192,7 +192,6 @@ section {
     margin: 0; }
 
 #numbers {
-  /*align-items: center*/
   background: #fff;
   display: flex;
   flex-direction: row;
@@ -222,24 +221,24 @@ section {
       display: block;
       font-size: 4em;
       font-weight: normal;
-      margin: 0.5em; }
+      margin: 0.8em 0.5em 0.5em; }
   #numbers h3 {
     font-weight: 500;
     margin: 0 -25px;
     max-width: 300px;
-    padding: 3em 1em; }
+    padding: 3em 2em; }
   #numbers ul {
-    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    max-width: 900px;
+    max-width: 800px;
     margin: auto;
-    padding: 0; }
+    padding: 0;
+    justify-content: center; }
     #numbers ul li {
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
-      padding: 1em;
+      padding: 1em 0.5em;
       text-align: center; }
       #numbers ul li strong {
         font-size: 2.5em;
