@@ -6,16 +6,15 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Work Sans;
-  margin: 0;
-  line-height: 1.618em; }
+  line-height: 1.618em;
+  margin: 0; }
 
 h1 {
-  background: url(../images/logo.svg) #fff no-repeat 10% center;
-  background-size: 10%;
-  font-size: 0;
-  height: 145px;
-  margin: 1em 0 0 0;
-  padding-left: 4em; }
+  background: #fff;
+  content: url(../images/logo.svg);
+  height: 3em;
+  margin: 0;
+  padding: 1em 3em; }
 
 h2 {
   font-weight: normal; }
@@ -45,12 +44,12 @@ nav {
 section {
   padding: 25px; }
 
-#advantages h2, #features h2, #numbers h2, #plus h2, #offer h2, #contact h2 {
+#advantages h2, #features h2, #numbers h2, #plus h2, #offre h2, #contact h2 {
   font-size: 2.5em;
   font-weight: 300;
   margin: 2em 0 0 0;
   text-align: center; }
-  #advantages h2:after, #features h2:after, #numbers h2:after, #plus h2:after, #offer h2:after, #contact h2:after {
+  #advantages h2:after, #features h2:after, #numbers h2:after, #plus h2:after, #offre h2:after, #contact h2:after {
     color: #faba49;
     content: '−';
     display: block;
@@ -58,7 +57,7 @@ section {
     line-height: 0.8em; }
 
 #introduction {
-  background: #fff;
+  padding: 0;
   position: relative; }
   #introduction > * {
     box-sizing: border-box;
@@ -67,18 +66,23 @@ section {
     max-width: 1200px;
     padding-right: 40%; }
   #introduction h2 {
+    background: #fff;
     font-size: 3em;
-    margin: 0 0 1em 2em;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    margin: 0;
+    max-width: none;
+    padding: 1em 10em 1em 2em;
+    width: 100%; }
   #introduction ul {
     background: #faba49;
-    font-size: 1.3em;
-    line-height: 2em;
+    font-size: 1.4em;
+    line-height: 2.2em;
     list-style: none;
+    margin: 0;
     max-width: none;
-    padding: 2em 40% 2em 7em; }
+    padding: 4em 40% 4em 5em; }
     #introduction ul:after {
-      bottom: 4em;
+      bottom: 2em;
       content: url(../images/computer.png);
       display: block;
       position: absolute;
@@ -97,12 +101,14 @@ section {
     color: white;
     font-size: 1.5em;
     padding: 1em;
-    margin: -2em auto 2em;
+    margin: -2em auto 0;
     padding-right: 0;
     text-align: center;
-    width: 30%; }
+    width: 25%; }
     #introduction p strong {
-      display: block; }
+      display: block;
+      font-weight: 600;
+      margin-top: 0.5em; }
 
 #advantages {
   background: #fff;
@@ -369,7 +375,7 @@ section {
       padding: 0.5em 1em;
       text-decoration: none; }
 
-#offer {
+#offre {
   background: #fff;
   box-sizing: border-box;
   display: flex;
@@ -377,28 +383,28 @@ section {
   justify-content: center;
   margin: 0 auto 2em;
   min-width: 1200px; }
-  #offer h2 {
+  #offre h2 {
     line-height: 1.5em;
     margin-top: 0; }
-    #offer h2 strong {
+    #offre h2 strong {
       color: #faba49;
       display: block;
       font-weight: 500; }
-    #offer h2:before {
+    #offre h2:before {
       content: url(../images/logo.svg);
       display: block;
       margin: 0 auto;
       width: 150px; }
-  #offer ul {
+  #offre ul {
     font-size: 1.3em;
     line-height: 2.5em;
     margin: 0 auto;
     padding-left: 0; }
-    #offer ul li a {
+    #offre ul li a {
       color: #00a071;
       text-decoration: none;
       transition: color 0.3s; }
-      #offer ul li a:hover {
+      #offre ul li a:hover {
         color: #00ba83; }
 
 #contact {

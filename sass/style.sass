@@ -9,16 +9,15 @@ body
   display: flex
   flex-direction: column
   font-family: Work Sans
-  margin: 0
   line-height: 1.618em
+  margin: 0
 
 h1
-  background: url(../images/logo.svg) #fff no-repeat 10% center
-  background-size: 10%
-  font-size: 0
-  height: 145px
-  margin: 1em 0 0 0
-  padding-left: 4em
+  background: #fff
+  content: url(../images/logo.svg)
+  height: 3em
+  margin: 0
+  padding: 1em 3em
 
 h2
   font-weight: normal
@@ -52,7 +51,7 @@ nav
 section
   padding: 25px
 
-#advantages, #features, #numbers, #plus, #offer, #contact
+#advantages, #features, #numbers, #plus, #offre, #contact
   h2
     font-size: 2.5em
     font-weight: 300
@@ -67,7 +66,7 @@ section
       line-height: 0.8em
 
 #introduction
-  background: #fff
+  padding: 0
   position: relative
 
   > *
@@ -78,20 +77,25 @@ section
     padding-right: 40%
 
   h2
+    background: #fff
     font-size: 3em
-    margin: 0 0 1em 2em
     line-height: 1.5em
+    margin: 0
+    max-width: none
+    padding: 1em 10em 1em 2em
+    width: 100%
 
   ul
     background: $yellow
-    font-size: 1.3em
-    line-height: 2em
+    font-size: 1.4em
+    line-height: 2.2em
     list-style: none
+    margin: 0
     max-width: none
-    padding: 2em 40% 2em 7em
+    padding: 4em 40% 4em 5em
 
     &:after
-      bottom: 4em
+      bottom: 2em
       content: url(../images/computer.png)
       display: block
       position: absolute
@@ -115,13 +119,15 @@ section
     color: white
     font-size: 1.5em
     padding: 1em
-    margin: -2em auto 2em
+    margin: -2em auto 0
     padding-right: 0
     text-align: center
-    width: 30%
+    width: 25%
 
     strong
       display: block
+      font-weight: 600
+      margin-top: 0.5em
 
 #advantages
   background: #fff
@@ -445,7 +451,7 @@ section
       text-decoration: none
 
 
-#offer
+#offre
   background: #fff
   box-sizing: border-box
   display: flex
