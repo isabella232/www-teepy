@@ -47,7 +47,6 @@ section {
 #advantages h2, #features h2, #numbers h2, #plus h2, #offre h2, #contact h2 {
   font-size: 2.5em;
   font-weight: 300;
-  margin: 2em 0 0 0;
   text-align: center; }
   #advantages h2:after, #features h2:after, #numbers h2:after, #plus h2:after, #offre h2:after, #contact h2:after {
     color: #faba49;
@@ -178,10 +177,15 @@ section {
     text-align: left; }
     #features h2:after {
       color: #383737; }
+  #features dl {
+    padding: 2em 5em; }
   #features dt {
+    color: #111111;
+    display: list-item;
     font-size: 1.5em;
-    font-weight: 600;
-    margin-top: 1.618em; }
+    font-weight: 500;
+    margin-top: 1.618em;
+    list-style-type: decimal; }
   #features dd {
     font-size: 1.1em;
     line-height: 2em;
