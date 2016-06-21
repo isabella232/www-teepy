@@ -290,16 +290,15 @@ section {
 
 #plus {
   background: #fff;
-  box-sizing: border-box;
   margin: 0 auto 2em;
-  max-width: 1200px;
+  min-width: 1200px;
   padding-bottom: 0; }
   #plus dl {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1150px;
     margin: auto;
+    max-width: 1150px;
     padding: 0;
     position: relative; }
     #plus dl:before {
@@ -351,7 +350,7 @@ section {
     box-sizing: border-box;
     line-height: 2em;
     font-size: 1.5em;
-    margin: 2em -25px 0;
+    margin: 1em -25px 0;
     padding: 2em 2em 0 2em;
     text-align: center;
     position: relative; }
@@ -369,7 +368,8 @@ section {
       -webkit-transform: rotate(45deg);
       width: 50px; }
     #plus p strong {
-      display: block; }
+      display: block;
+      font-weight: 600; }
     #plus p a {
       background: #383737;
       color: #fff;
