@@ -16,9 +16,6 @@ h1 {
   margin: 0;
   padding: 1em 3em; }
 
-h2 {
-  font-weight: normal; }
-
 nav {
   background: #383737;
   order: -1; }
@@ -42,6 +39,7 @@ nav {
         transition: color 0.3s; }
 
 section {
+  box-sizing: border-box;
   padding: 25px; }
 
 #advantages h2, #features h2, #numbers h2, #plus h2, #offre h2, #contact h2 {
@@ -67,6 +65,7 @@ section {
   #introduction h2 {
     background: #fff;
     font-size: 3em;
+    font-weight: 300;
     line-height: 1.5em;
     margin: 0;
     max-width: none;
@@ -286,7 +285,7 @@ section {
       #numbers p:nth-of-type(3) strong {
         color: #faba49;
         display: block;
-        font-weight: 600; }
+        font-weight: 500; }
 
 #plus {
   background: #fff;
@@ -518,5 +517,32 @@ footer {
   footer a {
     color: inherit;
     text-decoration: inherit; }
+
+@media screen and (max-width: 1000px) {
+  body {
+    line-height: normal; }
+  #introduction h2 {
+    padding: 0.5em 1em 1em;
+    text-align: center; }
+  #introduction ul {
+    padding: 2em 1em;
+    text-align: center; }
+    #introduction ul:after {
+      content: url(../images/computer3.png);
+      position: initial; }
+  #features h2 {
+    background: #faba49;
+    padding: 2em 1em;
+    text-align: center; }
+  #numbers, #plus, #offre {
+    min-width: initial;
+    width: auto; }
+  #numbers h2 {
+    flex: 1 100%;
+    padding: 2em 1em;
+    text-align: center; }
+  #numbers p:first-of-type {
+    flex: 1 100%;
+    padding: 0 2em 0 0; } }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */

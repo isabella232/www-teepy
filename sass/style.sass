@@ -19,9 +19,6 @@ h1
   margin: 0
   padding: 1em 3em
 
-h2
-  font-weight: normal
-
 nav
   background: $grey
   order: -1
@@ -49,6 +46,7 @@ nav
         transition: color 0.3s
 
 section
+  box-sizing: border-box
   padding: 25px
 
 #advantages, #features, #numbers, #plus, #offre, #contact
@@ -78,6 +76,7 @@ section
   h2
     background: #fff
     font-size: 3em
+    font-weight: 300
     line-height: 1.5em
     margin: 0
     max-width: none
@@ -185,7 +184,6 @@ section
 
       &#rationalization:before
         content: url(../images/rationalization.svg)
-
 
 #features
   background: #fff
@@ -325,7 +323,6 @@ section
         &:nth-child(3)
           background: darken($yellow, 10%)
 
-
   p
     text-align: center
     width: 100%
@@ -348,7 +345,7 @@ section
       strong
         color: $yellow
         display: block
-        font-weight: 600
+        font-weight: 500
 
 #plus
   background: #fff
@@ -624,3 +621,40 @@ footer
   a
     color: inherit
     text-decoration: inherit
+
+@media screen and (max-width:1000px)
+  body
+    line-height: normal
+
+  #introduction
+    h2
+      padding: 0.5em 1em 1em
+      text-align: center
+
+    ul
+      padding: 2em 1em
+      text-align: center
+
+      &:after
+        content: url(../images/computer3.png)
+        position: initial
+
+  #features
+    h2
+      background: $yellow
+      padding: 2em 1em
+      text-align: center
+
+  #numbers, #plus, #offre
+    min-width: initial
+    width: auto
+
+  #numbers
+    h2
+      flex: 1 100%
+      padding: 2em 1em
+      text-align: center
+
+    p:first-of-type
+      flex: 1 100%
+      padding: 0 2em 1em
