@@ -351,7 +351,7 @@ section {
     line-height: 2em;
     font-size: 1.5em;
     margin: 1em -25px 0;
-    padding: 2em 2em 0 2em;
+    padding: 2em 2em 1em 2em;
     text-align: center;
     position: relative; }
     #plus p:before {
