@@ -457,7 +457,6 @@ section
 
 #offre
   background: #fff
-  box-sizing: border-box
   display: flex
   flex-direction: column
   justify-content: center
@@ -567,6 +566,57 @@ section
         &:hover
           background: lighten($yellow, 5%)
 
+#click-to-call
+  background: $grey
+  background-clip: content-box
+  font-family: Work Sans
+  display: flex
+  flex-wrap: wrap
+  overflow: hidden
+  padding: 0 0 0 45px
+  position: fixed
+  text-align: center
+  top: 50%
+  transition: width 1s, right 1s
+  right: 0
+  width: 0px
+  z-index: 10
+
+  > *
+    flex: 1 100%
+
+  &:hover
+    color: #fff
+    right: 0
+    width: 210px
+
+    input
+      display: flex
+
+  &:before
+    background: url(../images/phone.svg) no-repeat $yellow center
+    background-size: 50%
+    color: #fff
+    content: ''
+    left: 0
+    position: absolute
+    top: 0
+    height: 45px
+    width: 45px
+
+  label
+    display: none
+
+  input
+    border: none
+    font-family: Work Sans
+    margin: 0.5em
+    padding: 0.5em 1em
+    outline: none
+
+    &[type="submit"]
+      background: $yellow
+      text-align: center
 
 footer
   background: $yellow

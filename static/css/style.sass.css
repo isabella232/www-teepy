@@ -380,7 +380,6 @@ section {
 
 #offre {
   background: #fff;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -468,6 +467,51 @@ section {
         transition: background 0.3s; }
         #contact form input[type="submit"]:hover {
           background: #fbc362; }
+
+#click-to-call {
+  background: #383737;
+  background-clip: content-box;
+  font-family: Work Sans;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 0 0 0 45px;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transition: width 1s, right 1s;
+  right: 0;
+  width: 0px;
+  z-index: 10; }
+  #click-to-call > * {
+    flex: 1 100%; }
+  #click-to-call:hover {
+    color: #fff;
+    right: 0;
+    width: 210px; }
+    #click-to-call:hover input {
+      display: flex; }
+  #click-to-call:before {
+    background: url(../images/phone.svg) no-repeat #faba49 center;
+    background-size: 50%;
+    color: #fff;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 45px;
+    width: 45px; }
+  #click-to-call label {
+    display: none; }
+  #click-to-call input {
+    border: none;
+    font-family: Work Sans;
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    outline: none; }
+    #click-to-call input[type="submit"] {
+      background: #faba49;
+      text-align: center; }
 
 footer {
   background: #faba49; }
