@@ -543,6 +543,6 @@ footer {
     text-align: center; }
   #numbers p:first-of-type {
     flex: 1 100%;
-    padding: 0 2em 0 0; } }
+    padding: 0 2em 1em; } }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */
