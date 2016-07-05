@@ -521,15 +521,11 @@ section
       margin: 0
       padding-left: 0
 
-    &:last-of-type
-      ul li
-        border: 1px solid $yellow
-        margin: 0.5em 0
-        padding: 0.5em 1em
-        text-align: center
+      li a
+        color: $yellow
 
         &:hover
-          background: $yellow
+          color: lighten($yellow, 5%)
 
   form
     display: flex
