@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,400,600);
 body {
   background: #f5f5f5;
   color: #383737;
@@ -23,7 +23,6 @@ nav {
     color: #fff;
     display: flex;
     flex-wrap: wrap;
-    font-weight: 500;
     justify-content: center;
     margin: 0;
     padding: 0; }
@@ -45,7 +44,7 @@ section {
   width: 100%; }
   section h2 {
     font-size: 2.5em;
-    font-weight: 300;
+    font-weight: lighter;
     text-align: center; }
     section h2:after {
       color: #faba49;
@@ -101,7 +100,7 @@ section {
     width: 25%; }
     #introduction p strong {
       display: block;
-      font-weight: 600;
+      font-weight: bold;
       margin-top: 0.5em; }
 
 #advantages {
@@ -126,7 +125,7 @@ section {
       width: 300px; }
       #advantages ul li strong {
         font-size: 1.2em;
-        font-weight: 600; }
+        font-weight: bold; }
       #advantages ul li:before {
         display: block;
         content: '';
@@ -172,7 +171,6 @@ section {
     color: #111111;
     display: list-item;
     font-size: 1.5em;
-    font-weight: 500;
     margin-top: 1.618em;
     list-style-type: decimal; }
   #features dd {
@@ -215,7 +213,6 @@ section {
     align-items: center;
     box-sizing: border-box;
     display: flex;
-    font-weight: 500;
     margin: 0;
     max-width: 33%;
     padding: 3em 2em; }
@@ -236,7 +233,7 @@ section {
       width: 33.3%; }
       #numbers ul li strong {
         font-size: 2.5em;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 2em; }
     #numbers ul#brake li strong {
       padding: 1em 0; }
@@ -272,7 +269,7 @@ section {
       #numbers p:nth-of-type(3) strong {
         color: #faba49;
         display: block;
-        font-weight: 500; }
+        font-weight: normal; }
 
 #plus {
   background: #fff; }
@@ -297,7 +294,7 @@ section {
       display: flex;
       flex-direction: column;
       font-size: 1.2em;
-      font-weight: 500;
+      font-weight: bold;
       height: 300px;
       line-height: 60px;
       margin: 0 -0.5px;
@@ -349,8 +346,7 @@ section {
       top: -20px;
       width: 40px; }
     #plus p strong {
-      display: block;
-      font-weight: 600; }
+      display: block; }
     #plus p a {
       background: #383737;
       color: #fff;
@@ -372,7 +368,7 @@ section {
     #offer h2 strong {
       color: #faba49;
       display: block;
-      font-weight: 500; }
+      font-weight: normal; }
     #offer h2:before {
       content: url(../images/logo.svg);
       display: block;
@@ -409,7 +405,6 @@ section {
     max-width: 600px; }
     #contact article h3 {
       font-size: 1.3em;
-      font-weight: 600;
       margin: 0; }
     #contact article ul {
       font-size: 1.1em;
@@ -441,7 +436,7 @@ section {
         background: #faba49;
         cursor: pointer;
         flex: 0;
-        font-weight: 600;
+        font-weight: bold;
         transition: background 0.3s; }
         #contact form input[type="submit"]:hover {
           background: #fbc362; }
