@@ -373,7 +373,8 @@ section {
       content: url(../images/logo.svg);
       display: block;
       margin: 0 auto;
-      width: 150px; }
+      max-width: 100%;
+      width: 300px; }
   #offer ul {
     font-size: 1.3em;
     line-height: 2.5em;
