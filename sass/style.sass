@@ -200,14 +200,19 @@ section
       color: $grey
 
   dl
+    counter-reset: list
     padding: 2em 5em
 
   dt
     color: darken($grey, 15%)
-    display: list-item
+    counter-increment: list
     font-size: 1.5em
     margin-top: 1.618em
-    list-style-type: decimal
+
+    &:before
+      content: counter(list) ". "
+      margin-left: -1.2em
+      position: absolute
 
   dd
     font-size: 1.1em
@@ -261,10 +266,10 @@ section
     align-items: stretch
     display: flex
     flex-wrap: wrap
+    justify-content: center
     max-width: 67%
     margin: 0
     padding: 0
-    justify-content: center
 
     li
       box-sizing: border-box
