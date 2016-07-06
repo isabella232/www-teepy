@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Backoffice - La gestion du tiers payant</title>
+    <link type="image/png" rel="icon" href="/static/images/favicon.png" />
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.sass.css') }}" />
+  </head>
+
+  <body>
+    <h1>Backoffice</h1>
+
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('page', page='index') }}#advantages">Les avantages</a></li>
+        <li><a href="{{ url_for('page', page='index') }}#features">Fonctionnalités</a></li>
+        <li><a href="{{ url_for('page', page='index') }}#numbers">Quelques chiffres</a></li>
+        <li><a href="{{ url_for('page', page='index') }}#plus">Les plus Backoffice</a></li>
+        <li><a href="{{ url_for('page', page='index') }}#offre">Offre</a></li>
+        <li><a href="{{ url_for('page', page='index') }}#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    {% block content %}{% endblock content %}
+
+    <footer>
+      <ul>
+        <li><a href="{{ url_for('page', page='legal') }}">Informations légales</a></li>
+        <li><a href="https://kozea.fr/">Kozea</a></li>
+        <li><a href="https://www.pharminfo.fr/">Pharminfo.fr</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

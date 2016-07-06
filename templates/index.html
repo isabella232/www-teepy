@@ -1,28 +1,6 @@
-<!DOCTYPE html>
+{% extends "_layout.jinja2" %}
 
-<html>
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Teepy - La gestion du tiers payant</title>
-    <link type="image/png" rel="icon" href="/static/images/favicon.png" />
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.sass.css') }}" />
-  </head>
-
-  <body>
-    <h1>Teepy</h1>
-
-    <nav>
-      <ul>
-        <li><a href="#advantages">Les avantages</a></li>
-        <li><a href="#features">Fonctionnalités</a></li>
-        <li><a href="#numbers">Quelques chiffres</a></li>
-        <li><a href="#plus">Les plus Teepy</a></li>
-        <li><a href="#offre">Offre</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
+{% block content %}
     <section id="introduction">
       <h2>Simplifiez la gestion de votre Tiers-Payant</h2>
       <ul>
@@ -51,7 +29,7 @@
         <dt>Suivi et contrôle des impayés</dt>
         <dd>Définissez les alertes et relances jusqu'au règlement.</dd>
         <dt>Interopérabilité</dt>
-        <dd>Teepy est accessible par l'équipe officinale ou par un opérateur intervenant au sein de la pharmacie sur n'importe quel ordinateur.</dd>
+        <dd>Backoffice est accessible par l'équipe officinale ou par un opérateur intervenant au sein de la pharmacie sur n'importe quel ordinateur.</dd>
         <dt>Accès à une base de courriers</dt>
         <dd>Des courriers de relance sont prédéfinis et l'édition est automatisée.</dd>
         <dt>Tri par mutuelle et régime obligatoire</dt>
@@ -77,13 +55,13 @@
         <li><strong>69 %</strong> ne souhaitent pas externaliser la gestion du tiers payant</li>
       </ul>
       <p>Enquête réalisée auprès de 378 pharmaciens sur les sites internet <a href="https://www.pharminfo.fr/">Pharminfo.fr</a>.</p>
-      <p>Avec Teepy, <strong>redonnez de la valeur à votre métier de pharmacien !</strong></p>
+      <p>Avec Backoffice, <strong>redonnez de la valeur à votre métier de pharmacien !</strong></p>
     </section>
 
     <section id="plus">
-      <h2>Les plus Teepy</h2>
+      <h2>Les plus Backoffice</h2>
       <dl>
-        <dt id="web">Teepy est un outil web</dt>
+        <dt id="web">Backoffice est un outil web</dt>
         <dd>pas besoin d'installation de logiciel, suivi sur tous les outils</dd>
         <dt id="responsive">Site web responsive</dt>
         <dd>consultation à distance à partir d'un smartphone, d'une tablette</dd>
@@ -92,11 +70,11 @@
         <dt id="pharmacy">Connaissance</dt>
         <dd>de l'univers de la pharmacie</dd>
       </dl>
-      <p>Besoin d'une prise en charge complète de votre tiers payant ? <strong>Nous vous proposons un accompagnement personnalisé par un gestionnaire Teepy qualifié.</strong><a href="#contact">Contactez-nous !</a></p>
+      <p>Besoin d'une prise en charge complète de votre tiers payant ? <strong>Nous vous proposons un accompagnement personnalisé par un gestionnaire Backoffice qualifié.</strong><a href="#contact">Contactez-nous !</a></p>
     </section>
 
     <section id="offre">
-      <h2>Gérez vous-même votre Tiers-Payant <strong>pour seulement 29,90€/mois !</strong></h2>
+      <h2>Gérez vous-même votre Tiers-Payant <strong>pour seulement 29,90 €/mois !</strong></h2>
       <ul>
         <li>Bénéficiez d'un site Internet <a href="https://www.pharminfo.fr/">Pharminfo.fr</a> gratuit</li>
         <li>Suivi et contrôle des impayés</li>
@@ -115,16 +93,9 @@
           <li>69100 Villeurbanne</li>
           <li>Tél. 04 27 11 83 97</li>
           <li>Fax. 04 27 11 83 98</li>
-          <li><a href="mailto:contact@lagestiondutp.fr">contact@lagestiondutp.fr</a></li>
+          <li><a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
         </ul>
       </article>
-      <!--<article>
-        <ul>
-          <li>Contactez notre service commercial</li>
-          <li>Contactez notre support technique</li>
-          <li>Pour tout autre demande</li>
-        </ul>
-      </article>-->
       <form>
         <label for="name">Nom</label>
         <input id="name" name="name" placeholder="Nom" />
@@ -138,20 +109,4 @@
         <input type="submit" value="Envoyer" />
       </form>
     </section>
-
-    <div id="click-to-call">
-        <p>Être rappelé ?</p>
-        <label for="phone">Téléphone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Téléphone" />
-        <input type="submit" value="Envoyer" />
-    </div>
-
-    <footer>
-      <ul>
-        <li><a href="/legal.html">Informations légales</a></li>
-        <li><a href="https://kozea.fr/">Kozea</a></li>
-        <li><a href="https://www.pharminfo.fr/">Pharminfo.fr</a></li>
-      </ul>
-    </footer>
-  </body>
-</html>
+{% endblock content %}
