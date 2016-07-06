@@ -381,8 +381,7 @@ section {
   #offer ul {
     font-size: 1.3em;
     line-height: 2.5em;
-    margin: 0 auto;
-    padding-left: 0; }
+    margin: 0 auto; }
     #offer ul li a {
       color: #00a071;
       text-decoration: none;
@@ -500,6 +499,8 @@ footer {
 @media screen and (max-width: 1000px) {
   body {
     line-height: normal; }
+  nav {
+    display: none; }
   #introduction h2 {
     padding: 0.5em 1em 1em;
     text-align: center; }
@@ -541,5 +542,9 @@ footer {
     width: 100%; }
   #plus dl dd {
     margin-bottom: 5em; } }
+
+@media screen and (max-width: 400px) {
+  #numbers ul li {
+    width: 100%; } }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */

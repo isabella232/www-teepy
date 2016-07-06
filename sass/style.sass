@@ -461,7 +461,6 @@ section
     font-size: 1.3em
     line-height: 2.5em
     margin: 0 auto
-    padding-left: 0
 
     li a
       color: #00a071
@@ -603,6 +602,9 @@ footer
   body
     line-height: normal
 
+  nav
+    display: none
+
   #introduction
     h2
       padding: 0.5em 1em 1em
@@ -659,3 +661,9 @@ footer
 
       dd
         margin-bottom: 5em
+
+@media screen and (max-width:400px)
+  #numbers
+    ul
+      li
+        width: 100%
