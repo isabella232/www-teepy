@@ -161,23 +161,9 @@ section
         border-color: $grey
         color: white
 
-      &#acceleration:before
-        content: url(../images/accelerate.svg)
-
-      &#simplification:before
-        content: url(../images/simplify.svg)
-
-      &#recoverate:before
-        content: url(../images/recoverate.svg)
-
-      &#time:before
-        content: url(../images/time.svg)
-
-      &#optimization:before
-        content: url(../images/optimization.svg)
-
-      &#rationalization:before
-        content: url(../images/rationalization.svg)
+      @each $name in acceleration, simplification, recoverate, time, optimization, rationalization
+        &##{$name}:before
+          content: url(../images/#{$name}.svg)
 
 #features
   background: #fff
@@ -379,18 +365,9 @@ section
       &:nth-of-type(2), &:nth-of-type(4)
         border-right: none
 
-      &#security:before
-        content: url(../images/security.svg)
-
-      &#web:before
-        content: url(../images/web.svg)
-
-      &#responsive:before
-        content: url(../images/responsive.svg)
-        width: 100px
-
-      &#pharmacy:before
-        content: url(../images/pharmacy.svg)
+      @each $name in security, web, responsive, pharmacy
+        &##{$name}:before
+          content: url(../images/#{$name}.svg)
 
     dd
       box-sizing: border-box

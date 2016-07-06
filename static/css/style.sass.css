@@ -137,9 +137,9 @@ section {
         border-color: #383737;
         color: white; }
       #advantages ul li#acceleration:before {
-        content: url(../images/accelerate.svg); }
+        content: url(../images/acceleration.svg); }
       #advantages ul li#simplification:before {
-        content: url(../images/simplify.svg); }
+        content: url(../images/simplification.svg); }
       #advantages ul li#recoverate:before {
         content: url(../images/recoverate.svg); }
       #advantages ul li#time:before {
@@ -317,8 +317,7 @@ section {
       #plus dl dt#web:before {
         content: url(../images/web.svg); }
       #plus dl dt#responsive:before {
-        content: url(../images/responsive.svg);
-        width: 100px; }
+        content: url(../images/responsive.svg); }
       #plus dl dt#pharmacy:before {
         content: url(../images/pharmacy.svg); }
     #plus dl dd {
