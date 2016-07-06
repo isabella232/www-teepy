@@ -1,7 +1,7 @@
 $yellow: #faba49
 $grey: #383737
 
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,500,600,700,200);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700);
 
 body
   background: #f5f5f5
@@ -47,9 +47,10 @@ nav
 
 section
   box-sizing: border-box
-  padding: 25px
+  margin: 1em auto
+  max-width: 1200px
+  width: 100%
 
-#advantages, #features, #numbers, #plus, #offre, #contact
   h2
     font-size: 2.5em
     font-weight: 300
@@ -63,34 +64,35 @@ section
       line-height: 0.8em
 
 #introduction
-  padding: 0
+  max-width: none
+  margin: 0
   position: relative
 
   > *
     box-sizing: border-box
     margin-left: auto
     margin-right: auto
-    max-width: 1200px
-    padding-right: 40%
+    text-align: left
+    padding-right: 450px
 
   h2
     background: #fff
     font-size: 3em
-    font-weight: 300
     line-height: 1.5em
     margin: 0
-    max-width: none
     padding: 1em 10em 1em 2em
     width: 100%
+
+    &:after
+      display: none
 
   ul
     background: $yellow
     font-size: 1.4em
     line-height: 2.2em
-    list-style: none
+    list-style-image: url(../images/check.svg)
     margin: 0
-    max-width: none
-    padding: 4em 40% 4em 5em
+    padding: 4em 450px 4em 5em
 
     &:after
       bottom: 2em
@@ -100,12 +102,6 @@ section
       right: 0
 
     li
-      &:before
-        content: url(../images/check.svg)
-        display: inline-block
-        margin-right: 0.5em
-        width: 15px
-
       a
         color: inherit
 
@@ -116,9 +112,9 @@ section
     background: $grey
     color: white
     font-size: 1.5em
-    padding: 1em
     margin: -2em auto 0
-    padding-right: 0
+    min-width: 12em;
+    padding: 1em
     text-align: center
     width: 25%
 
@@ -129,8 +125,7 @@ section
 
 #advantages
   background: #fff
-  margin: 2em auto
-  max-width: 1200px
+  padding: 1em
 
   ul
     display: flex
@@ -188,23 +183,18 @@ section
 #features
   background: #fff
   color: $grey
-  margin: 0 auto
-  max-width: 1200px
 
   > *
     box-sizing: border-box
     margin-left: auto
     margin-right: auto
-    max-width: 1200px
-    padding-right: 40%
 
   h2
     background: url(../images/computer2.png) $yellow no-repeat 120% 100%
     color: $grey
     line-height: 1.5em
-    margin: -25px
-    max-width: none
-    padding: 2em 16em 2em 2em
+    margin: 0
+    padding: 2em 650px 2em 2em
     text-align: left
 
     &:after
@@ -223,7 +213,6 @@ section
 
   dd
     font-size: 1.1em
-    line-height: 2em
     margin: 0
 
 #numbers
@@ -233,24 +222,25 @@ section
   flex-wrap: wrap
   margin: 2em auto
   position: relative
-  width: 1200px
 
   h2
     background: $grey
+    box-sizing: border-box
     color: #fff
     flex: 1 50%
     line-height: 1.5em
-    margin: -25px
+    margin: 0
     padding: 1em
     text-align: left
 
   p:first-of-type
     background: $grey
+    box-sizing: border-box
     color: #fff
     flex: 1 50%
     font-size: 1.2em
     line-height: 1.2em
-    margin: -25px
+    margin: 0
     padding: 2em 0
     text-align: center
 
@@ -262,16 +252,20 @@ section
       margin: 0.8em 0.5em 0.5em
 
   h3
+    align-items: center
+    box-sizing: border-box
+    display: flex
     font-weight: 500
-    margin: 0 -25px
-    max-width: 300px
+    margin: 0
+    max-width: 33%
     padding: 3em 2em
 
   ul
+    align-items: stretch
     display: flex
     flex-wrap: wrap
-    max-width: 800px
-    margin: auto
+    max-width: 67%
+    margin: 0
     padding: 0
     justify-content: center
 
@@ -281,6 +275,7 @@ section
       flex-direction: column
       padding: 1em 0.5em
       text-align: center
+      width: 33.3%
 
       strong
         font-size: 2.5em
@@ -289,32 +284,24 @@ section
 
     &#brake
       li
-        margin: 1em 2%
-
-        &:nth-child(1), &:nth-child(2), &:nth-child(3)
-          width: 29.3%
+        strong
+          padding: 1em 0
 
         &:nth-child(1) strong
-            background: url(../images/circle1.svg) no-repeat center
-            color: #499cfb
-            padding: 1em
+          background: url(../images/circle1.svg) no-repeat center
+          color: #499cfb
 
         &:nth-child(2) strong
           background: url(../images/circle2.svg) no-repeat center
           color: #fb6e62
-          padding: 1em
 
         &:nth-child(3) strong
           background: url(../images/circle3.svg) no-repeat center
           color: $yellow
-          padding: 1em
 
     &#wait
-      align-items: stretch
-
       li
         background: $yellow
-        width: 33.3%
 
         strong
         &:nth-child(2)
@@ -349,17 +336,13 @@ section
 
 #plus
   background: #fff
-  margin: 0 auto 2em
-  min-width: 1200px
-  padding-bottom: 0
 
   dl
     display: flex
     flex-wrap: wrap
     justify-content: center
     margin: auto
-    max-width: 1150px
-    padding: 0
+    max-width: 1000px
     position: relative
 
     &:before
@@ -420,7 +403,7 @@ section
     box-sizing: border-box
     line-height: 2em
     font-size: 1.5em
-    margin: 1em -25px 0
+    margin: 1em 0 0
     padding: 2em 2em 1em 2em
     text-align: center
     position: relative
@@ -435,9 +418,8 @@ section
       position: absolute
       right: 0
       transform: rotate(45deg)
-      top: -25px
-      -webkit-transform: rotate(45deg)
-      width: 50px
+      top: -20px
+      width: 40px
 
     strong
       display: block
@@ -452,13 +434,13 @@ section
       text-decoration: none
 
 
-#offre
+#offer
   background: #fff
   display: flex
   flex-direction: column
   justify-content: center
-  margin: 0 auto 2em
-  min-width: 1200px
+  padding: 1em
+  width: 100%
 
   h2
     line-height: 1.5em
@@ -490,13 +472,14 @@ section
         color: lighten(#00a071, 5%)
 
 #contact
-  /*align-items: center*/
   background: $grey
   color: white
   display: flex
-  /*flex-direction: column*/
   flex-wrap: wrap
   justify-content: center
+  max-width: none
+  margin: 0
+  padding: 1em
 
   h2
     flex: 1 100%
@@ -530,19 +513,19 @@ section
   form
     display: flex
     flex-wrap: wrap
-    padding: 0.5em 15em
+    padding: 0.5em 15%
 
     label
       display: none
 
     input, textarea
       border: none
-      font-family: Work Sans
       margin: 1em 0
       outline: none
       padding: 1em
 
     textarea
+      font-family: Work Sans
       height: 5em
       width: 100%
 
@@ -562,29 +545,28 @@ section
 #click-to-call
   background: $grey
   background-clip: content-box
-  font-family: Work Sans
   display: flex
   flex-wrap: wrap
   overflow: hidden
   padding: 0 0 0 45px
   position: fixed
-  text-align: center
   top: 50%
-  transition: width 1s, right 1s
+  transition: width 1s
   right: 0
-  width: 0px
+  width: 0
   z-index: 10
 
   > *
+    box-sizing: border-box
+    margin: 0.5em
     flex: 1 100%
+    text-align: center
+    white-space: nowrap
+    width: 100%
 
   &:hover
     color: #fff
-    right: 0
     width: 210px
-
-    input
-      display: flex
 
   &:before
     background: url(../images/phone.svg) no-repeat $yellow center
@@ -609,7 +591,6 @@ section
 
     &[type="submit"]
       background: $yellow
-      text-align: center
 
 footer
   background: $yellow
@@ -628,12 +609,17 @@ footer
       text-align: center
 
     ul
+      list-style: none
       padding: 2em 1em
       text-align: center
 
       &:after
-        content: url(../images/computer3.png)
+        background: url(../images/computer3.png) 50% 50% no-repeat
+        background-size: contain
+        content: ''
         position: initial
+        height: 20em
+        width: 100%
 
   #features
     h2
@@ -641,16 +627,35 @@ footer
       padding: 2em 1em
       text-align: center
 
-  #numbers, #plus, #offre
-    min-width: initial
-    width: auto
-
   #numbers
     h2
       flex: 1 100%
-      padding: 2em 1em
+      padding: 0.5em 1em 0
       text-align: center
+
+    h3, ul
+      text-align: center
+      max-width: none
+      width: 100%
 
     p:first-of-type
       flex: 1 100%
       padding: 0 2em 1em
+
+      strong
+        margin: 0.5em
+
+  #plus
+    dl
+      &:before
+        display: none
+
+      dt, dd
+        border: none
+        height: auto
+        margin: 0
+        padding: 0
+        width: 100%
+
+      dd
+        margin-bottom: 5em

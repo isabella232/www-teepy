@@ -25,6 +25,13 @@
 
     {% block content %}{% endblock content %}
 
+    <aside id="click-to-call">
+      <p>Être rappelé ?</p>
+      <label for="phone">Téléphone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Téléphone" />
+      <input type="submit" value="Envoyer" />
+    </aside>
+
     <footer>
       <ul>
         <li><a href="{{ url_for('page', page='legal') }}">Informations légales</a></li>
