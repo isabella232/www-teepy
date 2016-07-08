@@ -95,14 +95,15 @@
           <li><a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
         </ul>
       </article>
-      <form>
+      <form action="{{ url_for('contact') }}" method="POST">
         <label for="name">Nom</label>
         <input id="name" name="name" placeholder="Nom" />
         <label for="phone">Téléphone</label>
         <input type="tel" id="phone" name="phone" placeholder="Téléphone" />
         <label for="email">Email</label>
-        <input id="name" name="name" placeholder="Email" />
-        <textarea name="texte" placeholder="Votre message"></textarea>
+        <input id="email" name="email" placeholder="Email" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Votre message"></textarea>
         <input type="submit" value="Envoyer" />
       </form>
     </section>
