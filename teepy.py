@@ -21,7 +21,7 @@ def contact():
     message = {
         'to': [{'email': 'backoffice@lagestiondutierspayant.fr'}],
         'subject': 'Prise de contact sur le site de ',
-        'from_email': 'backoffice@lagestiondutierspayant.fr'}
+        'from_email': 'contact@kozea.fr'}
     if 'name' in form:
         message['html'] = '<br>'.join([
             'Nom : %s' % form['name'],
@@ -35,8 +35,6 @@ def contact():
 
     if not app.debug:
         mandrill.Mandrill(MANDRILL_KEY).send(message=message)
-    else:
-        print(message['html'])
 
     return redirect(url_for('page', page='contact_confirmation'))
 
