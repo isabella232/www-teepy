@@ -34,7 +34,7 @@ def contact():
             'Téléphone : %s' % form['phone']])
 
     if not app.debug:
-        mandrill.Mandrill(MANDRILL_KEY).send(message=message)
+        mandrill.Mandrill(MANDRILL_KEY).messages.send(message=message)
 
     return redirect(url_for('page', page='contact_confirmation'))
 
