@@ -10,9 +10,10 @@ body {
   margin: 0; }
 
 h1 {
-  background: #fff;
-  content: url(../images/logo.svg);
-  height: 3em;
+  background: url(../images/logo.svg) 50%/contain no-repeat #fff;
+  border: 1em solid #fff;
+  color: transparent;
+  height: 1em;
   margin: 0;
   padding: 1em 3em; }
 
