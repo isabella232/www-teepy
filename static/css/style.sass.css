@@ -445,6 +445,9 @@ section {
         #contact form input[type="submit"]:hover {
           background: #fbc362; }
 
+#confirmation {
+  text-align: center; }
+
 #click-to-call {
   background: #383737;
   background-clip: content-box;
@@ -463,8 +466,7 @@ section {
     margin: 0.5em;
     flex: 1 100%;
     text-align: center;
-    white-space: nowrap;
-    width: 100%; }
+    white-space: nowrap; }
   #click-to-call:hover {
     color: #fff;
     width: 210px; }
@@ -482,10 +484,13 @@ section {
     display: none; }
   #click-to-call input {
     border: none;
+    box-sizing: border-box;
+    display: block;
     font-family: Work Sans;
-    margin: 0.5em;
     padding: 0.5em 1em;
-    outline: none; }
+    outline: none;
+    text-align: center;
+    width: 100%; }
     #click-to-call input[type="submit"] {
       background: #faba49; }
 

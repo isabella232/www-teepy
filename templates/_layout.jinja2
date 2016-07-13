@@ -27,9 +27,11 @@
 
     <aside id="click-to-call">
       <p>Être rappelé ?</p>
-      <label for="phone">Téléphone</label>
-      <input type="tel" id="phone" name="phone" placeholder="Téléphone" />
-      <input type="submit" value="Envoyer" />
+      <form action="{{ url_for('contact') }}" method="POST">
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Téléphone" />
+        <input type="submit" value="Envoyer" />
+      </form>
     </aside>
 
     <footer>
