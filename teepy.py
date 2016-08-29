@@ -20,7 +20,7 @@ def contact():
     form = request.form
     message = {
         'to': [{'email': 'backoffice@lagestiondutierspayant.fr'}],
-        'subject': 'Prise de contact sur le site de ',
+        'subject': 'Prise de contact sur le site de BackOffice',
         'from_email': 'contact@kozea.fr'}
     if 'name' in form:
         message['html'] = '<br>'.join([
