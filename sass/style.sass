@@ -1,14 +1,15 @@
 $yellow: #faba49
 $grey: #383737
 
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,400,600);
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600')
 
 body
   background: #f5f5f5
   color: $grey
   display: flex
   flex-direction: column
-  font-family: Work Sans
+  font-family: Poppins
+  font-weight: 300
   line-height: 1.618em
   margin: 0
 
@@ -64,6 +65,7 @@ section
       line-height: 0.8em
 
 #introduction
+  font-weight: lighter
   max-width: none
   margin: 0
   position: relative
@@ -73,35 +75,37 @@ section
     margin-left: auto
     margin-right: auto
     text-align: left
-    padding-right: 450px
+    /*padding-right: 450px*/
 
   h2
     background: #fff
     font-size: 3em
+    font-weight: 400
     line-height: 1.5em
     margin: 0
-    padding: 1em 10em 1em 2em
+    text-align: center
+    /*padding: 1em 10em 1em 2em*/
     width: 100%
-
-    &:after
-      display: none
-
-  ul
-    background: $yellow
-    font-size: 1.4em
-    line-height: 2.2em
-    list-style-image: url(../images/check.svg)
-    margin: 0
-    padding: 4em 450px 4em 5em
 
     &:after
       bottom: 2em
       content: url(../images/computer.png)
-      display: block
-      position: absolute
-      right: 0
+      margin-top: 15px
+
+
+  ul
+    background: $yellow
+    display: flex
+    flex-direction: column
+    font-size: 1.4em
+    line-height: 2.2em
+    justify-content: center
+    list-style-image: url(../images/check.svg)
+    margin: -350px 0 0
+    padding: 350px 0 3em
 
     li
+      align-self: center
       a
         color: inherit
 
@@ -113,19 +117,30 @@ section
     color: white
     font-size: 1.5em
     margin: -2em auto 0
-    min-width: 12em;
+    min-width: 12em
     padding: 1em
     text-align: center
-    width: 25%
+    width: 30%
 
     strong
+      color: $yellow
       display: block
-      font-weight: bold
-      margin-top: 0.5em
+      font-size: 1.5em
+      font-weight: 400
+      margin: 0.5em 0
+
+      &:after
+        content: "*"
+        display: inline-block
+        font-size: 0.5em
+        vertical-align: super
 
 #advantages
   background: #fff
   padding: 1em
+
+  h2
+    line-height: 1.5em
 
   ul
     display: flex
@@ -148,7 +163,7 @@ section
 
       strong
         font-size: 1.2em
-        font-weight: bold
+        font-weight: 400
 
       &:before
         display: block
@@ -180,7 +195,7 @@ section
     color: $grey
     line-height: 1.5em
     margin: 0
-    padding: 2em 650px 2em 2em
+    padding: 3em 650px 2em 2em
     text-align: left
 
     &:after
@@ -194,16 +209,23 @@ section
     color: darken($grey, 15%)
     counter-increment: list
     font-size: 1.5em
+    font-weight: 400
     margin-top: 1.618em
 
     &:before
-      content: counter(list) ". "
-      margin-left: -1.2em
+      background: $yellow
+      border-radius: 100%
+      content: counter(list)
+      height: 1.8em
+      line-height: 2em
+      margin-left: -2.2em
       position: absolute
+      text-align: center
+      width: 1.8em
 
   dd
     font-size: 1.1em
-    margin: 0
+    margin: 0.5em 0 0
 
 #numbers
   background: #fff
@@ -220,7 +242,7 @@ section
     flex: 1 50%
     line-height: 1.5em
     margin: 0
-    padding: 1em
+    padding: 1.5em 1em 0
     text-align: left
 
   p:first-of-type
@@ -245,6 +267,8 @@ section
     align-items: center
     box-sizing: border-box
     display: flex
+    font-weight: 400
+    line-height: 1.8em
     margin: 0
     max-width: 33%
     padding: 3em 2em
@@ -262,19 +286,19 @@ section
       box-sizing: border-box
       display: flex
       flex-direction: column
-      padding: 1em 0.5em
+      padding: 1em
       text-align: center
       width: 33.3%
 
       strong
         font-size: 2.5em
-        font-weight: normal
+        font-weight: 400
         line-height: 2em
 
     &#brake
       li
         strong
-          padding: 1em 0
+          padding: 1em 0 1em.2em
 
         &:nth-child(1) strong
           background: url(../images/circle1.svg) no-repeat center
@@ -315,16 +339,24 @@ section
           color: lighten(#00a071, 5%)
 
     &:nth-of-type(3)
+      background: $yellow
       font-size: 2.2em
       line-height: 1.5em
+      margin-bottom: 0
+      padding: 1em
 
       strong
-        color: $yellow
         display: block
         font-weight: normal
+        text-decoration: underline
 
 #plus
   background: #fff
+
+  h3
+    font-weight: 400
+    margin: -1em 0 3em 0
+    text-align: center
 
   dl
     display: flex
@@ -406,11 +438,17 @@ section
 
     a
       background: $grey
+      border: 3px solid $grey
       color: #fff
       display: inline-block
       margin: 1em 0 0 0
       padding: 0.5em 1em
       text-decoration: none
+      transition: background ease-in-out 0.3s
+
+      &:hover
+        background: $yellow
+        color: $grey
 
 #offer
   background: #fff
@@ -440,14 +478,41 @@ section
     font-size: 1.3em
     line-height: 2.5em
     margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    box-sizing: border-box
+    padding-left: 0
 
-    li a
-      color: #00a071
-      text-decoration: none
-      transition: color 0.3s
+    li
+      background: #ececec
+      border: 4px solid #fff
+      box-sizing: border-box
+      flex: 1 50%
+      list-style: none
+      margin: 1em 0
+      padding: 1em
+      text-align: center
 
-      &:hover
-        color: lighten(#00a071, 5%)
+      &:before
+        display: block
+        content: ''
+        height: 50px
+        margin: -2.5em auto 1em
+        width: 50px
+
+      @each $name in control, interoperability, traceability, decrease, formation
+        &##{$name}:before
+          content: url(../images/#{$name}.svg)
+
+  p
+    font-size: 0.8em
+    margin: 0
+    text-align: center
+
+    &:before
+      content: "*"
+      color: $yellow
+      margin-right: 0.2em
 
 #contact
   background: $grey
@@ -468,8 +533,12 @@ section
 
   article
     line-height: 2.5em
-    margin: 0 2em
-    max-width: 600px
+    /*margin: 0 2em*/
+    /*max-width: 600px*/
+    flex: 1 100%
+    /*text-align: right*/
+    box-sizing: border-box
+    text-align: center
 
     h3
       font-size: 1.3em
@@ -496,13 +565,17 @@ section
       display: none
 
     input, textarea
-      border: none
+      border: 1px solid transparent
+      font-family: Poppins
       margin: 1em 0
       outline: none
       padding: 1em
+      transition: border-color 0.3s
+
+      &:focus
+        border: 1px solid $yellow
 
     textarea
-      font-family: Work Sans
       height: 5em
       width: 100%
 
@@ -510,14 +583,17 @@ section
       flex: 1 100%
 
       &[type="submit"]
-        background: $yellow
+        background: #499cfb
+        color: #fff
         cursor: pointer
         flex: 0
         font-weight: bold
-        transition: background 0.3s
+        transition: background 0.3s ease-in-out, box-shadow 0.3s
 
         &:hover
-          background: lighten($yellow, 5%)
+          background: $grey
+          border: 2px solid #499cfb
+          box-shadow: 2px 2px 9px #212121
 
 #confirmation
   text-align: center
@@ -548,7 +624,7 @@ section
     width: 210px
 
   &:before
-    background: url(../images/phone.svg) no-repeat $yellow center
+    background: url(../images/phone.svg) no-repeat center #499cfb
     background-size: 50%
     color: #fff
     content: ''
@@ -565,7 +641,7 @@ section
     border: none
     box-sizing: border-box
     display: block
-    font-family: Work Sans
+    font-family: Poppins
     padding: 0.5em 1em
     outline: none
     text-align: center
@@ -573,6 +649,11 @@ section
 
     &[type="submit"]
       background: $yellow
+      cursor: pointer
+      transition: background 0.3s
+
+      &:hover
+        background: lighten($yellow, 8%)
 
 footer
   background: $yellow
@@ -589,22 +670,9 @@ footer
     display: none
 
   #introduction
-    h2
-      padding: 0.5em 1em 1em
-      text-align: center
-
     ul
       list-style: none
-      padding: 2em 1em
       text-align: center
-
-      &:after
-        background: url(../images/computer3.png) 50% 50% no-repeat
-        background-size: contain
-        content: ''
-        position: initial
-        height: 20em
-        width: 100%
 
   #features
     h2
@@ -645,7 +713,18 @@ footer
       dd
         margin-bottom: 5em
 
-@media screen and (max-width:400px)
+  #offer
+    ul li
+      flex: 1 100%
+
+@media screen and (max-width:500px)
+  #introduction
+    h2:after
+      content: none
+    ul
+      margin: 0
+      padding: 1em 0 3em
+
   #numbers
     ul
       li
