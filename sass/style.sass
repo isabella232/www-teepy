@@ -84,14 +84,12 @@ section
     line-height: 1.5em
     margin: 0
     text-align: center
-    /*padding: 1em 10em 1em 2em*/
     width: 100%
 
     &:after
       bottom: 2em
       content: url(../images/computer.png)
       margin-top: 15px
-
 
   ul
     background: $yellow
@@ -106,6 +104,23 @@ section
 
     li
       align-self: center
+
+      &:first-of-type
+        list-style: none
+
+        a
+          background: #499cfb
+          color: #fff
+          font-size: 0.8em
+          font-weight: 400
+          padding: 0.5em 1em
+          text-decoration: none
+          transition: background 0.3s
+
+          &:hover
+            background: darken(#499cfb, 5%)
+            color: #fff
+
       a
         color: inherit
 
