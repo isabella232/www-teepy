@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <title>Backoffice - La gestion du tiers payant</title>
     <link type="image/png" rel="icon" href="/static/images/favicon.png" />
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.sass.css') }}" />
@@ -25,7 +25,7 @@
 
     {% block content %}{% endblock content %}
 
-    <aside id="click-to-call">
+    <aside id="click-to-call" onclick="/* iPhone hack */ return true">
       <p>Être rappelé ?</p>
       <form action="{{ url_for('contact') }}" method="POST">
         <label for="phone">Téléphone</label>
