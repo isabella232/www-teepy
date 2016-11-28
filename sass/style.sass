@@ -1,5 +1,6 @@
 $yellow: #faba49
 $grey: #383737
+$blue: #499cfb
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600')
 
@@ -109,7 +110,7 @@ section
         list-style: none
 
         a
-          background: #499cfb
+          background: $blue
           color: #fff
           font-size: 0.8em
           font-weight: 400
@@ -118,7 +119,7 @@ section
           transition: background 0.3s
 
           &:hover
-            background: darken(#499cfb, 5%)
+            background: darken($blue, 5%)
             color: #fff
 
       a
@@ -317,7 +318,7 @@ section
 
         &:nth-child(1) strong
           background: url(../images/circle1.svg) no-repeat center
-          color: #499cfb
+          color: $blue
 
         &:nth-child(2) strong
           background: url(../images/circle2.svg) no-repeat center
@@ -465,6 +466,31 @@ section
         background: $yellow
         color: $grey
 
+#formation
+  background: #fff
+  padding: 1em 3em 0 3em
+
+  h3
+    color: $yellow
+
+  h4
+    margin: .5em 0
+
+  p
+    margin: 0
+
+  p:nth-last-child(2), p:nth-last-child(1)
+    background: $yellow
+    margin: 0 -3em
+    text-align: center
+
+  strong
+    display: block
+    font-size: 1.5em
+    padding: 1em 0
+
+
+
 #offer
   background: #fff
   display: flex
@@ -598,7 +624,7 @@ section
       flex: 1 100%
 
       &[type="submit"]
-        background: #499cfb
+        background: $blue
         color: #fff
         cursor: pointer
         flex: 0
@@ -607,7 +633,7 @@ section
 
         &:hover
           background: $grey
-          border: 2px solid #499cfb
+          border: 2px solid $blue
           box-shadow: 2px 2px 9px #212121
 
 #confirmation
@@ -639,7 +665,7 @@ section
     width: 210px
 
   &:before
-    background: url(../images/phone.svg) no-repeat center #499cfb
+    background: url(../images/phone.svg) no-repeat center $blue
     background-size: 50%
     color: #fff
     content: ''
