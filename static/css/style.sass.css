@@ -77,8 +77,9 @@ section {
     #introduction h2:after {
       bottom: 2em;
       content: url(../images/computer.png);
-      display: inline;
-      margin-top: 15px; }
+      height: auto;
+      margin-top: 15px;
+      width: auto; }
   #introduction ul {
     background: #faba49;
     display: flex;
@@ -232,6 +233,8 @@ section {
     margin: 0;
     padding: 1.5em 1em 0;
     text-align: left; }
+    #numbers h2::after {
+      content: none; }
   #numbers p:first-of-type {
     background: #383737;
     box-sizing: border-box;

@@ -91,8 +91,9 @@ section
     &:after
       bottom: 2em
       content: url(../images/computer.png)
-      display: inline
+      height: auto
       margin-top: 15px
+      width: auto
 
   ul
     background: $yellow
@@ -262,6 +263,9 @@ section
     margin: 0
     padding: 1.5em 1em 0
     text-align: left
+
+    &::after
+      content: none
 
   p:first-of-type
     background: $grey
