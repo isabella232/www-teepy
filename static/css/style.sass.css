@@ -77,6 +77,7 @@ section {
     #introduction h2:after {
       bottom: 2em;
       content: url(../images/computer.png);
+      display: inline;
       margin-top: 15px; }
   #introduction ul {
     background: #faba49;
@@ -314,6 +315,39 @@ section {
         font-weight: normal;
         text-decoration: underline; }
 
+#outsourcing {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em 2em; }
+  #outsourcing p {
+    margin: 0.2em 0; }
+    #outsourcing p strong {
+      color: #faba49;
+      font-size: 1.2em; }
+  #outsourcing section {
+    border: 1px solid #e3e3e3;
+    flex: 1 50%;
+    padding: 0 2em 1em 2em;
+    transition: background 0.5s; }
+    #outsourcing section#homemade {
+      border-right: none; }
+    #outsourcing section:hover {
+      background: #f5f5f5; }
+    #outsourcing section:before {
+      display: block;
+      height: 80px;
+      margin: 0.5em auto;
+      width: 80px; }
+    #outsourcing section#homemade:before {
+      content: url(../images/homemade.svg); }
+    #outsourcing section#economy:before {
+      content: url(../images/economy.svg); }
+    #outsourcing section h3 {
+      margin-top: 0;
+      text-align: center; }
+
 #plus {
   background: #fff; }
   #plus h3 {
@@ -516,12 +550,9 @@ section {
   #contact strong {
     color: #faba49; }
   #contact article {
-    line-height: 2.5em;
-    /*margin: 0 2em*/
-    /*max-width: 600px*/
-    flex: 1 100%;
-    /*text-align: right*/
     box-sizing: border-box;
+    line-height: 2.5em;
+    flex: 1 100%;
     text-align: center; }
     #contact article h3 {
       font-size: 1.3em;
@@ -651,6 +682,15 @@ footer {
     padding: 0 2em 1em; }
     #numbers p:first-of-type strong {
       margin: 0.5em; }
+  #outsourcing {
+    padding-bottom: 0; }
+    #outsourcing section {
+      border: none;
+      flex: 1 100%;
+      margin: 0 -2em;
+      padding: 0; }
+      #outsourcing section#homemade {
+        border-bottom: 1px solid #e3e3e3; }
   #plus dl:before {
     display: none; }
   #plus dl dt, #plus dl dd {
