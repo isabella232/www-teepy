@@ -59,11 +59,12 @@ section
     text-align: center
 
     &:after
-      color: $yellow
-      content: '−'
+      background: $yellow
+      content: ''
       display: block
-      font-size: 2em
-      line-height: 0.8em
+      height: 3px
+      width: 35px
+      margin: 0.5em auto 0
 
 #introduction
   font-weight: lighter
@@ -468,28 +469,43 @@ section
 
 #formation
   background: #fff
-  padding: 1em 3em 0 3em
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
 
-  h3
-    color: $yellow
+  section
+    margin: 0
+    padding: 2em
+    width: 33%
 
-  h4
-    margin: .5em 0
+    h3
+      color: $yellow
+      font-size: 1.5em
+      font-weight: 300
+      line-height: 1.2em
+      margin-top: 0
+
+    h4
+      font-weight: 400
+      margin: .5em 0
+
+    &#novice, &#reject
+      background: #fafafa
+
+  h2
+    flex: 1 100%
 
   p
+    flex: 1 100%
+    font-size: 0.9em
     margin: 0
 
-  p:nth-last-child(2), p:nth-last-child(1)
-    background: $yellow
-    margin: 0 -3em
-    text-align: center
-
   strong
+    background: $yellow
     display: block
     font-size: 1.5em
-    padding: 1em 0
-
-
+    padding: 0.8em 0
+    text-align: center
 
 #offer
   background: #fff
@@ -573,12 +589,9 @@ section
     color: $yellow
 
   article
-    line-height: 2.5em
-    /*margin: 0 2em*/
-    /*max-width: 600px*/
-    flex: 1 100%
-    /*text-align: right*/
     box-sizing: border-box
+    line-height: 2.5em
+    flex: 1 100%
     text-align: center
 
     h3
@@ -753,6 +766,10 @@ footer
 
       dd
         margin-bottom: 5em
+
+  #formation
+    section
+      flex: 1 100%
 
   #offer
     ul li
