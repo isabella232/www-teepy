@@ -2,7 +2,7 @@
 
 {% block content %}
     <section id="offer">
-      <h2>La gestion de votre Tiers-Payant<strong>à partir de 29,90 €/mois !*</strong> sans engagement.</h2>
+      <h2>La gestion de votre Tiers-Payant<strong> à partir de 29,90 €/mois !*</strong> sans engagement.</h2>
       <ul>
         <li id="control">Suivi et contrôle des impayés</li>
         <li id="interoperability">Interopérabilité</li>
@@ -12,24 +12,38 @@
       </ul>
       <p>Consultez-nous pour un devis personnalisé</p>
     </section>
-
+    <section id="recap">
+      <h2>Nos offres</h2>
+      <ul>
+        <li><a href="{{ url_for('page', page='intern') }}">Gestion en interne</a></li>
+        <li><a href="{{ url_for('page', page='outsourcing') }}">Service d'externalisation</a></li>
+        <li><a href="{{ url_for('page', page='formation') }}">Formation</a></li>
+        <li><a href="{{ url_for('page', page='outsourcing') }}#association">Offre groupement</a></li>
+      </ul>
+    </section>
     <section id="contact">
       <h2>Contact</h2>
       <article>
-        <h3>Informations</h3>
         <ul>
-          <li>107, Boulevard de Stalingrad - 69100 Villeurbanne</li>
-          <li>Tél. 04 27 11 83 97 Fax. 04 27 11 83 98</li>
-          <li><a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
+          <li>Back Office Services - Kozea group</li>
+          <li>107, Boulevard de Stalingrad</li>
+          <li>69100 Villeurbanne</li>
+          <li>Tél. 04 27 11 83 97</li>
+          <li>Fax. 04 27 11 83 98</li>
+          <li>Email : <a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
         </ul>
       </article>
       <form action="{{ url_for('contact') }}" method="POST">
-        <label for="name">Nom</label>
-        <input id="name" name="name" placeholder="Nom" />
+        <label for="name">Vos nom et prénom</label>
+        <input id="name" name="name" placeholder="Vos nom et prénom" />
+        <label for="email">Votre adresse mail</label>
+        <input id="email" name="email" placeholder="Votre adresse mail" />
+        <label for="societe">Votre société</label>
+        <input id="societe" name="societe" placeholder="Votre société" />
         <label for="phone">Téléphone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Téléphone" />
-        <label for="email">Email</label>
-        <input id="email" name="email" placeholder="Email" />
+        <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" />
+        <label for="promotion">Votre code promotionnel</label>
+        <input id="promotion" name="promotion" placeholder="Votre code promotionnel" />
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Votre message"></textarea>
         <input type="submit" value="Envoyer" />
