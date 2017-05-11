@@ -1,22 +1,32 @@
 {% extends "_layout.jinja2" %}
 
 {% block content %}
-    <section id="numbers">
-      <h2>Quelques chiffres sur le Tiers-Payant</h2>
-      <p><strong>80 %</strong> du chiffre d'affaires d'une officine concerne le Tiers-Payant.</p>
-      <h3>Principaux freins rencontrés dans la gestion du Tiers-Payant</h3>
-      <ul id="brake">
-        <li><strong>24 %</strong> manque de temps</li>
+    <section id="income">
+      <p>Quelques chiffres sur le tiers-payant</p>
+      <p>80% du chiffre d'affaires d'une officine concerne le tiers-payant</p>
+    </section>
+    <section id="brake">
+      <h3>Principaux freins rencontrés dans la gestion du tiers-payant</h3>
+      <ul>
         <li><strong>30 %</strong> complexité des démarches administratives</li>
         <li><strong>28 %</strong> gestion du Tiers-Payant trop chronophage</li>
       </ul>
+    </section>
+    <section id="wait">
       <h3>Attentes du pharmacien en matière de Tiers-Payant</h3>
-      <ul id="wait">
-        <li><strong>58 %</strong> aimeraient connaître le temps exact passé au global et par intervenant sur le Tiers-Payant/mois</li>
+      <ul>
         <li><strong>65 %</strong> rencontrent des difficultés dans la gestion du Tiers-Payant</li>
         <li><strong>96 %</strong> souhaitent réduire le temps passé à la gestion du Tiers-Payant</li>
       </ul>
-      <p>Enquête réalisée auprès de 378 pharmaciens sur les sites internet <a href="https://www.pharminfo.fr/">Pharminfo.fr</a>.</p>
-      <p>Avec Backoffice, <strong>redonnez de la valeur à votre métier de pharmacien !</strong></p>
     </section>
+    <section id="hidden_cost">
+      <h3>Selon l'étude de l'USPO</h3>
+      <p>Les coûts cachés de gestion du tiers-payant</p>
+      <ul>
+        <li><strong>13 246 €/an</strong> si géré par un préparateur ou une secrétaire</li>
+        <li><strong>28 604 €/an</strong> si géré par un pharmacien</li>
+      </ul>
+    </section>
+    <p>Enquête réalisée auprès de 378 pharmaciens sur les sites Internet <a href="https://www.pharminfo.fr/">Pharminfo.fr</a>.</p>
+    <p>Étude 2016</p>
 {% endblock content %}
