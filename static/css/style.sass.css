@@ -47,6 +47,7 @@ section {
   box-sizing: border-box;
   margin: 1em auto;
   max-width: 1200px;
+  padding: 1em;
   width: 100%; }
   section h2 {
     font-size: 2em;
@@ -118,5 +119,35 @@ section {
       #introduction p strong:last-of-type {
         font-size: 1.2em;
         text-transform: uppercase; }
+
+#presentation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 0;
+  background: cornflowerblue; }
+  #presentation ul li {
+    background: #fff;
+    align-items: center;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /*height: 300px*/
+    margin: 12px;
+    padding: 1em;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s;
+    /*width: 300px*/ }
+    #presentation ul li strong {
+      font-size: 1.2em;
+      font-weight: 400; }
+    #presentation ul li#web_tool {
+      /*width: 300px*/ }
+    #presentation ul li#externalisation {
+      flex-grow: 1; }
+    #presentation ul li#training, #presentation ul li#mutualisation {
+      height: 300px;
+      width: 300px; }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */
