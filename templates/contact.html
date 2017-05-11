@@ -1,9 +1,38 @@
 {% extends "_layout.jinja2" %}
 
 {% block content %}
+    <section id="offer">
+      <h2>La gestion de votre Tiers-Payant<strong>à partir de 29,90 €/mois !*</strong> sans engagement.</h2>
+      <ul>
+        <li id="control">Suivi et contrôle des impayés</li>
+        <li id="interoperability">Interopérabilité</li>
+        <li id="traceability">Traçabilité des opérations effectuées</li>
+        <li id="decrease">Diminution des erreurs comptoirs</li>
+        <li id="formation">Catalogues de formations sur le Tiers-Payant, du niveau débutant au niveau expert</li>
+      </ul>
+      <p>Consultez-nous pour un devis personnalisé</p>
+    </section>
+
     <section id="contact">
-      <h2>La gestion de votre tiers-payant à partir de 29,90€/mois sans engagement</h2>
-      <p>Liste de tous les avantages de Backoffice.
-      </p>
+      <h2>Contact</h2>
+      <article>
+        <h3>Informations</h3>
+        <ul>
+          <li>107, Boulevard de Stalingrad - 69100 Villeurbanne</li>
+          <li>Tél. 04 27 11 83 97 Fax. 04 27 11 83 98</li>
+          <li><a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
+        </ul>
+      </article>
+      <form action="{{ url_for('contact') }}" method="POST">
+        <label for="name">Nom</label>
+        <input id="name" name="name" placeholder="Nom" />
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Téléphone" />
+        <label for="email">Email</label>
+        <input id="email" name="email" placeholder="Email" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Votre message"></textarea>
+        <input type="submit" value="Envoyer" />
+      </form>
     </section>
 {% endblock content %}
