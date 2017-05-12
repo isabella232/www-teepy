@@ -1,6 +1,7 @@
-#!/usr/bin/env python
-from flask import Flask, redirect, render_template, request, url_for
+#!/usr/bin/env python3
+
 import mandrill
+from flask import Flask, redirect, render_template, request, url_for
 
 
 app = Flask(__name__)
