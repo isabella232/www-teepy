@@ -45,13 +45,14 @@ nav {
 section {
   background: #fff;
   box-sizing: border-box;
-  margin: 1em auto;
+  margin: 0 auto;
   max-width: 1200px;
-  padding: 1em;
+  padding: 2em;
   width: 100%; }
   section h2 {
     font-size: 2em;
     font-weight: 300;
+    line-height: 2em;
     text-align: center; }
     section h2:after {
       background: #faba49;
@@ -149,5 +150,60 @@ section {
     #presentation ul li#training, #presentation ul li#mutualisation {
       height: 300px;
       width: 300px; }
+
+#video {
+  display: flex;
+  flex-wrap: wrap; }
+  #video h2 {
+    flex: 1 100%;
+    text-align: left; }
+    #video h2::after {
+      margin: .5em 0; }
+  #video p, #video iframe {
+    flex: 1 50%; }
+  #video iframe {
+    width: 50%; }
+
+#advantages ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0; }
+  #advantages ul li {
+    align-items: center;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    margin: 12px;
+    padding: 1em;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s;
+    width: 270px; }
+    #advantages ul li strong {
+      font-size: 1.1em; }
+    #advantages ul li:before {
+      display: block;
+      content: '';
+      height: 100px;
+      margin-top: 2em;
+      width: 25%; }
+    #advantages ul li:hover {
+      background: #383737;
+      border-color: #383737;
+      color: white; }
+    #advantages ul li#acceleration:before {
+      content: url(../images/acceleration.svg); }
+    #advantages ul li#simplification:before {
+      content: url(../images/simplification.svg); }
+    #advantages ul li#recoverate:before {
+      content: url(../images/recoverate.svg); }
+    #advantages ul li#time:before {
+      content: url(../images/time.svg); }
+    #advantages ul li#optimization:before {
+      content: url(../images/optimization.svg); }
+    #advantages ul li#rationalization:before {
+      content: url(../images/rationalization.svg); }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */

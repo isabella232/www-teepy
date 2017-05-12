@@ -54,14 +54,15 @@ nav
 section
   background: #fff
   box-sizing: border-box
-  margin: 1em auto
+  margin: 0 auto
   max-width: 1200px
-  padding: 1em
+  padding: 2em
   width: 100%
 
   h2
     font-size: 2em
     font-weight: 300
+    line-height: 2em
     text-align: center
 
     &:after
@@ -183,3 +184,59 @@ section
       &#training, &#mutualisation
         height: 300px
         width: 300px
+
+#video
+  display: flex
+  flex-wrap: wrap
+
+  h2
+    flex: 1 100%
+    text-align: left
+
+    &::after
+      margin: .5em 0
+
+  p, iframe
+    flex: 1 50%
+
+  iframe
+    width: 50%
+
+#advantages
+  ul
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding: 0
+
+    li
+      align-items: center
+      border: 1px solid #e3e3e3
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      height: 270px
+      margin: 12px
+      padding: 1em
+      text-align: center
+      transition: background 0.3s, border-color 0.3s
+      width: 270px
+
+      strong
+        font-size: 1.1em
+
+      &:before
+        display: block
+        content: ''
+        height: 100px
+        margin-top: 2em
+        width: 25%
+
+      &:hover
+        background: $grey
+        border-color: $grey
+        color: white
+
+      @each $name in acceleration, simplification, recoverate, time, optimization, rationalization
+        &##{$name}:before
+          content: url(../images/#{$name}.svg)
