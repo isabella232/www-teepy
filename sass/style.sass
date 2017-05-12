@@ -16,6 +16,21 @@ $blue: #499cfb
   &:hover
     background: darken($blue, 5%)
 
+=button_action_secondary
+  background: #fff
+  border: 2px solid $blue
+  color: $blue
+  display: inline-block
+  font-size: 0.8em
+  padding: 1em
+  text-decoration: none
+  transition: background .3s, color .3s
+
+  &:hover
+    background: darken($blue, 5%)
+    border-color: darken($blue, 5%)
+    color: #fff
+
 
 /* COMMON */
 #click-to-call
@@ -130,7 +145,7 @@ section
       display: block
       height: 3px
       width: 35px
-      margin: 0.5em auto 0
+      margin: 0 auto
 
 footer
   background: $grey
@@ -361,5 +376,87 @@ h1
 
 /* EXTERNALISATION */
 #outsourcing
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  h2
+    flex: 1 100%
+
+  p
+    margin: .2em 0
+
+    &:last-of-type
+      font-weight: 300
+
+    strong
+      color: $yellow
+
+  section
+    background: #fafafa
+    flex: 1 50%
+    margin: 1em 0
+    padding: 2em 3em
+
+    h3
+      font-size: 1em
+
+    &#homemade
+      margin-left: -2em
+
+    &#economy
+      margin-right: -2em
+
+    ul
+      font-weight: 300
+      list-style: none
+      padding-left: 0
+
+      li::before
+        content: url(../images/check-list.svg)
+        display: inline-block
+        height: 20px
+        margin-right: .5em
+        vertical-align: middle
+        width: 20px
+
   a
     +button_action_principal
+
+#association
+  box-sizing: border-box
+  display: flex
+  flex-wrap: wrap
+
+  h2
+    flex: 1 100%
+
+  section
+    flex: 1 50%
+
+    &#association_presentation
+      a
+        +button_action_secondary
+
+    &#association_benefits
+      border: 1px solid #e3e3e3
+
+      p
+        color: $yellow
+
+      ul
+        list-style: none
+        padding-left: 0
+
+        li
+          margin: 1em 0
+
+          &::before
+            background: $yellow
+            content: ""
+            display: inline-block
+            height: 30px
+            width: 30px
+
+          strong
+            display: block

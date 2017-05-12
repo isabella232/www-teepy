@@ -100,7 +100,7 @@ section {
       display: block;
       height: 3px;
       width: 35px;
-      margin: 0.5em auto 0; }
+      margin: 0 auto; }
 
 footer {
   background: #383737;
@@ -333,14 +333,87 @@ h1 {
       content: url(../images/rationalization.svg); }
 
 /* EXTERNALISATION */
-#outsourcing a {
-  background: #499cfb;
-  color: #fff;
-  font-size: 0.9em;
-  padding: 1em;
-  text-decoration: none;
-  transition: background 0.3s; }
-  #outsourcing a:hover {
-    background: #308efa; }
+#outsourcing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #outsourcing h2 {
+    flex: 1 100%; }
+  #outsourcing p {
+    margin: .2em 0; }
+    #outsourcing p:last-of-type {
+      font-weight: 300; }
+    #outsourcing p strong {
+      color: #faba49; }
+  #outsourcing section {
+    background: #fafafa;
+    flex: 1 50%;
+    margin: 1em 0;
+    padding: 2em 3em; }
+    #outsourcing section h3 {
+      font-size: 1em; }
+    #outsourcing section#homemade {
+      margin-left: -2em; }
+    #outsourcing section#economy {
+      margin-right: -2em; }
+    #outsourcing section ul {
+      font-weight: 300;
+      list-style: none;
+      padding-left: 0; }
+      #outsourcing section ul li::before {
+        content: url(../images/check-list.svg);
+        display: inline-block;
+        height: 20px;
+        margin-right: .5em;
+        vertical-align: middle;
+        width: 20px; }
+  #outsourcing a {
+    background: #499cfb;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 1em;
+    text-decoration: none;
+    transition: background 0.3s; }
+    #outsourcing a:hover {
+      background: #308efa; }
+
+#association {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap; }
+  #association h2 {
+    flex: 1 100%; }
+  #association section {
+    flex: 1 50%; }
+    #association section#association_presentation a {
+      background: #fff;
+      border: 2px solid #499cfb;
+      color: #499cfb;
+      display: inline-block;
+      font-size: 0.8em;
+      padding: 1em;
+      text-decoration: none;
+      transition: background .3s, color .3s; }
+      #association section#association_presentation a:hover {
+        background: #308efa;
+        border-color: #308efa;
+        color: #fff; }
+    #association section#association_benefits {
+      border: 1px solid #e3e3e3; }
+      #association section#association_benefits p {
+        color: #faba49; }
+      #association section#association_benefits ul {
+        list-style: none;
+        padding-left: 0; }
+        #association section#association_benefits ul li {
+          margin: 1em 0; }
+          #association section#association_benefits ul li::before {
+            background: #faba49;
+            content: "";
+            display: inline-block;
+            height: 30px;
+            width: 30px; }
+          #association section#association_benefits ul li strong {
+            display: block; }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */
