@@ -416,4 +416,61 @@ h1 {
           #association section#association_benefits ul li strong {
             display: block; }
 
+/* FORMATION */
+#formation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  #formation section {
+    margin: 0;
+    padding: 2em;
+    width: 33%; }
+    #formation section h3 {
+      color: #faba49;
+      font-size: 1.5em;
+      font-weight: 300;
+      line-height: 1.2em;
+      margin-top: 0; }
+    #formation section h4 {
+      font-weight: 400;
+      margin: .5em 0; }
+    #formation section a {
+      background: #fff;
+      border: 2px solid #499cfb;
+      color: #499cfb;
+      display: inline-block;
+      font-size: 0.8em;
+      padding: 1em;
+      text-decoration: none;
+      transition: background .3s, color .3s; }
+      #formation section a:hover {
+        background: #308efa;
+        border-color: #308efa;
+        color: #fff; }
+    #formation section#novice, #formation section#reject {
+      background: #fafafa; }
+  #formation h2 {
+    flex: 1 100%; }
+  #formation p {
+    flex: 1 100%;
+    font-weight: 300;
+    margin: 0; }
+    #formation p:first-of-type {
+      border-bottom: 1px solid #383737;
+      font-size: 1.5em; }
+      #formation p:first-of-type::before {
+        background: #383737;
+        content: "";
+        display: inline-block;
+        height: 45px;
+        margin-right: .5em;
+        vertical-align: middle;
+        width: 45px; }
+  #formation strong {
+    background: #faba49;
+    display: block;
+    font-size: 1.5em;
+    padding: 0.8em 0;
+    text-align: center; }
+
 /*# sourceMappingURL=../static/css/style.sass.css.map */

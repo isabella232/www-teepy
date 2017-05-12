@@ -460,3 +460,60 @@ h1
 
           strong
             display: block
+
+
+/* FORMATION */
+#formation
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  section
+    margin: 0
+    padding: 2em
+    width: 33%
+
+    h3
+      color: $yellow
+      font-size: 1.5em
+      font-weight: 300
+      line-height: 1.2em
+      margin-top: 0
+
+    h4
+      font-weight: 400
+      margin: .5em 0
+
+    a
+      +button_action_secondary
+
+    &#novice, &#reject
+      background: #fafafa
+
+  h2
+    flex: 1 100%
+
+  p
+    flex: 1 100%
+    font-weight: 300
+    margin: 0
+
+    &:first-of-type
+      border-bottom: 1px solid $grey
+      font-size: 1.5em
+
+      &::before
+        background: $grey
+        content: ""
+        display: inline-block
+        height: 45px
+        margin-right: .5em
+        vertical-align: middle
+        width: 45px
+
+  strong
+    background: $yellow
+    display: block
+    font-size: 1.5em
+    padding: 0.8em 0
+    text-align: center
