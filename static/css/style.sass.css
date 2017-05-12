@@ -1,4 +1,54 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600");
+#click-to-call {
+  background: #383737;
+  background-clip: content-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 0 0 0 45px;
+  position: fixed;
+  top: 50%;
+  transition: width 1s;
+  right: 0;
+  width: 0;
+  z-index: 10; }
+  #click-to-call > * {
+    box-sizing: border-box;
+    margin: 0.5em;
+    flex: 1 100%;
+    text-align: center;
+    white-space: nowrap; }
+  #click-to-call:hover {
+    color: #fff;
+    width: 210px; }
+  #click-to-call:before {
+    background: url(../images/phone.svg) no-repeat center #499cfb;
+    background-size: 50%;
+    color: #fff;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 45px;
+    width: 45px; }
+  #click-to-call label {
+    display: none; }
+  #click-to-call input {
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    font-family: Poppins;
+    padding: 0.5em 1em;
+    outline: none;
+    text-align: center;
+    width: 100%; }
+    #click-to-call input[type="submit"] {
+      background: #faba49;
+      cursor: pointer;
+      transition: background 0.3s; }
+      #click-to-call input[type="submit"]:hover {
+        background: #fbc971; }
+
 body {
   background: #f5f5f5;
   color: #383737;
@@ -205,5 +255,77 @@ section {
       content: url(../images/optimization.svg); }
     #advantages ul li#rationalization:before {
       content: url(../images/rationalization.svg); }
+
+footer {
+  background: #383737;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: .9em;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2em; }
+  footer ul {
+    list-style: none;
+    margin: 0; }
+  footer #contact_informations {
+    flex: 1 50%; }
+    footer #contact_informations::before {
+      content: url(../images/logo-footer.svg);
+      display: block;
+      width: 150px; }
+    footer #contact_informations a {
+      color: #faba49;
+      transition: color .3s; }
+      footer #contact_informations a:hover {
+        color: #fbc971; }
+  footer #legals_mentions {
+    margin-top: 50px;
+    text-align: right; }
+    footer #legals_mentions li:nth-child(2)::before {
+      content: "*";
+      color: #faba49; }
+    footer #legals_mentions a {
+      color: #fff;
+      transition: color .3s; }
+      footer #legals_mentions a:hover {
+        color: #faba49;
+        text-decoration: underline; }
+  footer #social {
+    display: flex;
+    flex: 1 100%;
+    justify-content: flex-end; }
+    footer #social li#facebook a {
+      content: url(../images/facebook.svg);
+      height: 30px;
+      margin: 0 .2em;
+      width: 30px; }
+    footer #social li#linkedin a {
+      content: url(../images/linkedin.svg);
+      height: 30px;
+      margin: 0 .2em;
+      width: 30px; }
+    footer #social li#youtube a {
+      content: url(../images/youtube.svg);
+      height: 30px;
+      margin: 0 .2em;
+      width: 30px; }
+    footer #social li#twitter a {
+      content: url(../images/twitter.svg);
+      height: 30px;
+      margin: 0 .2em;
+      width: 30px; }
+    footer #social li#instagram a {
+      content: url(../images/instagram.svg);
+      height: 30px;
+      margin: 0 .2em;
+      width: 30px; }
+    footer #social li#github a {
+      content: url(../images/github.svg);
+      height: 30px;
+      margin: 0 .2em;
+      width: 30px; }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */
