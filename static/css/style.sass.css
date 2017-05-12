@@ -1,4 +1,6 @@
+/* VARIABLES */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600");
+/* COMMON */
 #click-to-call {
   background: #383737;
   background-clip: content-box;
@@ -58,18 +60,6 @@ body {
   line-height: 1.618em;
   margin: 0; }
 
-header {
-  background: url(../images/introduction_bg.png) center no-repeat;
-  background-size: cover;
-  min-height: 500px; }
-
-h1 {
-  background: url(../images/logo-blanc.svg) left no-repeat;
-  color: transparent;
-  height: 3em;
-  margin: 1em auto;
-  max-width: 1200px; }
-
 nav {
   background: #383737;
   order: -1; }
@@ -111,150 +101,6 @@ section {
       height: 3px;
       width: 35px;
       margin: 0.5em auto 0; }
-
-#introduction {
-  background: none; }
-  #introduction h2 {
-    color: #fff;
-    font-size: 2.5em;
-    font-weight: 400;
-    line-height: 1.5em;
-    margin: 0;
-    text-align: left;
-    width: 100%; }
-    #introduction h2::after {
-      content: none; }
-  #introduction ul {
-    color: #fff;
-    font-size: 1.2em;
-    line-height: 2em;
-    list-style-image: url(../images/check.svg);
-    padding-left: 0; }
-    #introduction ul a:not(#contact_ask):not(#white_book) {
-      color: #fff; }
-      #introduction ul a:not(#contact_ask):not(#white_book):hover::before, #introduction ul a:not(#contact_ask):not(#white_book):hover:after {
-        margin: 0 .2em; }
-      #introduction ul a:not(#contact_ask):not(#white_book):before {
-        content: "["; }
-      #introduction ul a:not(#contact_ask):not(#white_book):after {
-        content: "]"; }
-  #introduction #contact_ask, #introduction #white_book {
-    display: inline-block;
-    font-size: 0.9em;
-    margin-top: 1em;
-    padding: 1em;
-    text-decoration: none;
-    transition: background 0.3s; }
-    #introduction #contact_ask#contact_ask, #introduction #white_book#contact_ask {
-      background: #499cfb;
-      color: #fff; }
-      #introduction #contact_ask#contact_ask:hover, #introduction #white_book#contact_ask:hover {
-        background: #308efa; }
-    #introduction #contact_ask#white_book, #introduction #white_book#white_book {
-      background: #fff;
-      color: #383737;
-      margin-left: 1em; }
-      #introduction #contact_ask#white_book:hover, #introduction #white_book#white_book:hover {
-        background: #f2f2f2; }
-  #introduction p {
-    background: #faba49;
-    display: inline-block;
-    float: right;
-    padding: 2em;
-    text-align: center; }
-    #introduction p strong {
-      display: block; }
-      #introduction p strong:first-of-type {
-        font-size: 2.5em;
-        margin: .2em 0; }
-      #introduction p strong:last-of-type {
-        font-size: 1.2em;
-        text-transform: uppercase; }
-
-#presentation ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  padding: 0;
-  background: cornflowerblue; }
-  #presentation ul li {
-    background: #fff;
-    align-items: center;
-    border: 1px solid #e3e3e3;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    /*height: 300px*/
-    margin: 12px;
-    padding: 1em;
-    text-align: center;
-    transition: background 0.3s, border-color 0.3s;
-    /*width: 300px*/ }
-    #presentation ul li strong {
-      font-size: 1.2em;
-      font-weight: 400; }
-    #presentation ul li#web_tool {
-      /*width: 300px*/ }
-    #presentation ul li#externalisation {
-      flex-grow: 1; }
-    #presentation ul li#training, #presentation ul li#mutualisation {
-      height: 300px;
-      width: 300px; }
-
-#video {
-  display: flex;
-  flex-wrap: wrap; }
-  #video h2 {
-    flex: 1 100%;
-    text-align: left; }
-    #video h2::after {
-      margin: .5em 0; }
-  #video p, #video iframe {
-    flex: 1 50%; }
-  #video iframe {
-    width: 50%; }
-
-#advantages ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0; }
-  #advantages ul li {
-    align-items: center;
-    border: 1px solid #e3e3e3;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    height: 270px;
-    margin: 12px;
-    padding: 1em;
-    text-align: center;
-    transition: background 0.3s, border-color 0.3s;
-    width: 270px; }
-    #advantages ul li strong {
-      font-size: 1.1em; }
-    #advantages ul li:before {
-      display: block;
-      content: '';
-      height: 100px;
-      margin-top: 2em;
-      width: 25%; }
-    #advantages ul li:hover {
-      background: #383737;
-      border-color: #383737;
-      color: white; }
-    #advantages ul li#acceleration:before {
-      content: url(../images/acceleration.svg); }
-    #advantages ul li#simplification:before {
-      content: url(../images/simplification.svg); }
-    #advantages ul li#recoverate:before {
-      content: url(../images/recoverate.svg); }
-    #advantages ul li#time:before {
-      content: url(../images/time.svg); }
-    #advantages ul li#optimization:before {
-      content: url(../images/optimization.svg); }
-    #advantages ul li#rationalization:before {
-      content: url(../images/rationalization.svg); }
 
 footer {
   background: #383737;
@@ -327,5 +173,174 @@ footer {
       height: 30px;
       margin: 0 .2em;
       width: 30px; }
+
+/* INDEX */
+header {
+  background: url(../images/introduction_bg.png) center no-repeat;
+  background-size: cover;
+  min-height: 500px; }
+
+h1 {
+  background: url(../images/logo-blanc.svg) left no-repeat;
+  color: transparent;
+  height: 3em;
+  margin: 1em auto;
+  max-width: 1200px; }
+
+#introduction {
+  background: none; }
+  #introduction h2 {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 0;
+    text-align: left;
+    width: 100%; }
+    #introduction h2::after {
+      content: none; }
+  #introduction ul {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 2em;
+    list-style-image: url(../images/check.svg);
+    padding-left: 0; }
+    #introduction ul a:not(#contact_ask):not(#white_book) {
+      color: #fff; }
+      #introduction ul a:not(#contact_ask):not(#white_book):hover::before, #introduction ul a:not(#contact_ask):not(#white_book):hover:after {
+        margin: 0 .2em; }
+      #introduction ul a:not(#contact_ask):not(#white_book):before {
+        content: "["; }
+      #introduction ul a:not(#contact_ask):not(#white_book):after {
+        content: "]"; }
+  #introduction #contact_ask {
+    background: #499cfb;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 1em;
+    text-decoration: none;
+    transition: background 0.3s; }
+    #introduction #contact_ask:hover {
+      background: #308efa; }
+  #introduction #white_book {
+    background: #499cfb;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 1em;
+    text-decoration: none;
+    transition: background 0.3s;
+    background: #fff;
+    color: #383737;
+    display: inline-block; }
+    #introduction #white_book:hover {
+      background: #308efa; }
+    #introduction #white_book:hover {
+      background: #f2f2f2; }
+  #introduction p {
+    background: #faba49;
+    display: inline-block;
+    float: right;
+    padding: 2em;
+    text-align: center; }
+    #introduction p strong {
+      display: block; }
+      #introduction p strong:first-of-type {
+        font-size: 2.5em;
+        margin: .2em 0; }
+      #introduction p strong:last-of-type {
+        font-size: 1.2em;
+        text-transform: uppercase; }
+
+#presentation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 0;
+  background: cornflowerblue; }
+  #presentation ul li {
+    background: #fff;
+    align-items: center;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 12px;
+    padding: 1em;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s; }
+    #presentation ul li strong {
+      font-size: 1.2em;
+      font-weight: 400; }
+    #presentation ul li#externalisation {
+      flex-grow: 1; }
+    #presentation ul li#training, #presentation ul li#mutualisation {
+      height: 300px;
+      width: 300px; }
+
+#video {
+  display: flex;
+  flex-wrap: wrap; }
+  #video h2 {
+    flex: 1 100%;
+    text-align: left; }
+    #video h2::after {
+      margin: .5em 0; }
+  #video p, #video iframe {
+    flex: 1 50%; }
+  #video iframe {
+    width: 50%; }
+
+#advantages ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0; }
+  #advantages ul li {
+    align-items: center;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    margin: 12px;
+    padding: 1em;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s;
+    width: 270px; }
+    #advantages ul li strong {
+      font-size: 1.1em; }
+    #advantages ul li:before {
+      display: block;
+      content: '';
+      height: 100px;
+      margin-top: 2em;
+      width: 25%; }
+    #advantages ul li:hover {
+      background: #383737;
+      border-color: #383737;
+      color: white; }
+    #advantages ul li#acceleration:before {
+      content: url(../images/acceleration.svg); }
+    #advantages ul li#simplification:before {
+      content: url(../images/simplification.svg); }
+    #advantages ul li#recoverate:before {
+      content: url(../images/recoverate.svg); }
+    #advantages ul li#time:before {
+      content: url(../images/time.svg); }
+    #advantages ul li#optimization:before {
+      content: url(../images/optimization.svg); }
+    #advantages ul li#rationalization:before {
+      content: url(../images/rationalization.svg); }
+
+/* EXTERNALISATION */
+#outsourcing a {
+  background: #499cfb;
+  color: #fff;
+  font-size: 0.9em;
+  padding: 1em;
+  text-decoration: none;
+  transition: background 0.3s; }
+  #outsourcing a:hover {
+    background: #308efa; }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */

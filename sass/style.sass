@@ -1,9 +1,23 @@
+/* VARIABLES */
+
 $yellow: #faba49
 $grey: #383737
 $blue: #499cfb
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600')
 
+=button_action_principal
+  background: $blue
+  color: #fff
+  font-size: 0.9em
+  padding: 1em
+  text-decoration: none
+  transition: background 0.3s
+
+  &:hover
+    background: darken($blue, 5%)
+
+
+/* COMMON */
 #click-to-call
   background: $grey
   background-clip: content-box
@@ -70,18 +84,6 @@ body
   line-height: 1.618em
   margin: 0
 
-header
-  background: url(../images/introduction_bg.png) center no-repeat
-  background-size: cover
-  min-height: 500px
-
-h1
-  background: url(../images/logo-blanc.svg) left no-repeat
-  color: transparent
-  height: 3em
-  margin: 1em auto
-  max-width: 1200px
-
 nav
   background: $grey
   order: -1
@@ -130,6 +132,80 @@ section
       width: 35px
       margin: 0.5em auto 0
 
+footer
+  background: $grey
+  color: #fff
+  display: flex
+  flex-wrap: wrap
+  font-size: .9em
+  max-width: 1200px
+  margin: 0 auto
+  width: 100%
+  box-sizing: border-box
+  padding: 2em
+
+  ul
+    list-style: none
+    margin: 0
+
+  #contact_informations
+      flex: 1 50%
+
+      &::before
+        content: url(../images/logo-footer.svg)
+        display: block
+        width: 150px
+
+      a
+        color: $yellow
+        transition: color .3s
+
+        &:hover
+          color: lighten($yellow, 8%)
+
+  #legals_mentions
+    margin-top: 50px
+    text-align: right
+
+    li:nth-child(2)::before
+      content: "*"
+      color: $yellow
+
+    a
+      color: #fff
+      transition: color .3s
+
+      &:hover
+        color: $yellow
+        text-decoration: underline
+
+  #social
+    display: flex
+    flex: 1 100%
+    justify-content: flex-end
+
+    li
+      @each $name in facebook, linkedin, youtube, twitter, instagram, github
+        &##{$name} a
+          content: url(../images/#{$name}.svg)
+          height: 30px
+          margin: 0 .2em
+          width: 30px
+
+
+/* INDEX */
+header
+  background: url(../images/introduction_bg.png) center no-repeat
+  background-size: cover
+  min-height: 500px
+
+h1
+  background: url(../images/logo-blanc.svg) left no-repeat
+  color: transparent
+  height: 3em
+  margin: 1em auto
+  max-width: 1200px
+
 #introduction
   background: none
 
@@ -165,28 +241,17 @@ section
       &:after
         content: "]"
 
-  #contact_ask, #white_book
+  #contact_ask
+    +button_action_principal
+
+  #white_book
+    +button_action_principal
+    background: #fff
+    color: $grey
     display: inline-block
-    font-size: 0.9em
-    margin-top: 1em
-    padding: 1em
-    text-decoration: none
-    transition: background 0.3s
 
-    &#contact_ask
-      background: $blue
-      color: #fff
-
-      &:hover
-        background: darken($blue, 5%)
-
-    &#white_book
-      background: #fff
-      color: $grey
-      margin-left: 1em
-
-      &:hover
-        background: darken(#fff, 5%)
+    &:hover
+      background: darken(#fff, 5%)
 
   p
     background: $yellow
@@ -221,19 +286,14 @@ section
       box-sizing: border-box
       display: flex
       flex-direction: column
-      /*height: 300px*/
       margin: 12px
       padding: 1em
       text-align: center
       transition: background 0.3s, border-color 0.3s
-      /*width: 300px*/
 
       strong
         font-size: 1.2em
         font-weight: 400
-
-      &#web_tool
-        /*width: 300px*/
 
       &#externalisation
         flex-grow: 1
@@ -298,62 +358,8 @@ section
         &##{$name}:before
           content: url(../images/#{$name}.svg)
 
-footer
-  background: $grey
-  color: #fff
-  display: flex
-  flex-wrap: wrap
-  font-size: .9em
-  max-width: 1200px
-  margin: 0 auto
-  width: 100%
-  box-sizing: border-box
-  padding: 2em
 
-  ul
-    list-style: none
-    margin: 0
-
-  #contact_informations
-      flex: 1 50%
-
-      &::before
-        content: url(../images/logo-footer.svg)
-        display: block
-        width: 150px
-
-      a
-        color: $yellow
-        transition: color .3s
-
-        &:hover
-          color: lighten($yellow, 8%)
-
-  #legals_mentions
-    margin-top: 50px
-    text-align: right
-
-    li:nth-child(2)::before
-      content: "*"
-      color: $yellow
-
-    a
-      color: #fff
-      transition: color .3s
-
-      &:hover
-        color: $yellow
-        text-decoration: underline
-
-  #social
-    display: flex
-    flex: 1 100%
-    justify-content: flex-end
-
-    li
-      @each $name in facebook, linkedin, youtube, twitter, instagram, github
-        &##{$name} a
-          content: url(../images/#{$name}.svg)
-          height: 30px
-          margin: 0 .2em
-          width: 30px
+/* EXTERNALISATION */
+#outsourcing
+  a
+    +button_action_principal
