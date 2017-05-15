@@ -8,17 +8,17 @@
         <li id="interoperability">Interopérabilité</li>
         <li id="traceability">Traçabilité des opérations effectuées</li>
         <li id="decrease">Diminution des erreurs comptoirs</li>
-        <li id="formation">Catalogues de formations sur le Tiers-Payant, du niveau débutant au niveau expert</li>
+        <li id="catalog">Catalogue de formations sur le Tiers-Payant, du niveau débutant au niveau expert</li>
       </ul>
       <p>Consultez-nous pour un devis personnalisé</p>
     </section>
     <section id="recap">
       <h2>Nos offres</h2>
       <ul>
-        <li><a href="{{ url_for('page', page='intern') }}">Gestion en interne</a></li>
-        <li><a href="{{ url_for('page', page='outsourcing') }}">Service d'externalisation</a></li>
-        <li><a href="{{ url_for('page', page='formation') }}">Formation</a></li>
-        <li><a href="{{ url_for('page', page='outsourcing') }}#association">Offre groupement</a></li>
+        <li id="feature_webtool"><a href="{{ url_for('page', page='intern') }}">Gestion en interne</a></li>
+        <li id="feature_outsourcing"><a href="{{ url_for('page', page='outsourcing') }}">Service d'externalisation</a></li>
+        <li id="feature_formation"><a href="{{ url_for('page', page='formation') }}">Formation</a></li>
+        <li id="feature_association"><a href="{{ url_for('page', page='outsourcing') }}#association">Offre groupement</a></li>
       </ul>
     </section>
     <section id="contact">
@@ -28,9 +28,9 @@
           <li>Back Office Services - Kozea group</li>
           <li>107, Boulevard de Stalingrad</li>
           <li>69100 Villeurbanne</li>
-          <li>Tél. 04 27 11 83 97</li>
-          <li>Fax. 04 27 11 83 98</li>
-          <li>Email : <a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
+          <li><strong>Tél.</strong> 04 27 11 83 97</li>
+          <li><strong>Fax.</strong> 04 27 11 83 98</li>
+          <li><strong>Email :</strong> <a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
         </ul>
       </article>
       <form action="{{ url_for('contact') }}" method="POST">

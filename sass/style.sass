@@ -517,3 +517,171 @@ h1
     font-size: 1.5em
     padding: 0.8em 0
     text-align: center
+
+/* QUELQUES CHIFFRES */
+/* RECRUTEMENT */
+/* CONTACT */
+
+#offer
+  background: url(../images/computer_contact.png) top 8em right no-repeat $yellow
+  padding: 0
+
+  &::before
+    background: #fff
+    content: url(../images/logo.png)
+    display: block
+    padding: 1em
+
+  h2
+    font-size: 1.5em
+    line-height: 1.5em
+    margin: 0
+    padding: 1em 2em 0
+    text-align: left
+
+    &::after
+      background: $grey
+      margin: .5em 0 0
+
+    strong
+      display: block
+
+  ul
+    box-sizing: border-box
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    margin: 0
+    padding: 1em 2em
+
+    li
+      box-sizing: border-box
+      list-style: none
+      margin: .5em 0
+
+      &:before
+        content: ''
+        display: inline-block
+        margin: 0 .5em
+        vertical-align: middle
+        width: 30px
+
+      @each $name in control, interoperability, traceability, decrease, catalog
+        &##{$name}:before
+          content: url(../images/#{$name}.svg)
+
+  p
+    font-size: 0.8em
+    margin: 0
+    text-align: center
+
+    &:before
+      content: "*"
+      color: $yellow
+      margin-right: 0.2em
+
+#recap
+  ul
+    box-sizing: border-box
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    padding-left: 0
+    justify-content: center
+
+    li
+      border: 1px solid #e3e3e3
+      box-sizing: border-box
+      display: flex
+      height: auto
+      justify-content: center
+      margin: 2px
+      text-align: center
+      transition: border-color .3s
+      width: 250px
+
+      &:hover
+        border-color: $yellow
+
+        a
+          color: $yellow
+
+      @each $name in feature_webtool, feature_outsourcing, feature_formation, feature_association
+        &##{$name} a:before
+          content: url(../images/#{$name}.svg)
+          display: block
+          margin: 0 auto
+          width: 150px
+
+      a
+        display: block
+        color: $grey
+        flex: 1 100%
+        padding: 1em
+        text-decoration: none
+        transition: color .3s
+
+#contact
+  box-sizing: border-box
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  h2
+    flex: 1 100%
+
+  article
+    flex: 1 50%
+    order: 1
+
+    ul
+      font-weight: 300
+      list-style: none
+      margin: 0
+
+      li
+        &:first-of-type
+          font-weight: 600
+
+        strong
+          color: $yellow
+
+        a
+          color: $grey
+          transition: color .3s
+
+          &:hover
+            color: $yellow
+
+  form
+    display: flex
+    flex: 1 50%
+    flex-grow: 1
+    flex-wrap: wrap
+    order: 0
+
+    label
+      display: none
+
+    input, textarea
+      border: 1px solid #e3e3e3
+      font-family: Poppins
+      outline: none
+      padding: 1em
+      transition: border-color 0.3s
+
+      &:focus
+        border: 1px solid $yellow
+
+    textarea
+      height: 8em
+      width: 100%
+
+    input
+      flex: 1 100%
+
+      &[type="submit"]
+        +button_action_principal
+        cursor: pointer
+        flex: 0
+        margin-top: .5em

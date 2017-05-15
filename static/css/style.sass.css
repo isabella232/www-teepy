@@ -473,4 +473,168 @@ h1 {
     padding: 0.8em 0;
     text-align: center; }
 
+/* QUELQUES CHIFFRES */
+/* RECRUTEMENT */
+/* CONTACT */
+#offer {
+  background: url(../images/computer_contact.png) top 8em right no-repeat #faba49;
+  padding: 0; }
+  #offer::before {
+    background: #fff;
+    content: url(../images/logo.png);
+    display: block;
+    padding: 1em; }
+  #offer h2 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 1em 2em 0;
+    text-align: left; }
+    #offer h2::after {
+      background: #383737;
+      margin: .5em 0 0; }
+    #offer h2 strong {
+      display: block; }
+  #offer ul {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+    padding: 1em 2em; }
+    #offer ul li {
+      box-sizing: border-box;
+      list-style: none;
+      margin: .5em 0; }
+      #offer ul li:before {
+        content: '';
+        display: inline-block;
+        margin: 0 .5em;
+        vertical-align: middle;
+        width: 30px; }
+      #offer ul li#control:before {
+        content: url(../images/control.svg); }
+      #offer ul li#interoperability:before {
+        content: url(../images/interoperability.svg); }
+      #offer ul li#traceability:before {
+        content: url(../images/traceability.svg); }
+      #offer ul li#decrease:before {
+        content: url(../images/decrease.svg); }
+      #offer ul li#catalog:before {
+        content: url(../images/catalog.svg); }
+  #offer p {
+    font-size: 0.8em;
+    margin: 0;
+    text-align: center; }
+    #offer p:before {
+      content: "*";
+      color: #faba49;
+      margin-right: 0.2em; }
+
+#recap ul {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+  justify-content: center; }
+  #recap ul li {
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin: 2px;
+    text-align: center;
+    transition: border-color .3s;
+    width: 250px; }
+    #recap ul li:hover {
+      border-color: #faba49; }
+      #recap ul li:hover a {
+        color: #faba49; }
+    #recap ul li#feature_webtool a:before {
+      content: url(../images/feature_webtool.svg);
+      display: block;
+      margin: 0 auto;
+      width: 150px; }
+    #recap ul li#feature_outsourcing a:before {
+      content: url(../images/feature_outsourcing.svg);
+      display: block;
+      margin: 0 auto;
+      width: 150px; }
+    #recap ul li#feature_formation a:before {
+      content: url(../images/feature_formation.svg);
+      display: block;
+      margin: 0 auto;
+      width: 150px; }
+    #recap ul li#feature_association a:before {
+      content: url(../images/feature_association.svg);
+      display: block;
+      margin: 0 auto;
+      width: 150px; }
+    #recap ul li a {
+      display: block;
+      color: #383737;
+      flex: 1 100%;
+      padding: 1em;
+      text-decoration: none;
+      transition: color .3s; }
+
+#contact {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #contact h2 {
+    flex: 1 100%; }
+  #contact article {
+    flex: 1 50%;
+    order: 1; }
+    #contact article ul {
+      font-weight: 300;
+      list-style: none;
+      margin: 0; }
+      #contact article ul li:first-of-type {
+        font-weight: 600; }
+      #contact article ul li strong {
+        color: #faba49; }
+      #contact article ul li a {
+        color: #383737;
+        transition: color .3s; }
+        #contact article ul li a:hover {
+          color: #faba49; }
+  #contact form {
+    display: flex;
+    flex: 1 50%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    order: 0; }
+    #contact form label {
+      display: none; }
+    #contact form input, #contact form textarea {
+      border: 1px solid #e3e3e3;
+      font-family: Poppins;
+      outline: none;
+      padding: 1em;
+      transition: border-color 0.3s; }
+      #contact form input:focus, #contact form textarea:focus {
+        border: 1px solid #faba49; }
+    #contact form textarea {
+      height: 8em;
+      width: 100%; }
+    #contact form input {
+      flex: 1 100%; }
+      #contact form input[type="submit"] {
+        background: #499cfb;
+        color: #fff;
+        font-size: 0.9em;
+        padding: 1em;
+        text-decoration: none;
+        transition: background 0.3s;
+        cursor: pointer;
+        flex: 0;
+        margin-top: .5em; }
+        #contact form input[type="submit"]:hover {
+          background: #308efa; }
+
 /*# sourceMappingURL=../static/css/style.sass.css.map */
