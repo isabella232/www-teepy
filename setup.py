@@ -21,6 +21,6 @@ setup(
         'mandrill',
         'libsass',
     ],
-    tests_requires=tests_requirements,
+    tests_require=tests_requirements,
     extras_require={'test': tests_requirements}
 )
