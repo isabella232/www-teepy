@@ -518,7 +518,114 @@ h1
     padding: 0.8em 0
     text-align: center
 
+
 /* QUELQUES CHIFFRES */
+#numbers
+  align-items: flex-start
+  background: #fff
+  box-sizing: border-box
+  display: flex
+  flex-wrap: wrap
+  margin: 0 auto
+  max-width: 1200px
+  padding: 2em
+
+  section
+    display: flex
+    height: 400px
+    flex: 1 50%
+    flex-wrap: wrap
+    padding: 0
+
+    h3
+      flex: 1 100%
+      font-weight: 400
+      margin: 0
+      padding: 1em 2em
+      text-align: center
+
+    ul
+      box-sizing: border-box
+      display: flex
+      flex-wrap: wrap
+      list-style: none
+      justify-content: space-around
+      margin: 0
+      padding-left: 0
+      width: 100%
+
+      li
+        /*flex: 1 50%*/
+        align-items: flex-start
+        box-sizing: border-box
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        height: 250px
+        padding: .5em
+        text-align: center
+        width: 250px
+
+        strong
+          /*display: block*/
+          font-size: 3em
+          line-height: 3em
+          height: 2em
+
+    &#income
+      background: $grey
+      color: #fff
+      height: 400px
+
+    &#brake
+      li
+        color: #fff
+
+        &:first-of-type
+          background: #fb695c
+
+        &:last-child
+          background: #f4b94f
+
+      ul
+        order: 0
+
+      h3
+        order: 1
+
+    &#wait
+      align-items: flex-end
+
+      li
+        &:first-child
+          background: #f9b130
+
+        &:last-child
+          background: #f9a717
+
+    &#value
+      align-items: center
+      background: #e3e3e3
+      height: 400px
+
+      h3
+        font-size: 1.8em
+        line-height: 1.5em
+        text-align: left
+        text-decoration: underline
+
+    &#hidden_cost
+      flex: 1 50%
+      width: 50%
+
+      li
+        color: #fff
+
+        &:first-child
+          background: #2bbfc1
+
+        &:last-child
+          background: #8dd8f5
 
 
 /* RECRUTEMENT */

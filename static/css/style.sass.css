@@ -474,6 +474,91 @@ h1 {
     text-align: center; }
 
 /* QUELQUES CHIFFRES */
+#numbers {
+  align-items: flex-start;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2em; }
+  #numbers section {
+    display: flex;
+    height: 400px;
+    flex: 1 50%;
+    flex-wrap: wrap;
+    padding: 0; }
+    #numbers section h3 {
+      flex: 1 100%;
+      font-weight: 400;
+      margin: 0;
+      padding: 1em 2em;
+      text-align: center; }
+    #numbers section ul {
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      justify-content: space-around;
+      margin: 0;
+      padding-left: 0;
+      width: 100%; }
+      #numbers section ul li {
+        /*flex: 1 50%*/
+        align-items: flex-start;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 250px;
+        padding: .5em;
+        text-align: center;
+        width: 250px; }
+        #numbers section ul li strong {
+          /*display: block*/
+          font-size: 3em;
+          line-height: 3em;
+          height: 2em; }
+    #numbers section#income {
+      background: #383737;
+      color: #fff;
+      height: 400px; }
+    #numbers section#brake li {
+      color: #fff; }
+      #numbers section#brake li:first-of-type {
+        background: #fb695c; }
+      #numbers section#brake li:last-child {
+        background: #f4b94f; }
+    #numbers section#brake ul {
+      order: 0; }
+    #numbers section#brake h3 {
+      order: 1; }
+    #numbers section#wait {
+      align-items: flex-end; }
+      #numbers section#wait li:first-child {
+        background: #f9b130; }
+      #numbers section#wait li:last-child {
+        background: #f9a717; }
+    #numbers section#value {
+      align-items: center;
+      background: #e3e3e3;
+      height: 400px; }
+      #numbers section#value h3 {
+        font-size: 1.8em;
+        line-height: 1.5em;
+        text-align: left;
+        text-decoration: underline; }
+    #numbers section#hidden_cost {
+      flex: 1 50%;
+      width: 50%; }
+      #numbers section#hidden_cost li {
+        color: #fff; }
+        #numbers section#hidden_cost li:first-child {
+          background: #2bbfc1; }
+        #numbers section#hidden_cost li:last-child {
+          background: #8dd8f5; }
+
 /* RECRUTEMENT */
 #recruitment article {
   border: 1px solid #e3e3e3;
