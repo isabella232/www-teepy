@@ -519,7 +519,41 @@ h1
     text-align: center
 
 /* QUELQUES CHIFFRES */
+
+
 /* RECRUTEMENT */
+#recruitment
+  article
+    border: 1px solid #e3e3e3
+    border-bottom: 0
+    font-weight: 300
+    padding: 2em 4em 0 4em
+
+    strong
+      display: block
+
+    p
+      &:first-of-type a
+        color: $yellow
+        font-weight: 600
+        text-transform: uppercase
+        transition: color .3s
+
+        &:hover
+          color: lighten($yellow, 5%)
+
+      &:last-child
+        background: $yellow
+        font-weight: 400
+        margin: 0 -4em
+        padding: 2em
+        text-align: center
+
+        a
+          color: $grey
+          font-weight: 600
+          text-transform: none
+
 /* CONTACT */
 
 #offer

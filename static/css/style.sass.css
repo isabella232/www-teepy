@@ -475,6 +475,31 @@ h1 {
 
 /* QUELQUES CHIFFRES */
 /* RECRUTEMENT */
+#recruitment article {
+  border: 1px solid #e3e3e3;
+  border-bottom: 0;
+  font-weight: 300;
+  padding: 2em 4em 0 4em; }
+  #recruitment article strong {
+    display: block; }
+  #recruitment article p:first-of-type a {
+    color: #faba49;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color .3s; }
+    #recruitment article p:first-of-type a:hover {
+      color: #fbc362; }
+  #recruitment article p:last-child {
+    background: #faba49;
+    font-weight: 400;
+    margin: 0 -4em;
+    padding: 2em;
+    text-align: center; }
+    #recruitment article p:last-child a {
+      color: #383737;
+      font-weight: 600;
+      text-transform: none; }
+
 /* CONTACT */
 #offer {
   background: url(../images/computer_contact.png) top 8em right no-repeat #faba49;
