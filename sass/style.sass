@@ -374,6 +374,84 @@ h1
           content: url(../images/#{$name}.svg)
 
 
+/* GESTION EN INTERNE */
+#plus
+  h3
+    font-weight: 400
+    text-align: center
+
+  dl
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: auto
+    max-width: 1000px
+    position: relative
+
+    &:before
+      background: lightgrey
+      content: ''
+      height: 1px
+      left: 0
+      position: absolute
+      top: 50%
+      width: 100%
+
+    dt
+      border-right: 1px solid lightgrey
+      box-sizing: border-box
+      display: flex
+      flex-direction: column
+      font-weight: 600
+      height: 300px
+      line-height: 60px
+      margin: 0 -0.5px
+      padding: 1em
+      text-align: center
+      width: 400px
+
+      &:before
+        display: block
+        margin: 0 auto
+        height: 100px
+        width: 80px
+
+      &:nth-of-type(2), &:nth-of-type(4)
+        border-right: none
+
+      @each $name in security, web, responsive, pharmacy
+        &##{$name}:before
+          content: url(../images/#{$name}.svg)
+
+    dd
+      box-sizing: border-box
+      font-weight: 300
+      height: 300px
+      margin-left: -398px
+      padding: 170px 3em 0
+      text-align: center
+      width: 398px
+
+#demo
+  background: #f3f4f8
+  text-align: center
+
+  h2
+    background: #fff
+    margin: 0
+    padding: 1em 0 0
+  p
+    background: #fff
+    margin: 0
+    padding: 2em
+
+    strong
+      display: block
+
+  a
+    +button_action_principal
+
+
 /* EXTERNALISATION */
 #outsourcing
   display: flex
