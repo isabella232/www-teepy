@@ -444,22 +444,18 @@ h1
       p
         color: $yellow
 
-      ul
-        list-style: none
-        padding-left: 0
+      dl
+        dd
+          font-weight: 300
+          margin-left: 0
 
-        li
-          margin: 1em 0
-
-          &::before
-            background: $yellow
-            content: ""
-            display: inline-block
-            height: 30px
-            width: 30px
-
-          strong
-            display: block
+          @each $name in reduce, management, evaluate
+            &##{$name}:before
+              content: url(../images/#{$name}.svg)
+              display: inline-block
+              height: 50px
+              vertical-align: middle
+              width: 50px
 
 
 /* FORMATION */

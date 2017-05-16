@@ -403,19 +403,27 @@ h1 {
       border: 1px solid #e3e3e3; }
       #association section#association_benefits p {
         color: #faba49; }
-      #association section#association_benefits ul {
-        list-style: none;
-        padding-left: 0; }
-        #association section#association_benefits ul li {
-          margin: 1em 0; }
-          #association section#association_benefits ul li::before {
-            background: #faba49;
-            content: "";
-            display: inline-block;
-            height: 30px;
-            width: 30px; }
-          #association section#association_benefits ul li strong {
-            display: block; }
+      #association section#association_benefits dl dd {
+        font-weight: 300;
+        margin-left: 0; }
+        #association section#association_benefits dl dd#reduce:before {
+          content: url(../images/reduce.svg);
+          display: inline-block;
+          height: 50px;
+          vertical-align: middle;
+          width: 50px; }
+        #association section#association_benefits dl dd#management:before {
+          content: url(../images/management.svg);
+          display: inline-block;
+          height: 50px;
+          vertical-align: middle;
+          width: 50px; }
+        #association section#association_benefits dl dd#evaluate:before {
+          content: url(../images/evaluate.svg);
+          display: inline-block;
+          height: 50px;
+          vertical-align: middle;
+          width: 50px; }
 
 /* FORMATION */
 #formation {
