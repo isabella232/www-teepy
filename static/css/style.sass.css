@@ -82,25 +82,26 @@ nav {
         text-decoration: inherit;
         transition: color 0.3s; }
 
-section {
+section, article {
   background: #fff;
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1200px;
   padding: 2em;
   width: 100%; }
-  section h2 {
-    font-size: 2em;
-    font-weight: 300;
-    line-height: 2em;
-    text-align: center; }
-    section h2:after {
-      background: #faba49;
-      content: '';
-      display: block;
-      height: 3px;
-      width: 35px;
-      margin: 0 auto; }
+
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 2em;
+  text-align: center; }
+  h2:after {
+    background: #faba49;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 35px;
+    margin: 0 auto; }
 
 footer {
   background: #383737;
@@ -419,59 +420,103 @@ h1 {
 /* FORMATION */
 #formation {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  #formation section {
-    margin: 0;
-    padding: 2em;
-    width: 33%; }
-    #formation section h3 {
-      color: #faba49;
-      font-size: 1.5em;
-      font-weight: 300;
-      line-height: 1.2em;
-      margin-top: 0; }
-    #formation section h4 {
-      font-weight: 400;
-      margin: .5em 0; }
-    #formation section a {
-      background: #fff;
-      border: 2px solid #499cfb;
-      color: #499cfb;
-      display: inline-block;
-      font-size: 0.8em;
-      padding: 1em;
-      text-decoration: none;
-      transition: background .3s, color .3s; }
-      #formation section a:hover {
-        background: #308efa;
-        border-color: #308efa;
-        color: #fff; }
-    #formation section#novice, #formation section#reject {
-      background: #fafafa; }
+  flex-wrap: wrap; }
   #formation h2 {
     flex: 1 100%; }
-  #formation p {
-    flex: 1 100%;
-    font-weight: 300;
-    margin: 0; }
-    #formation p:first-of-type {
-      border-bottom: 1px solid #383737;
-      font-size: 1.5em; }
-      #formation p:first-of-type::before {
-        background: #383737;
-        content: "";
+  #formation #certification {
+    border: 1px solid #e3e3e3;
+    display: flex;
+    flex: 1 50%;
+    flex-wrap: wrap; }
+    #formation #certification p {
+      flex: 1 75%;
+      font-weight: 300; }
+    #formation #certification::before {
+      content: url(../images/feature_formation.svg);
+      display: inline-block;
+      width: 100px; }
+    #formation #certification a {
+      background: #499cfb;
+      color: #fff;
+      font-size: 0.9em;
+      padding: 1em;
+      text-decoration: none;
+      transition: background 0.3s; }
+      #formation #certification a:hover {
+        background: #308efa; }
+  #formation #organism {
+    align-items: center;
+    background: #fafafa;
+    display: flex;
+    flex: 1 25%;
+    flex-wrap: wrap;
+    margin: 0 1em; }
+    #formation #organism ul {
+      list-style: none;
+      font-weight: 300; }
+      #formation #organism ul li:first-of-type {
+        font-weight: 500; }
+  #formation #lessons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em 0;
+    margin: 0 -2em; }
+    #formation #lessons section {
+      margin: 0;
+      padding: 2em;
+      width: 33%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start; }
+      #formation #lessons section h3 {
+        color: #faba49;
+        font-size: 1.5em;
+        font-weight: 300;
+        line-height: 1.2em;
+        margin-top: 0; }
+      #formation #lessons section h4 {
+        font-weight: 400;
+        margin: .5em 0; }
+      #formation #lessons section a {
+        background: #fff;
+        border: 2px solid #499cfb;
+        color: #499cfb;
         display: inline-block;
-        height: 45px;
-        margin-right: .5em;
-        vertical-align: middle;
-        width: 45px; }
-  #formation strong {
-    background: #faba49;
-    display: block;
-    font-size: 1.5em;
-    padding: 0.8em 0;
-    text-align: center; }
+        font-size: 0.8em;
+        padding: 1em;
+        text-decoration: none;
+        transition: background .3s, color .3s;
+        align-self: flex-end; }
+        #formation #lessons section a:hover {
+          background: #308efa;
+          border-color: #308efa;
+          color: #fff; }
+      #formation #lessons section#novice, #formation #lessons section#reject {
+        background: #fafafa; }
+    #formation #lessons h2 {
+      flex: 1 100%; }
+    #formation #lessons ul {
+      font-weight: 300; }
+    #formation #lessons p {
+      flex: 1 100%;
+      font-weight: 300;
+      margin: 0; }
+      #formation #lessons p:first-of-type {
+        border-bottom: 1px solid #383737;
+        font-size: 1.5em; }
+        #formation #lessons p:first-of-type::before {
+          content: url(../images/duration.svg);
+          display: inline-block;
+          margin-right: .5em;
+          vertical-align: middle;
+          width: 45px; }
+    #formation #lessons strong {
+      background: #faba49;
+      display: block;
+      font-size: 1.5em;
+      padding: 0.8em 0;
+      text-align: center; }
 
 /* QUELQUES CHIFFRES */
 #numbers {
@@ -499,9 +544,9 @@ h1 {
       content: "**"; }
   #numbers section {
     display: flex;
-    height: 400px;
     flex: 1 50%;
     flex-wrap: wrap;
+    height: 400px;
     padding: 0; }
     #numbers section h3 {
       flex: 1 100%;
@@ -514,27 +559,23 @@ h1 {
       box-sizing: border-box;
       display: flex;
       flex-wrap: wrap;
-      list-style: none;
       justify-content: space-around;
+      list-style: none;
       margin: 0;
       padding-left: 0;
       width: 100%; }
       #numbers section ul li {
-        /*flex: 1 50%*/
         align-items: center;
         box-sizing: border-box;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         height: 250px;
+        justify-content: center;
         padding: 2.5em;
         text-align: center;
         width: 250px; }
         #numbers section ul li strong {
-          /*display: block*/
-          font-size: 2.5em;
-          /*line-height: 2.5em*/
-          /*height: 2em*/ }
+          font-size: 2.5em; }
     #numbers section#income {
       background: #383737;
       color: #fff;

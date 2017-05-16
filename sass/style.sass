@@ -125,7 +125,7 @@ nav
         text-decoration: inherit
         transition: color 0.3s
 
-section
+section, article
   background: #fff
   box-sizing: border-box
   margin: 0 auto
@@ -133,19 +133,19 @@ section
   padding: 2em
   width: 100%
 
-  h2
-    font-size: 2em
-    font-weight: 300
-    line-height: 2em
-    text-align: center
+h2
+  font-size: 2em
+  font-weight: 300
+  line-height: 2em
+  text-align: center
 
-    &:after
-      background: $yellow
-      content: ''
-      display: block
-      height: 3px
-      width: 35px
-      margin: 0 auto
+  &:after
+    background: $yellow
+    content: ''
+    display: block
+    height: 3px
+    width: 35px
+    margin: 0 auto
 
 footer
   background: $grey
@@ -466,57 +466,104 @@ h1
 #formation
   display: flex
   flex-wrap: wrap
-  justify-content: space-between
-
-  section
-    margin: 0
-    padding: 2em
-    width: 33%
-
-    h3
-      color: $yellow
-      font-size: 1.5em
-      font-weight: 300
-      line-height: 1.2em
-      margin-top: 0
-
-    h4
-      font-weight: 400
-      margin: .5em 0
-
-    a
-      +button_action_secondary
-
-    &#novice, &#reject
-      background: #fafafa
 
   h2
     flex: 1 100%
 
-  p
-    flex: 1 100%
-    font-weight: 300
-    margin: 0
+  #certification
+    border: 1px solid #e3e3e3
+    display: flex
+    flex: 1 50%
+    flex-wrap: wrap
 
-    &:first-of-type
-      border-bottom: 1px solid $grey
+    p
+      flex: 1 75%
+      font-weight: 300
+
+    &::before
+      content: url(../images/feature_formation.svg)
+      display: inline-block
+      width: 100px
+
+    a
+      +button_action_principal
+
+  #organism
+    align-items: center
+    background: #fafafa
+    display: flex
+    flex: 1 25%
+    flex-wrap: wrap
+    margin: 0 1em
+
+    ul
+      list-style: none
+      font-weight: 300
+
+      li:first-of-type
+        font-weight: 500
+
+  #lessons
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 2em 0
+    margin: 0 -2em
+
+    section
+      margin: 0
+      padding: 2em
+      width: 33%
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-start
+
+      h3
+        color: $yellow
+        font-size: 1.5em
+        font-weight: 300
+        line-height: 1.2em
+        margin-top: 0
+
+      h4
+        font-weight: 400
+        margin: .5em 0
+
+      a
+        +button_action_secondary
+        align-self: flex-end
+
+      &#novice, &#reject
+        background: #fafafa
+
+    h2
+      flex: 1 100%
+
+    ul
+      font-weight: 300
+
+    p
+      flex: 1 100%
+      font-weight: 300
+      margin: 0
+
+      &:first-of-type
+        border-bottom: 1px solid $grey
+        font-size: 1.5em
+
+        &::before
+          content: url(../images/duration.svg)
+          display: inline-block
+          margin-right: .5em
+          vertical-align: middle
+          width: 45px
+
+    strong
+      background: $yellow
+      display: block
       font-size: 1.5em
-
-      &::before
-        background: $grey
-        content: ""
-        display: inline-block
-        height: 45px
-        margin-right: .5em
-        vertical-align: middle
-        width: 45px
-
-  strong
-    background: $yellow
-    display: block
-    font-size: 1.5em
-    padding: 0.8em 0
-    text-align: center
+      padding: 0.8em 0
+      text-align: center
 
 
 /* QUELQUES CHIFFRES */
