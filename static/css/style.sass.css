@@ -483,6 +483,20 @@ h1 {
   margin: 0 auto;
   max-width: 1200px;
   padding: 2em; }
+  #numbers #study_pharminfo, #numbers #study_uspo {
+    flex: 1 100%;
+    font-size: .8em;
+    margin: 0;
+    text-align: right; }
+    #numbers #study_pharminfo#study_pharminfo a, #numbers #study_uspo#study_pharminfo a {
+      color: #00a071;
+      transition: color .3s; }
+      #numbers #study_pharminfo#study_pharminfo a:hover, #numbers #study_uspo#study_pharminfo a:hover {
+        color: #00ba83; }
+    #numbers #study_pharminfo#study_pharminfo::before, #numbers #study_uspo#study_pharminfo::before {
+      content: "*"; }
+    #numbers #study_pharminfo#study_uspo::before, #numbers #study_uspo#study_uspo::before {
+      content: "**"; }
   #numbers section {
     display: flex;
     height: 400px;
@@ -491,6 +505,7 @@ h1 {
     padding: 0; }
     #numbers section h3 {
       flex: 1 100%;
+      font-size: 1.3em;
       font-weight: 400;
       margin: 0;
       padding: 1em 2em;
@@ -506,24 +521,45 @@ h1 {
       width: 100%; }
       #numbers section ul li {
         /*flex: 1 50%*/
-        align-items: flex-start;
+        align-items: center;
         box-sizing: border-box;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         height: 250px;
-        padding: .5em;
+        padding: 2.5em;
         text-align: center;
         width: 250px; }
         #numbers section ul li strong {
           /*display: block*/
-          font-size: 3em;
-          line-height: 3em;
-          height: 2em; }
+          font-size: 2.5em;
+          /*line-height: 2.5em*/
+          /*height: 2em*/ }
     #numbers section#income {
       background: #383737;
       color: #fff;
-      height: 400px; }
+      padding: 4em; }
+      #numbers section#income p {
+        margin: 0; }
+        #numbers section#income p:first-of-type {
+          align-self: flex-end;
+          font-size: 1.2em;
+          font-weight: 300; }
+          #numbers section#income p:first-of-type::after {
+            content: "*";
+            font-size: .8em;
+            vertical-align: super; }
+        #numbers section#income p:last-of-type {
+          color: #faba49;
+          font-size: 1.5em;
+          line-height: 1.5em; }
+          #numbers section#income p:last-of-type::before {
+            background: #fff;
+            content: "";
+            display: block;
+            height: 2px;
+            margin: 1em 0;
+            width: 25px; }
     #numbers section#brake li {
       color: #fff; }
       #numbers section#brake li:first-of-type {
@@ -550,14 +586,34 @@ h1 {
         text-align: left;
         text-decoration: underline; }
     #numbers section#hidden_cost {
-      flex: 1 50%;
-      width: 50%; }
+      align-items: center;
+      height: auto;
+      margin: 1em 0; }
+      #numbers section#hidden_cost dl {
+        flex: 1 50%;
+        text-align: center; }
+        #numbers section#hidden_cost dl dt {
+          font-size: 1.3em; }
+          #numbers section#hidden_cost dl dt::after {
+            content: "**";
+            font-size: .7em;
+            vertical-align: super; }
+        #numbers section#hidden_cost dl dd {
+          margin-left: 0; }
+      #numbers section#hidden_cost ul {
+        flex: 1 50%; }
       #numbers section#hidden_cost li {
         color: #fff; }
         #numbers section#hidden_cost li:first-child {
           background: #2bbfc1; }
         #numbers section#hidden_cost li:last-child {
           background: #8dd8f5; }
+        #numbers section#hidden_cost li strong {
+          height: auto;
+          line-height: normal; }
+          #numbers section#hidden_cost li strong span {
+            display: block;
+            font-size: .5em; }
 
 /* RECRUTEMENT */
 #recruitment article {
