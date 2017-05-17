@@ -334,6 +334,78 @@ h1 {
       content: url(../images/rationalization.svg); }
 
 /* GESTION EN INTERNE */
+#features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; }
+  #features img {
+    background: purple; }
+  #features dl {
+    background: url(../images/computer_feature.png) top no-repeat #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 1 50%;
+    /*background: #eee*/
+    margin: 0 -2em;
+    min-height: 400px;
+    position: relative;
+    align-items: center;
+    counter-reset: list; }
+    #features dl dt {
+      counter-increment: list;
+      font-weight: 600;
+      left: 0;
+      position: absolute;
+      top: 15%;
+      width: 25%;
+      padding: 1em 0 1em 4em; }
+      #features dl dt:hover {
+        background: #e3e3e3; }
+      #features dl dt::before {
+        background: #faba49;
+        border-radius: 100%;
+        content: counter(list);
+        height: 1.8em;
+        line-height: 2em;
+        margin-left: -3em;
+        position: absolute;
+        text-align: center;
+        /*top: -2px*/
+        width: 1.8em; }
+      #features dl dt:nth-of-type(2) {
+        top: 30%; }
+      #features dl dt:nth-of-type(3) {
+        top: 45%; }
+      #features dl dt:nth-of-type(4) {
+        top: 60%; }
+      #features dl dt:nth-of-type(5) {
+        top: 75%; }
+    #features dl dt:hover + dd {
+      display: block;
+      opacity: 1;
+      height: 150px;
+      /*visibility: visible*/
+      width: 25%; }
+    #features dl dd {
+      /*display: none*/
+      margin: 0 3%;
+      position: relative;
+      text-align: center;
+      /*visibility: hidden*/
+      opacity: 0;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      transition: all .3s ease .15s; }
+      #features dl dd:first-of-type::before {
+        content: url(../images/stats.png);
+        display: block;
+        left: -475px;
+        top: -145px;
+        position: absolute; }
+
 #plus h3 {
   font-weight: 400;
   text-align: center; }
