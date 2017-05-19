@@ -3,7 +3,7 @@
 $yellow: #faba49
 $grey: #383737
 $blue: #499cfb
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600')
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600')
 
 =button_action_principal
   background: $blue
@@ -291,24 +291,55 @@ h1
     display: flex
     flex-wrap: wrap
     justify-content: flex-end
+    margin: 0 -2em
     padding: 0
-    background: cornflowerblue
 
     li
-      background: #fff
-      align-items: center
       border: 1px solid #e3e3e3
       box-sizing: border-box
       display: flex
       flex-direction: column
-      margin: 12px
-      padding: 1em
-      text-align: center
+      padding: 2em
       transition: background 0.3s, border-color 0.3s
 
+      @each $name in feature_webtool, feature_outsourcing, feature_formation, feature_association
+        &.#{$name}:before
+          content: url(../images/#{$name}.svg)
+          display: block
+          width: 200px
+
+      &.feature_webtool
+        flex: 1 40%
+
+        &::before
+          margin: 0 auto
+
+      &.feature_outsourcing
+        flex: 1 60%
+
+        &::before
+          margin: 0 auto
+
+      &.feature_formation, &.feature_association
+        order: 0
+        width: 30%
+
+        &:before
+          align-self: flex-end
+          margin: -2em
+          order: 1
+
+      &.feature_formation:before
+        width: 150px
+
       strong
-        font-size: 1.2em
-        font-weight: 400
+        font-size: 1.1em
+        font-weight: 500
+
+      a
+        +button_action_secondary
+        align-self: flex-start
+        margin-top: 1em
 
       &#externalisation
         flex-grow: 1
@@ -1024,7 +1055,7 @@ h1
           color: $yellow
 
       @each $name in feature_webtool, feature_outsourcing, feature_formation, feature_association
-        &##{$name} a:before
+        &.#{$name} a:before
           content: url(../images/#{$name}.svg)
           display: block
           margin: 0 auto

@@ -1,5 +1,5 @@
 /* VARIABLES */
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600");
 /* COMMON */
 #click-to-call {
   background: #383737;
@@ -256,22 +256,66 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  padding: 0;
-  background: cornflowerblue; }
+  margin: 0 -2em;
+  padding: 0; }
   #presentation ul li {
-    background: #fff;
-    align-items: center;
     border: 1px solid #e3e3e3;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin: 12px;
-    padding: 1em;
-    text-align: center;
+    padding: 2em;
     transition: background 0.3s, border-color 0.3s; }
+    #presentation ul li.feature_webtool:before {
+      content: url(../images/feature_webtool.svg);
+      display: block;
+      width: 200px; }
+    #presentation ul li.feature_outsourcing:before {
+      content: url(../images/feature_outsourcing.svg);
+      display: block;
+      width: 200px; }
+    #presentation ul li.feature_formation:before {
+      content: url(../images/feature_formation.svg);
+      display: block;
+      width: 200px; }
+    #presentation ul li.feature_association:before {
+      content: url(../images/feature_association.svg);
+      display: block;
+      width: 200px; }
+    #presentation ul li.feature_webtool {
+      flex: 1 40%; }
+      #presentation ul li.feature_webtool::before {
+        margin: 0 auto; }
+    #presentation ul li.feature_outsourcing {
+      flex: 1 60%; }
+      #presentation ul li.feature_outsourcing::before {
+        margin: 0 auto; }
+    #presentation ul li.feature_formation, #presentation ul li.feature_association {
+      order: 0;
+      width: 30%; }
+      #presentation ul li.feature_formation:before, #presentation ul li.feature_association:before {
+        align-self: flex-end;
+        margin: -2em;
+        order: 1; }
+    #presentation ul li.feature_formation:before {
+      width: 150px; }
     #presentation ul li strong {
-      font-size: 1.2em;
-      font-weight: 400; }
+      font-size: 1.1em;
+      font-weight: 500; }
+    #presentation ul li a {
+      background: #fff;
+      border: 2px solid #499cfb;
+      color: #499cfb;
+      display: inline-block;
+      font-size: 0.8em;
+      padding: 1em;
+      text-decoration: none;
+      transition: background .3s, color .3s;
+      align-self: flex-start;
+      margin-top: 1em; }
+      #presentation ul li a:hover {
+        background: #308efa;
+        border-color: #308efa;
+        color: #fff; }
     #presentation ul li#externalisation {
       flex-grow: 1; }
     #presentation ul li#training, #presentation ul li#mutualisation {
@@ -918,22 +962,22 @@ h1 {
       border-color: #faba49; }
       #recap ul li:hover a {
         color: #faba49; }
-    #recap ul li#feature_webtool a:before {
+    #recap ul li.feature_webtool a:before {
       content: url(../images/feature_webtool.svg);
       display: block;
       margin: 0 auto;
       width: 150px; }
-    #recap ul li#feature_outsourcing a:before {
+    #recap ul li.feature_outsourcing a:before {
       content: url(../images/feature_outsourcing.svg);
       display: block;
       margin: 0 auto;
       width: 150px; }
-    #recap ul li#feature_formation a:before {
+    #recap ul li.feature_formation a:before {
       content: url(../images/feature_formation.svg);
       display: block;
       margin: 0 auto;
       width: 150px; }
-    #recap ul li#feature_association a:before {
+    #recap ul li.feature_association a:before {
       content: url(../images/feature_association.svg);
       display: block;
       margin: 0 auto;
