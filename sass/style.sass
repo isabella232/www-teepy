@@ -422,26 +422,25 @@ h1
     background: purple
 
   dl
+    align-items: center
     background: url(../images/computer_feature.png) top no-repeat #fff
+    counter-reset: list
     display: flex
     flex-wrap: wrap
     justify-content: flex-end
     flex: 1 50%
-    /*background: #eee*/
     margin: 0 -2em
     min-height: 400px
     position: relative
-    align-items: center
-    counter-reset: list
 
     dt
       counter-increment: list
       font-weight: 600
       left: 0
+      padding: 1em 0 1em 4em
       position: absolute
       top: 15%
       width: 25%
-      padding: 1em 0 1em 4em
 
       &:hover
         background: #e3e3e3
@@ -462,7 +461,18 @@ h1
         top: 30%
 
       &:nth-of-type(3)
+        /*top: 45%*/
+
+      &#features_statistics
         top: 45%
+
+        + dd
+          &::before
+            content: url(../images/stats.png)
+            display: block
+            left: -475px
+            top: 25px
+            position: absolute
 
       &:nth-of-type(4)
         top: 60%
@@ -473,9 +483,11 @@ h1
     dt:hover + dd
       display: block
       opacity: 1
-      height: 150px
+      /*height: 150px*/
+      height: auto
       /*visibility: visible*/
       width: 25%
+      padding-top: 200px
 
     dd
       /*display: none*/
@@ -484,18 +496,13 @@ h1
       text-align: center
       /*visibility: hidden*/
       opacity: 0
-      height: 0
-      width: 0
-      overflow: hidden
-      transition: all .3s ease .15s
+      /*height: 0*/
+      /*width: 0*/
+      /*overflow: hidden*/
+      /*transition: all .3s ease .15s*/
 
       &:first-of-type
-        &::before
-          content: url(../images/stats.png)
-          display: block
-          left: -475px
-          top: -145px
-          position: absolute
+
 
 #plus
   h3
