@@ -109,9 +109,11 @@ section, article {
   width: 100%; }
 
 h2 {
+  flex: 1 100%;
   font-size: 2em;
   font-weight: 300;
   line-height: 2em;
+  margin-top: 0;
   text-align: center; }
   h2:after {
     background: #faba49;
@@ -248,6 +250,7 @@ h1 {
     background: #499cfb;
     color: #fff;
     font-size: 0.9em;
+    font-weight: 500;
     padding: 1em;
     text-decoration: none;
     transition: background 0.3s;
@@ -258,6 +261,7 @@ h1 {
     background: #499cfb;
     color: #fff;
     font-size: 0.9em;
+    font-weight: 500;
     padding: 1em;
     text-decoration: none;
     transition: background 0.3s;
@@ -285,49 +289,45 @@ h1 {
         text-transform: uppercase; }
 
 #presentation ul {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   margin: 0 -2em;
   padding: 0; }
   #presentation ul li {
+    align-items: center;
     border: 1px solid #e3e3e3;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 2em;
-    transition: background 0.3s, border-color 0.3s; }
+    justify-content: center;
+    margin: 1em;
+    padding: 1em 2em;
+    transition: border-color 0.3s;
+    width: 45%; }
+    #presentation ul li:hover {
+      border-color: #faba49; }
     #presentation ul li.feature_webtool:before {
       content: url(../images/feature_webtool.svg);
       display: block;
+      margin: 0 auto;
       width: 200px; }
     #presentation ul li.feature_outsourcing:before {
       content: url(../images/feature_outsourcing.svg);
       display: block;
+      margin: 0 auto;
       width: 200px; }
     #presentation ul li.feature_formation:before {
       content: url(../images/feature_formation.svg);
       display: block;
+      margin: 0 auto;
       width: 200px; }
     #presentation ul li.feature_association:before {
       content: url(../images/feature_association.svg);
       display: block;
+      margin: 0 auto;
       width: 200px; }
-    #presentation ul li.feature_webtool {
-      flex: 1 40%; }
-      #presentation ul li.feature_webtool::before {
-        margin: 0 auto; }
-    #presentation ul li.feature_outsourcing {
-      flex: 1 60%; }
-      #presentation ul li.feature_outsourcing::before {
-        margin: 0 auto; }
-    #presentation ul li.feature_formation, #presentation ul li.feature_association {
-      order: 0;
-      width: 30%; }
-      #presentation ul li.feature_formation:before, #presentation ul li.feature_association:before {
-        align-self: flex-end;
-        margin: -2em;
-        order: 1; }
     #presentation ul li.feature_formation:before {
       width: 150px; }
     #presentation ul li strong {
@@ -339,33 +339,21 @@ h1 {
       color: #499cfb;
       display: inline-block;
       font-size: 0.8em;
+      font-weight: 500;
       padding: 1em;
       text-decoration: none;
       transition: background .3s, color .3s;
-      align-self: flex-start;
+      align-self: center;
       margin-top: 1em; }
       #presentation ul li a:hover {
         background: #308efa;
         border-color: #308efa;
         color: #fff; }
-    #presentation ul li#externalisation {
-      flex-grow: 1; }
-    #presentation ul li#training, #presentation ul li#mutualisation {
-      height: 300px;
-      width: 300px; }
 
 #video {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap; }
-  #video h2 {
-    flex: 1 100%;
-    text-align: left; }
-    #video h2::after {
-      margin: .5em 0; }
-  #video p, #video iframe {
-    flex: 1 50%; }
-  #video iframe {
-    width: 50%; }
 
 #advantages ul {
   display: flex;
@@ -554,6 +542,7 @@ h1 {
     background: #499cfb;
     color: #fff;
     font-size: 0.9em;
+    font-weight: 500;
     padding: 1em;
     text-decoration: none;
     transition: background 0.3s; }
@@ -599,6 +588,7 @@ h1 {
     background: #499cfb;
     color: #fff;
     font-size: 0.9em;
+    font-weight: 500;
     padding: 1em;
     text-decoration: none;
     transition: background 0.3s; }
@@ -619,6 +609,7 @@ h1 {
       color: #499cfb;
       display: inline-block;
       font-size: 0.8em;
+      font-weight: 500;
       padding: 1em;
       text-decoration: none;
       transition: background .3s, color .3s; }
@@ -674,6 +665,7 @@ h1 {
       background: #499cfb;
       color: #fff;
       font-size: 0.9em;
+      font-weight: 500;
       padding: 1em;
       text-decoration: none;
       transition: background 0.3s; }
@@ -719,6 +711,7 @@ h1 {
         color: #499cfb;
         display: inline-block;
         font-size: 0.8em;
+        font-weight: 500;
         padding: 1em;
         text-decoration: none;
         transition: background .3s, color .3s;
@@ -1070,6 +1063,7 @@ h1 {
         background: #499cfb;
         color: #fff;
         font-size: 0.9em;
+        font-weight: 500;
         padding: 1em;
         text-decoration: none;
         transition: background 0.3s;
