@@ -247,7 +247,11 @@ h1
   max-width: 1200px
 
 #introduction
+  align-items: baseline
   background: none
+  box-sizing: initial
+  display: flex
+  flex-wrap: wrap
 
   h2
     color: #fff
@@ -255,6 +259,7 @@ h1
     font-weight: 400
     line-height: 1.5em
     margin: 0
+    order: 0
     text-align: left
     width: 100%
 
@@ -266,14 +271,12 @@ h1
     font-size: 1.2em
     line-height: 2em
     list-style-image: url(../images/check.svg)
+    order: 1
     padding-left: 0
 
     a:not(#contact_ask):not(#white_book)
       color: #fff
-
-      &:hover
-        &::before, &:after
-          margin: 0 .2em
+      transition: color .3s
 
       &:before
         content: "["
@@ -281,22 +284,27 @@ h1
       &:after
         content: "]"
 
+      &:hover
+        color: $yellow
+
   #contact_ask
     +button_action_principal
+    order: 3
 
   #white_book
     +button_action_principal
     background: #fff
     color: $grey
-    display: inline-block
+    margin-left: .5em
+    order: 4
 
     &:hover
       background: darken(#fff, 5%)
 
   p
     background: $yellow
-    display: inline-block
-    float: right
+    margin: 0 0 0 auto
+    order: 2
     padding: 2em
     text-align: center
 

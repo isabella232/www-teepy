@@ -212,13 +212,18 @@ h1 {
   max-width: 1200px; }
 
 #introduction {
-  background: none; }
+  align-items: baseline;
+  background: none;
+  box-sizing: initial;
+  display: flex;
+  flex-wrap: wrap; }
   #introduction h2 {
     color: #fff;
     font-size: 2.5em;
     font-weight: 400;
     line-height: 1.5em;
     margin: 0;
+    order: 0;
     text-align: left;
     width: 100%; }
     #introduction h2::after {
@@ -228,22 +233,25 @@ h1 {
     font-size: 1.2em;
     line-height: 2em;
     list-style-image: url(../images/check.svg);
+    order: 1;
     padding-left: 0; }
     #introduction ul a:not(#contact_ask):not(#white_book) {
-      color: #fff; }
-      #introduction ul a:not(#contact_ask):not(#white_book):hover::before, #introduction ul a:not(#contact_ask):not(#white_book):hover:after {
-        margin: 0 .2em; }
+      color: #fff;
+      transition: color .3s; }
       #introduction ul a:not(#contact_ask):not(#white_book):before {
         content: "["; }
       #introduction ul a:not(#contact_ask):not(#white_book):after {
         content: "]"; }
+      #introduction ul a:not(#contact_ask):not(#white_book):hover {
+        color: #faba49; }
   #introduction #contact_ask {
     background: #499cfb;
     color: #fff;
     font-size: 0.9em;
     padding: 1em;
     text-decoration: none;
-    transition: background 0.3s; }
+    transition: background 0.3s;
+    order: 3; }
     #introduction #contact_ask:hover {
       background: #308efa; }
   #introduction #white_book {
@@ -255,15 +263,16 @@ h1 {
     transition: background 0.3s;
     background: #fff;
     color: #383737;
-    display: inline-block; }
+    margin-left: .5em;
+    order: 4; }
     #introduction #white_book:hover {
       background: #308efa; }
     #introduction #white_book:hover {
       background: #f2f2f2; }
   #introduction p {
     background: #faba49;
-    display: inline-block;
-    float: right;
+    margin: 0 0 0 auto;
+    order: 2;
     padding: 2em;
     text-align: center; }
     #introduction p strong {
