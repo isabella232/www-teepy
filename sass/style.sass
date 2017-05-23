@@ -99,13 +99,32 @@ body
   line-height: 1.618em
   margin: 0
 
+  &::before
+    content: ""
+    display: block
+    height: 50px
+
 nav
   background: $grey
+  display: flex
+  left: 0
+  min-height: 50px
   order: -1
+  padding: 0 1em
+  position: fixed
+  right: 0
+  z-index: 100
+
+  &::before
+    content: url(../images/paperclip.svg)
+    display: block
+    height: 50px
+    width: 20px
 
   ul
     color: #fff
     display: flex
+    flex: 1
     flex-wrap: wrap
     font-size: .9em
     justify-content: flex-end
@@ -200,12 +219,18 @@ footer
     justify-content: flex-end
 
     li
+      opacity: .7
+      transition: opacity .3s
+
       @each $name in facebook, linkedin, youtube, twitter, instagram, github
         &##{$name} a
           content: url(../images/#{$name}.svg)
           height: 30px
           margin: 0 .2em
           width: 30px
+
+      &:hover
+        opacity: 1
 
 
 /* INDEX */
@@ -1020,7 +1045,7 @@ h1
 
   p
     font-size: 0.8em
-    margin: 0
+    margin: 0/* RECRUTEMENT */
     text-align: center
 
     &:before
@@ -1133,3 +1158,19 @@ h1
         cursor: pointer
         flex: 0
         margin-top: .5em
+
+
+/* MENTIONS LÉGALES */
+#legal
+  dl
+    dt
+      display: inline-block
+      font-weight: 600
+
+    dd
+      display: inline
+      margin-left: 0
+
+      &::after
+        content: ""
+        display: block
