@@ -75,11 +75,6 @@ nav {
   position: fixed;
   right: 0;
   z-index: 100; }
-  nav::before {
-    content: url(../images/paperclip.svg);
-    display: block;
-    height: 50px;
-    width: 20px; }
   nav ul {
     color: #fff;
     display: flex;
@@ -88,9 +83,18 @@ nav {
     font-size: .9em;
     justify-content: flex-end;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    position: relative; }
     nav ul li {
       display: block; }
+      nav ul li:first-of-type a:before {
+        content: url(../images/paperclip.svg);
+        display: block;
+        height: 50px;
+        left: 0;
+        position: absolute;
+        top: 5px;
+        width: 20px; }
       nav ul li:hover a {
         color: #faba49; }
       nav ul li a {
@@ -624,27 +628,35 @@ h1 {
       border: 1px solid #e3e3e3; }
       #association section#association_benefits p {
         color: #faba49; }
-      #association section#association_benefits dl dd {
-        font-weight: 300;
-        margin-left: 0; }
-        #association section#association_benefits dl dd#reduce:before {
+      #association section#association_benefits dl dt {
+        font-weight: 500; }
+        #association section#association_benefits dl dt#reduce:before {
           content: url(../images/reduce.svg);
           display: inline-block;
           height: 50px;
+          float: left;
+          margin-right: 1em;
           vertical-align: middle;
           width: 50px; }
-        #association section#association_benefits dl dd#management:before {
+        #association section#association_benefits dl dt#management:before {
           content: url(../images/management.svg);
           display: inline-block;
           height: 50px;
+          float: left;
+          margin-right: 1em;
           vertical-align: middle;
           width: 50px; }
-        #association section#association_benefits dl dd#evaluate:before {
+        #association section#association_benefits dl dt#evaluate:before {
           content: url(../images/evaluate.svg);
           display: inline-block;
           height: 50px;
+          float: left;
+          margin-right: 1em;
           vertical-align: middle;
           width: 50px; }
+      #association section#association_benefits dl dd {
+        font-weight: 300;
+        margin: 0 0 1em 0; }
 
 /* FORMATION */
 #formation {
@@ -962,11 +974,11 @@ h1 {
         content: url(../images/catalog.svg); }
   #offer p {
     font-size: 0.8em;
-    margin: 0;
-    text-align: center; }
+    margin: 0 1em 0;
+    text-align: right; }
     #offer p:before {
       content: "*";
-      color: #faba49;
+      color: #383737;
       margin-right: 0.2em; }
 
 #recap ul {
@@ -1070,6 +1082,7 @@ h1 {
         padding: 1em;
         text-decoration: none;
         transition: background 0.3s;
+        border: none;
         cursor: pointer;
         flex: 0;
         margin-top: .5em; }
