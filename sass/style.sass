@@ -93,7 +93,7 @@ $blue: #499cfb
         background: lighten($yellow, 8%)
 
 body
-  background: #f5f5f5
+  /*background: #f5f5f5*/
   color: $grey
   display: flex
   flex-direction: column
@@ -181,7 +181,7 @@ footer
   display: flex
   flex-wrap: wrap
   font-size: .9em
-  max-width: 1200px
+  /*max-width: 1200px*/
   margin: 0 auto
   width: 100%
   box-sizing: border-box
@@ -422,87 +422,84 @@ h1
   display: flex
   flex-wrap: wrap
   justify-content: center
+  background: #ddd
+  padding: 2em 0
+
+  p
+    flex: 1 100%
+    text-align: center
 
   dl
-    align-items: center
-    background: url(../images/computer_feature.png) top no-repeat #fff
-    counter-reset: list
-    display: flex
+    background: url(../images/computer_feature.png) top no-repeat #eee
+    max-height: 400px
+    width: 100%
     flex-wrap: wrap
-    justify-content: flex-end
-    flex: 1 50%
+    /*flex-direction: column*/
+    justify-content: space-around
+    flex-flow: row wrap
+    box-sizing: border-box
     margin: 0 -2em
-    min-height: 400px
-    position: relative
+
+    display: flex
+    /*align-items: center*/
+    /*justify-content: center*/
+    flex-flow: column wrap
+    align-content: stretch
 
     dt
-      counter-increment: list
-      font-weight: 600
-      left: 0
-      padding: 1em 0 1em 4em
-      position: absolute
-      top: 15%
       width: 25%
+      /*position: absolute*/
 
       &:hover
-        background: #e3e3e3
 
       &::before
-        background: $yellow
+        background: $grey
         border-radius: 100%
-        content: counter(list)
+        content: ""
+        display: block
         height: 1.8em
-        line-height: 2em
-        margin-left: -3em
-        position: absolute
-        text-align: center
-        /*top: -2px*/
+        margin: 0 auto
         width: 1.8em
 
       &:nth-of-type(2)
-        top: 30%
 
       &:nth-of-type(3)
         /*top: 45%*/
 
-      &#features_statistics
-        top: 45%
+      &#features_devices
+        /*top: 45%*/
+        /*position: absolute*/
+        /*margin-left: auto*/
 
         + dd
+          /*position: absolute*/
+          /*margin-left: auto*/
+
+        &::after
+          content: ""
+          display: block
+          width: 100%
+
+      &#features_mail, &#features_selecting
+        /*position: absolute*/
+        margin-left: auto
+
+        + dd
+          /*position: absolute*/
+          margin-left: auto
+
           &::before
-            content: url(../images/stats.png)
-            display: block
-            left: -475px
-            top: -145px
-            position: absolute
-
-      &:nth-of-type(4)
-        top: 60%
-
-      &:nth-of-type(5)
-        top: 75%
 
     dt:hover + dd
       display: block
-      opacity: 1
-      /*height: 150px*/
-      /*height: 100%*/
-      visibility: visible
-      width: auto
-      max-width: 25%
-      /*padding-top: 200px*/
 
     dd
-      display: none
-      margin: 0 3%
-      position: relative
-      text-align: center
-      /*visibility: hidden*/
-      /*opacity: 0*/
+      /*display: none*/
+      margin-left: 0
+      width: 25%
       /*height: 0*/
-      /*width: 0*/
-      /*overflow: hidden*/
-      transition: all .3s ease .15s
+      /*position: absolute*/
+
 
 
 #plus
