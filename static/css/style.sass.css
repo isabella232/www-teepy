@@ -403,12 +403,10 @@ h1 {
 
 /* GESTION EN INTERNE */
 #features {
+  align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start; }
-  #features img {
-    background: purple; }
+  justify-content: center; }
   #features dl {
     align-items: center;
     background: url(../images/computer_feature.png) top no-repeat #fff;
@@ -451,7 +449,7 @@ h1 {
           content: url(../images/stats.png);
           display: block;
           left: -475px;
-          top: 25px;
+          top: -145px;
           position: absolute; }
       #features dl dt:nth-of-type(4) {
         top: 60%; }
@@ -461,21 +459,22 @@ h1 {
       display: block;
       opacity: 1;
       /*height: 150px*/
-      height: auto;
-      /*visibility: visible*/
-      width: 25%;
-      padding-top: 200px; }
+      /*height: 100%*/
+      visibility: visible;
+      width: auto;
+      max-width: 25%;
+      /*padding-top: 200px*/ }
     #features dl dd {
-      /*display: none*/
+      display: none;
       margin: 0 3%;
       position: relative;
       text-align: center;
       /*visibility: hidden*/
-      opacity: 0;
+      /*opacity: 0*/
       /*height: 0*/
       /*width: 0*/
       /*overflow: hidden*/
-      /*transition: all .3s ease .15s*/ }
+      transition: all .3s ease .15s; }
 
 #plus h3 {
   font-weight: 400;

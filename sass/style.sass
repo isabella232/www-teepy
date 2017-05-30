@@ -418,13 +418,10 @@ h1
 
 /* GESTION EN INTERNE */
 #features
+  align-items: flex-start
   display: flex
   flex-wrap: wrap
   justify-content: center
-  align-items: flex-start
-
-  img
-    background: purple
 
   dl
     align-items: center
@@ -476,7 +473,7 @@ h1
             content: url(../images/stats.png)
             display: block
             left: -475px
-            top: 25px
+            top: -145px
             position: absolute
 
       &:nth-of-type(4)
@@ -489,24 +486,23 @@ h1
       display: block
       opacity: 1
       /*height: 150px*/
-      height: auto
-      /*visibility: visible*/
-      width: 25%
-      padding-top: 200px
+      /*height: 100%*/
+      visibility: visible
+      width: auto
+      max-width: 25%
+      /*padding-top: 200px*/
 
     dd
-      /*display: none*/
+      display: none
       margin: 0 3%
       position: relative
       text-align: center
       /*visibility: hidden*/
-      opacity: 0
+      /*opacity: 0*/
       /*height: 0*/
       /*width: 0*/
       /*overflow: hidden*/
-      /*transition: all .3s ease .15s*/
-
-      &:first-of-type
+      transition: all .3s ease .15s
 
 
 #plus
