@@ -1166,3 +1166,12 @@ h1
       &::after
         content: ""
         display: block
+
+  h3 a
+    color: $yellow
+    text-decoration: none
+    transition: color .3s
+
+    &:hover
+      color: lighten($yellow, 5%)
+      text-decoration: underline

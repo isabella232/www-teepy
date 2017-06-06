@@ -1090,4 +1090,12 @@ h1 {
     content: "";
     display: block; }
 
+#legal h3 a {
+  color: #faba49;
+  text-decoration: none;
+  transition: color .3s; }
+  #legal h3 a:hover {
+    color: #fbc362;
+    text-decoration: underline; }
+
 /*# sourceMappingURL=../static/css/style.sass.css.map */
