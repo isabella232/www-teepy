@@ -452,22 +452,17 @@ h1 {
     text-align: center; }
   #features dl {
     background: url(../images/computer_feature.png) top no-repeat #eee;
-    max-height: 400px;
-    width: 100%;
-    flex-wrap: wrap;
-    /*flex-direction: column*/
-    justify-content: space-around;
-    flex-flow: row wrap;
     box-sizing: border-box;
+    columns: 2;
+    column-gap: 600px;
     margin: 0 -2em;
-    display: flex;
-    /*align-items: center*/
-    /*justify-content: center*/
-    flex-flow: column wrap;
-    align-content: stretch; }
+    min-height: 400px;
+    position: relative;
+    width: 100%; }
     #features dl dt {
-      width: 25%;
-      /*position: absolute*/ }
+      display: inline-block;
+      padding: 2em 0;
+      width: 100%; }
       #features dl dt::before {
         background: #383737;
         border-radius: 100%;
@@ -476,33 +471,27 @@ h1 {
         height: 1.8em;
         margin: 0 auto;
         width: 1.8em; }
-      #features dl dt:nth-of-type(3) {
-        /*top: 45%*/ }
-      #features dl dt#features_devices {
-        /*top: 45%*/
-        /*position: absolute*/
-        /*margin-left: auto*/ }
-        #features dl dt#features_devices + dd {
-          /*position: absolute*/
-          /*margin-left: auto*/ }
-        #features dl dt#features_devices::after {
+        #features dl dt::before::after {
           content: "";
           display: block;
           width: 100%; }
-      #features dl dt#features_mail, #features dl dt#features_selecting {
-        /*position: absolute*/
-        margin-left: auto; }
-        #features dl dt#features_mail + dd, #features dl dt#features_selecting + dd {
-          /*position: absolute*/
-          margin-left: auto; }
     #features dl dt:hover + dd {
-      display: block; }
+      display: inline-block; }
+      #features dl dt:hover + dd::before {
+        content: "";
+        display: block;
+        width: 421px;
+        height: 300px;
+        background: red;
+        margin: 0 auto 55px; }
     #features dl dd {
-      /*display: none*/
+      bottom: 0;
+      display: none;
+      left: 0;
       margin-left: 0;
-      width: 25%;
-      /*height: 0*/
-      /*position: absolute*/ }
+      position: absolute;
+      text-align: center;
+      width: 100%; }
 
 #plus h3 {
   font-weight: 400;

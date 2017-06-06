@@ -467,26 +467,18 @@ h1
 
   dl
     background: url(../images/computer_feature.png) top no-repeat #eee
-    max-height: 400px
-    width: 100%
-    flex-wrap: wrap
-    /*flex-direction: column*/
-    justify-content: space-around
-    flex-flow: row wrap
     box-sizing: border-box
+    columns: 2
+    column-gap: 600px
     margin: 0 -2em
-
-    display: flex
-    /*align-items: center*/
-    /*justify-content: center*/
-    flex-flow: column wrap
-    align-content: stretch
+    min-height: 400px
+    position: relative
+    width: 100%
 
     dt
-      width: 25%
-      /*position: absolute*/
-
-      &:hover
+      display: inline-block
+      padding: 2em 0
+      width: 100%
 
       &::before
         background: $grey
@@ -497,46 +489,30 @@ h1
         margin: 0 auto
         width: 1.8em
 
-      &:nth-of-type(2)
-
-      &:nth-of-type(3)
-        /*top: 45%*/
-
-      &#features_devices
-        /*top: 45%*/
-        /*position: absolute*/
-        /*margin-left: auto*/
-
-        + dd
-          /*position: absolute*/
-          /*margin-left: auto*/
-
         &::after
           content: ""
           display: block
           width: 100%
 
-      &#features_mail, &#features_selecting
-        /*position: absolute*/
-        margin-left: auto
-
-        + dd
-          /*position: absolute*/
-          margin-left: auto
-
-          &::before
-
     dt:hover + dd
-      display: block
+      display: inline-block
+
+      &::before
+        content: ""
+        display: block
+        width: 421px
+        height: 300px
+        background: red
+        margin: 0 auto 55px
 
     dd
-      /*display: none*/
+      bottom: 0
+      display: none
+      left: 0
       margin-left: 0
-      width: 25%
-      /*height: 0*/
-      /*position: absolute*/
-
-
+      position: absolute
+      text-align: center
+      width: 100%
 
 #plus
   h3
