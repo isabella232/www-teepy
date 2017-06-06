@@ -33,6 +33,10 @@ $blue: #499cfb
     border-color: darken($blue, 5%)
     color: #fff
 
+.asterisk
+  color: lighten($grey, 25%)
+  font-size: .9em
+
 
 /* COMMON */
 #click-to-call
@@ -150,6 +154,38 @@ nav
         padding: 1em
         text-decoration: inherit
         transition: color 0.3s
+
+form
+  display: flex
+  flex-wrap: wrap
+  width: 50%
+
+  label
+    display: none
+
+  input, textarea
+    border: 1px solid #e3e3e3
+    font-family: Poppins
+    outline: none
+    padding: 1em
+    transition: border-color 0.3s
+
+    &:focus
+      border: 1px solid $yellow
+
+  textarea
+    height: 8em
+    width: 100%
+
+  input
+    flex: 1 100%
+
+    &[type="submit"]
+      +button_action_principal
+      border: none
+      cursor: pointer
+      flex: 0
+      margin-top: .5em
 
 section, article
   background: #fff
@@ -1117,39 +1153,8 @@ h1
           &:hover
             color: $yellow
 
-  form
-    display: flex
-    flex: 1 50%
-    flex-grow: 1
-    flex-wrap: wrap
-    order: 0
-
-    label
-      display: none
-
-    input, textarea
-      border: 1px solid #e3e3e3
-      font-family: Poppins
-      outline: none
-      padding: 1em
-      transition: border-color 0.3s
-
-      &:focus
-        border: 1px solid $yellow
-
-    textarea
-      height: 8em
-      width: 100%
-
-    input
-      flex: 1 100%
-
-      &[type="submit"]
-        +button_action_principal
-        border: none
-        cursor: pointer
-        flex: 0
-        margin-top: .5em
+  p
+    order: 2
 
 
 /* MENTIONS LÉGALES */

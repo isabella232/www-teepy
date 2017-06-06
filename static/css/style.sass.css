@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* VARIABLES */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600");
+.asterisk {
+  color: #787676;
+  font-size: .9em; }
+
 /* COMMON */
 #click-to-call {
   background: #383737;
@@ -103,6 +107,40 @@ nav {
         padding: 1em;
         text-decoration: inherit;
         transition: color 0.3s; }
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%; }
+  form label {
+    display: none; }
+  form input, form textarea {
+    border: 1px solid #e3e3e3;
+    font-family: Poppins;
+    outline: none;
+    padding: 1em;
+    transition: border-color 0.3s; }
+    form input:focus, form textarea:focus {
+      border: 1px solid #faba49; }
+  form textarea {
+    height: 8em;
+    width: 100%; }
+  form input {
+    flex: 1 100%; }
+    form input[type="submit"] {
+      background: #499cfb;
+      color: #fff;
+      font-size: 0.9em;
+      font-weight: 500;
+      padding: 1em;
+      text-decoration: none;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+      flex: 0;
+      margin-top: .5em; }
+      form input[type="submit"]:hover {
+        background: #308efa; }
 
 section, article {
   background: #fff;
@@ -1042,41 +1080,8 @@ h1 {
         transition: color .3s; }
         #contact article ul li a:hover {
           color: #faba49; }
-  #contact form {
-    display: flex;
-    flex: 1 50%;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    order: 0; }
-    #contact form label {
-      display: none; }
-    #contact form input, #contact form textarea {
-      border: 1px solid #e3e3e3;
-      font-family: Poppins;
-      outline: none;
-      padding: 1em;
-      transition: border-color 0.3s; }
-      #contact form input:focus, #contact form textarea:focus {
-        border: 1px solid #faba49; }
-    #contact form textarea {
-      height: 8em;
-      width: 100%; }
-    #contact form input {
-      flex: 1 100%; }
-      #contact form input[type="submit"] {
-        background: #499cfb;
-        color: #fff;
-        font-size: 0.9em;
-        font-weight: 500;
-        padding: 1em;
-        text-decoration: none;
-        transition: background 0.3s;
-        border: none;
-        cursor: pointer;
-        flex: 0;
-        margin-top: .5em; }
-        #contact form input[type="submit"]:hover {
-          background: #308efa; }
+  #contact p {
+    order: 2; }
 
 /* MENTIONS LÉGALES */
 #legal dl dt {

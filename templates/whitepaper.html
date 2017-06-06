@@ -1,0 +1,25 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <section id="whitepaper">
+    <h2>Télécharger le livre blanc Backoffice</h2>
+    <h3>Comment redonner de la valeur au métier de pharmacien en optimisant la gestion du tiers-payant ?</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan suscipit nibh, a molestie tortor laoreet sit amet.
+      Sed non condimentum ante, et ullamcorper ligula. Aliquam eu ornare nisl. In lacinia mauris nunc, non vulputate arcu interdum vel.
+      Pellentesque at mauris sed quam pulvinar pretium. Aliquam erat volutpat. Curabitur in lobortis mi. Praesent sit amet bibendum dui. Vivamus in semper massa.
+    </p>
+    <form action="{{ url_for('contact') }}" method="POST">
+      <label for="name">Vos nom et prénom</label>
+      <input id="name" name="name" placeholder="Vos nom et prénom*" required="required"/>
+      <label for="email">Votre adresse mail</label>
+      <input id="email" name="email" placeholder="Votre adresse mail*" required="required"/>
+      <label for="societe">Votre société</label>
+      <input id="societe" name="societe" placeholder="Votre société*" required="required"/>
+      <label for="phone">Téléphone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone*" required="required"/>
+      <input type="submit" value="Télécharger le livre blanc" />
+    </form>
+    <p class="asterisk">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
+  </section>
+{% endblock content %}
