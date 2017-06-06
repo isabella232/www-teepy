@@ -445,48 +445,74 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #ddd;
+  /*background: #ddd*/
   padding: 2em 0; }
   #features p {
     flex: 1 100%;
     text-align: center; }
   #features dl {
-    background: url(../images/computer_feature.png) top no-repeat #eee;
+    background: url(../images/computer_feature.png) top no-repeat #fff;
     box-sizing: border-box;
     columns: 2;
-    column-gap: 600px;
+    column-gap: 450px;
     margin: 0 -2em;
-    min-height: 400px;
+    min-height: 450px;
     position: relative;
     width: 100%; }
     #features dl dt {
       display: inline-block;
-      padding: 2em 0;
+      font-weight: 600;
+      margin: 1em auto;
+      text-align: center;
       width: 100%; }
+      #features dl dt#features_monitoring::before {
+        content: url(../images/control.svg); }
+      #features dl dt#features_statistics::before {
+        content: url(../images/features_statistics.svg); }
+      #features dl dt#features_devices::before {
+        content: url(../images/interoperability.svg); }
+      #features dl dt#features_selecting::before {
+        content: url(../images/features_selecting.svg); }
+      #features dl dt#features_mail::before {
+        content: url(../images/features_mail.svg); }
       #features dl dt::before {
-        background: #383737;
+        background: #e3e3e3;
         border-radius: 100%;
         content: "";
         display: block;
-        height: 1.8em;
-        margin: 0 auto;
-        width: 1.8em; }
+        height: 4em;
+        margin: 0 auto 1em;
+        transition: background .2s;
+        width: 4em; }
         #features dl dt::before::after {
           content: "";
           display: block;
           width: 100%; }
+    #features dl dt:hover::before {
+      background: #faba49; }
     #features dl dt:hover + dd {
-      display: inline-block; }
+      display: inline-block;
+      opacity: 1;
+      height: 2em;
+      visibility: visible; }
       #features dl dt:hover + dd::before {
+        background: url(../images/stats.png) center no-repeat;
+        bottom: 141px;
         content: "";
         display: block;
-        width: 421px;
-        height: 300px;
-        background: red;
-        margin: 0 auto 55px; }
+        height: 280px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        width: 422px; }
     #features dl dd {
       bottom: 0;
-      display: none;
+      /*display: none*/
+      opacity: 0;
+      height: 0;
+      visibility: hidden;
+      transition: all .3s ease .15s;
       left: 0;
       margin-left: 0;
       position: absolute;
@@ -505,7 +531,7 @@ h1 {
   max-width: 1000px;
   position: relative; }
   #plus dl:before {
-    background: lightgrey;
+    background: #e3e3e3;
     content: '';
     height: 1px;
     left: 0;
@@ -513,7 +539,7 @@ h1 {
     top: 50%;
     width: 100%; }
   #plus dl dt {
-    border-right: 1px solid lightgrey;
+    border-right: 1px solid #e3e3e3;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

@@ -2,6 +2,7 @@
 
 $yellow: #faba49
 $grey: #383737
+$lightgrey: #e3e3e3
 $blue: #499cfb
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600')
 
@@ -164,7 +165,7 @@ form
     display: none
 
   input, textarea
-    border: 1px solid #e3e3e3
+    border: 1px solid $lightgrey
     font-family: Poppins
     outline: none
     padding: 1em
@@ -375,7 +376,7 @@ h1
 
     li
       align-items: center
-      border: 1px solid #e3e3e3
+      border: 1px solid $lightgrey
       box-sizing: border-box
       display: flex
       flex-direction: column
@@ -421,7 +422,7 @@ h1
 
     li
       align-items: center
-      border: 1px solid #e3e3e3
+      border: 1px solid $lightgrey
       box-sizing: border-box
       display: flex
       flex-direction: column
@@ -458,7 +459,7 @@ h1
   display: flex
   flex-wrap: wrap
   justify-content: center
-  background: #ddd
+  /*background: #ddd*/
   padding: 2em 0
 
   p
@@ -466,48 +467,80 @@ h1
     text-align: center
 
   dl
-    background: url(../images/computer_feature.png) top no-repeat #eee
+    background: url(../images/computer_feature.png) top no-repeat #fff
     box-sizing: border-box
     columns: 2
-    column-gap: 600px
+    column-gap: 450px
     margin: 0 -2em
-    min-height: 400px
+    min-height: 450px
     position: relative
     width: 100%
 
     dt
       display: inline-block
-      padding: 2em 0
+      font-weight: 600
+      margin: 1em auto
+      text-align: center
       width: 100%
 
+      &#features_monitoring::before
+        content: url(../images/control.svg)
+
+      &#features_statistics::before
+        content: url(../images/features_statistics.svg)
+
+      &#features_devices::before
+        content: url(../images/interoperability.svg)
+
+      &#features_selecting::before
+        content: url(../images/features_selecting.svg)
+
+      &#features_mail::before
+        content: url(../images/features_mail.svg)
+
       &::before
-        background: $grey
+        background: $lightgrey
         border-radius: 100%
         content: ""
         display: block
-        height: 1.8em
-        margin: 0 auto
-        width: 1.8em
+        height: 4em
+        margin: 0 auto 1em
+        transition: background .2s
+        width: 4em
 
         &::after
           content: ""
           display: block
           width: 100%
 
+    dt:hover::before
+      background: $yellow
+
     dt:hover + dd
       display: inline-block
+      opacity: 1
+      height: 2em
+      visibility: visible
 
       &::before
+        background: url(../images/stats.png) center no-repeat
+        bottom: 141px
         content: ""
         display: block
-        width: 421px
-        height: 300px
-        background: red
-        margin: 0 auto 55px
+        height: 280px
+        left: 0
+        margin: 0 auto
+        position: absolute
+        right: 0
+        width: 422px
 
     dd
       bottom: 0
-      display: none
+      /*display: none*/
+      opacity: 0
+      height: 0
+      visibility: hidden
+      transition: all .3s ease .15s
       left: 0
       margin-left: 0
       position: absolute
@@ -528,7 +561,7 @@ h1
     position: relative
 
     &:before
-      background: lightgrey
+      background: $lightgrey
       content: ''
       height: 1px
       left: 0
@@ -537,7 +570,7 @@ h1
       width: 100%
 
     dt
-      border-right: 1px solid lightgrey
+      border-right: 1px solid $lightgrey
       box-sizing: border-box
       display: flex
       flex-direction: column
@@ -656,7 +689,7 @@ h1
         +button_action_secondary
 
     &#association_benefits
-      border: 1px solid #e3e3e3
+      border: 1px solid $lightgrey
 
       p
         color: $yellow
@@ -689,7 +722,7 @@ h1
     flex: 1 100%
 
   #certification
-    border: 1px solid #e3e3e3
+    border: 1px solid $lightgrey
     display: flex
     flex: 1 50%
     flex-wrap: wrap
@@ -913,7 +946,7 @@ h1
 
     &#value
       align-items: center
-      background: #e3e3e3
+      background: $lightgrey
       height: 400px
 
       h3
@@ -966,7 +999,7 @@ h1
 /* RECRUTEMENT */
 #recruitment
   article
-    border: 1px solid #e3e3e3
+    border: 1px solid $lightgrey
     border-bottom: 0
     font-weight: 300
     padding: 2em 4em 0 4em
@@ -1066,7 +1099,7 @@ h1
     justify-content: center
 
     li
-      border: 1px solid #e3e3e3
+      border: 1px solid $lightgrey
       box-sizing: border-box
       display: flex
       height: auto
