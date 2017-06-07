@@ -445,7 +445,6 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*background: #ddd*/
   padding: 2em 0; }
   #features p {
     flex: 1 100%;
@@ -465,16 +464,8 @@ h1 {
       margin: 1em auto;
       text-align: center;
       width: 100%; }
-      #features dl dt#features_monitoring::before {
-        content: url(../images/control.svg); }
-      #features dl dt#features_statistics::before {
-        content: url(../images/features_statistics.svg); }
-      #features dl dt#features_devices::before {
-        content: url(../images/interoperability.svg); }
-      #features dl dt#features_selecting::before {
-        content: url(../images/features_selecting.svg); }
-      #features dl dt#features_mail::before {
-        content: url(../images/features_mail.svg); }
+      #features dl dt:hover::before {
+        background: #faba49; }
       #features dl dt::before {
         background: #e3e3e3;
         border-radius: 100%;
@@ -484,19 +475,30 @@ h1 {
         margin: 0 auto 1em;
         transition: background .2s;
         width: 4em; }
-        #features dl dt::before::after {
-          content: "";
-          display: block;
-          width: 100%; }
-    #features dl dt:hover::before {
-      background: #faba49; }
+      #features dl dt#features_monitoring + dd::before {
+        background: url(../images/features_monitoring_screen.png); }
+      #features dl dt#features_monitoring::before {
+        content: url(../images/features_monitoring.svg); }
+      #features dl dt#features_statistics + dd::before {
+        background: url(../images/features_statistics_screen.png); }
+      #features dl dt#features_statistics::before {
+        content: url(../images/features_statistics.svg); }
+      #features dl dt#features_mail + dd::before {
+        background: url(../images/features_mail_screen.png); }
+      #features dl dt#features_mail::before {
+        content: url(../images/features_mail.svg); }
+      #features dl dt#features_selecting + dd::before {
+        background: url(../images/features_selecting_screen.png); }
+      #features dl dt#features_selecting::before {
+        content: url(../images/features_selecting.svg); }
     #features dl dt:hover + dd {
       display: inline-block;
-      opacity: 1;
+      font-weight: 500;
       height: 2em;
+      opacity: 1;
+      padding: 2em 0;
       visibility: visible; }
       #features dl dt:hover + dd::before {
-        background: url(../images/stats.png) center no-repeat;
         bottom: 141px;
         content: "";
         display: block;
@@ -508,15 +510,14 @@ h1 {
         width: 422px; }
     #features dl dd {
       bottom: 0;
-      /*display: none*/
-      opacity: 0;
       height: 0;
-      visibility: hidden;
-      transition: all .3s ease .15s;
       left: 0;
       margin-left: 0;
+      opacity: 0;
       position: absolute;
       text-align: center;
+      transition: all .3s ease .15s;
+      visibility: hidden;
       width: 100%; }
 
 #plus h3 {
