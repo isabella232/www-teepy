@@ -414,8 +414,6 @@ h1 {
     text-align: center;
     transition: background 0.3s, border-color 0.3s;
     width: 270px; }
-    #advantages ul li strong {
-      font-size: 1.1em; }
     #advantages ul li:before {
       display: block;
       content: '';
@@ -445,9 +443,9 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2em 0; }
-  #features p {
-    flex: 1 100%;
+  padding: 2em 0 0; }
+  #features h3 {
+    font-weight: 400;
     text-align: center; }
   #features dl {
     background: url(../images/computer_feature.png) top no-repeat #fff;
@@ -461,7 +459,7 @@ h1 {
     #features dl dt {
       display: inline-block;
       font-weight: 600;
-      margin: 1em auto;
+      margin: 2em auto;
       text-align: center;
       width: 100%; }
       #features dl dt:hover::before {
@@ -544,7 +542,7 @@ h1 {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    font-weight: 600;
+    font-weight: 700;
     height: 300px;
     line-height: 60px;
     margin: 0 -0.5px;
@@ -568,7 +566,6 @@ h1 {
       content: url(../images/pharmacy.svg); }
   #plus dl dd {
     box-sizing: border-box;
-    font-weight: 300;
     height: 300px;
     margin-left: -398px;
     padding: 170px 3em 0;
@@ -576,16 +573,15 @@ h1 {
     width: 398px; }
 
 #demo {
-  background: #f3f4f8;
+  background: #499cfb;
+  max-width: none;
   text-align: center; }
   #demo h2 {
-    background: #fff;
-    margin: 0;
-    padding: 1em 0 0; }
+    color: #fff; }
+    #demo h2::after {
+      background: #fff; }
   #demo p {
-    background: #fff;
-    margin: 0;
-    padding: 2em; }
+    color: #fff; }
     #demo p strong {
       display: block; }
   #demo a {
@@ -595,7 +591,9 @@ h1 {
     font-weight: 500;
     padding: 1em;
     text-decoration: none;
-    transition: background 0.3s; }
+    transition: background 0.3s;
+    border: 2px solid #fff;
+    display: inline-block; }
     #demo a:hover {
       background: #308efa; }
 

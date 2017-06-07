@@ -433,9 +433,6 @@ h1
       transition: background 0.3s, border-color 0.3s
       width: 270px
 
-      strong
-        font-size: 1.1em
-
       &:before
         display: block
         content: ''
@@ -459,10 +456,10 @@ h1
   display: flex
   flex-wrap: wrap
   justify-content: center
-  padding: 2em 0
+  padding: 2em 0 0
 
-  p
-    flex: 1 100%
+  h3
+    font-weight: 400
     text-align: center
 
   dl
@@ -478,7 +475,7 @@ h1
     dt
       display: inline-block
       font-weight: 600
-      margin: 1em auto
+      margin: 2em auto
       text-align: center
       width: 100%
 
@@ -560,7 +557,7 @@ h1
       box-sizing: border-box
       display: flex
       flex-direction: column
-      font-weight: 600
+      font-weight: 700
       height: 300px
       line-height: 60px
       margin: 0 -0.5px
@@ -583,7 +580,6 @@ h1
 
     dd
       box-sizing: border-box
-      font-weight: 300
       height: 300px
       margin-left: -398px
       padding: 170px 3em 0
@@ -591,23 +587,26 @@ h1
       width: 398px
 
 #demo
-  background: #f3f4f8
+  background: $blue
+  max-width: none
   text-align: center
 
   h2
-    background: #fff
-    margin: 0
-    padding: 1em 0 0
+    color: #fff
+
+    &::after
+      background: #fff
+
   p
-    background: #fff
-    margin: 0
-    padding: 2em
+    color: #fff
 
     strong
       display: block
 
   a
     +button_action_principal
+    border: 2px solid #fff
+    display: inline-block
 
 
 /* EXTERNALISATION */
