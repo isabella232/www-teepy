@@ -3,7 +3,6 @@
 import mandrill
 from flask import Flask, redirect, render_template, request, url_for
 
-
 app = Flask(__name__)
 app.config.from_envvar('BACKOFFICE_CONFIG', silent=True)
 
