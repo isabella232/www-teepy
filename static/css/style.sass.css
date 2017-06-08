@@ -117,6 +117,7 @@ form {
   form input, form textarea {
     border: 1px solid #e3e3e3;
     font-family: Poppins;
+    margin: .3em 0;
     outline: none;
     padding: 1em;
     transition: border-color 0.3s; }
@@ -174,7 +175,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   font-size: .9em;
-  /*max-width: 1200px*/
+  justify-content: space-around;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
@@ -182,17 +183,15 @@ footer {
   footer ul {
     list-style: none;
     margin: 0; }
-  footer #contact_informations {
-    flex: 1 50%; }
-    footer #contact_informations::before {
-      content: url(../images/logo-footer.svg);
-      display: block;
-      width: 150px; }
-    footer #contact_informations a {
-      color: #faba49;
-      transition: color .3s; }
-      footer #contact_informations a:hover {
-        color: #fbc971; }
+  footer #contact_informations::before {
+    content: url(../images/logo-footer.svg);
+    display: block;
+    width: 150px; }
+  footer #contact_informations a {
+    color: #faba49;
+    transition: color .3s; }
+    footer #contact_informations a:hover {
+      color: #fbc971; }
   footer #legals_mentions {
     margin-top: 50px;
     text-align: right; }
@@ -874,8 +873,7 @@ h1 {
         margin: 0; }
         #numbers section#income p:first-of-type {
           align-self: flex-end;
-          font-size: 1.2em;
-          font-weight: 300; }
+          font-size: 1.2em; }
           #numbers section#income p:first-of-type::after {
             content: "*";
             font-size: .8em;
@@ -950,7 +948,6 @@ h1 {
 #recruitment article {
   border: 1px solid #e3e3e3;
   border-bottom: 0;
-  font-weight: 300;
   padding: 2em 4em 0 4em; }
   #recruitment article strong {
     display: block; }
@@ -1088,7 +1085,6 @@ h1 {
     flex: 1 50%;
     order: 1; }
     #contact article ul {
-      font-weight: 300;
       list-style: none;
       margin: 0; }
       #contact article ul li:first-of-type {

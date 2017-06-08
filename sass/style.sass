@@ -167,6 +167,7 @@ form
   input, textarea
     border: 1px solid $lightgrey
     font-family: Poppins
+    margin: .3em 0
     outline: none
     padding: 1em
     transition: border-color 0.3s
@@ -221,7 +222,7 @@ footer
   display: flex
   flex-wrap: wrap
   font-size: .9em
-  /*max-width: 1200px*/
+  justify-content: space-around
   margin: 0 auto
   width: 100%
   box-sizing: border-box
@@ -232,8 +233,6 @@ footer
     margin: 0
 
   #contact_informations
-      flex: 1 50%
-
       &::before
         content: url(../images/logo-footer.svg)
         display: block
@@ -889,7 +888,6 @@ h1
         &:first-of-type
           align-self: flex-end
           font-size: 1.2em
-          font-weight: 300
 
           &::after
             content: "*"
@@ -992,7 +990,6 @@ h1
   article
     border: 1px solid $lightgrey
     border-bottom: 0
-    font-weight: 300
     padding: 2em 4em 0 4em
 
     strong
@@ -1135,7 +1132,6 @@ h1
     order: 1
 
     ul
-      font-weight: 300
       list-style: none
       margin: 0
 
