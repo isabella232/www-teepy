@@ -721,8 +721,7 @@ h1 {
     flex: 1 50%;
     flex-wrap: wrap; }
     #formation #certification p {
-      flex: 1 75%;
-      font-weight: 300; }
+      flex: 1 75%; }
     #formation #certification::before {
       content: url(../images/feature_formation.svg);
       display: inline-block;
@@ -745,10 +744,9 @@ h1 {
     flex-wrap: wrap;
     margin: 0 1em; }
     #formation #organism ul {
-      list-style: none;
-      font-weight: 300; }
+      list-style: none; }
       #formation #organism ul li:first-of-type {
-        font-weight: 500; }
+        font-weight: 600; }
   #formation #lessons {
     display: flex;
     flex-wrap: wrap;
@@ -764,12 +762,10 @@ h1 {
       align-items: flex-start; }
       #formation #lessons section h3 {
         color: #faba49;
-        font-size: 1.5em;
-        font-weight: 300;
-        line-height: 1.2em;
+        font-size: 1.2em;
+        font-weight: 500;
         margin-top: 0; }
       #formation #lessons section h4 {
-        font-weight: 400;
         margin: .5em 0; }
       #formation #lessons section a {
         background: #fff;
@@ -791,10 +787,10 @@ h1 {
     #formation #lessons h2 {
       flex: 1 100%; }
     #formation #lessons ul {
-      font-weight: 300; }
+      font-size: .9em; }
     #formation #lessons p {
       flex: 1 100%;
-      font-weight: 300;
+      font-size: .9em;
       margin: 0; }
       #formation #lessons p:first-of-type {
         border-bottom: 1px solid #383737;
