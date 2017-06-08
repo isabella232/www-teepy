@@ -165,6 +165,9 @@ h2 {
     width: 35px;
     margin: 0 auto; }
 
+h3 {
+  font-size: 1.1em; }
+
 footer {
   background: #383737;
   color: #fff;
@@ -606,25 +609,24 @@ h1 {
     flex: 1 100%; }
   #outsourcing p {
     margin: .2em 0; }
-    #outsourcing p:last-of-type {
-      font-weight: 300; }
     #outsourcing p strong {
       color: #faba49; }
   #outsourcing section {
-    background: #fafafa;
     flex: 1 50%;
-    margin: 1em 0;
-    padding: 2em 3em; }
+    margin: 1em 0 0;
+    padding: 1em; }
     #outsourcing section h3 {
-      font-size: 1em; }
-    #outsourcing section#homemade {
-      margin-left: -2em; }
-    #outsourcing section#economy {
-      margin-right: -2em; }
+      font-size: 1.1em;
+      margin: 0;
+      text-align: center; }
     #outsourcing section ul {
-      font-weight: 300;
       list-style: none;
       padding-left: 0; }
+      #outsourcing section ul li {
+        border-top: 1px solid #e3e3e3;
+        padding: 1em 0; }
+        #outsourcing section ul li:last-of-type {
+          border-bottom: 1px solid #e3e3e3; }
       #outsourcing section ul li::before {
         content: url(../images/check-list.svg);
         display: inline-block;
@@ -666,38 +668,46 @@ h1 {
         border-color: #308efa;
         color: #fff; }
     #association section#association_benefits {
-      border: 1px solid #e3e3e3; }
+      /*border: 1px solid $lightgrey*/
+      background: #f7f7f7;
+      padding-top: 0; }
       #association section#association_benefits p {
-        color: #faba49; }
-      #association section#association_benefits dl dt {
-        font-weight: 500; }
-        #association section#association_benefits dl dt#reduce:before {
-          content: url(../images/reduce.svg);
-          display: inline-block;
-          height: 50px;
-          float: left;
-          margin-right: 1em;
-          vertical-align: middle;
-          width: 50px; }
-        #association section#association_benefits dl dt#management:before {
-          content: url(../images/management.svg);
-          display: inline-block;
-          height: 50px;
-          float: left;
-          margin-right: 1em;
-          vertical-align: middle;
-          width: 50px; }
-        #association section#association_benefits dl dt#evaluate:before {
-          content: url(../images/evaluate.svg);
-          display: inline-block;
-          height: 50px;
-          float: left;
-          margin-right: 1em;
-          vertical-align: middle;
-          width: 50px; }
-      #association section#association_benefits dl dd {
-        font-weight: 300;
-        margin: 0 0 1em 0; }
+        background: #faba49;
+        font-weight: 600;
+        margin: 0 -2em;
+        padding: 1em 1em 1em 2em; }
+      #association section#association_benefits dl {
+        margin: 2em 0 0; }
+        #association section#association_benefits dl dt {
+          font-weight: 600; }
+          #association section#association_benefits dl dt#reduce:before {
+            content: url(../images/reduce.svg);
+            display: inline-block;
+            height: 50px;
+            float: left;
+            margin-right: 1em;
+            vertical-align: middle;
+            width: 50px; }
+          #association section#association_benefits dl dt#management:before {
+            content: url(../images/management.svg);
+            display: inline-block;
+            height: 50px;
+            float: left;
+            margin-right: 1em;
+            vertical-align: middle;
+            width: 50px; }
+          #association section#association_benefits dl dt#evaluate:before {
+            content: url(../images/evaluate.svg);
+            display: inline-block;
+            height: 50px;
+            float: left;
+            margin-right: 1em;
+            vertical-align: middle;
+            width: 50px; }
+        #association section#association_benefits dl dd {
+          margin: 0 0 1em 0; }
+          #association section#association_benefits dl dd:last-of-type {
+            margin-bottom: 0; }
 
 /* FORMATION */
 #formation {

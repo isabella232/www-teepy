@@ -212,6 +212,9 @@ h2
     width: 35px
     margin: 0 auto
 
+h3
+  font-size: 1.1em
+
 footer
   background: $grey
   color: #fff
@@ -621,31 +624,29 @@ h1
   p
     margin: .2em 0
 
-    &:last-of-type
-      font-weight: 300
-
     strong
       color: $yellow
 
   section
-    background: #fafafa
     flex: 1 50%
-    margin: 1em 0
-    padding: 2em 3em
+    margin: 1em 0 0
+    padding: 1em
 
     h3
-      font-size: 1em
-
-    &#homemade
-      margin-left: -2em
-
-    &#economy
-      margin-right: -2em
+      font-size: 1.1em
+      margin: 0
+      text-align: center
 
     ul
-      font-weight: 300
       list-style: none
       padding-left: 0
+
+      li
+        border-top: 1px solid $lightgrey
+        padding: 1em 0
+
+        &:last-of-type
+          border-bottom: 1px solid $lightgrey
 
       li::before
         content: url(../images/check-list.svg)
@@ -674,14 +675,21 @@ h1
         +button_action_secondary
 
     &#association_benefits
-      border: 1px solid $lightgrey
+      /*border: 1px solid $lightgrey*/
+      background: lighten($lightgrey, 8%)
+      padding-top: 0
 
       p
-        color: $yellow
+        background: $yellow
+        font-weight: 600
+        margin: 0 -2em
+        padding: 1em 1em 1em 2em
 
       dl
+        margin: 2em 0 0
+
         dt
-          font-weight: 500
+          font-weight: 600
 
           @each $name in reduce, management, evaluate
             &##{$name}:before
@@ -694,8 +702,10 @@ h1
               width: 50px
 
         dd
-          font-weight: 300
           margin: 0 0 1em 0
+
+          &:last-of-type
+            margin-bottom: 0
 
 
 /* FORMATION */
