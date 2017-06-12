@@ -148,7 +148,7 @@ section, article {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 2em;
+  padding: 1em 2em;
   width: 100%; }
 
 h2 {
@@ -398,6 +398,8 @@ h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
+  #video a {
+    content: url(../images/youtube.png); }
 
 #advantages ul {
   display: flex;
@@ -419,8 +421,8 @@ h1 {
     #advantages ul li:before {
       display: block;
       content: '';
-      height: 100px;
-      margin-top: 2em;
+      height: 80px;
+      margin-top: 3em;
       width: 25%; }
     #advantages ul li:hover {
       background: #383737;
@@ -578,6 +580,8 @@ h1 {
   background: #499cfb;
   max-width: none;
   text-align: center; }
+  #demo > *:not(h2) {
+    font-size: 1.2em; }
   #demo h2 {
     color: #fff; }
     #demo h2::after {
@@ -585,7 +589,8 @@ h1 {
   #demo p {
     color: #fff; }
     #demo p strong {
-      display: block; }
+      display: block;
+      margin-top: .5em; }
   #demo a {
     background: #499cfb;
     color: #fff;
@@ -594,10 +599,15 @@ h1 {
     padding: 1em;
     text-decoration: none;
     transition: background 0.3s;
+    background: #fff;
     border: 2px solid #fff;
-    display: inline-block; }
+    color: #499cfb;
+    display: inline-block;
+    font-weight: 600; }
     #demo a:hover {
       background: #308efa; }
+    #demo a:hover {
+      color: #fff; }
 
 /* EXTERNALISATION */
 #outsourcing {
@@ -971,39 +981,38 @@ h1 {
 
 /* CONTACT */
 #offer {
-  background: url(../images/computer_contact.png) top 8em right no-repeat #faba49;
+  background: #faba49;
+  max-width: none;
   padding: 0; }
   #offer::before {
-    background: #fff;
-    content: url(../images/logo.png);
+    background: url(../images/logo.svg) no-repeat center #fff;
+    content: "";
     display: block;
-    padding: 1em; }
+    height: 8em; }
   #offer h2 {
-    font-size: 1.5em;
     line-height: 1.5em;
     margin: 0;
-    padding: 1em 2em 0;
-    text-align: left; }
+    padding: 1em 2em 0; }
     #offer h2::after {
-      background: #383737;
-      margin: .5em 0 0; }
+      background: #383737; }
     #offer h2 strong {
       display: block; }
   #offer ul {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    margin: 0;
+    margin: 1em auto 0;
+    max-width: 1200px;
     padding: 1em 2em; }
     #offer ul li {
       box-sizing: border-box;
       list-style: none;
-      margin: .5em 0; }
+      text-align: center;
+      width: 33%; }
       #offer ul li:before {
         content: '';
         display: inline-block;
-        margin: 0 .5em;
+        margin-right: .5em;
         vertical-align: middle;
         width: 30px; }
       #offer ul li#control:before {
@@ -1016,6 +1025,8 @@ h1 {
         content: url(../images/decrease.svg); }
       #offer ul li#catalog:before {
         content: url(../images/catalog.svg); }
+      #offer ul li#catalog {
+        flex-grow: 1; }
   #offer p {
     font-size: 0.8em;
     margin: 0 1em 0;
@@ -1041,7 +1052,7 @@ h1 {
     margin: 2px;
     text-align: center;
     transition: border-color .3s;
-    width: 250px; }
+    width: 200px; }
     #recap ul li:hover {
       border-color: #faba49; }
       #recap ul li:hover a {
@@ -1050,22 +1061,22 @@ h1 {
       content: url(../images/feature_webtool.svg);
       display: block;
       margin: 0 auto;
-      width: 150px; }
+      width: 100px; }
     #recap ul li.feature_outsourcing a:before {
       content: url(../images/feature_outsourcing.svg);
       display: block;
       margin: 0 auto;
-      width: 150px; }
+      width: 100px; }
     #recap ul li.feature_formation a:before {
       content: url(../images/feature_formation.svg);
       display: block;
       margin: 0 auto;
-      width: 150px; }
+      width: 100px; }
     #recap ul li.feature_association a:before {
       content: url(../images/feature_association.svg);
       display: block;
       margin: 0 auto;
-      width: 150px; }
+      width: 100px; }
     #recap ul li a {
       display: block;
       color: #383737;
