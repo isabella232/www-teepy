@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import mandrill
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, Response, redirect, render_template, request, url_for
 
 app = Flask(__name__)
 app.config.from_envvar('BACKOFFICE_CONFIG', silent=True)
@@ -13,6 +13,11 @@ MANDRILL_KEY = app.config.get('MANDRILL_KEY')
 @app.route('/<page>')
 def page(page='index'):
     return render_template('{}.html'.format(page), page=page)
+
+
+@app.route('/robots.txt')
+def robots():
+    return Response('User-agent: *\nDisallow: \n', mimetype='text/plain')
 
 
 @app.route('/contact', methods=['POST'])
