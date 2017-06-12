@@ -25,28 +25,43 @@ def robots():
     return Response('User-agent: *\nDisallow: \n', mimetype='text/plain')
 
 
-@app.route('/contact', methods=['POST'])
-def contact():
+@app.route('/contact/<name>', methods=['POST'])
+def contact(name=None):
     form = request.form
     message = {
         'to': [{'email': 'backoffice@lagestiondutierspayant.fr'}],
         'subject': 'Prise de contact sur le site de BackOffice',
         'from_email': 'contact@kozea.fr'}
-    if 'name' in form:
+    if name == 'contact':
         message['html'] = '<br>'.join([
-            'Nom : %s' % form['name'],
-            'Téléphone : %s' % form['phone'],
-            'Email : %s' % form['email'],
-            'Demande : %s ' % form['message']])
-    else:
+            'Nom : %s' % form.get('name', ''),
+            'Email : %s' % form.get('email', ''),
+            'Société : %s' % form.get('company', ''),
+            'Téléphone : %s' % form.get('phone', ''),
+            'Code promotionnel : %s' % form.get('promotion', ''),
+            'Demande : %s ' % form.get('message', '')])
+    elif name == 'phone':
         message['html'] = '<br>'.join([
             'Demande de rappel au téléphone.',
-            'Téléphone : %s' % form['phone']])
+            'Téléphone : %s' % form.get('phone')])
+    elif name == 'whitepaper':
+        message['html'] = 'Téléchargement du livre blanc Backoffice<br><br>'
+        message['html'] += '<br>'.join([
+            'Nom : %s' % form.get('name', ''),
+            'Email : %s' % form.get('email', ''),
+            'Société : %s' % form.get('company', ''),
+            'Téléphone : %s' % form.get('phone', '')])
+    else:
+        abort(404)
 
     if not app.debug:
         mandrill.Mandrill(MANDRILL_KEY).messages.send(message=message)
 
-    return redirect(url_for('page', page='contact_confirmation'))
+    if name == 'whitepaper':
+        return redirect(
+            url_for('static', filename='pdf/livre_blanc_backoffice.pdf'))
+    else:
+        return redirect(url_for('page', page='contact_confirmation'))
 
 
 @app.errorhandler(404)

@@ -9,7 +9,7 @@
       Sed non condimentum ante, et ullamcorper ligula. Aliquam eu ornare nisl. In lacinia mauris nunc, non vulputate arcu interdum vel.
       Pellentesque at mauris sed quam pulvinar pretium. Aliquam erat volutpat. Curabitur in lobortis mi. Praesent sit amet bibendum dui. Vivamus in semper massa.
     </p>
-    <form action="{{ url_for('contact') }}" method="POST">
+    <form action="{{ url_for('contact', name='whitepaper') }}" method="POST">
       <label for="name">Vos nom et prénom</label>
       <input id="name" name="name" placeholder="Vos nom et prénom*" required="required"/>
       <label for="email">Votre adresse mail</label>
