@@ -482,9 +482,9 @@ h1
     background: url(../images/computer_feature.png) top no-repeat #fff
     box-sizing: border-box
     columns: 2
-    column-gap: 600px
+    column-gap: 620px
     margin: 0 -2em
-    min-height: 500px
+    min-height: 520px
     position: relative
     width: 100%
 
@@ -495,8 +495,11 @@ h1
       text-align: center
       width: 100%
 
-      &:hover::before
-        background: $yellow
+      &:hover
+        color: $yellow
+
+        &::before
+          background: $yellow
 
       &::before
         background: $lightgrey
@@ -517,14 +520,12 @@ h1
 
     dt:hover + dd
       display: inline-block
-      font-weight: 500
       height: 2em
       opacity: 1
-      /*padding: 2em 0*/
       visibility: visible
 
       &::before
-        bottom: 98px
+        bottom: 118px
         content: ""
         display: block
         height: 368px
@@ -535,11 +536,15 @@ h1
         width: 588px
 
     dd
+      background: $yellow
       bottom: 0
+      font-size: 1.2em
+      font-weight: 500
       height: 0
       left: 0
       margin-left: 0
       opacity: 0
+      padding: 1em 0 .5em
       position: absolute
       text-align: center
       transition: all .6s ease .15s

@@ -46,6 +46,27 @@
       section
         width: 100%
 
+  #features
+    dl
+      background-position: bottom
+      background: none
+      column-gap: 2em
+
+      dt:hover + dd
+        &::before
+          content: none
+
+      dd
+        background: none
+        display: block
+        font-size: inherit
+        height: auto
+        opacity: 1
+        position: initial
+        visibility: visible
+        transition: none
+
+
   #numbers
     section
       min-height: 0
