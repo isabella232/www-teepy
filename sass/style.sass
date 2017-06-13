@@ -98,7 +98,6 @@ $blue: #499cfb
         background: lighten($yellow, 8%)
 
 body
-  /*background: #f5f5f5*/
   color: $grey
   display: flex
   flex-direction: column
@@ -218,15 +217,16 @@ h3
 
 footer
   background: $grey
+  bottom: 0
+  box-sizing: border-box
   color: #fff
   display: flex
   flex-wrap: wrap
   font-size: .9em
   justify-content: space-around
   margin: 0 auto
-  width: 100%
-  box-sizing: border-box
   padding: 2em
+  width: 100%
 
   ul
     list-style: none
@@ -1030,8 +1030,8 @@ h1
           font-weight: 600
           text-transform: none
 
-/* CONTACT */
 
+/* CONTACT */
 #offer
   background: $yellow
   max-width: none
@@ -1191,3 +1191,20 @@ h1
     &:hover
       color: lighten($yellow, 5%)
       text-decoration: underline
+
+/* 404 */
+#error
+  text-align: center
+
+  h2
+    background: url(../images/error.svg) no-repeat center
+    font-size: 0
+    height: 250px
+
+    &::after
+      display: none
+
+  a
+    +button_action_principal
+    display: inline-block
+    margin-bottom: 2em

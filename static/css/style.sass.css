@@ -57,7 +57,6 @@
         background: #fbc971; }
 
 body {
-  /*background: #f5f5f5*/
   color: #383737;
   display: flex;
   flex-direction: column;
@@ -171,15 +170,16 @@ h3 {
 
 footer {
   background: #383737;
+  bottom: 0;
+  box-sizing: border-box;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
   font-size: .9em;
   justify-content: space-around;
   margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 2em; }
+  padding: 2em;
+  width: 100%; }
   footer ul {
     list-style: none;
     margin: 0; }
@@ -1129,5 +1129,27 @@ h1 {
   #legal h3 a:hover {
     color: #fbc362;
     text-decoration: underline; }
+
+/* 404 */
+#error {
+  text-align: center; }
+  #error h2 {
+    background: url(../images/error.svg) no-repeat center;
+    font-size: 0;
+    height: 250px; }
+    #error h2::after {
+      display: none; }
+  #error a {
+    background: #499cfb;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 1em;
+    text-decoration: none;
+    transition: background 0.3s;
+    display: inline-block;
+    margin-bottom: 2em; }
+    #error a:hover {
+      background: #308efa; }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */
