@@ -271,11 +271,17 @@ footer
       transition: opacity .3s
 
       @each $name in facebook, linkedin, youtube, twitter, instagram, github
-        &##{$name} a
+        &##{$name} a::before
           content: url(../images/#{$name}.svg)
+          display: block
           height: 30px
           margin: 0 .2em
           width: 30px
+
+        a
+          color: transparent
+          display: block
+          font-size: 0
 
       &:hover
         opacity: 1
@@ -297,7 +303,6 @@ h1
 #introduction
   align-items: baseline
   background: none
-  box-sizing: initial
   display: flex
   flex-wrap: wrap
 
@@ -307,7 +312,6 @@ h1
     font-weight: 400
     line-height: 1.5em
     margin: 0
-    order: 0
     text-align: left
     width: 100%
 
@@ -316,10 +320,11 @@ h1
 
   ul
     color: #fff
+    flex: 1 100%
     font-size: 1.2em
     line-height: 2em
     list-style-image: url(../images/check.svg)
-    order: 1
+    order: 0
     padding-left: 0
 
     a:not(#contact_ask):not(#white_book)
@@ -337,14 +342,14 @@ h1
 
   #contact_ask
     +button_action_principal
-    order: 3
+    order: 1
 
   #white_book
     +button_action_principal
     background: #fff
     color: $grey
     margin-left: .5em
-    order: 4
+    order: 2
 
     &:hover
       background: darken(#fff, 5%)
@@ -352,7 +357,7 @@ h1
   p
     background: $yellow
     margin: 0 0 0 auto
-    order: 2
+    order: 3
     padding: 2em
     text-align: center
 
@@ -416,7 +421,12 @@ h1
   flex-wrap: wrap
 
   a
-    content: url(../images/youtube.png)
+    color: transparent
+    font-size: 0
+    display: block
+    &::before
+      content: url(../images/youtube.png)
+      display: block
 
 #advantages
   ul

@@ -211,36 +211,66 @@ footer {
     footer #social li {
       opacity: .7;
       transition: opacity .3s; }
-      footer #social li#facebook a {
+      footer #social li#facebook a::before {
         content: url(../images/facebook.svg);
+        display: block;
         height: 30px;
         margin: 0 .2em;
         width: 30px; }
-      footer #social li#linkedin a {
+      footer #social li a {
+        color: transparent;
+        display: block;
+        font-size: 0; }
+      footer #social li#linkedin a::before {
         content: url(../images/linkedin.svg);
+        display: block;
         height: 30px;
         margin: 0 .2em;
         width: 30px; }
-      footer #social li#youtube a {
+      footer #social li a {
+        color: transparent;
+        display: block;
+        font-size: 0; }
+      footer #social li#youtube a::before {
         content: url(../images/youtube.svg);
+        display: block;
         height: 30px;
         margin: 0 .2em;
         width: 30px; }
-      footer #social li#twitter a {
+      footer #social li a {
+        color: transparent;
+        display: block;
+        font-size: 0; }
+      footer #social li#twitter a::before {
         content: url(../images/twitter.svg);
+        display: block;
         height: 30px;
         margin: 0 .2em;
         width: 30px; }
-      footer #social li#instagram a {
+      footer #social li a {
+        color: transparent;
+        display: block;
+        font-size: 0; }
+      footer #social li#instagram a::before {
         content: url(../images/instagram.svg);
+        display: block;
         height: 30px;
         margin: 0 .2em;
         width: 30px; }
-      footer #social li#github a {
+      footer #social li a {
+        color: transparent;
+        display: block;
+        font-size: 0; }
+      footer #social li#github a::before {
         content: url(../images/github.svg);
+        display: block;
         height: 30px;
         margin: 0 .2em;
         width: 30px; }
+      footer #social li a {
+        color: transparent;
+        display: block;
+        font-size: 0; }
       footer #social li:hover {
         opacity: 1; }
 
@@ -260,7 +290,6 @@ h1 {
 #introduction {
   align-items: baseline;
   background: none;
-  box-sizing: initial;
   display: flex;
   flex-wrap: wrap; }
   #introduction h2 {
@@ -269,17 +298,17 @@ h1 {
     font-weight: 400;
     line-height: 1.5em;
     margin: 0;
-    order: 0;
     text-align: left;
     width: 100%; }
     #introduction h2::after {
       content: none; }
   #introduction ul {
     color: #fff;
+    flex: 1 100%;
     font-size: 1.2em;
     line-height: 2em;
     list-style-image: url(../images/check.svg);
-    order: 1;
+    order: 0;
     padding-left: 0; }
     #introduction ul a:not(#contact_ask):not(#white_book) {
       color: #fff;
@@ -298,7 +327,7 @@ h1 {
     padding: 1em;
     text-decoration: none;
     transition: background 0.3s;
-    order: 3; }
+    order: 1; }
     #introduction #contact_ask:hover {
       background: #308efa; }
   #introduction #white_book {
@@ -312,7 +341,7 @@ h1 {
     background: #fff;
     color: #383737;
     margin-left: .5em;
-    order: 4; }
+    order: 2; }
     #introduction #white_book:hover {
       background: #308efa; }
     #introduction #white_book:hover {
@@ -320,7 +349,7 @@ h1 {
   #introduction p {
     background: #faba49;
     margin: 0 0 0 auto;
-    order: 2;
+    order: 3;
     padding: 2em;
     text-align: center; }
     #introduction p strong {
@@ -399,7 +428,12 @@ h1 {
   justify-content: center;
   flex-wrap: wrap; }
   #video a {
-    content: url(../images/youtube.png); }
+    color: transparent;
+    font-size: 0;
+    display: block; }
+    #video a::before {
+      content: url(../images/youtube.png);
+      display: block; }
 
 #advantages ul {
   display: flex;
