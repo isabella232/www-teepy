@@ -1,6 +1,7 @@
 {% extends "_layout.jinja2" %}
 
 {% block content %}
+  <article id="contact">
     <section id="offer">
       <h2>La gestion de votre Tiers-Payant<strong> à partir de 29,90 €/mois !**</strong> sans engagement.</h2>
       <ul>
@@ -21,7 +22,7 @@
         <li class="feature_association"><a href="{{ url_for('page', page='outsourcing') }}#association">Offre groupement</a></li>
       </ul>
     </section>
-    <section id="contact">
+    <section id="contact_form">
       <h2>Contact</h2>
       <article>
         <ul>
@@ -50,4 +51,5 @@
       </form>
       <p class="asterisk">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
     </section>
+  </article>
 {% endblock content %}
