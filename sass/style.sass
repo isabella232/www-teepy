@@ -6,6 +6,7 @@ $lightgrey: #e3e3e3
 $blue: #499cfb
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600')
 
+
 =button_action_principal
   background: $blue
   color: #fff
@@ -421,12 +422,12 @@ h1
   flex-wrap: wrap
 
   a
+    background: url(../images/youtube.png) no-repeat center
     color: transparent
     font-size: 0
     display: block
-    &::before
-      content: url(../images/youtube.png)
-      display: block
+    min-height: 450px
+    width: 100%
 
 #advantages
   ul
@@ -774,7 +775,6 @@ h1
     flex-wrap: wrap
     justify-content: space-between
     padding: 2em 0
-    margin: 0 -2em
 
     section
       margin: 0
@@ -804,6 +804,7 @@ h1
       flex: 1 100%
 
     ul
+      flex: 1 100%
       font-size: .9em
 
     p
@@ -865,7 +866,7 @@ h1
     display: flex
     flex: 1 50%
     flex-wrap: wrap
-    height: 400px
+    min-height: 400px
     padding: 0
 
     h3
@@ -1218,3 +1219,5 @@ h1
     +button_action_principal
     display: inline-block
     margin-bottom: 2em
+
+@import _responsive

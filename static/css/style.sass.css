@@ -428,12 +428,12 @@ h1 {
   justify-content: center;
   flex-wrap: wrap; }
   #video a {
+    background: url(../images/youtube.png) no-repeat center;
     color: transparent;
     font-size: 0;
-    display: block; }
-    #video a::before {
-      content: url(../images/youtube.png);
-      display: block; }
+    display: block;
+    min-height: 450px;
+    width: 100%; }
 
 #advantages ul {
   display: flex;
@@ -794,8 +794,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2em 0;
-    margin: 0 -2em; }
+    padding: 2em 0; }
     #formation #lessons section {
       margin: 0;
       padding: 2em;
@@ -830,6 +829,7 @@ h1 {
     #formation #lessons h2 {
       flex: 1 100%; }
     #formation #lessons ul {
+      flex: 1 100%;
       font-size: .9em; }
     #formation #lessons p {
       flex: 1 100%;
@@ -879,7 +879,7 @@ h1 {
     display: flex;
     flex: 1 50%;
     flex-wrap: wrap;
-    height: 400px;
+    min-height: 400px;
     padding: 0; }
     #numbers section h3 {
       flex: 1 100%;
@@ -1185,5 +1185,58 @@ h1 {
     margin-bottom: 2em; }
     #error a:hover {
       background: #308efa; }
+
+@media screen and (max-width: 900px) {
+  body::before {
+    content: none; }
+  nav {
+    position: initial; }
+    nav ul {
+      justify-content: center; }
+  h1 {
+    background-position: center; }
+  #introduction p {
+    margin: .5em 0;
+    padding: 1em 0;
+    width: 100%; }
+    #introduction p strong {
+      display: inline-block; }
+  #presentation ul li {
+    width: 100%; }
+  #formation #certification, #formation #organism {
+    flex: 1 100%; }
+  #formation #certification {
+    justify-content: center; }
+    #formation #certification::before {
+      content: none; }
+  #formation #organism {
+    margin: 1em 0; }
+    #formation #organism ul {
+      text-align: center;
+      width: 100%; }
+  #formation #lessons section {
+    width: 100%; }
+  #numbers section {
+    min-height: 0; }
+    #numbers section#income {
+      flex: 1 100%; }
+    #numbers section#brake, #numbers section#wait {
+      flex: 1 100%;
+      padding: 1em 0; }
+      #numbers section#brake h3, #numbers section#wait h3 {
+        order: 0;
+        padding-top: 0; }
+    #numbers section#value {
+      flex: 1 100%;
+      height: auto;
+      order: 5; }
+    #numbers section#hidden_cost dl {
+      flex: 1 100%;
+      margin: 0; }
+  footer #social {
+    justify-content: center;
+    margin-top: 1em; }
+  footer #legals_mentions {
+    text-align: left; } }
 
 /*# sourceMappingURL=../static/css/style.sass.css.map */

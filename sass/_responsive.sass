@@ -1,0 +1,80 @@
+@media screen and (max-width: 900px)
+  body
+    &::before
+      content: none
+
+  nav
+    position: initial
+
+    ul
+      justify-content: center
+
+  h1
+    background-position: center
+
+  #introduction
+    p
+      margin: .5em 0
+      padding: 1em 0
+      width: 100%
+
+      strong
+        display: inline-block
+
+  #presentation
+    ul li
+      width: 100%
+
+  #formation
+    #certification, #organism
+      flex: 1 100%
+
+    #certification
+      justify-content: center
+
+      &::before
+        content: none
+
+    #organism
+      margin: 1em 0
+
+      ul
+        text-align: center
+        width: 100%
+
+    #lessons
+      section
+        width: 100%
+
+  #numbers
+    section
+      min-height: 0
+
+      &#income
+        flex: 1 100%
+
+      &#brake, &#wait
+        flex: 1 100%
+        padding: 1em 0
+
+        h3
+          order: 0
+          padding-top: 0
+
+      &#value
+        flex: 1 100%
+        height: auto
+        order: 5
+
+      &#hidden_cost
+        dl
+          flex: 1 100%
+          margin: 0
+
+  footer
+    #social
+      justify-content: center
+      margin-top: 1em
+
+    #legals_mentions
+      text-align: left
