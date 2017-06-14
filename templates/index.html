@@ -55,4 +55,16 @@
         <li id="optimization"><strong>Optimisation</strong> au comptoir de la gestion du Tiers-Payant.</li>
       </ul>
     </section>
+
+    <section id="news">
+      <h2>Actualités</h2>
+      {% for entry in news %}
+        <article>
+          <h3>{{ entry.title }}</h3>
+          <time pubdate datetime="{{ entry.isodate }}">{{ entry.date }}</time>
+          <img src="{{ entry.image or url_for('static', filename='news.svg') }}" alt="{{ entry.title }}" />
+          <p>{{ entry.description | safe }}</p>
+        </article>
+      {% endfor %}
+    </section>
 {% endblock content %}

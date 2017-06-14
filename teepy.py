@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+from email.utils import parsedate_to_datetime
+from locale import LC_ALL, setlocale
+from urllib.request import urlopen
+from xml.etree import ElementTree
+
 import jinja2
 import mandrill
 from flask import (Flask, Response, abort, redirect, render_template, request,
@@ -8,14 +13,38 @@ from flask import (Flask, Response, abort, redirect, render_template, request,
 app = Flask(__name__)
 app.config.from_envvar('BACKOFFICE_CONFIG', silent=True)
 
+setlocale(LC_ALL, 'fr_FR')
+
 MANDRILL_KEY = app.config.get('MANDRILL_KEY')
+
+
+def get_news():
+    tree = ElementTree.parse(urlopen(
+        'https://kozeagroup.wordpress.com/category/backoffice/feed/'))
+    news = []
+    for item in tree.find('channel').findall('item'):
+        date = parsedate_to_datetime(item.find('pubDate').text)
+        entry = {
+            'title': item.find('title').text,
+            'description': item.find('description').text,
+            'link': item.find('link').text,
+            'isodate': date.strftime('%Y-%m-%d'),
+            'date': date.strftime('%d %B %Y')}
+        image = item.find(
+            'media:thumbnail',
+            namespaces={'media': 'http://search.yahoo.com/mrss/'})
+        if image is not None:
+            entry['image'] = image.attrib['url']
+        news.append(entry)
+    return news
 
 
 @app.route('/')
 @app.route('/<page>')
 def page(page='index'):
+    extra = {'news': get_news()[:2]} if page == 'index' else {}
     try:
-        return render_template('{}.html'.format(page), page=page)
+        return render_template('{}.html'.format(page), page=page, **extra)
     except jinja2.exceptions.TemplateNotFound:
         abort(404)
 
