@@ -1197,6 +1197,9 @@ h1 {
     #error a:hover {
       background: #308efa; }
 
+#confirmation {
+  text-align: center; }
+
 @media screen and (max-width: 900px) {
   body::before {
     content: none; }
@@ -1292,6 +1295,8 @@ h1 {
     padding: 1em 0; }
     #contact #contact_form article ul {
       padding-left: 0; }
+  #whitepaper form {
+    width: 100%; }
   footer #social {
     justify-content: center;
     margin-top: 1em; }
