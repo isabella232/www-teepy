@@ -545,15 +545,15 @@ h1 {
         right: 0;
         width: 588px; }
     #features dl dd {
-      background: #faba49;
       bottom: 0;
+      border-bottom: 1px solid #e3e3e3;
       font-size: 1.2em;
       font-weight: 500;
       height: 0;
       left: 0;
       margin-left: 0;
       opacity: 0;
-      padding: 1em 0 .5em;
+      padding: 1em 0 0;
       position: absolute;
       text-align: center;
       transition: all .6s ease .15s;
@@ -617,6 +617,7 @@ h1 {
 #demo {
   background: #499cfb;
   max-width: none;
+  padding: 3em 2em;
   text-align: center; }
   #demo > *:not(h2) {
     font-size: 1.2em; }
@@ -1229,18 +1230,42 @@ h1 {
   #features dl {
     background-position: bottom;
     background: none;
-    column-gap: 2em; }
-    #features dl dt:hover + dd::before {
-      content: none; }
+    column-gap: 2em; } }
+  @media screen and (max-width: 900px) and (max-width: 800px) {
+    #features dl {
+      columns: 1; }
+      #features dl dt {
+        margin-bottom: .5em; } }
+
+@media screen and (max-width: 900px) {
+    #features dl dt:hover + dd {
+      height: auto; }
+      #features dl dt:hover + dd::before {
+        content: none; }
     #features dl dd {
       background: none;
+      border-bottom: none;
       display: block;
       font-size: inherit;
       height: auto;
       opacity: 1;
+      padding: 0;
       position: initial;
       visibility: visible;
       transition: none; }
+  #plus dl {
+    border: none; }
+    #plus dl::before {
+      content: none; }
+    #plus dl dt {
+      border: none;
+      height: auto; }
+    #plus dl dd {
+      height: auto;
+      margin-left: 0;
+      padding: 0;
+      text-align: left;
+      width: auto; }
   #numbers section {
     min-height: 0; }
     #numbers section#income {
