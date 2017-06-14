@@ -475,6 +475,36 @@ h1 {
     #advantages ul li#rationalization:before {
       content: url(../images/rationalization.svg); }
 
+#news {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #news article {
+    background: #499cfb;
+    color: #fff;
+    width: 33%; }
+    #news article time, #news article img {
+      display: none; }
+    #news article h3 {
+      font-size: 1.3em; }
+    #news article a {
+      background: #fff;
+      border: 2px solid #499cfb;
+      color: #499cfb;
+      display: inline-block;
+      font-size: 0.8em;
+      font-weight: 500;
+      padding: 1em;
+      text-decoration: none;
+      transition: background .3s, color .3s;
+      display: inline-block;
+      margin-top: 1.5em; }
+      #news article a:hover {
+        background: #308efa;
+        border-color: #308efa;
+        color: #fff; }
+
 /* GESTION EN INTERNE */
 #features {
   align-items: flex-start;

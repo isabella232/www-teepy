@@ -465,6 +465,28 @@ h1
         &##{$name}:before
           content: url(../images/#{$name}.svg)
 
+#news
+  box-sizing: border-box
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  article
+    background: $blue
+    color: #fff
+    width: 33%
+
+    time, img
+      display: none
+
+    h3
+      font-size: 1.3em
+
+    a
+      +button_action_secondary
+      display: inline-block
+      margin-top: 1.5em
+
 
 /* GESTION EN INTERNE */
 #features
