@@ -484,8 +484,6 @@ h1 {
     background: #499cfb;
     color: #fff;
     width: 33%; }
-    #news article time, #news article img {
-      display: none; }
     #news article h3 {
       font-size: 1.3em; }
     #news article a {

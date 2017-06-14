@@ -61,8 +61,6 @@
       {% for entry in news %}
         <article>
           <h3>{{ entry.title }}</h3>
-          <time pubdate datetime="{{ entry.isodate }}">{{ entry.date }}</time>
-          <img src="{{ entry.image or url_for('static', filename='news.svg') }}" alt="{{ entry.title }}" />
           <p>{{ entry.description | safe }}</p>
         </article>
       {% endfor %}
