@@ -668,6 +668,10 @@ h1
 
   h2
     flex: 1 100%
+    text-align: left
+
+    &::after
+      margin: 0
 
   p
     margin: .2em 0
@@ -676,9 +680,18 @@ h1
       color: $yellow
 
   section
-    flex: 1 50%
+    /*flex: 1 50%*/
     margin: 1em 0 0
     padding: 1em
+
+    &#outsourcing_explain
+      flex: 1 40%
+
+    &#economy
+      flex: 1 60%
+      columns: 2
+      column-gap: 2em
+
 
     h3
       font-size: 1.1em

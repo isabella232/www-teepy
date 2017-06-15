@@ -682,15 +682,24 @@ h1 {
   flex-wrap: wrap;
   justify-content: center; }
   #outsourcing h2 {
-    flex: 1 100%; }
+    flex: 1 100%;
+    text-align: left; }
+    #outsourcing h2::after {
+      margin: 0; }
   #outsourcing p {
     margin: .2em 0; }
     #outsourcing p strong {
       color: #faba49; }
   #outsourcing section {
-    flex: 1 50%;
+    /*flex: 1 50%*/
     margin: 1em 0 0;
     padding: 1em; }
+    #outsourcing section#outsourcing_explain {
+      flex: 1 40%; }
+    #outsourcing section#economy {
+      flex: 1 60%;
+      columns: 2;
+      column-gap: 2em; }
     #outsourcing section h3 {
       font-size: 1.1em;
       margin: 0;
