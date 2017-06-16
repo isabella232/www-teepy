@@ -6,7 +6,6 @@ $lightgrey: #e3e3e3
 $blue: #499cfb
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600')
 
-
 =button_action_principal
   background: $blue
   color: #fff
@@ -71,10 +70,10 @@ $blue: #499cfb
     background-size: 50%
     color: #fff
     content: ''
+    height: 45px
     left: 0
     position: absolute
     top: 0
-    height: 45px
     width: 45px
 
   label
@@ -102,7 +101,7 @@ body
   color: $grey
   display: flex
   flex-direction: column
-  font-family: Poppins
+  font-family: Poppins, sans-serif
   line-height: 1.618em
   margin: 0
 
@@ -190,7 +189,6 @@ form
       margin-top: .5em
 
 section, article
-  background: #fff
   box-sizing: border-box
   margin: 0 auto
   max-width: 1200px
@@ -210,8 +208,8 @@ h2
     content: ''
     display: block
     height: 3px
-    width: 35px
     margin: 0 auto
+    width: 35px
 
 h3
   font-size: 1.1em
@@ -251,8 +249,8 @@ footer
     text-align: right
 
     li:nth-child(2)::before
-      content: "*"
       color: $yellow
+      content: "*"
 
     a
       color: #fff
@@ -330,13 +328,8 @@ h1
 
     a:not(#contact_ask):not(#white_book)
       color: #fff
+      font-weight: 500
       transition: color .3s
-
-      &:before
-        content: "["
-
-      &:after
-        content: "]"
 
       &:hover
         color: $yellow
@@ -418,8 +411,8 @@ h1
 
 #video
   display: flex
-  justify-content: center
   flex-wrap: wrap
+  justify-content: center
 
   a
     background: url(../images/youtube.png) no-repeat center
@@ -466,7 +459,6 @@ h1
           content: url(../images/#{$name}.svg)
 
 #news
-  box-sizing: border-box
   display: flex
   flex-wrap: wrap
   justify-content: center
@@ -669,14 +661,12 @@ h1
   padding: 4em 2em 0 2em
 
   h2
-    flex: 1 100%
     text-align: left
 
     &::after
       margin: 0
 
-  p
-    strong
+  strong
       color: $yellow
 
   #outsourcing_explain
@@ -726,34 +716,30 @@ h1
     h3
       margin: 2em
 
-    dl
-      dt
-        font-weight: 600
+    dt
+      font-weight: 600
 
-        @each $name in reduce, management, evaluate
-          &##{$name}:before
-            content: url(../images/#{$name}.svg)
-            display: inline-block
-            height: 50px
-            float: left
-            margin-right: 1em
-            vertical-align: middle
-            width: 50px
+      @each $name in reduce, management, evaluate
+        &##{$name}:before
+          content: url(../images/#{$name}.svg)
+          display: inline-block
+          height: 50px
+          float: left
+          margin-right: 1em
+          vertical-align: middle
+          width: 50px
 
-      dd
-        margin: 0 0 1em 0
+    dd
+      margin: 0 0 1em 0
 
-        &:last-of-type
-          margin-bottom: 0
+      &:last-of-type
+        margin-bottom: 0
 
 
 /* FORMATION */
 #formation
   display: flex
   flex-wrap: wrap
-
-  h2
-    flex: 1 100%
 
   #certification
     border: 1px solid $lightgrey
@@ -778,7 +764,7 @@ h1
     display: flex
     flex: 1 25%
     flex-wrap: wrap
-    margin: 0 1em
+    margin: 0 0 0 1em
 
     ul
       list-style: none
@@ -793,12 +779,12 @@ h1
     padding: 2em 0
 
     section
+      align-items: flex-start
+      display: flex
+      flex-wrap: wrap
       margin: 0
       padding: 2em
       width: 33%
-      display: flex
-      flex-wrap: wrap
-      align-items: flex-start
 
       h3
         color: $yellow
@@ -816,16 +802,13 @@ h1
       &#novice, &#reject
         background: #fafafa
 
-    h2
+    ul, p
       flex: 1 100%
 
     ul
-      flex: 1 100%
-      font-size: .9em
+      padding-left: 1em
 
     p
-      flex: 1 100%
-      font-size: .9em
       margin: 0
 
       &:first-of-type
@@ -1027,35 +1010,32 @@ h1
 
 /* RECRUTEMENT */
 #recruitment
-  article
-    border: 1px solid $lightgrey
-    border-bottom: 0
-    padding: 2em 4em 0 4em
+  ul
+    padding-left: 1em
 
-    strong
-      display: block
+  strong
+    display: block
 
-    p
-      &:first-of-type a
-        color: $yellow
+  p
+    &:first-of-type a
+      color: $yellow
+      font-weight: 600
+      text-transform: uppercase
+      transition: color .3s
+
+      &:hover
+        color: lighten($yellow, 5%)
+
+    &:last-child
+      background: $yellow
+      font-weight: 400
+      padding: 1em 2em
+      text-align: center
+
+      a
+        color: $grey
         font-weight: 600
-        text-transform: uppercase
-        transition: color .3s
-
-        &:hover
-          color: lighten($yellow, 5%)
-
-      &:last-child
-        background: $yellow
-        font-weight: 400
-        margin: 0 -4em
-        padding: 2em
-        text-align: center
-
-        a
-          color: $grey
-          font-weight: 600
-          text-transform: none
+        text-transform: none
 
 
 /* CONTACT */
@@ -1094,8 +1074,8 @@ h1
 
     li
       box-sizing: border-box
-      list-style: none
       flex: 1 100%
+      list-style: none
 
       &:before
         content: ''
@@ -1117,8 +1097,8 @@ h1
     text-align: right
 
     &:before
-      content: "*"
       color: $grey
+      content: "*"
       margin-right: 0.2em
 
 #recap
@@ -1126,9 +1106,9 @@ h1
     box-sizing: border-box
     display: flex
     flex-wrap: wrap
+    justify-content: center
     list-style: none
     padding-left: 0
-    justify-content: center
 
     li
       border: 1px solid $lightgrey
@@ -1166,13 +1146,12 @@ h1
   flex: 1 50%
 
 #contact_form
-  box-sizing: border-box
   display: flex
   flex-wrap: wrap
   justify-content: center
 
-  h2
-    flex: 1 100%
+  p
+    order: 2
 
   article
     flex: 1 50%
@@ -1195,9 +1174,6 @@ h1
 
           &:hover
             color: $yellow
-
-  p
-    order: 2
 
 
 /* MENTIONS LÉGALES */
