@@ -661,10 +661,12 @@ h1
 
 
 /* EXTERNALISATION */
-#outsourcing
+#outsourcing, #association
+  align-items: center
   display: flex
   flex-wrap: wrap
   justify-content: center
+  padding: 4em 2em 0 2em
 
   h2
     flex: 1 100%
@@ -674,99 +676,75 @@ h1
       margin: 0
 
   p
-    margin: .2em 0
-
     strong
       color: $yellow
 
-  section
-    /*flex: 1 50%*/
-    margin: 1em 0 0
-    padding: 1em
+  #outsourcing_explain
+    flex: 1 40%
 
-    &#outsourcing_explain
-      flex: 1 40%
+  #economy
+    background: lighten($lightgrey, 8%)
+    columns: 2
+    column-gap: 2em
+    flex: 1 60%
+    padding: 4em 2em
 
-    &#economy
-      flex: 1 60%
-      columns: 2
-      column-gap: 2em
+  h3
+    margin: 0
 
+  ul
+    list-style: none
+    padding-left: 0
 
-    h3
-      font-size: 1.1em
-      margin: 0
-      text-align: center
+    li
+      padding: .5em 0
 
-    ul
-      list-style: none
-      padding-left: 0
-
-      li
-        border-top: 1px solid $lightgrey
-        padding: 1em 0
-
-        &:last-of-type
-          border-bottom: 1px solid $lightgrey
-
-      li::before
-        content: url(../images/check-list.svg)
-        display: inline-block
-        height: 20px
-        margin-right: .5em
-        vertical-align: middle
-        width: 20px
+    li::before
+      content: url(../images/check-list.svg)
+      display: inline-block
+      height: 20px
+      margin-right: .5em
+      vertical-align: middle
+      width: 20px
 
   a
     +button_action_principal
+    display: inline-block
 
 #association
-  box-sizing: border-box
-  display: flex
-  flex-wrap: wrap
+  #association_presentation
+    flex: 1 40%
 
-  h2
-    flex: 1 100%
+    a
+      +button_action_secondary
 
-  section
-    flex: 1 50%
+  #association_benefits
+    background: lighten($lightgrey, 8%)
+    flex: 1 60%
+    padding-top: 0
 
-    &#association_presentation
-      a
-        +button_action_secondary
+    h3
+      margin: 2em
 
-    &#association_benefits
-      /*border: 1px solid $lightgrey*/
-      background: lighten($lightgrey, 8%)
-      padding-top: 0
-
-      p
-        background: $yellow
+    dl
+      dt
         font-weight: 600
-        margin: 0 -2em
-        padding: 1em 1em 1em 2em
 
-      dl
-        margin: 2em 0 0
+        @each $name in reduce, management, evaluate
+          &##{$name}:before
+            content: url(../images/#{$name}.svg)
+            display: inline-block
+            height: 50px
+            float: left
+            margin-right: 1em
+            vertical-align: middle
+            width: 50px
 
-        dt
-          font-weight: 600
+      dd
+        margin: 0 0 1em 0
 
-          @each $name in reduce, management, evaluate
-            &##{$name}:before
-              content: url(../images/#{$name}.svg)
-              display: inline-block
-              height: 50px
-              float: left
-              margin-right: 1em
-              vertical-align: middle
-              width: 50px
-
-        dd
-          margin: 0 0 1em 0
-
-          &:last-of-type
-            margin-bottom: 0
+        &:last-of-type
+          margin-bottom: 0
 
 
 /* FORMATION */

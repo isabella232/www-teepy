@@ -677,122 +677,106 @@ h1 {
       color: #fff; }
 
 /* EXTERNALISATION */
-#outsourcing {
+#outsourcing, #association {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
-  #outsourcing h2 {
+  justify-content: center;
+  padding: 4em 2em 0 2em; }
+  #outsourcing h2, #association h2 {
     flex: 1 100%;
     text-align: left; }
-    #outsourcing h2::after {
+    #outsourcing h2::after, #association h2::after {
       margin: 0; }
-  #outsourcing p {
-    margin: .2em 0; }
-    #outsourcing p strong {
-      color: #faba49; }
-  #outsourcing section {
-    /*flex: 1 50%*/
-    margin: 1em 0 0;
-    padding: 1em; }
-    #outsourcing section#outsourcing_explain {
-      flex: 1 40%; }
-    #outsourcing section#economy {
-      flex: 1 60%;
-      columns: 2;
-      column-gap: 2em; }
-    #outsourcing section h3 {
-      font-size: 1.1em;
-      margin: 0;
-      text-align: center; }
-    #outsourcing section ul {
-      list-style: none;
-      padding-left: 0; }
-      #outsourcing section ul li {
-        border-top: 1px solid #e3e3e3;
-        padding: 1em 0; }
-        #outsourcing section ul li:last-of-type {
-          border-bottom: 1px solid #e3e3e3; }
-      #outsourcing section ul li::before {
-        content: url(../images/check-list.svg);
-        display: inline-block;
-        height: 20px;
-        margin-right: .5em;
-        vertical-align: middle;
-        width: 20px; }
-  #outsourcing a {
+  #outsourcing p strong, #association p strong {
+    color: #faba49; }
+  #outsourcing #outsourcing_explain, #association #outsourcing_explain {
+    flex: 1 40%; }
+  #outsourcing #economy, #association #economy {
+    background: #f7f7f7;
+    columns: 2;
+    column-gap: 2em;
+    flex: 1 60%;
+    padding: 4em 2em; }
+  #outsourcing h3, #association h3 {
+    margin: 0; }
+  #outsourcing ul, #association ul {
+    list-style: none;
+    padding-left: 0; }
+    #outsourcing ul li, #association ul li {
+      padding: .5em 0; }
+    #outsourcing ul li::before, #association ul li::before {
+      content: url(../images/check-list.svg);
+      display: inline-block;
+      height: 20px;
+      margin-right: .5em;
+      vertical-align: middle;
+      width: 20px; }
+  #outsourcing a, #association a {
     background: #499cfb;
     color: #fff;
     font-size: 0.9em;
     font-weight: 500;
     padding: 1em;
     text-decoration: none;
-    transition: background 0.3s; }
-    #outsourcing a:hover {
+    transition: background 0.3s;
+    display: inline-block; }
+    #outsourcing a:hover, #association a:hover {
       background: #308efa; }
 
-#association {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap; }
-  #association h2 {
-    flex: 1 100%; }
-  #association section {
-    flex: 1 50%; }
-    #association section#association_presentation a {
-      background: #fff;
-      border: 2px solid #499cfb;
-      color: #499cfb;
+#association #association_presentation {
+  flex: 1 40%; }
+  #association #association_presentation a {
+    background: #fff;
+    border: 2px solid #499cfb;
+    color: #499cfb;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 500;
+    padding: 1em;
+    text-decoration: none;
+    transition: background .3s, color .3s; }
+    #association #association_presentation a:hover {
+      background: #308efa;
+      border-color: #308efa;
+      color: #fff; }
+
+#association #association_benefits {
+  background: #f7f7f7;
+  flex: 1 60%;
+  padding-top: 0; }
+  #association #association_benefits h3 {
+    margin: 2em; }
+  #association #association_benefits dl dt {
+    font-weight: 600; }
+    #association #association_benefits dl dt#reduce:before {
+      content: url(../images/reduce.svg);
       display: inline-block;
-      font-size: 0.8em;
-      font-weight: 500;
-      padding: 1em;
-      text-decoration: none;
-      transition: background .3s, color .3s; }
-      #association section#association_presentation a:hover {
-        background: #308efa;
-        border-color: #308efa;
-        color: #fff; }
-    #association section#association_benefits {
-      /*border: 1px solid $lightgrey*/
-      background: #f7f7f7;
-      padding-top: 0; }
-      #association section#association_benefits p {
-        background: #faba49;
-        font-weight: 600;
-        margin: 0 -2em;
-        padding: 1em 1em 1em 2em; }
-      #association section#association_benefits dl {
-        margin: 2em 0 0; }
-        #association section#association_benefits dl dt {
-          font-weight: 600; }
-          #association section#association_benefits dl dt#reduce:before {
-            content: url(../images/reduce.svg);
-            display: inline-block;
-            height: 50px;
-            float: left;
-            margin-right: 1em;
-            vertical-align: middle;
-            width: 50px; }
-          #association section#association_benefits dl dt#management:before {
-            content: url(../images/management.svg);
-            display: inline-block;
-            height: 50px;
-            float: left;
-            margin-right: 1em;
-            vertical-align: middle;
-            width: 50px; }
-          #association section#association_benefits dl dt#evaluate:before {
-            content: url(../images/evaluate.svg);
-            display: inline-block;
-            height: 50px;
-            float: left;
-            margin-right: 1em;
-            vertical-align: middle;
-            width: 50px; }
-        #association section#association_benefits dl dd {
-          margin: 0 0 1em 0; }
-          #association section#association_benefits dl dd:last-of-type {
-            margin-bottom: 0; }
+      height: 50px;
+      float: left;
+      margin-right: 1em;
+      vertical-align: middle;
+      width: 50px; }
+    #association #association_benefits dl dt#management:before {
+      content: url(../images/management.svg);
+      display: inline-block;
+      height: 50px;
+      float: left;
+      margin-right: 1em;
+      vertical-align: middle;
+      width: 50px; }
+    #association #association_benefits dl dt#evaluate:before {
+      content: url(../images/evaluate.svg);
+      display: inline-block;
+      height: 50px;
+      float: left;
+      margin-right: 1em;
+      vertical-align: middle;
+      width: 50px; }
+  #association #association_benefits dl dd {
+    margin: 0 0 1em 0; }
+    #association #association_benefits dl dd:last-of-type {
+      margin-bottom: 0; }
 
 /* FORMATION */
 #formation {
