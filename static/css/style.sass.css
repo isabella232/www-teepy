@@ -113,14 +113,14 @@ form {
   width: 50%; }
   form label {
     display: none; }
-  form input, form textarea {
+  form input, form textarea, form select {
     border: 1px solid #e3e3e3;
     font-family: Poppins;
     margin: .3em 0;
     outline: none;
     padding: 1em;
     transition: border-color 0.3s; }
-    form input:focus, form textarea:focus {
+    form input:focus, form textarea:focus, form select:focus {
       border: 1px solid #faba49; }
   form textarea {
     height: 8em;
@@ -373,6 +373,7 @@ h1 {
     justify-content: center;
     margin: 1em;
     padding: 1em 2em;
+    text-align: center;
     transition: border-color 0.3s;
     width: 45%; }
     #presentation ul li:hover {
@@ -682,10 +683,10 @@ h1 {
     text-align: left; }
     #outsourcing h2::after, #association h2::after {
       margin: 0; }
-  #outsourcing strong, #association strong {
-    color: #faba49; }
   #outsourcing #outsourcing_explain, #association #outsourcing_explain {
     flex: 1 40%; }
+    #outsourcing #outsourcing_explain p:first-of-type strong, #association #outsourcing_explain p:first-of-type strong {
+      color: #faba49; }
   #outsourcing #economy, #association #economy {
     background: #f7f7f7;
     columns: 2;
@@ -898,7 +899,7 @@ h1 {
     padding: 0; }
     #numbers section h3 {
       flex: 1 100%;
-      font-size: 1.3em;
+      font-size: 1em;
       font-weight: 400;
       margin: 0;
       padding: 1em 2em;

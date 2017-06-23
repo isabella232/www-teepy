@@ -163,7 +163,7 @@ form
   label
     display: none
 
-  input, textarea
+  input, textarea, select
     border: 1px solid $lightgrey
     font-family: Poppins
     margin: .3em 0
@@ -384,6 +384,7 @@ h1
       justify-content: center
       margin: 1em
       padding: 1em 2em
+      text-align: center
       transition: border-color 0.3s
       width: 45%
 
@@ -666,11 +667,11 @@ h1
     &::after
       margin: 0
 
-  strong
-      color: $yellow
-
   #outsourcing_explain
     flex: 1 40%
+
+    p:first-of-type strong
+        color: $yellow
 
   #economy
     background: lighten($lightgrey, 8%)
@@ -870,7 +871,7 @@ h1
 
     h3
       flex: 1 100%
-      font-size: 1.3em
+      font-size: 1em
       font-weight: 400
       margin: 0
       padding: 1em 2em
