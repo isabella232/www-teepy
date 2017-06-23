@@ -889,8 +889,6 @@ h1 {
         color: #00ba83; }
     #numbers #study_pharminfo#study_pharminfo::before, #numbers #study_uspo#study_pharminfo::before {
       content: "*"; }
-    #numbers #study_pharminfo#study_uspo::before, #numbers #study_uspo#study_uspo::before {
-      content: "**"; }
   #numbers section {
     display: flex;
     flex: 1 50%;
@@ -983,10 +981,6 @@ h1 {
         text-align: center; }
         #numbers section#hidden_cost dl dt {
           font-size: 1.3em; }
-          #numbers section#hidden_cost dl dt::after {
-            content: "**";
-            font-size: .7em;
-            vertical-align: super; }
         #numbers section#hidden_cost dl dd {
           margin-left: 0; }
       #numbers section#hidden_cost ul {
@@ -1176,11 +1170,11 @@ h1 {
     display: block; }
 
 #legal h3 a {
-  color: #faba49;
+  color: #499cfb;
   text-decoration: none;
   transition: color .3s; }
   #legal h3 a:hover {
-    color: #fbc362;
+    color: #62aafc;
     text-decoration: underline; }
 
 /* 404 */

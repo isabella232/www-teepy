@@ -859,9 +859,6 @@ h1
       &::before
         content: "*"
 
-    &#study_uspo::before
-      content: "**"
-
   section
     display: flex
     flex: 1 50%
@@ -979,11 +976,6 @@ h1
 
         dt
           font-size: 1.3em
-
-          &::after
-            content: "**"
-            font-size: .7em
-            vertical-align: super
 
         dd
           margin-left: 0
@@ -1193,12 +1185,12 @@ h1
         display: block
 
   h3 a
-    color: $yellow
+    color: $blue
     text-decoration: none
     transition: color .3s
 
     &:hover
-      color: lighten($yellow, 5%)
+      color: lighten($blue, 5%)
       text-decoration: underline
 
 /* 404 */
