@@ -106,6 +106,9 @@ nav {
         padding: 1em;
         text-decoration: inherit;
         transition: color 0.3s; }
+      nav ul li.active a {
+        background: #faba49;
+        color: #383737; }
 
 form {
   display: flex;
