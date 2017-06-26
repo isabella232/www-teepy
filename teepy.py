@@ -63,6 +63,7 @@ def contact(name=None):
         'from_email': 'contact@kozea.fr'}
     if name == 'contact':
         message['html'] = '<br>'.join([
+            'Objet : %s' % form.get('object', ''),
             'Nom : %s' % form.get('name', ''),
             'Email : %s' % form.get('email', ''),
             'Société : %s' % form.get('company', ''),

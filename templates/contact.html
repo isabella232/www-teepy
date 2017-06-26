@@ -35,12 +35,13 @@
         </ul>
       </article>
       <form action="{{ url_for('contact', name='contact') }}" method="POST">
-        <select>
-          <option value="" disabled selected hidden>Sélectionnez l'objet de votre demande</option>
-          <option value="Audit">Audit gratuit</option>
-          <option value="Démonstration">Demande de démonstration</option>
-          <option value="Groupement">Informations groupement</option>
-          <option value="Formation">Inscription à une formation</option>
+        <label for="object">Object de votre demande</label>
+        <select name="object" id="object" required="required">
+          <option value="" disabled="disabled" selected="selected" hidden="hidden">Sélectionnez l'objet de votre demande</option>
+          <option value="Audit gratuit">Audit gratuit</option>
+          <option value="Demande de démonstration">Demande de démonstration</option>
+          <option value="Informations groupement">Informations groupement</option>
+          <option value="Inscription à une formation">Inscription à une formation</option>
         </select>
         <label for="name">Vos nom et prénom</label>
         <input id="name" name="name" placeholder="Vos nom et prénom*" required="required"/>
