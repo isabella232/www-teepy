@@ -107,8 +107,8 @@ nav {
         text-decoration: inherit;
         transition: color 0.3s; }
       nav ul li.active a {
-        background: #faba49;
-        color: #383737; }
+        color: #faba49;
+        font-weight: 500; }
 
 form {
   display: flex;
