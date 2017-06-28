@@ -401,8 +401,6 @@ h1 {
       display: block;
       margin: 0 auto;
       width: 200px; }
-    #presentation ul li.feature_formation:before {
-      width: 150px; }
     #presentation ul li strong {
       font-size: 1.1em;
       font-weight: 500; }
