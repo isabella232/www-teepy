@@ -14,15 +14,15 @@
   overflow: hidden;
   padding: 0 0 0 45px;
   position: fixed;
+  right: 0;
   top: 50%;
   transition: width 1s;
-  right: 0;
   width: 0;
   z-index: 10; }
   #click-to-call > * {
     box-sizing: border-box;
-    margin: 0.5em;
     flex: 1 100%;
+    margin: 0.5em;
     text-align: center;
     white-space: nowrap; }
   #click-to-call:hover {
@@ -570,8 +570,8 @@ h1 {
         right: 0;
         width: 588px; }
     #features dl dd {
-      bottom: 0;
       border-bottom: 1px solid #e3e3e3;
+      bottom: 0;
       font-size: 1.2em;
       font-weight: 500;
       height: 0;
@@ -748,24 +748,24 @@ h1 {
     #association #association_benefits dt#reduce:before {
       content: url(../images/reduce.svg);
       display: inline-block;
-      height: 50px;
       float: left;
+      height: 50px;
       margin-right: 1em;
       vertical-align: middle;
       width: 50px; }
     #association #association_benefits dt#management:before {
       content: url(../images/management.svg);
       display: inline-block;
-      height: 50px;
       float: left;
+      height: 50px;
       margin-right: 1em;
       vertical-align: middle;
       width: 50px; }
     #association #association_benefits dt#evaluate:before {
       content: url(../images/evaluate.svg);
       display: inline-block;
-      height: 50px;
       float: left;
+      height: 50px;
       margin-right: 1em;
       vertical-align: middle;
       width: 50px; }
@@ -1126,8 +1126,8 @@ h1 {
       margin: 0 auto;
       width: 100px; }
     #recap ul li a {
-      display: block;
       color: #383737;
+      display: block;
       flex: 1 100%;
       padding: 1em;
       text-decoration: none;
@@ -1219,6 +1219,8 @@ h1 {
     #introduction p strong {
       display: inline-block; }
   #presentation ul li {
+    width: 100%; }
+  #news article {
     width: 100%; }
   #formation #certification, #formation #organism {
     flex: 1 100%; }
