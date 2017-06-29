@@ -1,9 +1,9 @@
 /* VARIABLES */
 
-$yellow: #faba49
+$blue: #499cfb
 $grey: #383737
 $lightgrey: #e3e3e3
-$blue: #499cfb
+$yellow: #faba49
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600')
 
 =button_action_principal
@@ -48,16 +48,16 @@ $blue: #499cfb
   overflow: hidden
   padding: 0 0 0 45px
   position: fixed
+  right: 0
   top: 50%
   transition: width 1s
-  right: 0
   width: 0
   z-index: 10
 
   > *
     box-sizing: border-box
-    margin: 0.5em
     flex: 1 100%
+    margin: 0.5em
     text-align: center
     white-space: nowrap
 
@@ -549,8 +549,8 @@ h1
         width: 588px
 
     dd
-      bottom: 0
       border-bottom: 1px solid $lightgrey
+      bottom: 0
       font-size: 1.2em
       font-weight: 500
       height: 0
@@ -725,8 +725,8 @@ h1
         &##{$name}:before
           content: url(../images/#{$name}.svg)
           display: inline-block
-          height: 50px
           float: left
+          height: 50px
           margin-right: 1em
           vertical-align: middle
           width: 50px
