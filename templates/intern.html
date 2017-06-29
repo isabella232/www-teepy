@@ -1,0 +1,39 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+    <section id="features">
+      <h2>Un outil web pour une gestion en interne</h2>
+      <h3>Des fonctionnalités adaptées pour une gestion simplifiée du tiers-payant.</h3>
+      <dl>
+        <dt id="features_monitoring">Suivi et contrôle des impayés</dt>
+        <dd>Vous pouvez définir des alertes et relances jusqu'au règlement.</dd>
+        <dt id="features_statistics">Suivi statistique</dt>
+        <dd>Vous contrôlez les motifs de rejet et l'évolution de votre Tiers-Payant.</dd>
+        <dt id="features_mail">Accès à une base de courriers</dt>
+        <dd>Backoffice vous propose des courriers de relance prédéfinis avec archivage de ceux-ci.</dd>
+        <dt id="features_selecting">Tri</dt>
+        <dd>Seules les factures à traiter apparaissent dans le logiciel, plus besoin de trier les papiers.</dd>
+      </dl>
+    </section>
+
+    <section id="plus">
+      <h2>Les plus Backoffice</h2>
+      <h3>Des offres flexibles et adaptées à vos besoins en matière de Tiers-Payant.</h3>
+      <dl>
+        <dt id="web">Un outil web</dt>
+        <dd>Accessible sur tous les supports (tablette, smartphone, PC) avec une connexion internet.</dd>
+        <dt id="security">Sécurité des données</dt>
+        <dd>La plateforme est sécurisée à l'aide du protocole HTTPS.</dd>
+        <dt id="responsive">Interopérabilité</dt>
+        <dd>Backoffice est accessible par l'équipe officinale ou par un opérateur intervenant au sein de la pharmacie sur n'importe quel ordinateur.</dd>
+        <dt id="pharmacy">Connaissance</dt>
+        <dd>Toute notre équipe est spécialiste de l'univers de la pharmacie</dd>
+      </dl>
+    </section>
+
+    <section id="demo">
+      <h2>Découvrir Backoffice</h2>
+      <p>Vous souhaitez un aperçu de l'outil Backoffice ?<strong>Contactez-nous !</strong></p>
+      <a href="{{ url_for('page', page='contact') }}#contact">Demande de démonstration</a>
+    </section>
+{% endblock content %}

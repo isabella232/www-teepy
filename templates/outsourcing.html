@@ -1,0 +1,47 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+    <section id="outsourcing">
+      <section id="outsourcing_explain">
+        <h2>La gestion du tiers payant vous semble chronophage ?</h2>
+        <p>Elle représente en moyenne <strong>150 heures de travail par an</strong> pour le suivi et traitement des contentieux.</p>
+        <p><strong>Objectif pour le pharmacien :</strong> déléguer l’ensemble des tâches liées au tiers-payant à un expert de ce domaine.</p>
+        <a href="{{ url_for('page', page='contact') }}#contact">Demander un audit gratuit</a>
+      </section>
+      <section id="economy">
+        <h3>Avantages pour votre officine</h3>
+        <ul>
+          <li>La prise en charge de l’intégralité de la gestion du tiers-payant.</li>
+          <li>Un suivi statistique pour conseiller et aider à réduire le nombre rejets.</li>
+          <li>Un point personnalisé et régulier avec nos spécialistes du tiers-payant.</li>
+          <li>Diminution des encours avec un taux moyen d’impayés inférieur à 1 % contre une moyenne de 3 % en France.</li>
+          <li>Du temps de gagné.</li>
+          <li>Moins de litiges.</li>
+          <li>Économie et gain de productivité.</li>
+          <li>Économie de masse salariale.</li>
+        </ul>
+      </section>
+    </section>
+
+    <section id="association">
+      <section id="association_presentation">
+        <h2>Offre groupement</h2>
+        <h3>Vous êtes un groupement et vous souhaitez proposer un service de gestion de tiers-payant à vos pharmaciens adhérents ?</h3>
+        <p>Backoffice est la solution !
+          En gestion interne ou en externalisation, bénéficiez de la mutualisation de la gestion de votre tiers-payant grâce à l'outil Backoffice.
+        </p>
+        <a href="{{ url_for('page', page='contact') }}#contact">Plus d'informations</a>
+      </section>
+      <section id="association_benefits">
+        <h3>Backoffice vous accompagne pour</h3>
+        <dl>
+          <dt id="reduce">Réduire vos coûts</dt>
+          <dd>avec un seul et même outil pour tous vos pharmaciens</dd>
+          <dt id="management">Maîtriser votre gestion du tiers-payant</dt>
+          <dd>Backoffice est à votre disposition pour centraliser et mesurer le tiers-payant pour chacun de vos adhérents</dd>
+          <dt id="evaluate">Évaluer</dt>
+          <dd>la gestion du tiers-payant dans son ensemble grâce à la visualisation des données statistiques</dd>
+        </dl>
+      </section>
+    </section>
+{% endblock content %}

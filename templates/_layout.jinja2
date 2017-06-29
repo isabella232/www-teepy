@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
   <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Professionnels de santé, simplifiez la gestion de votre tiers-payant. Externalisation, formation, nous vous proposons un accompagnement personnalisé." />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <title>Backoffice - La gestion du tiers payant</title>
-    <link type="image/png" rel="icon" href="/static/images/favicon.png" />
+    <link type="image/png" rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" />
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.sass.css') }}" />
   </head>
 
   <body>
-    <h1>Backoffice</h1>
-
     <nav>
       <ul>
-        <li><a href="{{ url_for('page', page='index') }}#advantages">Les avantages</a></li>
-        <li><a href="{{ url_for('page', page='index') }}#features">Fonctionnalités</a></li>
-        <li><a href="{{ url_for('page', page='index') }}#numbers">Quelques chiffres</a></li>
-        <li><a href="{{ url_for('page', page='index') }}#plus">Les plus Backoffice</a></li>
-        <li><a href="{{ url_for('page', page='index') }}#outsourcing">Externalisation</a></li>
-        <li><a href="{{ url_for('page', page='index') }}#formation">Les formations</a></li>
-        <li><a href="{{ url_for('page', page='index') }}#offer">Offres</a></li>
-        <li><a href="{{ url_for('page', page='index') }}#contact">Contact</a></li>
+        <li {{ 'class="active"' if page == 'index' }}><a href="{{ url_for('page', page='index') }}">Accueil</a></li>
+        <li {{ 'class="active"' if page == 'intern' }}><a href="{{ url_for('page', page='intern') }}">Gestion en interne</a></li>
+        <li {{ 'class="active"' if page == 'outsourcing' }}><a href="{{ url_for('page', page='outsourcing') }}">Externalisation</a></li>
+        <li {{ 'class="active"' if page == 'formation' }}><a href="{{ url_for('page', page='formation') }}">Formation</a></li>
+        <li {{ 'class="active"' if page == 'numbers' }}><a href="{{ url_for('page', page='numbers') }}">Quelques chiffres</a></li>
+        <li {{ 'class="active"' if page == 'recruitment' }}><a href="{{ url_for('page', page='recruitment') }}">Recrutement</a></li>
+        <li {{ 'class="active"' if page == 'contact' }}><a href="{{ url_for('page', page='contact') }}">Contact</a></li>
       </ul>
     </nav>
 
@@ -29,7 +27,7 @@
 
     <aside id="click-to-call" onclick="/* iPhone hack */ return true">
       <p>Être rappelé ?</p>
-      <form action="{{ url_for('contact') }}" method="POST">
+      <form action="{{ url_for('contact', name='phone') }}" method="POST">
         <label for="phone">Téléphone</label>
         <input type="tel" id="phone" name="phone" placeholder="Téléphone" />
         <input type="submit" value="Envoyer" />
@@ -37,9 +35,28 @@
     </aside>
 
     <footer>
-      <ul>
-        <li><a href="{{ url_for('page', page='legal') }}">Informations légales</a></li>
-        <li><a href="https://kozea.fr/">Kozea</a></li>
+      <ul id="contact_informations">
+        <li>Tél. 04 27 11 83 97</li>
+        <li>Fax 04 27 11 83 98</li>
+        <li><a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
+        <li>Back Office Services</li>
+        <li>107, Boulevard de Stalingrad</li>
+        <li>69100 VILLEURBANNE</li>
+      </ul>
+
+      <ul id="legals_mentions">
+        <li><a href="{{ url_for('page', page='legal') }}">Mentions légales</a></li>
+        <li>Conditions Back Office Services</li>
+        <li>Backoffice, une marque <a href="https://kozea.fr/" target="_blank">Kozea group</a></li>
+      </ul>
+
+      <ul id="social">
+        <li id="facebook"><a href="https://www.facebook.com/kozeagroup/" target="_blank">Facebook</a></li>
+        <li id="linkedin"><a href="https://www.linkedin.com/company/kozeagroup" target="_blank">Linkedin</a></li>
+        <li id="youtube"><a href="https://www.youtube.com/channel/UCx5VGRSsjpRWhc55EpI_gEw" target="_blank">Youtube</a></li>
+        <li id="twitter"><a href="https://twitter.com/Kozeagroup" target="_blank">Twitter</a></li>
+        <li id="instagram"><a href="https://www.instagram.com/kozea/" target="_blank">Instagram</a></li>
+        <li id="github"><a href="https://github.com/Kozea" target="_blank">Github</a></li>
       </ul>
     </footer>
 

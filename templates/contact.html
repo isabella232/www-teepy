@@ -1,0 +1,64 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <article id="contact">
+    <section id="offer">
+      <h2>La gestion de votre Tiers-Payant<strong> à partir de 29,90 €/mois !*</strong> sans engagement.</h2>
+      <ul>
+        <li id="control">Suivi et contrôle des impayés</li>
+        <li id="interoperability">Interopérabilité</li>
+        <li id="traceability">Traçabilité des opérations effectuées</li>
+        <li id="decrease">Diminution des erreurs comptoirs</li>
+        <li id="catalog">Catalogue de formations sur le Tiers-Payant, du niveau débutant au niveau expert</li>
+      </ul>
+      <p>Consultez-nous pour un devis personnalisé</p>
+    </section>
+    <section id="recap">
+      <h2>Nos offres</h2>
+      <ul>
+        <li class="feature_webtool"><a href="{{ url_for('page', page='intern') }}">Gestion en interne</a></li>
+        <li class="feature_outsourcing"><a href="{{ url_for('page', page='outsourcing') }}">Service d'externalisation</a></li>
+        <li class="feature_formation"><a href="{{ url_for('page', page='formation') }}">Formation</a></li>
+        <li class="feature_association"><a href="{{ url_for('page', page='outsourcing') }}#association">Offre groupement</a></li>
+      </ul>
+    </section>
+    <section id="contact_form">
+      <h2>Contact</h2>
+      <article>
+        <ul>
+          <li>Back Office Services - Kozea group</li>
+          <li>107, Boulevard de Stalingrad</li>
+          <li>69100 Villeurbanne</li>
+          <li><strong>Tél.</strong> 04 27 11 83 97</li>
+          <li><strong>Fax.</strong> 04 27 11 83 98</li>
+          <li><strong>Email :</strong> <a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
+        </ul>
+      </article>
+      <form action="{{ url_for('contact', name='contact') }}" method="POST">
+        <label for="object">Objet de votre demande</label>
+        <select name="object" id="object" required="required">
+          <option value="" disabled="disabled" selected="selected" hidden="hidden">Sélectionnez l'objet de votre demande</option>
+          <option value="Demande d'informations">Demande d'informations</option>
+          <option value="Audit gratuit">Audit gratuit</option>
+          <option value="Demande de démonstration">Demande de démonstration</option>
+          <option value="Informations groupement">Informations groupement</option>
+          <option value="Inscription à une formation">Inscription à une formation</option>
+        </select>
+        <label for="name">Vos nom et prénom</label>
+        <input id="name" name="name" placeholder="Vos nom et prénom*" required="required"/>
+        <label for="email">Votre adresse mail</label>
+        <input id="email" name="email" placeholder="Votre adresse mail*" required="required"/>
+        <label for="company">Votre société</label>
+        <input id="company" name="company" placeholder="Votre société*" required="required"/>
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone*" required="required"/>
+        <label for="promotion">Votre code promotionnel</label>
+        <input id="promotion" name="promotion" placeholder="Votre code promotionnel" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Votre message"></textarea>
+        <input type="submit" value="Envoyer" />
+      </form>
+      <p class="asterisk">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
+    </section>
+  </article>
+{% endblock content %}
