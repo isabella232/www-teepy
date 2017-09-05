@@ -1,0 +1,29 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <section id="whitepaper">
+    <h2>Télécharger le livre blanc Backoffice</h2>
+    <h3>Comment redonner de la valeur au métier de pharmacien en optimisant la gestion du tiers-payant ?</h3>
+    <p> Ce livre blanc s'adresse aux pharmaciens d'officine à la recherche d'informations pertinentes pour mieux gérer leur tiers-payant.
+      Il propose des solutions pratiques pour une récupération rapide de trésorerie en pharmacie.
+    </p>
+    <p><strong>Informez-vous sur :</strong></p>
+    <ul>
+      <li>la gestion quotidienne du tiers-payant</li>
+      <li>des moyens d'optimisation du tiers-payant (formations, externalisation...)</li>
+    </ul>
+    <p>Avec le livre blanc Backoffice, libérez-vous d'une gestion de tiers-payant contraignante et chronophage pour vous recentrer sur votre métier de pharmacien !</p>
+    <form action="{{ url_for('contact', name='whitepaper') }}" method="POST">
+      <label for="name">Vos nom et prénom</label>
+      <input id="name" name="name" placeholder="Vos nom et prénom*" required="required"/>
+      <label for="email">Votre adresse mail</label>
+      <input id="email" name="email" placeholder="Votre adresse mail*" required="required"/>
+      <label for="societe">Votre société</label>
+      <input id="societe" name="societe" placeholder="Votre société*" required="required"/>
+      <label for="phone">Téléphone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone"/>
+      <input type="submit" value="Télécharger le livre blanc" />
+    </form>
+    <p class="asterisk">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
+  </section>
+{% endblock content %}
