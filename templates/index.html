@@ -62,6 +62,7 @@
         <article>
           <h3>{{ entry.title }}</h3>
           <p>{{ entry.description | safe }}</p>
+          <a href="{{ entry.link }}">Lire la suite</a>
         </article>
       {% endfor %}
     </section>
