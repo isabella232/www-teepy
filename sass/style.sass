@@ -299,8 +299,8 @@ header
 h1
   background: url(../images/logo-blanc.svg) left no-repeat
   color: transparent
-  height: 3em
-  margin: 1em auto
+  height: 2em
+  margin: 2em auto .5em
   max-width: 1200px
 
 #introduction
@@ -308,27 +308,41 @@ h1
   background: none
   display: flex
   flex-wrap: wrap
+  font-size: .9em
+  margin: 0 auto
+
+  article
+    display: flex
+    flex-wrap: wrap
+    margin: 0
+    padding: 0
+    width: 70%
 
   h2
     color: #fff
     font-size: 2.5em
-    font-weight: 400
+    font-weight: 600
     line-height: 1.5em
     margin: 0
     text-align: left
-    width: 100%
+
+    span
+      color: $yellow
 
     &::after
       content: none
 
   ul
     color: #fff
-    flex: 1 100%
-    font-size: 1.2em
-    line-height: 2em
+    font-size: 1.1em
     list-style-image: url(../images/check.svg)
-    order: 0
     padding-left: 0
+
+    li
+      margin-bottom: .5em
+
+      span
+        font-weight: 600
 
     a:not(#contact_ask):not(#white_book)
       color: #fff
@@ -340,22 +354,19 @@ h1
 
   #contact_ask
     +button_action_principal
-    order: 1
 
   #white_book
     +button_action_principal
     background: #fff
     color: $grey
     margin-left: .5em
-    order: 2
 
     &:hover
       background: darken(#fff, 5%)
 
   p
     background: $yellow
-    margin: 0 0 0 auto
-    order: 3
+    margin-left: auto
     padding: 2em
     text-align: center
 
@@ -369,6 +380,39 @@ h1
       &:last-of-type
         font-size: 1.2em
         text-transform: uppercase
+
+#interview
+  position: relative
+
+  h2
+    color: $blue
+    margin: 0 auto
+    padding: 0 5em
+
+    &::before
+      content: url(../images/player.svg)
+      display: block
+      height: 70px
+      margin: 0 auto
+      width: 70px
+
+    &::after
+      content: none
+
+  a
+    color: $blue
+    display: block
+    font-size: 1.2em
+    font-weight: 600
+    text-align: center
+
+    &::before
+      bottom: 0
+      content: ""
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
 
 #presentation
   ul

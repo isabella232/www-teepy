@@ -285,33 +285,43 @@ header {
 h1 {
   background: url(../images/logo-blanc.svg) left no-repeat;
   color: transparent;
-  height: 3em;
-  margin: 1em auto;
+  height: 2em;
+  margin: 2em auto .5em;
   max-width: 1200px; }
 
 #introduction {
   align-items: baseline;
   background: none;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  font-size: .9em;
+  margin: 0 auto; }
+  #introduction article {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 70%; }
   #introduction h2 {
     color: #fff;
     font-size: 2.5em;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.5em;
     margin: 0;
-    text-align: left;
-    width: 100%; }
+    text-align: left; }
+    #introduction h2 span {
+      color: #faba49; }
     #introduction h2::after {
       content: none; }
   #introduction ul {
     color: #fff;
-    flex: 1 100%;
-    font-size: 1.2em;
-    line-height: 2em;
+    font-size: 1.1em;
     list-style-image: url(../images/check.svg);
-    order: 0;
     padding-left: 0; }
+    #introduction ul li {
+      margin-bottom: .5em; }
+      #introduction ul li span {
+        font-weight: 600; }
     #introduction ul a:not(#contact_ask):not(#white_book) {
       color: #fff;
       font-weight: 500;
@@ -325,8 +335,7 @@ h1 {
     font-weight: 500;
     padding: 1em;
     text-decoration: none;
-    transition: background 0.3s;
-    order: 1; }
+    transition: background 0.3s; }
     #introduction #contact_ask:hover {
       background: #308efa; }
   #introduction #white_book {
@@ -339,16 +348,14 @@ h1 {
     transition: background 0.3s;
     background: #fff;
     color: #383737;
-    margin-left: .5em;
-    order: 2; }
+    margin-left: .5em; }
     #introduction #white_book:hover {
       background: #308efa; }
     #introduction #white_book:hover {
       background: #f2f2f2; }
   #introduction p {
     background: #faba49;
-    margin: 0 0 0 auto;
-    order: 3;
+    margin-left: auto;
     padding: 2em;
     text-align: center; }
     #introduction p strong {
@@ -359,6 +366,34 @@ h1 {
       #introduction p strong:last-of-type {
         font-size: 1.2em;
         text-transform: uppercase; }
+
+#interview {
+  position: relative; }
+  #interview h2 {
+    color: #499cfb;
+    margin: 0 auto;
+    padding: 0 5em; }
+    #interview h2::before {
+      content: url(../images/player.svg);
+      display: block;
+      height: 70px;
+      margin: 0 auto;
+      width: 70px; }
+    #interview h2::after {
+      content: none; }
+  #interview a {
+    color: #499cfb;
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center; }
+    #interview a::before {
+      bottom: 0;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0; }
 
 #presentation ul {
   box-sizing: border-box;
@@ -1212,12 +1247,17 @@ h1 {
       justify-content: center; }
   h1 {
     background-position: center; }
+  #introduction article {
+    padding: 0 1em;
+    width: 100%; }
   #introduction p {
-    margin: .5em 0;
+    margin: 2em 0;
     padding: 1em 0;
     width: 100%; }
     #introduction p strong {
       display: inline-block; }
+  #interview h2 {
+    padding: 0; }
   #presentation ul li {
     width: 100%; }
   #news article {
