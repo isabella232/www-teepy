@@ -390,12 +390,10 @@ h1 {
     #interview a::before {
       bottom: 0;
       content: "";
-      height: 100%;
       left: 0;
       position: absolute;
       right: 0;
-      top: 0;
-      width: 100%; }
+      top: 0; }
 
 #presentation ul {
   box-sizing: border-box;
