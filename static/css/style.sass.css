@@ -1177,6 +1177,18 @@ h1 {
   justify-content: center; }
   #contact_form p {
     order: 2; }
+  #contact_form form label:last-of-type {
+    display: block;
+    font-size: .8em; }
+    #contact_form form label:last-of-type input {
+      vertical-align: middle; }
+  #contact_form form p a {
+    color: #499cfb;
+    font-size: .9em;
+    text-decoration: none;
+    transition: color 0.3s; }
+    #contact_form form p a:hover {
+      color: #308efa; }
   #contact_form article {
     flex: 1 50%;
     order: 1; }

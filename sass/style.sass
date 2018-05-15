@@ -1191,6 +1191,23 @@ h1
   p
     order: 2
 
+  form
+    label:last-of-type
+      display: block
+      font-size: .8em
+
+      input
+        vertical-align: middle
+
+    p a
+      color: $blue
+      font-size: .9em
+      text-decoration: none
+      transition: color 0.3s
+
+      &:hover
+        color: darken($blue, 5%)
+
   article
     flex: 1 50%
     order: 1
