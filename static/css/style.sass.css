@@ -1225,6 +1225,19 @@ h1 {
     color: #62aafc;
     text-decoration: underline; }
 
+/* LIVRE BLANC */
+#whitepaper .legal {
+  background: #e3e3e3;
+  font-size: .85em;
+  margin-top: 2em;
+  padding: 2em; }
+  #whitepaper .legal a {
+    color: #499cfb;
+    text-decoration: none;
+    transition: color .3s; }
+    #whitepaper .legal a:hover {
+      color: #308efa; }
+
 /* 404 */
 #error {
   text-align: center; }
