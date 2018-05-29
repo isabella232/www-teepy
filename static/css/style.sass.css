@@ -38,8 +38,6 @@
     position: absolute;
     top: 0;
     width: 45px; }
-  #click-to-call label {
-    display: none; }
   #click-to-call input {
     border: none;
     box-sizing: border-box;
@@ -114,7 +112,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   width: 50%; }
-  form label {
+  form label:not(.checkbox) {
     display: none; }
   form input, form textarea, form select {
     border: 1px solid #e3e3e3;
