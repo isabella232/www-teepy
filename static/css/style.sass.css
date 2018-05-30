@@ -38,8 +38,6 @@
     position: absolute;
     top: 0;
     width: 45px; }
-  #click-to-call label {
-    display: none; }
   #click-to-call input {
     border: none;
     box-sizing: border-box;
@@ -114,7 +112,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   width: 50%; }
-  form label {
+  form label:not(.checkbox) {
     display: none; }
   form input, form textarea, form select {
     border: 1px solid #e3e3e3;
@@ -1177,6 +1175,18 @@ h1 {
   justify-content: center; }
   #contact_form p {
     order: 2; }
+  #contact_form form label:last-of-type {
+    display: block;
+    font-size: .8em; }
+    #contact_form form label:last-of-type input {
+      vertical-align: middle; }
+  #contact_form form p a {
+    color: #499cfb;
+    font-size: .9em;
+    text-decoration: none;
+    transition: color 0.3s; }
+    #contact_form form p a:hover {
+      color: #308efa; }
   #contact_form article {
     flex: 1 50%;
     order: 1; }
@@ -1212,6 +1222,19 @@ h1 {
   #legal h3 a:hover {
     color: #62aafc;
     text-decoration: underline; }
+
+/* LIVRE BLANC */
+#whitepaper .legal {
+  background: #e3e3e3;
+  font-size: .85em;
+  margin-top: 2em;
+  padding: 2em; }
+  #whitepaper .legal a {
+    color: #499cfb;
+    text-decoration: none;
+    transition: color .3s; }
+    #whitepaper .legal a:hover {
+      color: #308efa; }
 
 /* 404 */
 #error {

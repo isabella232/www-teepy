@@ -56,6 +56,19 @@
         <input id="promotion" name="promotion" placeholder="Votre code promotionnel" />
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Votre message"></textarea>
+        <label>
+          <input name="data" type="checkbox" required="required" />
+          J'accepte que les informations saisies soient exploitées par
+          Backoffice Service dans le cadre de demande d'informations ou de
+          devis et de la relation commerciale qui peut en découler. Je suis
+          informé(e) que je peux facilement et à tout moment, modifier mes
+          préférences d'abonnement.
+        </label>
+        <p>
+          <a href="{{ url_for('page', page='legal') }}">
+            Voir notre politique de confidentialité dans les mentions légales.
+          </a>
+        </p>
         <input type="submit" value="Envoyer" />
       </form>
       <p class="asterisk">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
