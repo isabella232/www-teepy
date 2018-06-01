@@ -862,9 +862,10 @@ h1 {
   display: flex;
   flex-wrap: wrap; }
   #formation #certification {
+    align-self: flex-start;
     border: 1px solid #e3e3e3;
     display: flex;
-    flex: 1 50%;
+    flex: 1 25%;
     flex-wrap: wrap; }
     #formation #certification p {
       flex: 1 75%; }
@@ -890,9 +891,22 @@ h1 {
     flex-wrap: wrap;
     margin: 0 0 0 1em; }
     #formation #organism ul {
-      list-style: none; }
+      list-style: none;
+      padding-left: 0; }
       #formation #organism ul li:first-of-type {
         font-weight: 600; }
+    #formation #organism p a {
+      color: #499cfb;
+      text-decoration: none; }
+      #formation #organism p a:hover {
+        color: #62aafc; }
+    #formation #organism p::after {
+      background: url(../images/datadocke.jpg) no-repeat;
+      background-size: cover;
+      content: '';
+      display: block;
+      height: 98px;
+      width: 90px; }
   #formation #lessons {
     display: flex;
     flex-wrap: wrap;

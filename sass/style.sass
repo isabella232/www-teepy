@@ -845,9 +845,10 @@ h1
   flex-wrap: wrap
 
   #certification
+    align-self: flex-start
     border: 1px solid $lightgrey
     display: flex
-    flex: 1 50%
+    flex: 1 25%
     flex-wrap: wrap
 
     p
@@ -871,9 +872,26 @@ h1
 
     ul
       list-style: none
+      padding-left: 0
 
       li:first-of-type
         font-weight: 600
+
+    p
+      a
+        color: $blue
+        text-decoration: none
+
+        &:hover
+          color: lighten($blue, 5%)
+
+      &::after
+        background: url(../images/datadocke.jpg) no-repeat
+        background-size: cover
+        content: ''
+        display: block
+        height: 98px
+        width: 90px
 
   #lessons
     display: flex
