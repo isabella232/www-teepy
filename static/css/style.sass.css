@@ -1054,6 +1054,23 @@ h1 {
           line-height: 1.2em;
           margin-bottom: 1em; }
 
+#estimate-optic {
+  padding: 2em 1em 3em 1em;
+  text-align: center; }
+  #estimate-optic h3 {
+    font-size: 1.5em;
+    margin-bottom: 2em; }
+  #estimate-optic a {
+    background: #499cfb;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 1em;
+    text-decoration: none;
+    transition: background 0.3s; }
+    #estimate-optic a:hover {
+      background: #308efa; }
+
 /* QUELQUES CHIFFRES */
 #numbers {
   align-items: flex-start;
