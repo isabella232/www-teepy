@@ -1020,6 +1020,40 @@ h1 {
     #advantages-optic ul li#simplification-optic::before, #advantages-optic ul li#optimization-optic::before {
       width: 65px; }
 
+#numbers-optic {
+  background: #f7f7f7;
+  max-width: none;
+  padding: 1em 0; }
+  #numbers-optic section {
+    max-width: 1200px;
+    padding: 0; }
+    #numbers-optic section h2::after {
+      background: #00b2ee; }
+    #numbers-optic section h2:first-of-type {
+      margin-top: 1em; }
+    #numbers-optic section ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      justify-content: center;
+      padding-left: 0; }
+      #numbers-optic section ul li {
+        align-content: center;
+        background: #fff;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1em;
+        padding: 3em 1em;
+        text-align: center;
+        width: 30%; }
+        #numbers-optic section ul li strong {
+          color: #00b2ee;
+          font-size: 2em;
+          line-height: 1.2em;
+          margin-bottom: 1em; }
+
 /* QUELQUES CHIFFRES */
 #numbers {
   align-items: flex-start;
@@ -1465,6 +1499,10 @@ h1 {
   #advantages-optic ul li#simplification-optic, #advantages-optic ul li#optimization-optic {
     height: auto;
     width: 270px; }
+  #numbers-optic section {
+    padding: 1em 2em; }
+    #numbers-optic section ul li {
+      width: 270px; }
   #numbers section {
     min-height: 0; }
     #numbers section#income {
