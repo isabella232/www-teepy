@@ -1024,6 +1024,9 @@ h1 {
   background: #f7f7f7;
   max-width: none;
   padding: 1em 0; }
+  #numbers-optic p {
+    font-size: .8em;
+    text-align: center; }
   #numbers-optic section {
     max-width: 1200px;
     padding: 0; }
