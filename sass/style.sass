@@ -1,6 +1,7 @@
 /* VARIABLES */
 
 $blue: #499cfb
+$optic: #00b2ee
 $grey: #383737
 $lightgrey: #e3e3e3
 $lightgrey-2: #f7f7f7
@@ -950,6 +951,43 @@ h1
       padding: 0.8em 0
       text-align: center
 
+/* OPTIQUE */
+#optic-intro
+  background: $optic
+  color: #fff
+  padding: 0
+  position: relative
+
+  h2, p
+    box-sizing: border-box
+    max-width: 50%
+    text-align: left
+
+  h2
+    padding: 2em 2em 0 2em
+
+    &::before
+      content: url(../images/logo-optic.svg)
+      display: block
+      width: 5em
+
+    &::after
+      background: #fff
+      margin: 0
+
+  p
+    padding: 0 2em 2em 4em
+
+  &::after
+    background: url(../images/optic.png) center no-repeat
+    background-size: cover
+    content: ''
+    display: block
+    height: 100%
+    position: absolute
+    right: 0
+    top: 0
+    width: 50%
 
 /* QUELQUES CHIFFRES */
 #numbers
