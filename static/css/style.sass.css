@@ -466,12 +466,12 @@ h1 {
     min-height: 450px;
     width: 100%; }
 
-#advantages ul {
+.advantages ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0; }
-  #advantages ul li {
+  .advantages ul li {
     align-items: center;
     border: 1px solid #e3e3e3;
     box-sizing: border-box;
@@ -483,28 +483,42 @@ h1 {
     text-align: center;
     transition: background 0.3s, border-color 0.3s;
     width: 270px; }
-    #advantages ul li:before {
+    .advantages ul li:before {
       display: block;
       content: '';
       height: 80px;
       margin-top: 3em;
       width: 25%; }
-    #advantages ul li:hover {
+    .advantages ul li:hover {
       background: #383737;
       border-color: #383737;
       color: white; }
-    #advantages ul li#acceleration:before {
+    .advantages ul li#acceleration:before {
       content: url(../images/acceleration.svg); }
-    #advantages ul li#simplification:before {
+    .advantages ul li#simplification:before {
       content: url(../images/simplification.svg); }
-    #advantages ul li#recoverate:before {
+    .advantages ul li#recoverate:before {
       content: url(../images/recoverate.svg); }
-    #advantages ul li#time:before {
+    .advantages ul li#time:before {
       content: url(../images/time.svg); }
-    #advantages ul li#optimization:before {
+    .advantages ul li#optimization:before {
       content: url(../images/optimization.svg); }
-    #advantages ul li#rationalization:before {
+    .advantages ul li#rationalization:before {
       content: url(../images/rationalization.svg); }
+    .advantages ul li#acceleration-optic:before {
+      content: url(../images/acceleration-optic.svg); }
+    .advantages ul li#simplification-optic:before {
+      content: url(../images/simplification-optic.svg); }
+    .advantages ul li#recoverate-optic:before {
+      content: url(../images/recoverate-optic.svg); }
+    .advantages ul li#time-optic:before {
+      content: url(../images/time-optic.svg); }
+    .advantages ul li#optimization-optic:before {
+      content: url(../images/optimization-optic.svg); }
+    .advantages ul li#rationalization-optic:before {
+      content: url(../images/rationalization-optic.svg); }
+    .advantages ul li#economy-optic:before {
+      content: url(../images/economy-optic.svg); }
 
 #testimonials {
   background: #f7f7f7;
@@ -997,6 +1011,15 @@ h1 {
     top: 0;
     width: 50%; }
 
+#advantages-optic {
+  padding-top: 2em; }
+  #advantages-optic h2::after {
+    background: #00b2ee; }
+  #advantages-optic ul li#simplification-optic, #advantages-optic ul li#optimization-optic {
+    width: 50%; }
+    #advantages-optic ul li#simplification-optic::before, #advantages-optic ul li#optimization-optic::before {
+      width: 65px; }
+
 /* QUELQUES CHIFFRES */
 #numbers {
   align-items: flex-start;
@@ -1439,6 +1462,9 @@ h1 {
     content: none; }
   #optic-intro h2, #optic-intro p {
     max-width: none; }
+  #advantages-optic ul li#simplification-optic, #advantages-optic ul li#optimization-optic {
+    height: auto;
+    width: 270px; }
   #numbers section {
     min-height: 0; }
     #numbers section#income {
