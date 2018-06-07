@@ -1,7 +1,7 @@
 /* VARIABLES */
 
 $blue: #499cfb
-$optic: #00b2ee
+$blue-2: #00b2ee
 $grey: #383737
 $lightgrey: #e3e3e3
 $lightgrey-2: #f7f7f7
@@ -503,9 +503,9 @@ h1
         &##{$name}:before
           content: url(../images/#{$name}.svg)
 
-      @each $name in acceleration-optic, simplification-optic, recoverate-optic, time-optic, optimization-optic, rationalization-optic, economy-optic
-        &##{$name}:before
-          content: url(../images/#{$name}.svg)
+      @each $name in acceleration, simplification, recoverate, time, optimization, rationalization, economy
+        &##{$name}-optic:before
+          content: url(../images/#{$name}-optic.svg)
 
 #testimonials
   background: $lightgrey-2
@@ -957,7 +957,7 @@ h1
 
 /* OPTIQUE */
 #optic-intro
-  background: $optic
+  background: $blue-2
   color: #fff
   padding: 0
   position: relative
@@ -983,8 +983,7 @@ h1
     padding: 0 2em 2em 4em
 
   &::after
-    background: url(../images/optic.png) center no-repeat
-    background-size: cover
+    background: url(../images/optic.png) center / cover no-repeat
     content: ''
     display: block
     height: 100%
@@ -997,7 +996,7 @@ h1
   padding-top: 2em
 
   h2::after
-    background: $optic
+    background: $blue-2
 
   ul li
     &#simplification-optic, &#optimization-optic
@@ -1022,7 +1021,7 @@ h1
 
     h2
       &::after
-        background: $optic
+        background: $blue-2
 
       &:first-of-type
         margin-top: 1em
@@ -1047,7 +1046,7 @@ h1
         width: 30%
 
         strong
-          color: $optic
+          color: $blue-2
           font-size: 2em
           line-height: 1.2em
           margin-bottom: 1em

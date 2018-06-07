@@ -1001,8 +1001,7 @@ h1 {
   #optic-intro p {
     padding: 0 2em 2em 4em; }
   #optic-intro::after {
-    background: url(../images/optic.png) center no-repeat;
-    background-size: cover;
+    background: url(../images/optic.png) center/cover no-repeat;
     content: '';
     display: block;
     height: 100%;
