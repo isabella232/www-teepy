@@ -1,6 +1,7 @@
 /* VARIABLES */
 
 $blue: #499cfb
+$blue-2: #00b2ee
 $grey: #383737
 $lightgrey: #e3e3e3
 $lightgrey-2: #f7f7f7
@@ -466,7 +467,7 @@ h1
     min-height: 450px
     width: 100%
 
-#advantages
+.advantages
   ul
     display: flex
     flex-wrap: wrap
@@ -501,6 +502,10 @@ h1
       @each $name in acceleration, simplification, recoverate, time, optimization, rationalization
         &##{$name}:before
           content: url(../images/#{$name}.svg)
+
+      @each $name in acceleration, simplification, recoverate, time, optimization, rationalization, economy
+        &##{$name}-optic:before
+          content: url(../images/#{$name}-optic.svg)
 
 #testimonials
   background: $lightgrey-2
@@ -950,6 +955,112 @@ h1
       padding: 0.8em 0
       text-align: center
 
+/* OPTIQUE */
+#optic-intro
+  background: $blue-2
+  color: #fff
+  padding: 0
+  position: relative
+
+  h2, p
+    box-sizing: border-box
+    max-width: 50%
+    text-align: left
+
+  h2
+    padding: 2em 2em 0 2em
+
+    &::before
+      content: url(../images/logo-optic.svg)
+      display: block
+      width: 5em
+
+    &::after
+      background: #fff
+      margin: 0
+
+  p
+    padding: 0 2em 2em 4em
+
+  &::after
+    background: url(../images/optic.png) center / cover no-repeat
+    content: ''
+    display: block
+    height: 100%
+    position: absolute
+    right: 0
+    top: 0
+    width: 50%
+
+#advantages-optic
+  padding-top: 2em
+
+  h2::after
+    background: $blue-2
+
+  ul li
+    &#simplification-optic, &#optimization-optic
+      width: 50%
+
+      &::before
+        width: 65px
+
+#numbers-optic
+  background: $lightgrey-2
+  max-width: none
+  padding: 1em 0
+
+  p
+    font-size: .8em
+    text-align: center
+
+
+  section
+    max-width: 1200px
+    padding: 0
+
+    h2
+      &::after
+        background: $blue-2
+
+      &:first-of-type
+        margin-top: 1em
+
+    ul
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      list-style: none
+      padding-left: 0
+
+      li
+        align-content: center
+        background: #fff
+        box-sizing: border-box
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        margin: 1em
+        padding: 3em 1em
+        text-align: center
+        width: 30%
+
+        strong
+          color: $blue-2
+          font-size: 2em
+          line-height: 1.2em
+          margin-bottom: 1em
+
+#estimate-optic
+  padding: 2em 1em 3em 1em
+  text-align: center
+
+  h3
+    font-size: 1.5em
+    margin-bottom: 2em
+
+  a
+    +button_action_principal
 
 /* QUELQUES CHIFFRES */
 #numbers
