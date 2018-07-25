@@ -1,0 +1,52 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+<section id="optic-intro">
+  <h2>Réseau d'opticiens, Backoffice Optique est fait pour vous !</h2>
+  <p>
+    Les opticiens consacrent plus de <strong>312 heures/an</strong> à la gestion du tiers-payant.
+    <strong>Le service d'externalisation</strong> du tiers-payant permet de <strong>déléguer l'ensemble
+    des tâches liées à la gestion du tiers-payant à un expert Backoffice</strong> spécialisé dans l'optique.
+  </p>
+</section>
+
+<section class="advantages" id="advantages-optic">
+  <h2>Les avantages de l'externalisation</h2>
+  <ul>
+    <li id="time-optic"><strong>Gain de temps</strong> moins d'administratif, plus de temps pour sa clientèle.</li>
+    <li id="economy-optic"><strong>Économie et gain de productivité.</strong></li>
+    <li id="acceleration-optic"><strong>Accélération</strong> des délais d'encaissement.</li>
+    <li id="simplification-optic"><strong>Prise en charge complète</strong> préparation télétransmission, traitement des rejets, rapprochement bancaire.</li>
+    <li id="recoverate-optic"><strong>Récupération</strong> rapide de trésorerie.</li>
+    <li id="rationalization-optic"><strong>Rationnalisation</strong> du temps passé en back-office.</li>
+    <li id="optimization-optic"><strong>Accompagnement d'un expert du tiers-payant</strong> avec des points réguliers pour vous informer de l'évolution de votre tiers-payant.</li>
+  </ul>
+</section>
+
+<section id="numbers-optic">
+  <section>
+    <h2>Zoom sur les opticiens et la gestion du tiers-payant</h2>
+    <ul>
+      <li><strong>2/3</strong> des opticiens le proposent systématiquement.</li>
+      <li><strong>6h/semaine</strong> correspondent au temps passé par semaine pour la gestion administrative du tiers-payant.</li>
+      <li><strong>93%</strong> des opticiens interrogés pratiquent le tiers-payant.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Quel impact sur la trésorerie et le chiffre d'affaires ?</h2>
+    <ul>
+      <li><strong>3,5 dossiers sur 100</strong> C'est le nombre de dossiers qui ne sont jamais remboursés, d'après 49% des opticiens interrogés qui déclarent subir des pertes fincancières sur les dossiers du tiers-payant.</li>
+      <li><strong>2,8% du chiffre d'affaires</strong> Estimation de l'effort de trésorerie imposé par le tiers-payant.</li>
+      <li><strong>3 semaines et 3 jours</strong> Le délai moyen de remboursement d'un opticien par les complémentaires santé sur un dossier de tiers-payant.</li>
+    </ul>
+  </section>
+  <p>Source : Etude de La Centrale des Opticiens (CDO) réalisée par Gallileo Business Consulting (2011).</p>
+</section>
+
+<section id="estimate-optic">
+  <h3>Contactez-nous pour un devis personnalisé selon vos besoins.</h3>
+  <a href="{{ url_for('page', page='contact') }}#contact">Demande de devis</a>
+</section>
+
+{% endblock content %}
