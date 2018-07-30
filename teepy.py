@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import socket
 from email.utils import parsedate_to_datetime
 from locale import LC_ALL, setlocale
 from urllib.request import urlopen
@@ -19,9 +20,14 @@ MANDRILL_KEY = app.config.get('MANDRILL_KEY')
 
 
 def get_news():
-    tree = ElementTree.parse(urlopen(
-        'https://kozeagroup.wordpress.com/category/backoffice/feed/'))
     news = []
+    try:
+        feed = urlopen(
+            'https://kozeagroup.wordpress.com/category/backoffice/feed/',
+            timeout=3)
+    except socket.timeout:
+        return news
+    tree = ElementTree.parse(feed)
     for item in tree.find('channel').findall('item'):
         date = parsedate_to_datetime(item.find('pubDate').text)
         entry = {
