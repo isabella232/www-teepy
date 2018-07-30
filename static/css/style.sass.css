@@ -1036,8 +1036,8 @@ h1 {
     #numbers-optic section ul {
       display: flex;
       flex-wrap: wrap;
-      list-style: none;
       justify-content: center;
+      list-style: none;
       padding-left: 0; }
       #numbers-optic section ul li {
         align-content: center;
