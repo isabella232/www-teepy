@@ -63,6 +63,11 @@ def robots():
 @app.route('/contact/<name>', methods=['POST'])
 def contact(name=None):
     form = request.form
+
+    # Catch bots with a hidden field
+    if request.form.get('city'):
+        return redirect(url_for('page', page='contact_confirmation'))
+
     message = {
         'to': [{'email': 'backoffice@lagestiondutierspayant.fr'}],
         'subject': 'Prise de contact sur le site de BackOffice',
@@ -90,7 +95,9 @@ def contact(name=None):
     else:
         abort(404)
 
-    if not app.debug:
+    if app.debug:
+        print(message)
+    else:
         mandrill.Mandrill(MANDRILL_KEY).messages.send(message=message)
 
     if name == 'whitepaper':

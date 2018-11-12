@@ -32,6 +32,8 @@
       <form action="{{ url_for('contact', name='phone') }}" method="POST">
         <label for="phone">Téléphone</label>
         <input type="tel" id="phone" name="phone" placeholder="Téléphone" />
+        <label style="display: none" for="city">Ville (piège à robots)</label>
+        <input style="display: none" id="city" name="city" placeholder="Ville"/>
         <input type="submit" value="Envoyer" />
       </form>
     </aside>
