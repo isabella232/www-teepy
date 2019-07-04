@@ -111,6 +111,8 @@ def contact(name=None):
     if name == 'whitepaper':
         return redirect(
             url_for('static', filename='pdf/livre_blanc_backoffice.pdf'))
+    elif name == 'newsletter':
+        return redirect(url_for('page', page='newsletter_confirmation'))
     else:
         return redirect(url_for('page', page='contact_confirmation'))
 
