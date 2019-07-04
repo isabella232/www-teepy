@@ -183,6 +183,12 @@ footer {
   footer ul {
     list-style: none;
     margin: 0; }
+  footer form {
+    width: 100%; }
+    footer form input[type=submit], footer form input[type=submit]:hover {
+      background: #faba49;
+      color: #383737;
+      margin-left: auto; }
   footer #contact_informations::before {
     content: url(../images/logo-footer.svg);
     display: block;
@@ -1394,6 +1400,14 @@ h1 {
   #legal h3 a:hover {
     color: #62aafc;
     text-decoration: underline; }
+
+#register h3 {
+  width: 100%; }
+
+#register form {
+  width: 100%; }
+  #register form label {
+    width: 100%; }
 
 /* LIVRE BLANC */
 #whitepaper .legal {

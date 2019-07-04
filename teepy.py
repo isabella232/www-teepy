@@ -92,6 +92,14 @@ def contact(name=None):
             'Email : %s' % form.get('email', ''),
             'Société : %s' % form.get('company', ''),
             'Téléphone : %s' % form.get('phone', '')])
+    elif name == 'newsletter':
+        message['html'] = 'Inscription à la newsletter<br><br>'
+        message['html'] += '<br>'.join([
+            'Email : %s' % form.get('email', ''),
+            'Contact par e-mail : %s' % (
+                'Oui' if form.get('contact-email', '') else 'Non'),
+            'contact par courrier direct : %s' % (
+                'Oui' if form.get('contact-direct-mail', '') else 'Non')])
     else:
         abort(404)
 

@@ -1,0 +1,46 @@
+{% extends "_layout.jinja2" %}
+
+{% block content %}
+  <article id="register">
+    <section>
+      <h2>Inscription à notre newsletter</h2>
+      <form method="POST" action="{{ url_for('contact', name='newsletter') }}">
+        <h3>Inscrivez-vous pour bénéficier d'offres spéciales et rester informé de toute l'actualité de Backoffice</h3>
+        <label for="email">Votre adresse mail</label>
+        <input id="email" name="email" placeholder="Votre adresse mail*" required="required"/>
+
+        <h3>Recueil de consentement</h3>
+        <label class="checkbox">
+          <input name="agreement" type="checkbox" required="required"/>
+          J'accepte de recevoir les informations commerciales de Backoffice
+        </label>
+
+        <h3>Autorisation de marketing</h3>
+        <p>
+          Backoffice utilisera les informations fournies sur ce formulaire pour
+          vous contacter et vous transmettre des offres promotionnelles pour le
+          tiers-payant et pour des services associés. Merci de nous indiquer
+          que vous nous autorisez à vous contacter par :
+        </p>
+        <label class="checkbox">
+          <input name="contact-email" type="checkbox"/>
+          E-mail
+        </label>
+        <label class="checkbox">
+          <input name="contact-direct-mail" type="checkbox"/>
+          Courrier direct
+        </label>
+        <p>
+          Vous pouvez changer les informations vous concernant ou vous
+          désinscrire à tout moment en cliquant sur le lien « Se désinscrire »
+          situé en pied de page de tout e-mail que vous recevrez de notre part,
+          ou en nous contactant à contact@lagestiondutierspayant.fr. Nous
+          traiterons vos informations avec respect. En cliquant ci-dessus, vous
+          acceptez que nous puissions traiter vos informations conformément à
+          ces termes.
+        </p>
+        <input type="submit" value="S'abonner" />
+      </form>
+    </section>
+  </article>
+{% endblock content %}
