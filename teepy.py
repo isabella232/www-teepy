@@ -98,7 +98,7 @@ def contact(name=None):
             'Email : %s' % form.get('email', ''),
             'Contact par e-mail : %s' % (
                 'Oui' if form.get('contact-email', '') else 'Non'),
-            'contact par courrier direct : %s' % (
+            'Contact par courrier direct : %s' % (
                 'Oui' if form.get('contact-direct-mail', '') else 'Non')])
     else:
         abort(404)
