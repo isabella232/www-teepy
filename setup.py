@@ -18,7 +18,7 @@ setup(
     scripts=['teepy.py'],
     install_requires=[
         'Flask',
-        'mandrill',
+        'mandrill-37',
         'libsass',
     ],
     tests_require=tests_requirements,
