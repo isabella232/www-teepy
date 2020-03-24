@@ -293,6 +293,33 @@ h1 {
   margin: 2em auto .5em;
   max-width: 1200px; }
 
+#announce {
+  background: #faba49;
+  max-width: initial;
+  text-align: center; }
+  #announce a {
+    background: #fff;
+    border: 2px solid #499cfb;
+    color: #499cfb;
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 500;
+    padding: 1em;
+    text-decoration: none;
+    transition: background .3s, color .3s;
+    background: inherit;
+    border: 2px solid #383737;
+    color: inherit;
+    font-size: inherit;
+    font-weight: bolder;
+    padding: 0.5em; }
+    #announce a:hover {
+      background: #308efa;
+      border-color: #308efa;
+      color: #fff; }
+  #announce p strong {
+    text-decoration-line: underline; }
+
 #introduction {
   align-items: baseline;
   background: none;
@@ -1495,7 +1522,6 @@ h1 {
       columns: 1; }
       #features dl dt {
         margin-bottom: .5em; } }
-
 @media screen and (max-width: 900px) {
     #features dl dt:hover + dd {
       height: auto; }
@@ -1570,4 +1596,4 @@ h1 {
   footer #legals_mentions {
     text-align: left; } }
 
-/*# sourceMappingURL=../static/css/style.sass.css.map */
+/*# sourceMappingURL=style.sass.css.map */
