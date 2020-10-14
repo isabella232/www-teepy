@@ -1,4 +1,4 @@
-@media screen and (max-width: 900px)
+@media screen and (max-width: 950px)
   body
     &::before
       content: none
@@ -7,23 +7,19 @@
     position: initial
 
     ul
-      justify-content: center
+      justify-content: flex-start
+      padding-left: 20px
 
-  h1
-    background-position: center
+  header
+    padding: 0 2em
 
   #introduction
+    &::after
+      content: none
+
     article
       padding: 0 1em
       width: 100%
-
-    p
-      margin: 2em 0
-      padding: 1em 0
-      width: 100%
-
-      strong
-        display: inline-block
 
   #interview
     h2

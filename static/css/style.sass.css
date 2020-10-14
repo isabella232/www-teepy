@@ -67,6 +67,7 @@ body {
     height: 50px; }
 
 nav {
+  align-items: center;
   background: #383737;
   display: flex;
   left: 0;
@@ -95,13 +96,13 @@ nav {
         left: 0;
         position: absolute;
         top: 5px;
-        width: 20px; }
+        width: 15px; }
       nav ul li:hover a {
         color: #faba49; }
       nav ul li a {
         color: inherit;
         display: block;
-        padding: 1em;
+        padding: .5em 1em;
         text-decoration: inherit;
         transition: color 0.3s; }
       nav ul li.active a {
@@ -216,6 +217,7 @@ footer {
     justify-content: flex-end; }
     footer #social li {
       opacity: .7;
+      padding: 0 .25em;
       transition: opacity .3s; }
       footer #social li#facebook a::before {
         content: url(../images/facebook.svg);
@@ -282,15 +284,13 @@ footer {
 
 /* INDEX */
 header {
-  background: url(../images/introduction_bg.png) center no-repeat;
-  background-size: cover;
-  min-height: 500px; }
+  background-color: #f7f7f7; }
 
 h1 {
-  background: url(../images/logo-blanc.svg) left no-repeat;
+  background: url(../images/logo.svg) left no-repeat;
   color: transparent;
-  height: 2em;
-  margin: 2em auto .5em;
+  height: 1.5em;
+  margin: 1em auto 1em;
   max-width: 1200px; }
 
 #announce {
@@ -321,44 +321,46 @@ h1 {
     text-decoration-line: underline; }
 
 #introduction {
-  align-items: baseline;
-  background: none;
+  align-items: flex-end;
   display: flex;
   flex-wrap: wrap;
   font-size: .9em;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 0 2em 0; }
+  #introduction::after {
+    content: url(../images/computer-statistics.png);
+    display: block;
+    height: auto;
+    width: auto;
+    margin-left: auto; }
   #introduction article {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0;
-    width: 70%; }
+    padding: 0 1em;
+    width: 45%; }
+    #introduction article p {
+      margin-bottom: 0; }
+      #introduction article p a {
+        color: #383737;
+        transition: color .3s; }
+        #introduction article p a:hover {
+          color: #499cfb; }
   #introduction h2 {
-    color: #fff;
-    font-size: 2.5em;
+    font-size: 2.75em;
     font-weight: 600;
     line-height: 1.5em;
     margin: 0;
     text-align: left; }
-    #introduction h2 span {
-      color: #faba49; }
     #introduction h2::after {
       content: none; }
-  #introduction ul {
-    color: #fff;
-    font-size: 1.1em;
-    list-style-image: url(../images/check.svg);
-    padding-left: 0; }
-    #introduction ul li {
-      margin-bottom: .5em; }
-      #introduction ul li span {
-        font-weight: 600; }
-    #introduction ul a:not(#contact_ask):not(#white_book) {
-      color: #fff;
-      font-weight: 500;
-      transition: color .3s; }
-      #introduction ul a:not(#contact_ask):not(#white_book):hover {
-        color: #faba49; }
+  #introduction h3 {
+    color: #faba49;
+    display: block;
+    font-size: 1.25em;
+    margin: 0;
+    padding: 1.5em 0;
+    width: 100%; }
   #introduction #contact_ask {
     background: #499cfb;
     color: #fff;
@@ -377,26 +379,14 @@ h1 {
     padding: 1em;
     text-decoration: none;
     transition: background 0.3s;
-    background: #fff;
-    color: #383737;
+    background: none;
+    color: #499cfb;
     margin-left: .5em; }
     #introduction #white_book:hover {
       background: #308efa; }
     #introduction #white_book:hover {
-      background: #f2f2f2; }
-  #introduction p {
-    background: #faba49;
-    margin-left: auto;
-    padding: 2em;
-    text-align: center; }
-    #introduction p strong {
-      display: block; }
-      #introduction p strong:first-of-type {
-        font-size: 2.5em;
-        margin: .2em 0; }
-      #introduction p strong:last-of-type {
-        font-size: 1.2em;
-        text-transform: uppercase; }
+      background: none;
+      color: #308efa; }
 
 #interview {
   position: relative; }
@@ -1272,7 +1262,7 @@ h1 {
     background: url(../images/logo.svg) no-repeat center #fff;
     content: "";
     display: block;
-    height: 7em;
+    height: 5em;
     margin: 2em 0;
     width: 100%; }
 
@@ -1282,6 +1272,8 @@ h1 {
   #offer h2 {
     line-height: 1.5em;
     text-align: left; }
+    #offer h2 strong {
+      font-weight: 600; }
     #offer h2::after {
       background: #383737;
       margin: .5em 0; }
@@ -1315,12 +1307,8 @@ h1 {
         flex-grow: 1; }
   #offer p {
     font-size: 0.8em;
-    margin: 0 1em 0;
-    text-align: right; }
-    #offer p:before {
-      color: #383737;
-      content: "*";
-      margin-right: 0.2em; }
+    font-weight: 500;
+    margin: 2em 0 0; }
 
 #recap ul {
   box-sizing: border-box;
@@ -1474,24 +1462,21 @@ h1 {
 #confirmation {
   text-align: center; }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   body::before {
     content: none; }
   nav {
     position: initial; }
     nav ul {
-      justify-content: center; }
-  h1 {
-    background-position: center; }
+      justify-content: flex-start;
+      padding-left: 20px; }
+  header {
+    padding: 0 2em; }
+  #introduction::after {
+    content: none; }
   #introduction article {
     padding: 0 1em;
     width: 100%; }
-  #introduction p {
-    margin: 2em 0;
-    padding: 1em 0;
-    width: 100%; }
-    #introduction p strong {
-      display: inline-block; }
   #interview h2 {
     padding: 0; }
   #presentation ul li {
@@ -1517,12 +1502,13 @@ h1 {
     background-position: bottom;
     background: none;
     column-gap: 2em; } }
-  @media screen and (max-width: 900px) and (max-width: 800px) {
+  @media screen and (max-width: 950px) and (max-width: 800px) {
     #features dl {
       columns: 1; }
       #features dl dt {
         margin-bottom: .5em; } }
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 950px) {
     #features dl dt:hover + dd {
       height: auto; }
       #features dl dt:hover + dd::before {
@@ -1596,4 +1582,4 @@ h1 {
   footer #legals_mentions {
     text-align: left; } }
 
-/*# sourceMappingURL=style.sass.css.map */
+/*# sourceMappingURL=../static/css/style.sass.css.map */
