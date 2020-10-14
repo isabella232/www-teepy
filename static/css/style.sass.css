@@ -331,8 +331,8 @@ h1 {
     content: url(../images/computer-statistics.png);
     display: block;
     height: auto;
-    width: auto;
-    margin-left: auto; }
+    margin-left: auto;
+    width: auto; }
   #introduction article {
     display: flex;
     flex-wrap: wrap;
