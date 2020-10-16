@@ -110,6 +110,7 @@ body
     height: 50px
 
 nav
+  align-items: center
   background: $grey
   display: flex
   left: 0
@@ -142,7 +143,7 @@ nav
           left: 0
           position: absolute
           top: 5px
-          width: 20px
+          width: 15px
 
       &:hover a
         color: $yellow
@@ -150,7 +151,7 @@ nav
       a
         color: inherit
         display: block
-        padding: 1em
+        padding: .5em 1em
         text-decoration: inherit
         transition: color 0.3s
 
@@ -278,6 +279,7 @@ footer
 
     li
       opacity: .7
+      padding: 0 .25em
       transition: opacity .3s
 
       @each $name in facebook, linkedin, youtube, twitter, instagram, github
@@ -299,15 +301,13 @@ footer
 
 /* INDEX */
 header
-  background: url(../images/introduction_bg.png) center no-repeat
-  background-size: cover
-  min-height: 500px
+  background-color: $lightgrey-2
 
 h1
-  background: url(../images/logo-blanc.svg) left no-repeat
+  background: url(../images/logo.svg) left no-repeat
   color: transparent
-  height: 2em
-  margin: 2em auto .5em
+  height: 1.5em
+  margin: 1em auto 1em
   max-width: 1200px
 
 #announce
@@ -328,82 +328,67 @@ h1
     text-decoration-line: underline
 
 #introduction
-  align-items: baseline
-  background: none
+  align-items: flex-end
   display: flex
   flex-wrap: wrap
   font-size: .9em
   margin: 0 auto
+  padding: 0 0 2em 0
+
+  &::after
+    content: url(../images/computer-statistics.png)
+    display: block
+    height: auto
+    margin-left: auto
+    width: auto
 
   article
     display: flex
     flex-wrap: wrap
     margin: 0
-    padding: 0
-    width: 70%
+    padding: 0 1em
+    width: 45%
+
+    p
+      margin-bottom: 0
+
+      a
+        color: $grey
+        transition: color .3s
+
+        &:hover
+          color: $blue
 
   h2
-    color: #fff
-    font-size: 2.5em
+    font-size: 2.75em
     font-weight: 600
     line-height: 1.5em
     margin: 0
     text-align: left
 
-    span
-      color: $yellow
-
     &::after
       content: none
 
-  ul
-    color: #fff
-    font-size: 1.1em
-    list-style-image: url(../images/check.svg)
-    padding-left: 0
-
-    li
-      margin-bottom: .5em
-
-      span
-        font-weight: 600
-
-    a:not(#contact_ask):not(#white_book)
-      color: #fff
-      font-weight: 500
-      transition: color .3s
-
-      &:hover
-        color: $yellow
+  h3
+    color: $yellow
+    display: block
+    font-size: 1.25em
+    margin: 0
+    padding: 1.5em 0
+    width: 100%
 
   #contact_ask
     +button_action_principal
 
   #white_book
     +button_action_principal
-    background: #fff
-    color: $grey
+    background: none
+    color: $blue
     margin-left: .5em
 
     &:hover
-      background: darken(#fff, 5%)
-
-  p
-    background: $yellow
-    margin-left: auto
-    padding: 2em
-    text-align: center
-
-    strong
-      display: block
-
-      &:first-of-type
-        font-size: 2.5em
-        margin: .2em 0
-
-      &:last-of-type
-        font-size: 1.2em
-        text-transform: uppercase
+      background: none
+      color: darken($blue, 5%)
 
 #interview
   position: relative
@@ -1298,7 +1283,7 @@ h1
     background: url(../images/logo.svg) no-repeat center #fff
     content: ""
     display: block
-    height: 7em
+    height: 5em
     margin: 2em 0
     width: 100%
 
@@ -1309,6 +1294,9 @@ h1
   h2
     line-height: 1.5em
     text-align: left
+
+    strong
+      font-weight: 600
 
     &::after
       background: $grey
@@ -1342,13 +1330,8 @@ h1
 
   p
     font-size: 0.8em
-    margin: 0 1em 0
-    text-align: right
-
-    &:before
-      color: $grey
-      content: "*"
-      margin-right: 0.2em
+    font-weight: 500
+    margin: 2em 0 0
 
 #recap
   ul
