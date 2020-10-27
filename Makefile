@@ -1,7 +1,7 @@
 include config.Makefile
 -include config.custom.Makefile
 
-BASEVERSION ?= v1
+BASEVERSION ?= piptools
 BASEROOT ?= https://raw.githubusercontent.com/Kozea/MakeCitron/$(BASEVERSION)/
 BASENAME := base.Makefile
 ifeq ($(MAKELEVEL), 0)
@@ -16,47 +16,6 @@ else
 include $(BASENAME)
 endif
 
-
-all: install serve
-	$(LOG)
-
-install:
-	test -d $(VENV) || virtualenv $(VENV)
-	$(PIP) install --upgrade --no-cache pip setuptools -e .[test]
-
-install-dev:
-	$(PIP) install --upgrade devcore
-
-clean:
-	rm -fr dist
-
-clean-install: clean
-	rm -fr $(VENV)
-	rm -fr *.egg-info
-
-lint:
-	$(PYTEST) --no-cov --flake8 -m flake8
-	$(PYTEST) --no-cov --isort -m isort
-
-check-python: lint
-	$(LOG)
-
-check-outdated:
-	$(PIP) list --outdated --format=columns
-
-check: check-python check-outdated
-	$(LOG)
-
-build:
-
-env:
-	$(RUN)
-
-run:
-	$(VENV)/bin/$(PROJECT_NAME).py
-
-serve: run
-	$(LOG)
 
 deploy-test:
 	$(LOG)
