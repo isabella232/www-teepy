@@ -3,6 +3,7 @@ HOST ?= 0.0.0.0
 
 export PROJECT_NAME = teepy
 export FLASK_APP = $(PWD)/$(PROJECT_NAME).py
+export FLASK_ENV ?= development
 
 # Python env
 PYTHON_ONLY = 1
