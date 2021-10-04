@@ -895,111 +895,126 @@ h1 {
       margin-bottom: 0; }
 
 /* FORMATION */
-#formation {
+#certification {
   display: flex;
-  flex-wrap: wrap; }
-  #formation #certification {
-    display: flex;
-    flex-direction: column;
-    text-align: center; }
-    #formation #certification p a {
-      color: #499cfb;
-      text-decoration: none;
-      transition: color .3s; }
-      #formation #certification p a:hover {
-        color: #308efa; }
-    #formation #certification > a {
-      background: #499cfb;
-      color: #fff;
-      font-size: 0.9em;
-      font-weight: 500;
-      padding: 1em;
-      text-decoration: none;
-      transition: background 0.3s;
-      align-self: center; }
-      #formation #certification > a:hover {
-        background: #308efa; }
-  #formation #organism {
-    align-items: center;
-    background: #fafafa;
-    display: flex;
-    flex: 1 25%;
-    flex-wrap: wrap;
-    margin: 0 0 0 1em; }
-    #formation #organism ul {
-      list-style: none;
-      padding-left: 0; }
-      #formation #organism ul li:first-of-type {
-        font-weight: 600; }
-    #formation #organism p a {
-      color: #499cfb;
-      text-decoration: none; }
-      #formation #organism p a:hover {
-        color: #62aafc; }
-    #formation #organism p::after {
-      background: url(../images/datadocke.jpg) no-repeat;
-      background-size: cover;
-      content: '';
-      display: block;
-      height: 98px;
-      width: 90px; }
-  #formation #lessons {
+  flex-direction: column;
+  text-align: center; }
+  #certification p a {
+    color: #499cfb;
+    text-decoration: none;
+    transition: color .3s; }
+    #certification p a:hover {
+      color: #308efa; }
+  #certification > a {
+    background: #499cfb;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 1em;
+    text-decoration: none;
+    transition: background 0.3s;
+    align-self: center; }
+    #certification > a:hover {
+      background: #308efa; }
+
+#organism {
+  align-items: center;
+  background: #fafafa;
+  display: flex;
+  flex: 1 25%;
+  flex-wrap: wrap;
+  margin: 0 0 0 1em; }
+  #organism ul {
+    list-style: none;
+    padding-left: 0; }
+    #organism ul li:first-of-type {
+      font-weight: 600; }
+  #organism p a {
+    color: #499cfb;
+    text-decoration: none; }
+    #organism p a:hover {
+      color: #62aafc; }
+  #organism p::after {
+    background: url(../images/datadocke.jpg) no-repeat;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 98px;
+    width: 90px; }
+
+#lessons {
+  background: #f7f7f7;
+  max-width: none; }
+  #lessons #lessons-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2em 0; }
-    #formation #lessons section {
-      align-items: flex-start;
+    margin: 0 auto;
+    padding: 2em 0 0 0; }
+    #lessons #lessons-container > p {
+      margin: 1em auto; }
+      #lessons #lessons-container > p a {
+        color: #499cfb;
+        text-decoration: none;
+        transition: color .3s; }
+        #lessons #lessons-container > p a:hover {
+          color: #308efa; }
+    #lessons #lessons-container section {
+      align-items: start;
+      background: #fff;
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
-      margin: 0;
+      font-size: .9em;
       padding: 2em;
       width: 33%; }
-      #formation #lessons section h3 {
-        color: #faba49;
+      #lessons #lessons-container section h3 {
         font-size: 1.2em;
-        font-weight: 500;
-        margin-top: 0; }
-      #formation #lessons section h4 {
-        margin: .5em 0; }
-      #formation #lessons section a {
-        background: #fff;
-        border: 2px solid #499cfb;
-        color: #499cfb;
-        display: inline-block;
-        font-size: 0.8em;
+        font-weight: 600; }
+      #lessons #lessons-container section h4 {
+        margin-top: 1.5em; }
+        #lessons #lessons-container section h4::before {
+          background: #faba49;
+          content: '';
+          display: block;
+          height: 2px;
+          margin-bottom: 1.5em;
+          width: 40px; }
+      #lessons #lessons-container section a {
+        background: #499cfb;
+        color: #fff;
+        font-size: 0.9em;
         font-weight: 500;
         padding: 1em;
         text-decoration: none;
-        transition: background .3s, color .3s;
-        align-self: flex-end; }
-        #formation #lessons section a:hover {
-          background: #308efa;
-          border-color: #308efa;
-          color: #fff; }
-      #formation #lessons section#novice, #formation #lessons section#reject {
-        background: #fafafa; }
-    #formation #lessons ul, #formation #lessons p {
-      flex: 1 100%; }
-    #formation #lessons ul {
-      padding-left: 1em; }
-    #formation #lessons p {
-      margin: 0; }
-      #formation #lessons p:first-of-type {
-        border-bottom: 1px solid #383737;
-        font-size: 1.5em; }
-        #formation #lessons p:first-of-type::before {
-          content: url(../images/duration.svg);
-          display: inline-block;
-          margin-right: .5em;
-          vertical-align: middle;
-          width: 45px; }
-    #formation #lessons strong {
-      background: #faba49;
-      display: block;
-      font-size: 1.5em;
-      padding: 0.8em 0;
-      text-align: center; }
+        transition: background 0.3s;
+        margin-top: auto; }
+        #lessons #lessons-container section a:hover {
+          background: #308efa; }
+      #lessons #lessons-container section ul {
+        padding-left: 1em; }
+      #lessons #lessons-container section p {
+        margin: 0; }
+        #lessons #lessons-container section p:first-of-type {
+          color: #faba49;
+          font-size: .85em;
+          font-weight: 600;
+          margin-right: auto;
+          padding: .5em 0; }
+        #lessons #lessons-container section p:nth-child(2) {
+          align-content: center;
+          background: #faba49;
+          border-radius: 4em;
+          display: flex;
+          font-size: .85em;
+          font-weight: 600;
+          padding: .5em 1em; }
+          #lessons #lessons-container section p:nth-child(2)::before {
+            background: url(../images/duration.svg) no-repeat center;
+            content: '';
+            display: block;
+            margin-right: .25em;
+            width: 1em; }
 
 /* OPTIQUE */
 #optic-intro {
@@ -1484,18 +1499,18 @@ h1 {
     width: 100%; }
   #news article {
     width: 100%; }
-  #formation #certification, #formation #organism {
+  #certification, #organism {
     flex: 1 100%; }
-  #formation #certification {
+  #certification {
     justify-content: center; }
-    #formation #certification::before {
+    #certification::before {
       content: none; }
-  #formation #organism {
+  #organism {
     margin: 1em 0; }
-    #formation #organism ul {
+    #organism ul {
       text-align: center;
       width: 100%; }
-  #formation #lessons section {
+  #lessons #lessons-container section {
     width: 100%; }
   #features dl {
     background-position: bottom;

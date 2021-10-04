@@ -1,15 +1,16 @@
 {% extends "_layout.jinja2" %}
 
 {% block content %}
-  <article id="formation">
+  <section id="certification">
     <h2>Formation</h2>
-    <section id="certification">
-      <p>Back Office Services est agréé organisme de formation. Les formations sur la gestion du tiers-payant peuvent être financées par l'OPCO.</p>
-      <p>Les formations Backoffice sont référencées sur <a href="https://www.data-dock.fr/" target="_blank">Datadock</a></p>
-      <a>Télécharger le catalogue de formation</a>
-    </section>
+    <p>Back Office Services est agréé organisme de formation. Les formations sur la gestion du tiers-payant peuvent être financées par l'OPCO.</p>
+    <p>Les formations Backoffice sont référencées sur <a href="https://www.data-dock.fr/" target="_blank">Datadock</a></p>
+    <a>Télécharger le catalogue de formation</a>
+  </section>
 
-    <section id="lessons">
+  <section id="lessons">
+    <section id="lessons-container">
+
       <section id="novice">
         <p>Formation à distance</p>
         <p>35h</p>
@@ -19,6 +20,7 @@
         <p>Tout public</p>
         <a href="{{ url_for('page', page='contact') }}#contact">Demande de devis</a>
       </section>
+
       <section id="confirmed">
         <p>Formation à distance</p>
         <p>14h</p>
@@ -32,12 +34,14 @@
         </ul>
         <a href="{{ url_for('page', page='contact') }}#contact">Demande de devis</a>
       </section>
+
       <section id="reject">
         <p>Formation à distance</p>
         <p>7h</p>
         <h3>Gestion des rejets / erreurs comptoir</h3>
         <p>La formation "Gestion des rejets / erreurs comptoir" donne les clés de la gestion du tiers-payant et une méthode de traitement des rejets.
           Elle va aussi permettre aux participants d'améliorer la délivrance au comptoir pour éviter les rejets.</p>
+        <h4>Public</h4>
         <ul>
           <li>Pharmaciens</li>
           <li>Préparateurs en pharmacie</li>
@@ -45,34 +49,35 @@
         </ul>
         <a href="{{ url_for('page', page='contact') }}#contact">Demande de devis</a>
       </section>
-      <p>Pour plus d'informations, <a href="{{ url_for('page', page='contact') }}#contact">contactez-nous.</a></p>
-    </section>
 
-    <section id="formation_complementary_informations">
-      <h2>Informations complémentaires</h2>
-      <dl>
-        <dt>Prérequis</dt>
-        <dd>Aucun prérequis n'est nécessaire</dd>
-        <dt>Méthodes et modalités d'évaluation</dt>
-        <dd>Pédagogie participative avec alternance d'exposés théoriques et évaluations à chaque fin de module. Annexe documentaire et/ou présentation du formateur envoyés par mail sur demande.</dd>
-        <dt>Accessibilité aux personnes en situation de handicap</dt>
-        <dd>Si vous souhaitez nous faire part d'un handicap, merci de nous contacter afin que nous adaptions au mieux notre formation à vos besoins.</dd>
-        <dt>Planning</dt>
-        <dd>Date à définir avec le(s) participant(s)</dd>
-        <dt>Numéro Organisme de Formation</dt>
-        <dd>846 914 834 69</dd>
-        <dd>Préfecture de Lyon</dd>
-      </dl>
+    <p>Pour plus d'informations, <a href="{{ url_for('page', page='contact') }}#contact">contactez-nous.</a></p>
     </section>
+  </section>
 
-    <section id="formation_statistics">
-      <ul>
-        <li><span>96%</span> taux de satisfaction des stagiaires</li>
-        <li><span>245 heures</span> de formations dispensées</li>
-        <li><span>%</span> taux de réussite aux évaluations finales</li>
-        <li><span>15 ans</span> d'expérience dans le secteur de la pharmacie</li>
-      </ul>
-    </section>
+  <section id="formation_complementary_informations">
+    <h2>Informations complémentaires</h2>
+    <dl>
+      <dt>Prérequis</dt>
+      <dd>Aucun prérequis n'est nécessaire</dd>
+      <dt>Méthodes et modalités d'évaluation</dt>
+      <dd>Pédagogie participative avec alternance d'exposés théoriques et évaluations à chaque fin de module. Annexe documentaire et/ou présentation du formateur envoyés par mail sur demande.</dd>
+      <dt>Accessibilité aux personnes en situation de handicap</dt>
+      <dd>Si vous souhaitez nous faire part d'un handicap, merci de nous contacter afin que nous adaptions au mieux notre formation à vos besoins.</dd>
+      <dt>Planning</dt>
+      <dd>Date à définir avec le(s) participant(s)</dd>
+      <dt>Numéro Organisme de Formation</dt>
+      <dd>846 914 834 69</dd>
+      <dd>Préfecture de Lyon</dd>
+    </dl>
+  </section>
 
-  </article>
+  <section id="formation_statistics">
+    <ul>
+      <li><span>96%</span> taux de satisfaction des stagiaires</li>
+      <li><span>245 heures</span> de formations dispensées</li>
+      <li><span>%</span> taux de réussite aux évaluations finales</li>
+      <li><span>15 ans</span> d'expérience dans le secteur de la pharmacie</li>
+    </ul>
+  </section>
+
 {% endblock content %}

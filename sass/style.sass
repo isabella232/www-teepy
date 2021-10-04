@@ -855,16 +855,70 @@ h1
 
 
 /* FORMATION */
-#formation
+
+#certification
   display: flex
+  flex-direction: column
+  text-align: center
+
+  p
+    a
+      color: $blue
+      text-decoration: none
+      transition: color .3s
+
+      &:hover
+        color: darken($blue, 5%)
+
+  > a
+    +button_action_principal
+    align-self: center
+
+#organism
+  align-items: center
+  background: #fafafa
+  display: flex
+  flex: 1 25%
   flex-wrap: wrap
+  margin: 0 0 0 1em
 
-  #certification
+  ul
+    list-style: none
+    padding-left: 0
+
+    li:first-of-type
+      font-weight: 600
+
+  p
+    a
+      color: $blue
+      text-decoration: none
+
+      &:hover
+        color: lighten($blue, 5%)
+
+    &::after
+      background: url(../images/datadocke.jpg) no-repeat
+      background-size: cover
+      content: ''
+      display: block
+      height: 98px
+      width: 90px
+
+#lessons
+  background: $lightgrey-2
+  max-width: none
+
+  #lessons-container
     display: flex
-    flex-direction: column
-    text-align: center
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 0 auto
+    padding: 2em 0 0 0
 
-    p
+    > p
+      margin: 1em auto
+
       a
         color: $blue
         text-decoration: none
@@ -873,97 +927,64 @@ h1
         &:hover
           color: darken($blue, 5%)
 
-    > a
-      +button_action_principal
-      align-self: center
-
-  #organism
-    align-items: center
-    background: #fafafa
-    display: flex
-    flex: 1 25%
-    flex-wrap: wrap
-    margin: 0 0 0 1em
-
-    ul
-      list-style: none
-      padding-left: 0
-
-      li:first-of-type
-        font-weight: 600
-
-    p
-      a
-        color: $blue
-        text-decoration: none
-
-        &:hover
-          color: lighten($blue, 5%)
-
-      &::after
-        background: url(../images/datadocke.jpg) no-repeat
-        background-size: cover
-        content: ''
-        display: block
-        height: 98px
-        width: 90px
-
-  #lessons
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    padding: 2em 0
-
     section
-      align-items: flex-start
+      align-items: start
+      background: #fff
       display: flex
+      flex-direction: column
       flex-wrap: wrap
-      margin: 0
+      font-size: .9em
       padding: 2em
       width: 33%
 
       h3
-        color: $yellow
         font-size: 1.2em
-        font-weight: 500
-        margin-top: 0
+        font-weight: 600
 
       h4
-        margin: .5em 0
-
-      a
-        +button_action_secondary
-        align-self: flex-end
-
-      &#novice, &#reject
-        background: #fafafa
-
-    ul, p
-      flex: 1 100%
-
-    ul
-      padding-left: 1em
-
-    p
-      margin: 0
-
-      &:first-of-type
-        border-bottom: 1px solid $grey
-        font-size: 1.5em
+        margin-top: 1.5em
 
         &::before
-          content: url(../images/duration.svg)
-          display: inline-block
-          margin-right: .5em
-          vertical-align: middle
-          width: 45px
+          background: $yellow
+          content: ''
+          display: block
+          height: 2px
+          margin-bottom: 1.5em
+          width: 40px
 
-    strong
-      background: $yellow
-      display: block
-      font-size: 1.5em
-      padding: 0.8em 0
-      text-align: center
+      a
+        +button_action_principal
+        margin-top: auto
+
+      ul
+        padding-left: 1em
+
+      p
+        margin: 0
+
+        &:first-of-type
+          color: $yellow
+          font-size: .85em
+          font-weight: 600
+          margin-right: auto
+          padding: .5em 0
+
+        &:nth-child(2)
+          align-content: center
+          background: $yellow
+          border-radius: 4em
+          display: flex
+          font-size: .85em
+          font-weight: 600
+          padding: .5em 1em
+
+          &::before
+            background: url(../images/duration.svg) no-repeat center
+            content: ''
+            display: block
+            margin-right: .25em
+            width: 1em
+
 
 /* OPTIQUE */
 #optic-intro
