@@ -125,5 +125,5 @@ def page_not_found(error):
 if __name__ == '__main__':
     from sassutils.wsgi import SassMiddleware
     app.wsgi_app = SassMiddleware(app.wsgi_app, {
-        'teepy': ('sass', 'static/css', '/static/css')})
+        'teepy': ('sass', 'static/css', '/static/css', False)})
     app.run(debug=True)
