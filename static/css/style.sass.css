@@ -899,26 +899,25 @@ h1 {
   display: flex;
   flex-wrap: wrap; }
   #formation #certification {
-    align-self: flex-start;
-    border: 1px solid #e3e3e3;
     display: flex;
-    flex: 1 25%;
-    flex-wrap: wrap; }
-    #formation #certification p {
-      flex: 1 75%; }
-    #formation #certification::before {
-      content: url(../images/feature_formation.svg);
-      display: inline-block;
-      width: 100px; }
-    #formation #certification a {
+    flex-direction: column;
+    text-align: center; }
+    #formation #certification p a {
+      color: #499cfb;
+      text-decoration: none;
+      transition: color .3s; }
+      #formation #certification p a:hover {
+        color: #308efa; }
+    #formation #certification > a {
       background: #499cfb;
       color: #fff;
       font-size: 0.9em;
       font-weight: 500;
       padding: 1em;
       text-decoration: none;
-      transition: background 0.3s; }
-      #formation #certification a:hover {
+      transition: background 0.3s;
+      align-self: center; }
+      #formation #certification > a:hover {
         background: #308efa; }
   #formation #organism {
     align-items: center;
@@ -1507,7 +1506,6 @@ h1 {
       columns: 1; }
       #features dl dt {
         margin-bottom: .5em; } }
-
 @media screen and (max-width: 950px) {
     #features dl dt:hover + dd {
       height: auto; }
@@ -1582,4 +1580,4 @@ h1 {
   footer #legals_mentions {
     text-align: left; } }
 
-/*# sourceMappingURL=../static/css/style.sass.css.map */
+/*# sourceMappingURL=style.sass.css.map */

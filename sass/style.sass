@@ -860,22 +860,22 @@ h1
   flex-wrap: wrap
 
   #certification
-    align-self: flex-start
-    border: 1px solid $lightgrey
     display: flex
-    flex: 1 25%
-    flex-wrap: wrap
+    flex-direction: column
+    text-align: center
 
     p
-      flex: 1 75%
+      a
+        color: $blue
+        text-decoration: none
+        transition: color .3s
 
-    &::before
-      content: url(../images/feature_formation.svg)
-      display: inline-block
-      width: 100px
+        &:hover
+          color: darken($blue, 5%)
 
-    a
+    > a
       +button_action_principal
+      align-self: center
 
   #organism
     align-items: center
