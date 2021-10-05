@@ -985,6 +985,30 @@ h1
             margin-right: .25em
             width: 1em
 
+#formation_complementary_informations
+  dl
+    display: grid
+    grid-template-columns: 25% 1fr
+
+    dt
+      border-bottom: 1px solid $lightgrey
+      grid-column: 1
+      font-size: 1.15em
+      font-weight: 600
+      padding: .75em 0
+
+      &:last-of-type
+        border: none
+
+    dd
+      border-bottom: 1px solid $lightgrey
+      grid-column: 2
+      margin-left: 0
+      padding: 1em 0 1em 1em
+
+      &:last-of-type
+        border: none
+
 
 /* OPTIQUE */
 #optic-intro

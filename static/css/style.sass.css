@@ -1016,6 +1016,25 @@ h1 {
             margin-right: .25em;
             width: 1em; }
 
+#formation_complementary_informations dl {
+  display: grid;
+  grid-template-columns: 25% 1fr; }
+  #formation_complementary_informations dl dt {
+    border-bottom: 1px solid #e3e3e3;
+    grid-column: 1;
+    font-size: 1.15em;
+    font-weight: 600;
+    padding: .75em 0; }
+    #formation_complementary_informations dl dt:last-of-type {
+      border: none; }
+  #formation_complementary_informations dl dd {
+    border-bottom: 1px solid #e3e3e3;
+    grid-column: 2;
+    margin-left: 0;
+    padding: 1em 0 1em 1em; }
+    #formation_complementary_informations dl dd:last-of-type {
+      border: none; }
+
 /* OPTIQUE */
 #optic-intro {
   background: #00b2ee;
@@ -1512,6 +1531,11 @@ h1 {
       width: 100%; }
   #lessons #lessons-container section {
     width: 100%; }
+  #formation_complementary_informations dl {
+    display: initial; }
+    #formation_complementary_informations dl dd {
+      border: none;
+      padding: 1em 0; }
   #features dl {
     background-position: bottom;
     background: none;
