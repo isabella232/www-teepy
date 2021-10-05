@@ -913,46 +913,23 @@ h1 {
     padding: 1em;
     text-decoration: none;
     transition: background 0.3s;
-    align-self: center; }
+    align-self: center;
+    margin-bottom: 2em; }
     #certification > a:hover {
       background: #308efa; }
 
-#organism {
-  align-items: center;
-  background: #fafafa;
-  display: flex;
-  flex: 1 25%;
-  flex-wrap: wrap;
-  margin: 0 0 0 1em; }
-  #organism ul {
-    list-style: none;
-    padding-left: 0; }
-    #organism ul li:first-of-type {
-      font-weight: 600; }
-  #organism p a {
-    color: #499cfb;
-    text-decoration: none; }
-    #organism p a:hover {
-      color: #62aafc; }
-  #organism p::after {
-    background: url(../images/datadocke.jpg) no-repeat;
-    background-size: cover;
-    content: '';
-    display: block;
-    height: 98px;
-    width: 90px; }
-
 #lessons {
   background: #f7f7f7;
+  padding: 0;
   max-width: none; }
   #lessons #lessons-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 2em 0 0 0; }
+    padding: 2em 0; }
     #lessons #lessons-container > p {
-      margin: 1em auto; }
+      margin: 1em auto 0; }
       #lessons #lessons-container > p a {
         color: #499cfb;
         text-decoration: none;
@@ -973,6 +950,8 @@ h1 {
         font-weight: 600; }
       #lessons #lessons-container section h4 {
         margin-top: 1.5em; }
+        #lessons #lessons-container section h4 + p {
+          margin-bottom: 1em; }
         #lessons #lessons-container section h4::before {
           background: #faba49;
           content: '';
@@ -999,7 +978,6 @@ h1 {
           color: #faba49;
           font-size: .85em;
           font-weight: 600;
-          margin-right: auto;
           padding: .5em 0; }
         #lessons #lessons-container section p:nth-child(2) {
           align-content: center;
@@ -1016,24 +994,26 @@ h1 {
             margin-right: .25em;
             width: 1em; }
 
-#formation_complementary_informations dl {
-  display: grid;
-  grid-template-columns: 25% 1fr; }
-  #formation_complementary_informations dl dt {
-    border-bottom: 1px solid #e3e3e3;
-    grid-column: 1;
-    font-size: 1.15em;
-    font-weight: 600;
-    padding: .75em 0; }
-    #formation_complementary_informations dl dt:last-of-type {
-      border: none; }
-  #formation_complementary_informations dl dd {
-    border-bottom: 1px solid #e3e3e3;
-    grid-column: 2;
-    margin-left: 0;
-    padding: 1em 0 1em 1em; }
-    #formation_complementary_informations dl dd:last-of-type {
-      border: none; }
+#formation_complementary_informations {
+  margin: 1em auto; }
+  #formation_complementary_informations dl {
+    display: grid;
+    grid-template-columns: 25% 1fr; }
+    #formation_complementary_informations dl dt {
+      border-bottom: 1px solid #e3e3e3;
+      grid-column: 1;
+      font-size: 1.15em;
+      font-weight: 600;
+      padding: 1.75em 0; }
+      #formation_complementary_informations dl dt:last-of-type {
+        border: none; }
+    #formation_complementary_informations dl dd {
+      border-bottom: 1px solid #e3e3e3;
+      grid-column: 2;
+      margin-left: 0;
+      padding: 2em 0 2em 2em; }
+      #formation_complementary_informations dl dd:last-of-type {
+        border: none; }
 
 #formation_statistics {
   background: #faba49;
@@ -1551,11 +1531,14 @@ h1 {
       text-align: center;
       width: 100%; }
   #lessons #lessons-container section {
+    margin: 1em 0;
     width: 100%; }
   #formation_complementary_informations dl {
     display: initial; }
     #formation_complementary_informations dl dd {
       border: none;
+      padding: 1em 0; }
+    #formation_complementary_informations dl dt {
       padding: 1em 0; }
   #formation_statistics ul {
     flex-wrap: wrap; }
