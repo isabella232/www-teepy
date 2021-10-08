@@ -947,12 +947,13 @@ h1 {
       width: 33%; }
       #lessons #lessons-container section h3 {
         font-size: 1.2em;
-        font-weight: 600; }
-      #lessons #lessons-container section h4 {
+        font-weight: 600;
+        margin-bottom: 0; }
+      #lessons #lessons-container section h4:not(:first-of-type) {
         margin-top: 1.5em; }
-        #lessons #lessons-container section h4 + p {
+        #lessons #lessons-container section h4:not(:first-of-type) + p {
           margin-bottom: 1em; }
-        #lessons #lessons-container section h4::before {
+        #lessons #lessons-container section h4:not(:first-of-type)::before {
           background: #faba49;
           content: '';
           display: block;
@@ -971,6 +972,7 @@ h1 {
         #lessons #lessons-container section a:hover {
           background: #308efa; }
       #lessons #lessons-container section ul {
+        margin-top: 0;
         padding-left: 1em; }
       #lessons #lessons-container section p {
         margin: 0; }
