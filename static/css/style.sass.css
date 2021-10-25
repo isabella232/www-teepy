@@ -202,7 +202,7 @@ footer {
   footer #legals_mentions {
     margin-top: 50px;
     text-align: right; }
-    footer #legals_mentions li:nth-child(2)::before {
+    footer #legals_mentions li:nth-child(3)::before {
       color: #faba49;
       content: "*"; }
     footer #legals_mentions a {
