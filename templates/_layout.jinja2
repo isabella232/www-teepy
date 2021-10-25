@@ -25,6 +25,35 @@
       g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.matomo.cloud/pharminfo.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
+    <script src="{{ url_for('static', filename='tarteaucitron/tarteaucitron.js') }}"></script>
+    <script type="text/javascript">
+      tarteaucitron.init({
+        "privacyUrl": "{{ url_for('page', page='legal') }}",
+        "hashtag": "#tarteaucitron",
+        "cookieName": "tarteaucitron",
+        "orientation": "middle",
+        "groupServices": false,
+        "showAlertSmall": false,
+        "cookieslist": false,
+        "closePopup": false,
+        "showIcon": false,
+        //"iconSrc": "",
+        "iconPosition": "BottomRight",
+        "adblocker": false,
+        "DenyAllCta" : true,
+        "AcceptAllCta" : true,
+        "highPrivacy": true,
+        "handleBrowserDNTRequest": false,
+        "removeCredit": false,
+        "moreInfoLink": true,
+        "useExternalCss": false,
+        "useExternalJs": false,
+        //"cookieDomain": "",
+        "readmoreLink": "",
+        "mandatory": true,
+      });
+    </script>
+    <script async defer src="https://get.smart-data-systems.com/gq?site_id=101338043&notrack=1"></script>
   </head>
 
   <body>
@@ -67,6 +96,7 @@
       </ul>
 
       <ul id="legals_mentions">
+        <li><a href="#tarteaucitron">Cookies</a></li>
         <li><a href="{{ url_for('page', page='legal') }}">Mentions légales</a></li>
         <li>Conditions Back Office Services</li>
         <li>Backoffice, une marque <a href="https://kozea.fr/" target="_blank">Kozea group</a></li>
@@ -86,5 +116,10 @@
         <li id="github"><a href="https://github.com/Kozea" target="_blank">Github</a></li>
       </ul>
     </footer>
+
+    <script type="text/javascript">
+      tarteaucitron.user.getguanty = '101338043';
+      (tarteaucitron.job = tarteaucitron.job || []).push('getquanty');
+    </script>
   </body>
 </html>
