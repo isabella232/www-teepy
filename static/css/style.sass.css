@@ -1549,17 +1549,20 @@ h1 {
     width: 100%; }
   #news article {
     width: 100%; }
-  #certification, #organism {
-    flex: 1 100%; }
   #certification {
-    justify-content: center; }
-    #certification::before {
-      content: none; }
-  #organism {
-    margin: 1em 0; }
-    #organism ul {
+    justify-content: center;
+    flex-wrap: wrap; }
+    #certification #certification-description {
       text-align: center;
       width: 100%; }
+      #certification #certification-description h2 {
+        text-align: center; }
+        #certification #certification-description h2::after {
+          margin: 0 auto; }
+    #certification #certification-qualiopi {
+      min-width: 15em;
+      max-width: 20em;
+      width: auto; }
   #lessons #lessons-container section {
     margin: 1em 0;
     width: 100%; }
