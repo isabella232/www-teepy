@@ -16,6 +16,11 @@ else
 include $(BASENAME)
 endif
 
+run:
+	$(PYTHON) $(FLASK_APP)
+
+serve: run
+	$(LOG)
 
 deploy-test:
 	$(LOG)
