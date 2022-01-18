@@ -855,25 +855,57 @@ h1
 
 
 /* FORMATION */
-
 #certification
+  align-items: center
   display: flex
-  flex-direction: column
-  text-align: center
+  justify-content: space-between
+  padding: 0
 
-  p
-    a
-      color: $blue
-      text-decoration: none
-      transition: color .3s
+  #certification-description
+    margin: 0
+    width: 75%
 
-      &:hover
-        color: darken($blue, 5%)
+    h2
+      text-align: left
 
-  > a
-    +button_action_principal
-    align-self: center
-    margin-bottom: 2em
+      &::after
+        margin: 0
+
+    p
+      margin-bottom: 2em
+      a
+        color: $blue
+        text-decoration: none
+        transition: color .3s
+
+        &:hover
+          color: darken($blue, 5%)
+
+    > a
+      +button_action_principal
+
+  #certification-qualiopi
+    margin: 0
+    width: 25%
+
+    p
+      background: $yellow
+      font-size: .8em
+      padding: 0 2em 1em 2em
+      line-height: normal
+
+      span
+        font-weight: 600
+        text-transform: uppercase
+
+      &::before
+        background: white
+        content: url(../images/logo-qualiopi.svg)
+        display: block
+        height: auto
+        margin-bottom: .5em
+        margin-left: -2em
+        margin-right: -2em
 
 #lessons
   background: $lightgrey-2

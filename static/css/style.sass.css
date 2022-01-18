@@ -202,7 +202,7 @@ footer {
   footer #legals_mentions {
     margin-top: 50px;
     text-align: right; }
-    footer #legals_mentions li:nth-child(3)::before {
+    footer #legals_mentions li:nth-child(2)::before {
       color: #faba49;
       content: "*"; }
     footer #legals_mentions a {
@@ -896,27 +896,54 @@ h1 {
 
 /* FORMATION */
 #certification {
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  text-align: center; }
-  #certification p a {
-    color: #499cfb;
-    text-decoration: none;
-    transition: color .3s; }
-    #certification p a:hover {
-      color: #308efa; }
-  #certification > a {
-    background: #499cfb;
-    color: #fff;
-    font-size: 0.9em;
-    font-weight: 500;
-    padding: 1em;
-    text-decoration: none;
-    transition: background 0.3s;
-    align-self: center;
-    margin-bottom: 2em; }
-    #certification > a:hover {
-      background: #308efa; }
+  justify-content: space-between;
+  padding: 0; }
+  #certification #certification-description {
+    margin: 0;
+    width: 75%; }
+    #certification #certification-description h2 {
+      text-align: left; }
+      #certification #certification-description h2::after {
+        margin: 0; }
+    #certification #certification-description p {
+      margin-bottom: 2em; }
+      #certification #certification-description p a {
+        color: #499cfb;
+        text-decoration: none;
+        transition: color .3s; }
+        #certification #certification-description p a:hover {
+          color: #308efa; }
+    #certification #certification-description > a {
+      background: #499cfb;
+      color: #fff;
+      font-size: 0.9em;
+      font-weight: 500;
+      padding: 1em;
+      text-decoration: none;
+      transition: background 0.3s; }
+      #certification #certification-description > a:hover {
+        background: #308efa; }
+  #certification #certification-qualiopi {
+    margin: 0;
+    width: 25%; }
+    #certification #certification-qualiopi p {
+      background: #faba49;
+      font-size: .8em;
+      padding: 0 2em 1em 2em;
+      line-height: normal; }
+      #certification #certification-qualiopi p span {
+        font-weight: 600;
+        text-transform: uppercase; }
+      #certification #certification-qualiopi p::before {
+        background: white;
+        content: url(../images/logo-qualiopi.svg);
+        display: block;
+        height: auto;
+        margin-bottom: .5em;
+        margin-left: -2em;
+        margin-right: -2em; }
 
 #lessons {
   background: #f7f7f7;
