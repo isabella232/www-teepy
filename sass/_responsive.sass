@@ -37,21 +37,24 @@
     article
       width: 100%
 
-  #certification, #organism
-    flex: 1 100%
-
   #certification
+    flex-wrap: wrap
     justify-content: center
 
-    &::before
-      content: none
-
-  #organism
-    margin: 1em 0
-
-    ul
+    #certification-description
       text-align: center
       width: 100%
+
+      h2
+        text-align: center
+
+        &::after
+          margin: 0 auto
+
+    #certification-qualiopi
+      min-width: 15em
+      max-width: 20em
+      width: auto
 
   #lessons #lessons-container
     section
