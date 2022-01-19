@@ -1550,8 +1550,8 @@ h1 {
   #news article {
     width: 100%; }
   #certification {
-    justify-content: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: center; }
     #certification #certification-description {
       text-align: center;
       width: 100%; }
