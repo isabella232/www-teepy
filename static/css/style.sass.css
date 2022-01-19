@@ -940,8 +940,7 @@ h1 {
         background: white;
         content: url(../images/logo-qualiopi.svg);
         display: block;
-        height: auto;
-        margin-bottom: .5em;
+        margin-bottom: 1em;
         margin-left: -2em;
         margin-right: -2em; }
 
