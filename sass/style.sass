@@ -104,11 +104,6 @@ body
   line-height: 1.618em
   margin: 0
 
-  &::before
-    content: ""
-    display: block
-    height: 50px
-
 nav
   align-items: center
   background: $grey
@@ -117,8 +112,9 @@ nav
   left: 0
   order: -1
   padding: 1em 2em
-  position: fixed
+  position: sticky
   right: 0
+  top: 0
   z-index: 100
 
   ul
