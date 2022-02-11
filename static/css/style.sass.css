@@ -416,34 +416,6 @@ h1 {
     #diagnosis a:hover {
       background: #2b2a2a; }
 
-#interview {
-  position: relative; }
-  #interview h2 {
-    color: #499cfb;
-    margin: 0 auto;
-    padding: 0 5em; }
-    #interview h2::before {
-      content: url(../images/player.svg);
-      display: block;
-      height: 70px;
-      margin: 0 auto;
-      width: 70px; }
-    #interview h2::after {
-      content: none; }
-  #interview a {
-    color: #499cfb;
-    display: block;
-    font-size: 1.2em;
-    font-weight: 600;
-    text-align: center; }
-    #interview a::before {
-      bottom: 0;
-      content: "";
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0; }
-
 #presentation ul {
   box-sizing: border-box;
   display: flex;
@@ -1580,8 +1552,6 @@ h1 {
     justify-content: center; }
     #diagnosis a {
       margin-left: initial; }
-  #interview h2 {
-    padding: 0; }
   #presentation ul li {
     width: 100%; }
   #testimonials article {
