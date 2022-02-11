@@ -485,26 +485,18 @@ h1 {
   padding: 0; }
   .advantages ul li {
     align-items: center;
-    border: 1px solid #e3e3e3;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 270px;
     margin: 12px;
     padding: 1em;
     text-align: center;
-    transition: background 0.3s, border-color 0.3s;
     width: 270px; }
     .advantages ul li:before {
       display: block;
       content: '';
       height: 80px;
-      margin-top: 3em;
       width: 25%; }
-    .advantages ul li:hover {
-      background: #383737;
-      border-color: #383737;
-      color: white; }
     .advantages ul li#acceleration:before {
       content: url(../images/acceleration.svg); }
     .advantages ul li#simplification:before {

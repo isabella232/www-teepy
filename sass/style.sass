@@ -463,28 +463,19 @@ h1
 
     li
       align-items: center
-      border: 1px solid $lightgrey
       box-sizing: border-box
       display: flex
       flex-direction: column
-      height: 270px
       margin: 12px
       padding: 1em
       text-align: center
-      transition: background 0.3s, border-color 0.3s
       width: 270px
 
       &:before
         display: block
         content: ''
         height: 80px
-        margin-top: 3em
         width: 25%
-
-      &:hover
-        background: $grey
-        border-color: $grey
-        color: white
 
       @each $name in acceleration, simplification, recoverate, time, optimization, rationalization
         &##{$name}:before
