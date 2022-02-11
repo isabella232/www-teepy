@@ -100,10 +100,11 @@ nav {
         font-weight: 500; }
   nav > a {
     background: #499cfb;
+    border-radius: 3px;
     color: #fff;
     font-size: 0.9em;
     font-weight: 500;
-    padding: 1em;
+    padding: 1em 2em;
     text-decoration: none;
     transition: background 0.3s; }
     nav > a:hover {
@@ -131,10 +132,11 @@ form {
     flex: 1 100%; }
     form input[type="submit"] {
       background: #499cfb;
+      border-radius: 3px;
       color: #fff;
       font-size: 0.9em;
       font-weight: 500;
-      padding: 1em;
+      padding: 1em 2em;
       text-decoration: none;
       transition: background 0.3s;
       border: none;
@@ -284,7 +286,7 @@ footer {
 
 /* INDEX */
 header {
-  background-color: #f7f7f7; }
+  padding: 2em 0; }
 
 h1 {
   font-size: 0; }
@@ -322,10 +324,9 @@ h1 {
     text-decoration-line: underline; }
 
 #introduction {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  font-size: .9em;
   margin: 0 auto;
   padding: 0 0 2em 0; }
   #introduction::after {
@@ -364,20 +365,22 @@ h1 {
     width: 100%; }
   #introduction #contact_ask {
     background: #499cfb;
+    border-radius: 3px;
     color: #fff;
     font-size: 0.9em;
     font-weight: 500;
-    padding: 1em;
+    padding: 1em 2em;
     text-decoration: none;
     transition: background 0.3s; }
     #introduction #contact_ask:hover {
       background: #308efa; }
   #introduction #white_book {
     background: #499cfb;
+    border-radius: 3px;
     color: #fff;
     font-size: 0.9em;
     font-weight: 500;
-    padding: 1em;
+    padding: 1em 2em;
     text-decoration: none;
     transition: background 0.3s;
     background: none;
@@ -388,6 +391,30 @@ h1 {
     #introduction #white_book:hover {
       background: none;
       color: #308efa; }
+
+#diagnosis {
+  background: #faba49;
+  border-radius: 3px;
+  display: flex;
+  align-items: center; }
+  #diagnosis h3 {
+    font-size: 1.25em; }
+  #diagnosis a {
+    background: #499cfb;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: background 0.3s;
+    background: #383737;
+    color: #FFF;
+    margin-left: auto; }
+    #diagnosis a:hover {
+      background: #308efa; }
+    #diagnosis a:hover {
+      background: #2b2a2a; }
 
 #interview {
   position: relative; }
@@ -778,10 +805,11 @@ h1 {
       margin-top: .5em; }
   #demo a {
     background: #499cfb;
+    border-radius: 3px;
     color: #fff;
     font-size: 0.9em;
     font-weight: 500;
-    padding: 1em;
+    padding: 1em 2em;
     text-decoration: none;
     transition: background 0.3s;
     background: #fff;
@@ -831,10 +859,11 @@ h1 {
       width: 20px; }
   #outsourcing a, #association a {
     background: #499cfb;
+    border-radius: 3px;
     color: #fff;
     font-size: 0.9em;
     font-weight: 500;
-    padding: 1em;
+    padding: 1em 2em;
     text-decoration: none;
     transition: background 0.3s;
     display: inline-block; }
@@ -918,10 +947,11 @@ h1 {
           color: #308efa; }
     #certification #certification-description > a {
       background: #499cfb;
+      border-radius: 3px;
       color: #fff;
       font-size: 0.9em;
       font-weight: 500;
-      padding: 1em;
+      padding: 1em 2em;
       text-decoration: none;
       transition: background 0.3s; }
       #certification #certification-description > a:hover {
@@ -989,10 +1019,11 @@ h1 {
           width: 20px; }
       #lessons #lessons-container section a {
         background: #499cfb;
+        border-radius: 3px;
         color: #fff;
         font-size: 0.9em;
         font-weight: 500;
-        padding: 1em;
+        padding: 1em 2em;
         text-decoration: none;
         transition: background 0.3s;
         margin-top: auto; }
@@ -1151,10 +1182,11 @@ h1 {
     margin-bottom: 2em; }
   #estimate-optic a {
     background: #499cfb;
+    border-radius: 3px;
     color: #fff;
     font-size: 0.9em;
     font-weight: 500;
-    padding: 1em;
+    padding: 1em 2em;
     text-decoration: none;
     transition: background 0.3s; }
     #estimate-optic a:hover {
@@ -1512,10 +1544,11 @@ h1 {
       display: none; }
   #error a {
     background: #499cfb;
+    border-radius: 3px;
     color: #fff;
     font-size: 0.9em;
     font-weight: 500;
-    padding: 1em;
+    padding: 1em 2em;
     text-decoration: none;
     transition: background 0.3s;
     display: inline-block;
@@ -1542,6 +1575,11 @@ h1 {
   #introduction article {
     padding: 0 1em;
     width: 100%; }
+  #diagnosis {
+    flex-wrap: wrap;
+    justify-content: center; }
+    #diagnosis a {
+      margin-left: initial; }
   #interview h2 {
     padding: 0; }
   #presentation ul li {
