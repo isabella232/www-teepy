@@ -127,30 +127,24 @@ nav
     flex: 1
     flex-wrap: wrap
     font-size: .9em
-    justify-content: flex-end
     margin: 0
     padding: 0
-    position: relative
 
     li
-      display: block
+      display: flex
 
       &:first-of-type
         a:before
-          content: url(../images/paperclip.svg)
-          display: block
-          height: 50px
-          left: 0
-          position: absolute
-          top: 5px
-          width: 15px
+          content: url(../images/logo-white.svg)
+          width: 150px
 
       &:hover a
         color: $yellow
 
       a
+        align-items: center
         color: inherit
-        display: block
+        display: flex
         padding: .5em 1em
         text-decoration: inherit
         transition: color 0.3s
@@ -245,7 +239,7 @@ footer
 
   #contact_informations
       &::before
-        content: url(../images/logo-footer.svg)
+        content: url(../images/logo-white.svg)
         display: block
         width: 150px
 
@@ -304,11 +298,7 @@ header
   background-color: $lightgrey-2
 
 h1
-  background: url(../images/logo.svg) left no-repeat
-  color: transparent
-  height: 1.5em
-  margin: 1em auto 1em
-  max-width: 1200px
+  display: none
 
 #announce
   background: $yellow
