@@ -70,10 +70,10 @@ nav {
   align-items: center;
   background: #383737;
   display: flex;
+  flex-wrap: wrap;
   left: 0;
-  min-height: 50px;
   order: -1;
-  padding: 0 1em;
+  padding: 1em 2em;
   position: fixed;
   right: 0;
   z-index: 100; }
@@ -83,13 +83,12 @@ nav {
     flex: 1;
     flex-wrap: wrap;
     font-size: .9em;
+    font-weight: 500;
+    justify-content: center;
     margin: 0;
     padding: 0; }
     nav ul li {
       display: flex; }
-      nav ul li:first-of-type a:before {
-        content: url(../images/logo-white.svg);
-        width: 150px; }
       nav ul li:hover a {
         color: #faba49; }
       nav ul li a {
@@ -102,6 +101,16 @@ nav {
       nav ul li.active a {
         color: #faba49;
         font-weight: 500; }
+  nav > a {
+    background: #499cfb;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 1em;
+    text-decoration: none;
+    transition: background 0.3s; }
+    nav > a:hover {
+      background: #308efa; }
 
 form {
   display: flex;
@@ -281,7 +290,12 @@ header {
   background-color: #f7f7f7; }
 
 h1 {
-  display: none; }
+  font-size: 0; }
+  h1 a {
+    content: url(../images/logo-white.svg);
+    display: flex;
+    height: 100%;
+    width: 150px; }
 
 #announce {
   background: #faba49;
@@ -1520,9 +1534,10 @@ h1 {
     content: none; }
   nav {
     position: initial; }
+    nav h1, nav ul {
+      flex: 1 100%; }
     nav ul {
-      justify-content: flex-start;
-      padding-left: 20px; }
+      justify-content: flex-start; }
   header {
     padding: 0 2em; }
   #introduction::after {
