@@ -407,66 +407,64 @@ h1 {
     #diagnosis a:hover {
       background: #2b2a2a; }
 
-#presentation ul {
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 -2em;
-  padding: 0; }
-  #presentation ul li {
-    align-items: center;
-    border: 1px solid #e3e3e3;
+#presentation {
+  background: #f7f7f7;
+  max-width: none; }
+  #presentation h2 {
+    margin-top: 1em; }
+  #presentation ul {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1em;
-    padding: 1em 2em;
-    text-align: center;
-    transition: border-color 0.3s;
-    width: 45%; }
-    #presentation ul li:hover {
-      border-color: #faba49; }
-    #presentation ul li.feature_webtool:before {
-      content: url(../images/feature_webtool.svg);
-      display: block;
-      margin: 0 auto;
-      width: 200px; }
-    #presentation ul li.feature_outsourcing:before {
-      content: url(../images/feature_outsourcing.svg);
-      display: block;
-      margin: 0 auto;
-      width: 200px; }
-    #presentation ul li.feature_formation:before {
-      content: url(../images/feature_formation.svg);
-      display: block;
-      margin: 0 auto;
-      width: 200px; }
-    #presentation ul li.feature_association:before {
-      content: url(../images/feature_association.svg);
-      display: block;
-      margin: 0 auto;
-      width: 200px; }
-    #presentation ul li strong {
-      font-size: 1.1em;
-      font-weight: 500; }
-    #presentation ul li a {
-      background: #fff;
-      border: 2px solid #499cfb;
-      color: #499cfb;
-      display: inline-block;
-      font-size: 0.8em;
-      font-weight: 500;
-      padding: 1em;
-      text-decoration: none;
-      transition: background .3s, color .3s;
-      align-self: center;
-      margin-top: 1em; }
-      #presentation ul li a:hover {
-        background: #308efa;
-        border-color: #308efa;
-        color: #fff; }
+    column-gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2em 0;
+    row-gap: 1em; }
+    #presentation ul li {
+      background: #FFF;
+      box-sizing: border-box;
+      border: 2px solid #FFF;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      padding: 1em 2em;
+      transition: border-color 0.3s; }
+      #presentation ul li:hover {
+        border-color: #499cfb; }
+      #presentation ul li.feature_webtool:before {
+        content: url(../images/feature_webtool.svg);
+        display: block;
+        margin-bottom: 1em;
+        width: 80px; }
+      #presentation ul li.feature_outsourcing:before {
+        content: url(../images/feature_outsourcing.svg);
+        display: block;
+        margin-bottom: 1em;
+        width: 80px; }
+      #presentation ul li.feature_formation:before {
+        content: url(../images/feature_formation.svg);
+        display: block;
+        margin-bottom: 1em;
+        width: 80px; }
+      #presentation ul li.feature_association:before {
+        content: url(../images/feature_association.svg);
+        display: block;
+        margin-bottom: 1em;
+        width: 80px; }
+      #presentation ul li strong {
+        font-size: 1.1em;
+        font-weight: 600;
+        margin-bottom: .5em; }
+      #presentation ul li a {
+        color: #499cfb;
+        font-size: .9em;
+        font-weight: 500;
+        margin-top: auto;
+        padding-top: 1em;
+        text-decoration: none; }
+        #presentation ul li a:hover {
+          color: #308efa; }
 
 #video {
   display: flex;

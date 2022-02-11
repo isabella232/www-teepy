@@ -389,45 +389,57 @@ h1
       background: darken($grey, 5%)
 
 #presentation
+  background: $lightgrey-2
+  max-width: none
+
+  h2
+    margin-top: 1em
+
   ul
     box-sizing: border-box
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    margin: 0 -2em
-    padding: 0
+    column-gap: 1em
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    margin: 0 auto
+    max-width: 1200px
+    padding: 2em 0
+    row-gap: 1em
 
     li
-      align-items: center
-      border: 1px solid $lightgrey
+      background: #FFF
       box-sizing: border-box
+      border: 2px solid #FFF
+      border-radius: 3px
       display: flex
       flex-direction: column
-      justify-content: center
-      margin: 1em
       padding: 1em 2em
-      text-align: center
       transition: border-color 0.3s
-      width: 45%
 
       &:hover
-        border-color: $yellow
+        border-color: $blue
 
       @each $name in feature_webtool, feature_outsourcing, feature_formation, feature_association
         &.#{$name}:before
           content: url(../images/#{$name}.svg)
           display: block
-          margin: 0 auto
-          width: 200px
+          margin-bottom: 1em
+          width: 80px
 
       strong
         font-size: 1.1em
-        font-weight: 500
+        font-weight: 600
+        margin-bottom: .5em
 
       a
-        +button_action_secondary
-        align-self: center
-        margin-top: 1em
+        color: $blue
+        font-size: .9em
+        font-weight: 500
+        margin-top: auto
+        padding-top: 1em
+        text-decoration: none
+
+        &:hover
+          color: darken($blue, 5%)
 
 #video
   display: flex
