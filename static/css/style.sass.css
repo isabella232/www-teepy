@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* VARIABLES */
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap");
 .asterisk {
   color: #787676;
   font-size: .9em; }
@@ -332,11 +332,22 @@ h1 {
   #introduction article {
     display: flex;
     flex-wrap: wrap;
+    font-weight: 500;
     margin: 0;
     padding: 0 1em;
     width: 45%; }
     #introduction article p {
       margin-bottom: 0; }
+      #introduction article p:last-child {
+        color: #499cfb;
+        font-style: italic; }
+        #introduction article p:last-child::before {
+          content: url(../images/french-flag.svg);
+          display: inline-block;
+          height: 24px;
+          margin-right: 1em;
+          vertical-align: middle;
+          width: 30px; }
       #introduction article p a {
         color: #383737;
         transition: color .3s; }
@@ -1655,8 +1666,8 @@ h1 {
   #whitepaper form {
     width: 100%; }
   footer ul {
-    padding-left: 0;
-    margin-right: 1em; }
+    margin-right: 1em;
+    padding-left: 0; }
   footer #company {
     flex: 1 100%; }
   footer #social {

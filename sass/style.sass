@@ -6,7 +6,7 @@ $grey: #383737
 $lightgrey: #e3e3e3
 $lightgrey-2: #f7f7f7
 $yellow: #faba49
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600')
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap')
 
 =button_action_principal
   background: $blue
@@ -342,12 +342,25 @@ h1
   article
     display: flex
     flex-wrap: wrap
+    font-weight: 500
     margin: 0
     padding: 0 1em
     width: 45%
 
     p
       margin-bottom: 0
+
+      &:last-child
+        color: $blue
+        font-style: italic
+
+        &::before
+          content: url(../images/french-flag.svg)
+          display: inline-block
+          height: 24px
+          margin-right: 1em
+          vertical-align: middle
+          width: 30px
 
       a
         color: $grey
