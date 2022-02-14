@@ -428,6 +428,9 @@ h1 {
     margin: 1em auto;
     max-width: 1200px;
     text-align: center; }
+    #presentation p a {
+      color: #499cfb;
+      text-decoration: none; }
     #presentation p:last-of-type {
       font-style: italic;
       font-weight: 500; }
