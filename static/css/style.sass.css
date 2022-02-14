@@ -166,116 +166,117 @@ h3 {
 
 footer {
   background: #383737;
-  bottom: 0;
   box-sizing: border-box;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
   font-size: .9em;
-  justify-content: space-around;
   margin: 0 auto;
   padding: 2em;
   width: 100%; }
   footer ul {
     list-style: none;
     margin: 0; }
-  footer form {
-    width: 100%; }
-    footer form input[type=submit], footer form input[type=submit]:hover {
-      background: #faba49;
-      color: #383737;
-      margin-left: auto; }
-  footer #contact_informations::before {
-    content: url(../images/logo-white.svg);
-    display: block;
-    width: 150px; }
-  footer #contact_informations a {
-    color: #faba49;
-    transition: color .3s; }
-    footer #contact_informations a:hover {
-      color: #fbc971; }
-  footer #legals_mentions {
-    margin-top: 50px;
-    text-align: right; }
-    footer #legals_mentions li:nth-child(2)::before {
-      color: #faba49;
-      content: "*"; }
-    footer #legals_mentions a {
-      color: #fff;
-      transition: color .3s; }
-      footer #legals_mentions a:hover {
-        color: #faba49;
-        text-decoration: underline; }
-  footer #social {
+  footer form input[type=submit] {
+    background: #faba49;
+    color: #383737; }
+    footer form input[type=submit]:hover {
+      background: #f9b130; }
+  footer #footer-upper {
+    align-items: center;
     display: flex;
     flex: 1 100%;
-    justify-content: flex-end; }
-    footer #social li {
-      opacity: .7;
-      padding: 0 .25em;
-      transition: opacity .3s; }
-      footer #social li#facebook a::before {
-        content: url(../images/facebook.svg);
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px; }
+    footer #footer-upper li a {
+      color: #faba49;
+      text-decoration: none; }
+    footer #footer-upper #company {
+      padding-left: 0; }
+      footer #footer-upper #company::before {
+        content: url(../images/logo-white.svg);
         display: block;
-        height: 30px;
-        margin: 0 .2em;
-        width: 30px; }
-      footer #social li a {
-        color: transparent;
-        display: block;
-        font-size: 0; }
-      footer #social li#linkedin a::before {
-        content: url(../images/linkedin.svg);
-        display: block;
-        height: 30px;
-        margin: 0 .2em;
-        width: 30px; }
-      footer #social li a {
-        color: transparent;
-        display: block;
-        font-size: 0; }
-      footer #social li#youtube a::before {
-        content: url(../images/youtube.svg);
-        display: block;
-        height: 30px;
-        margin: 0 .2em;
-        width: 30px; }
-      footer #social li a {
-        color: transparent;
-        display: block;
-        font-size: 0; }
-      footer #social li#twitter a::before {
-        content: url(../images/twitter.svg);
-        display: block;
-        height: 30px;
-        margin: 0 .2em;
-        width: 30px; }
-      footer #social li a {
-        color: transparent;
-        display: block;
-        font-size: 0; }
-      footer #social li#instagram a::before {
-        content: url(../images/instagram.svg);
-        display: block;
-        height: 30px;
-        margin: 0 .2em;
-        width: 30px; }
-      footer #social li a {
-        color: transparent;
-        display: block;
-        font-size: 0; }
-      footer #social li#github a::before {
-        content: url(../images/github.svg);
-        display: block;
-        height: 30px;
-        margin: 0 .2em;
-        width: 30px; }
-      footer #social li a {
-        color: transparent;
-        display: block;
-        font-size: 0; }
-      footer #social li:hover {
-        opacity: 1; }
+        width: 150px; }
+    footer #footer-upper #social {
+      display: flex;
+      height: 30px;
+      margin: 1em 0;
+      padding-left: 0; }
+      footer #footer-upper #social li {
+        padding: 0 .25em;
+        transition: opacity .3s; }
+        footer #footer-upper #social li#facebook a::before {
+          content: url(../images/facebook.svg);
+          display: block;
+          height: 30px;
+          margin: 0 .2em;
+          width: 30px; }
+        footer #footer-upper #social li a {
+          color: transparent;
+          display: block;
+          font-size: 0; }
+        footer #footer-upper #social li#linkedin a::before {
+          content: url(../images/linkedin.svg);
+          display: block;
+          height: 30px;
+          margin: 0 .2em;
+          width: 30px; }
+        footer #footer-upper #social li a {
+          color: transparent;
+          display: block;
+          font-size: 0; }
+        footer #footer-upper #social li#youtube a::before {
+          content: url(../images/youtube.svg);
+          display: block;
+          height: 30px;
+          margin: 0 .2em;
+          width: 30px; }
+        footer #footer-upper #social li a {
+          color: transparent;
+          display: block;
+          font-size: 0; }
+        footer #footer-upper #social li#twitter a::before {
+          content: url(../images/twitter.svg);
+          display: block;
+          height: 30px;
+          margin: 0 .2em;
+          width: 30px; }
+        footer #footer-upper #social li a {
+          color: transparent;
+          display: block;
+          font-size: 0; }
+        footer #footer-upper #social li#instagram a::before {
+          content: url(../images/instagram.svg);
+          display: block;
+          height: 30px;
+          margin: 0 .2em;
+          width: 30px; }
+        footer #footer-upper #social li a {
+          color: transparent;
+          display: block;
+          font-size: 0; }
+        footer #footer-upper #social li:hover {
+          opacity: 1; }
+  footer #footer-lower {
+    align-items: center;
+    border-top: 1px solid #FFF;
+    display: flex;
+    flex: 1 100%;
+    margin: 1em auto 0;
+    max-width: 1200px;
+    font-size: .85em; }
+    footer #footer-lower a {
+      color: #FFF;
+      text-decoration: none;
+      transition: color .3s; }
+      footer #footer-lower a:hover {
+        color: #faba49; }
+    footer #footer-lower ul {
+      display: flex;
+      margin-left: auto; }
+      footer #footer-lower ul li:first-of-type {
+        padding-right: 1em; }
 
 /* INDEX */
 header {
@@ -1653,10 +1654,12 @@ h1 {
       padding-left: 0; }
   #whitepaper form {
     width: 100%; }
+  footer ul {
+    padding-left: 0;
+    margin-right: 1em; }
+  footer #company {
+    flex: 1 100%; }
   footer #social {
-    justify-content: center;
-    margin-top: 1em; }
-  footer #legals_mentions {
-    text-align: left; } }
+    margin-top: 1em; } }
 
 /*# sourceMappingURL=style.sass.css.map */
