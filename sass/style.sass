@@ -422,6 +422,18 @@ h1
   h2
     margin-top: 1em
 
+  p
+    margin: 1em auto
+    max-width: 1200px
+    text-align: center
+
+    &:last-of-type
+      font-style: italic
+      font-weight: 500
+
+      &::before, &::after
+        content: '-'
+
   ul
     box-sizing: border-box
     column-gap: 1em

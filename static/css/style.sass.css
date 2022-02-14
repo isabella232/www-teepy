@@ -424,6 +424,15 @@ h1 {
   max-width: none; }
   #presentation h2 {
     margin-top: 1em; }
+  #presentation p {
+    margin: 1em auto;
+    max-width: 1200px;
+    text-align: center; }
+    #presentation p:last-of-type {
+      font-style: italic;
+      font-weight: 500; }
+      #presentation p:last-of-type::before, #presentation p:last-of-type::after {
+        content: '-'; }
   #presentation ul {
     box-sizing: border-box;
     column-gap: 1em;
