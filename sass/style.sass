@@ -485,6 +485,39 @@ h1
         &##{$name}-optic:before
           content: url(../images/#{$name}-optic.svg)
 
+#whitepaper-presentation
+  background: $blue
+  color: #FFF
+  max-width: none
+
+  &_container
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    max-width: 1200px
+    padding: 1em 0
+
+    img
+      height: auto
+      width: 40%
+
+    article
+      width: 60%
+
+      h2
+        text-align: left
+
+      a
+        +button_action_principal
+        background: #FFF
+        border: 2px solid #fff
+        color: $blue
+        display: inline-block
+
+        &:hover
+          color: #FFF
+
+
 #testimonials
   background: $lightgrey-2
   display: flex

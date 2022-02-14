@@ -524,6 +524,41 @@ h1 {
     .advantages ul li#economy-optic:before {
       content: url(../images/economy-optic.svg); }
 
+#whitepaper-presentation {
+  background: #499cfb;
+  color: #FFF;
+  max-width: none; }
+  #whitepaper-presentation_container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 1em 0; }
+    #whitepaper-presentation_container img {
+      height: auto;
+      width: 40%; }
+    #whitepaper-presentation_container article {
+      width: 60%; }
+      #whitepaper-presentation_container article h2 {
+        text-align: left; }
+      #whitepaper-presentation_container article a {
+        background: #499cfb;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 0.9em;
+        font-weight: 500;
+        padding: 1em 2em;
+        text-decoration: none;
+        transition: background 0.3s;
+        background: #FFF;
+        border: 2px solid #fff;
+        color: #499cfb;
+        display: inline-block; }
+        #whitepaper-presentation_container article a:hover {
+          background: #308efa; }
+        #whitepaper-presentation_container article a:hover {
+          color: #FFF; }
+
 #testimonials {
   background: #f7f7f7;
   display: flex;
@@ -1507,6 +1542,9 @@ h1 {
     #diagnosis a {
       margin-left: initial; }
   #presentation ul li {
+    width: 100%; }
+  #whitepaper-presentation_container article, #whitepaper-presentation_container img {
+    padding: 1em 0;
     width: 100%; }
   #testimonials article {
     width: 100%; }
