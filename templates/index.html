@@ -2,7 +2,6 @@
 
 {% block content %}
     <header>
-      <h1>Backoffice</h1>
       <section id="introduction">
         <article>
           <h2>Simplifiez la gestion de votre tiers-payant</h2>
@@ -10,17 +9,13 @@
             de vos impayés en toute autonomie avec la plateforme Backoffice,
             développée par <a href="https://kozea.fr/" target="_blank">Kozea group</a>.
           </p>
-          <h3>Profitez d'un diagnostic rapide et sans engagement.</h3>
-          <a href="{{ url_for('page', page='contact') }}#contact" id="contact_ask">Demande de contact</a>
-          <a href="{{ url_for('page', page='whitepaper') }}" id="white_book">Télécharger le livre blanc</a>
         </article>
       </section>
+      <article id="diagnosis">
+        <h3>Profitez d'un diagnostic rapide et sans engagement !</h3>
+        <a href="{{ url_for('page', page='contact') }}#contact" id="contact_ask">Nous contacter</a>
+      </article>
     </header>
-
-    <section id="interview">
-      <h2>Quels avantages a un professionnel de santé à utiliser BackOffice ?</h2>
-      <a href="https://youtu.be/PlaglALBDUI" target="_blank">Regarder notre vidéo</a>
-    </section>
 
     <section id="presentation">
       <h2>Les services proposés par Backoffice</h2>
@@ -60,6 +55,20 @@
         <li id="simplification"><strong>Simplification</strong> du suivi des impayés au sein de l'officine : passerelle avec le concentrateur.</li>
         <li id="optimization"><strong>Optimisation</strong> au comptoir de la gestion du Tiers-Payant.</li>
       </ul>
+    </section>
+
+    <section id="whitepaper-presentation">
+      <section id="whitepaper-presentation_container">
+        <article>
+          <h2>Comment redonner de la valeur au métier de pharmacien en optimisant la gestion du tiers-payant ?</h2>
+          <p>Ce livre blanc s'adresse aux pharmaciens d'officine à la recherche d'informations pertinentes
+          pour mieux gérer leur tiers-payant. Il propose des solutions pratiques pour une récupération
+          rapide de trésorerie et pharmacie.
+          </p>
+          <a href="{{ url_for('page', page='whitepaper') }}" id="white_book">Télécharger le livre blanc</a>
+        </article>
+        <img src="../static/images/livre-blanc.jpg">
+      </section>
     </section>
 
     <section id="testimonials">
@@ -103,16 +112,5 @@
           C’est une équipe très sympathique, à notre écoute et qui nous a toujours très bien reçus.
         </p>
       </article>
-    </section>
-
-    <section id="news">
-      <h2>Actualités</h2>
-      {% for entry in news %}
-        <article>
-          <h3>{{ entry.title }}</h3>
-          <p>{{ entry.description | safe }}</p>
-          <a href="{{ entry.link }}">Lire la suite</a>
-        </article>
-      {% endfor %}
     </section>
 {% endblock content %}

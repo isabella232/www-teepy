@@ -45,7 +45,7 @@ def get_news():
     return news
 
 
-@app.route('/')
+@app.route('/', endpoint='index')
 @app.route('/<page>')
 def page(page='index'):
     extra = {'news': get_news()[:2]} if page == 'index' else {}

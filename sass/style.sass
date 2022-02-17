@@ -10,10 +10,11 @@ $yellow: #faba49
 
 =button_action_principal
   background: $blue
+  border-radius: 3px
   color: #fff
   font-size: 0.9em
   font-weight: 500
-  padding: 1em
+  padding: 1em 2em
   text-decoration: none
   transition: background 0.3s
 
@@ -104,21 +105,17 @@ body
   line-height: 1.618em
   margin: 0
 
-  &::before
-    content: ""
-    display: block
-    height: 50px
-
 nav
   align-items: center
   background: $grey
   display: flex
+  flex-wrap: wrap
   left: 0
-  min-height: 50px
   order: -1
-  padding: 0 1em
-  position: fixed
+  padding: 1em 2em
+  position: sticky
   right: 0
+  top: 0
   z-index: 100
 
   ul
@@ -127,30 +124,21 @@ nav
     flex: 1
     flex-wrap: wrap
     font-size: .9em
-    justify-content: flex-end
+    font-weight: 500
+    justify-content: center
     margin: 0
     padding: 0
-    position: relative
 
     li
-      display: block
-
-      &:first-of-type
-        a:before
-          content: url(../images/paperclip.svg)
-          display: block
-          height: 50px
-          left: 0
-          position: absolute
-          top: 5px
-          width: 15px
+      display: flex
 
       &:hover a
         color: $yellow
 
       a
+        align-items: center
         color: inherit
-        display: block
+        display: flex
         padding: .5em 1em
         text-decoration: inherit
         transition: color 0.3s
@@ -158,6 +146,8 @@ nav
       &.active a
         color: $yellow
         font-weight: 500
+  > a
+    +button_action_principal
 
 form
   display: flex
@@ -202,31 +192,21 @@ section, article
 h2
   flex: 1 100%
   font-size: 2em
-  font-weight: 300
-  line-height: 2em
+  font-weight: 600
+  line-height: 1.5
   margin-top: 0
   text-align: center
-
-  &:after
-    background: $yellow
-    content: ''
-    display: block
-    height: 3px
-    margin: 0 auto
-    width: 35px
 
 h3
   font-size: 1.1em
 
 footer
   background: $grey
-  bottom: 0
   box-sizing: border-box
   color: #fff
   display: flex
   flex-wrap: wrap
   font-size: .9em
-  justify-content: space-around
   margin: 0 auto
   padding: 2em
   width: 100%
@@ -236,79 +216,97 @@ footer
     margin: 0
 
   form
-    width: 100%
-
-    input[type=submit], input[type=submit]:hover
+    input[type=submit]
       background: $yellow
       color: $grey
-      margin-left: auto
 
-  #contact_informations
+      &:hover
+        background: darken($yellow, 5%)
+
+  #footer-upper
+    align-items: center
+    display: flex
+    flex: 1 100%
+    flex-wrap: wrap
+    margin: 0 auto
+    max-width: 1200px
+
+    li a
+      color: $yellow
+      text-decoration: none
+
+    #company
+      padding-left: 0
+
       &::before
-        content: url(../images/logo-footer.svg)
+        content: url(../images/logo-white.svg)
         display: block
         width: 150px
 
-      a
-        color: $yellow
-        transition: color .3s
+    #social
+      display: flex
+      height: 30px
+      margin: 1em 0
+      padding-left: 0
+
+      li
+        padding: 0 .25em
+        transition: opacity .3s
+
+        @each $name in facebook, linkedin, youtube, twitter, instagram
+          &##{$name} a::before
+            content: url(../images/#{$name}.svg)
+            display: block
+            height: 30px
+            margin: 0 .2em
+            width: 30px
+
+          a
+            color: transparent
+            display: block
+            font-size: 0
 
         &:hover
-          color: lighten($yellow, 8%)
+          opacity: 1
 
-  #legals_mentions
-    margin-top: 50px
-    text-align: right
 
-    li:nth-child(2)::before
-      color: $yellow
-      content: "*"
+  #footer-lower
+    align-items: center
+    border-top: 1px solid #FFF
+    display: flex
+    flex: 1 100%
+    margin: 1em auto 0
+    max-width: 1200px
+    font-size: .85em
 
     a
-      color: #fff
+      color: #FFF
+      text-decoration: none
       transition: color .3s
 
       &:hover
         color: $yellow
-        text-decoration: underline
 
-  #social
-    display: flex
-    flex: 1 100%
-    justify-content: flex-end
+    ul
+      display: flex
+      margin-left: auto
 
-    li
-      opacity: .7
-      padding: 0 .25em
-      transition: opacity .3s
-
-      @each $name in facebook, linkedin, youtube, twitter, instagram, github
-        &##{$name} a::before
-          content: url(../images/#{$name}.svg)
-          display: block
-          height: 30px
-          margin: 0 .2em
-          width: 30px
-
-        a
-          color: transparent
-          display: block
-          font-size: 0
-
-      &:hover
-        opacity: 1
+      li:first-of-type
+        padding-right: 1em
 
 
 /* INDEX */
 header
-  background-color: $lightgrey-2
+  padding: 2em 0
 
 h1
-  background: url(../images/logo.svg) left no-repeat
-  color: transparent
-  height: 1.5em
-  margin: 1em auto 1em
-  max-width: 1200px
+  font-size: 0
+
+  a
+    content: url(../images/logo-white.svg)
+    display: flex
+    height: 100%
+    width: 150px
 
 #announce
   background: $yellow
@@ -328,10 +326,9 @@ h1
     text-decoration-line: underline
 
 #introduction
-  align-items: flex-end
+  align-items: center
   display: flex
   flex-wrap: wrap
-  font-size: .9em
   margin: 0 auto
   padding: 0 0 2em 0
 
@@ -366,9 +363,6 @@ h1
     margin: 0
     text-align: left
 
-    &::after
-      content: none
-
   h3
     color: $yellow
     display: block
@@ -390,79 +384,87 @@ h1
       background: none
       color: darken($blue, 5%)
 
-#interview
-  position: relative
+#diagnosis
+  background: $yellow
+  border-radius: 3px
+  display: flex
+  align-items: center
 
-  h2
-    color: $blue
-    margin: 0 auto
-    padding: 0 5em
-
-    &::before
-      content: url(../images/player.svg)
-      display: block
-      height: 70px
-      margin: 0 auto
-      width: 70px
-
-    &::after
-      content: none
+  h3
+    font-size: 1.25em
 
   a
-    color: $blue
-    display: block
-    font-size: 1.2em
-    font-weight: 600
-    text-align: center
+    +button_action_principal
+    background: $grey
+    color: #FFF
+    margin-left: auto
 
-    &::before
-      bottom: 0
-      content: ""
-      left: 0
-      position: absolute
-      right: 0
-      top: 0
+    &:hover
+      background: darken($grey, 5%)
 
 #presentation
+  background: $lightgrey-2
+  max-width: none
+
+  h2
+    margin-top: 1em
+
   ul
     box-sizing: border-box
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    margin: 0 -2em
-    padding: 0
+    column-gap: 1em
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    margin: 0 auto
+    max-width: 1200px
+    padding: 2em 0
+    row-gap: 1em
 
     li
-      align-items: center
-      border: 1px solid $lightgrey
+      background: #FFF
       box-sizing: border-box
+      border: 2px solid #FFF
+      border-radius: 3px
       display: flex
       flex-direction: column
-      justify-content: center
-      margin: 1em
-      padding: 1em 2em
-      text-align: center
+      padding: 1em 2em 4em 2em
       transition: border-color 0.3s
-      width: 45%
+      position: relative
 
       &:hover
-        border-color: $yellow
+        border-color: $blue
 
       @each $name in feature_webtool, feature_outsourcing, feature_formation, feature_association
         &.#{$name}:before
           content: url(../images/#{$name}.svg)
           display: block
-          margin: 0 auto
-          width: 200px
+          margin-bottom: 1em
+          width: 80px
 
       strong
         font-size: 1.1em
-        font-weight: 500
+        font-weight: 600
+        margin-bottom: .5em
 
       a
-        +button_action_secondary
-        align-self: center
-        margin-top: 1em
+        bottom: 0
+        font-size: 0
+        left: 0
+        position: absolute
+        right: 0
+        top: 0
+
+        &::after
+          bottom: 1em
+          color: $blue
+          content: "En savoir plus"
+          font-size: 1rem
+          font-weight: 500
+          left: 2em
+          position: absolute
+
+        &:hover
+          &::after
+            color: darken($blue, 5%)
 
 #video
   display: flex
@@ -486,28 +488,19 @@ h1
 
     li
       align-items: center
-      border: 1px solid $lightgrey
       box-sizing: border-box
       display: flex
       flex-direction: column
-      height: 270px
       margin: 12px
       padding: 1em
       text-align: center
-      transition: background 0.3s, border-color 0.3s
       width: 270px
 
       &:before
         display: block
         content: ''
         height: 80px
-        margin-top: 3em
         width: 25%
-
-      &:hover
-        background: $grey
-        border-color: $grey
-        color: white
 
       @each $name in acceleration, simplification, recoverate, time, optimization, rationalization
         &##{$name}:before
@@ -516,6 +509,39 @@ h1
       @each $name in acceleration, simplification, recoverate, time, optimization, rationalization, economy
         &##{$name}-optic:before
           content: url(../images/#{$name}-optic.svg)
+
+#whitepaper-presentation
+  background: $blue
+  color: #FFF
+  max-width: none
+
+  &_container
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    max-width: 1200px
+    padding: 1em 0
+
+    img
+      height: auto
+      width: 40%
+
+    article
+      width: 60%
+
+      h2
+        text-align: left
+
+      a
+        +button_action_principal
+        background: #FFF
+        border: 2px solid #fff
+        color: $blue
+        display: inline-block
+
+        &:hover
+          color: #FFF
+
 
 #testimonials
   background: $lightgrey-2
@@ -575,25 +601,6 @@ h1
           top: -10px
           transform: rotate(45deg)
           width: 20px
-
-#news
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
-
-  article
-    background: $blue
-    color: #fff
-    width: 33%
-
-    h3
-      font-size: 1.3em
-
-    a
-      +button_action_secondary
-      display: inline-block
-      margin-top: 1.5em
-
 
 /* GESTION EN INTERNE */
 #features

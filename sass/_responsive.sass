@@ -6,9 +6,11 @@
   nav
     position: initial
 
+    h1, ul
+      flex: 1 100%
+
     ul
       justify-content: flex-start
-      padding-left: 20px
 
   header
     padding: 0 2em
@@ -21,19 +23,24 @@
       padding: 0 1em
       width: 100%
 
-  #interview
-    h2
-      padding: 0
+  #diagnosis
+    flex-wrap: wrap
+    justify-content: center
+
+    a
+      margin-left: initial
 
   #presentation
     ul li
       width: 100%
 
-  #testimonials
-    article
-      width: 100%
+  #whitepaper-presentation
+    &_container
+      article, img
+        padding: 1em 0
+        width: 100%
 
-  #news
+  #testimonials
     article
       width: 100%
 
@@ -191,9 +198,12 @@
       width: 100%
 
   footer
-    #social
-      justify-content: center
-      margin-top: 1em
+    ul
+      margin-right: 1em
+      padding-left: 0
 
-    #legals_mentions
-      text-align: left
+    #company
+      flex: 1 100%
+
+    #social
+      margin-top: 1em

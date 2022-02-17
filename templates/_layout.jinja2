@@ -58,8 +58,9 @@
   <body>
     <section id="announce" style="display: none"></section>
     <nav>
+      <h1><a href="{{ url_for('index') }}">Backoffice</a></h1>
       <ul>
-        <li {{ 'class="active"' if page == 'index' }}><a href="{{ url_for('page', page='index') }}">Accueil</a></li>
+        <li {{ 'class="active"' if page == 'index' }}><a href="{{ url_for('index') }}">Accueil</a></li>
         <li {{ 'class="active"' if page == 'intern' }}><a href="{{ url_for('page', page='intern') }}">Gestion en interne</a></li>
         <li {{ 'class="active"' if page == 'outsourcing' }}><a href="{{ url_for('page', page='outsourcing') }}">Externalisation</a></li>
         <li {{ 'class="active"' if page == 'formation' }}><a href="{{ url_for('page', page='formation') }}">Formation</a></li>
@@ -67,8 +68,8 @@
         <li {{ 'class="active"' if page == 'numbers' }}><a href="{{ url_for('page', page='numbers') }}">Quelques chiffres</a></li>
         <li {{ 'class="active"' if page == 'recruitment' }}><a href="{{ url_for('page', page='recruitment') }}">Recrutement</a></li>
         <li {{ 'class="active"' if page == 'contact' }}><a href="{{ url_for('page', page='contact') }}">Contact</a></li>
-        <li><a href="https://admin.lagestiondutierspayant.fr/">Espace client</a></li>
       </ul>
+      <a href="https://admin.lagestiondutierspayant.fr/">Espace client</a>
     </nav>
 
     {% block content %}{% endblock content %}
@@ -85,35 +86,45 @@
     </aside>
 
     <footer>
-      <ul id="contact_informations">
-        <li>Tél. 04 27 11 83 97</li>
-        <li>Fax 04 27 11 83 98</li>
-        <li><a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
-        <li>Back Office Services</li>
-        <li>107, Boulevard de Stalingrad</li>
-        <li>69100 VILLEURBANNE</li>
-      </ul>
+      <div id="footer-upper">
+        <ul id="company">
+          <li>Backoffice, une marque <a href="https://kozea.fr/" target="_blank">Kozea group</a></li>
+          <li>
+            <ul id="social">
+              <li id="facebook"><a href="https://www.facebook.com/kozeagroup/" target="_blank">Facebook</a></li>
+              <li id="linkedin"><a href="https://www.linkedin.com/company/kozeagroup" target="_blank">Linkedin</a></li>
+              <li id="youtube"><a href="https://www.youtube.com/channel/UCx5VGRSsjpRWhc55EpI_gEw" target="_blank">Youtube</a></li>
+              <li id="twitter"><a href="https://twitter.com/Kozeagroup" target="_blank">Twitter</a></li>
+              <li id="instagram"><a href="https://www.instagram.com/kozea/" target="_blank">Instagram</a></li>
+            </ul>
+          </li>
+          <li>
+            <form action="{{ url_for('page', page='register') }}">
+              <input type="submit" value="S'inscrire à notre newsletter" />
+            </form>
+          </li>
+        </ul>
 
-      <ul id="legals_mentions">
-        <li><a href="#tarteaucitron">Cookies</a></li>
-        <li><a href="{{ url_for('page', page='legal') }}">Mentions légales</a></li>
-        <li>Conditions Back Office Services</li>
-        <li>Backoffice, une marque <a href="https://kozea.fr/" target="_blank">Kozea group</a></li>
-        <li>
-          <form action="{{ url_for('page', page='register') }}">
-            <input type="submit" value="S'inscrire à notre newsletter" />
-          </form>
-        </li>
-      </ul>
+        <ul>
+          <li>Back Office Services</li>
+          <li>107, Boulevard de Stalingrad</li>
+          <li>69100 VILLEURBANNE</li>
+        </ul>
 
-      <ul id="social">
-        <li id="facebook"><a href="https://www.facebook.com/kozeagroup/" target="_blank">Facebook</a></li>
-        <li id="linkedin"><a href="https://www.linkedin.com/company/kozeagroup" target="_blank">Linkedin</a></li>
-        <li id="youtube"><a href="https://www.youtube.com/channel/UCx5VGRSsjpRWhc55EpI_gEw" target="_blank">Youtube</a></li>
-        <li id="twitter"><a href="https://twitter.com/Kozeagroup" target="_blank">Twitter</a></li>
-        <li id="instagram"><a href="https://www.instagram.com/kozea/" target="_blank">Instagram</a></li>
-        <li id="github"><a href="https://github.com/Kozea" target="_blank">Github</a></li>
-      </ul>
+        <ul>
+          <li>Tél. 04 27 11 83 97</li>
+          <li>Fax 04 27 11 83 98</li>
+          <li><a href="mailto:backoffice@lagestiondutierspayant.fr">backoffice@lagestiondutierspayant.fr</a></li>
+        </ul>
+      </div>
+
+      <div id="footer-lower">
+        <p><a href="https://kozea.fr/" target="_blank">©Kozea 2022</a> - Tous droits réservés</p>
+        <ul>
+          <li><a href="{{ url_for('page', page='legal') }}">Mentions légales</a></li>
+          <li><a href="#tarteaucitron">Cookies</a></li>
+        </ul>
+      </div>
     </footer>
 
     <script type="text/javascript">
