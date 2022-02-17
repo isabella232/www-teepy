@@ -426,8 +426,9 @@ h1
       border-radius: 3px
       display: flex
       flex-direction: column
-      padding: 1em 2em
+      padding: 1em 2em 4em 2em
       transition: border-color 0.3s
+      position: relative
 
       &:hover
         border-color: $blue
@@ -445,15 +446,25 @@ h1
         margin-bottom: .5em
 
       a
-        color: $blue
-        font-size: .9em
-        font-weight: 500
-        margin-top: auto
-        padding-top: 1em
-        text-decoration: none
+        bottom: 0
+        font-size: 0
+        left: 0
+        position: absolute
+        right: 0
+        top: 0
+
+        &::after
+          bottom: 1em
+          color: $blue
+          content: "En savoir plus"
+          font-size: 1rem
+          font-weight: 500
+          left: 2em
+          position: absolute
 
         &:hover
-          color: darken($blue, 5%)
+          &::after
+            color: darken($blue, 5%)
 
 #video
   display: flex

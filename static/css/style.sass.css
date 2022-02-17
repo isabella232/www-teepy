@@ -429,8 +429,9 @@ h1 {
       border-radius: 3px;
       display: flex;
       flex-direction: column;
-      padding: 1em 2em;
-      transition: border-color 0.3s; }
+      padding: 1em 2em 4em 2em;
+      transition: border-color 0.3s;
+      position: relative; }
       #presentation ul li:hover {
         border-color: #499cfb; }
       #presentation ul li.feature_webtool:before {
@@ -458,13 +459,21 @@ h1 {
         font-weight: 600;
         margin-bottom: .5em; }
       #presentation ul li a {
-        color: #499cfb;
-        font-size: .9em;
-        font-weight: 500;
-        margin-top: auto;
-        padding-top: 1em;
-        text-decoration: none; }
-        #presentation ul li a:hover {
+        bottom: 0;
+        font-size: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0; }
+        #presentation ul li a::after {
+          bottom: 1em;
+          color: #499cfb;
+          content: "En savoir plus";
+          font-size: 1rem;
+          font-weight: 500;
+          left: 2em;
+          position: absolute; }
+        #presentation ul li a:hover::after {
           color: #308efa; }
 
 #video {
@@ -1655,8 +1664,8 @@ h1 {
   #whitepaper form {
     width: 100%; }
   footer ul {
-    padding-left: 0;
-    margin-right: 1em; }
+    margin-right: 1em;
+    padding-left: 0; }
   footer #company {
     flex: 1 100%; }
   footer #social {
