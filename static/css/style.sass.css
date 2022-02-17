@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* VARIABLES */
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap");
 .asterisk {
   color: #787676;
   font-size: .9em; }
@@ -198,6 +198,16 @@ footer {
         content: url(../images/logo-white.svg);
         display: block;
         width: 150px; }
+      footer #footer-upper #company > li:nth-child(2) {
+        font-size: .9em;
+        font-style: italic; }
+        footer #footer-upper #company > li:nth-child(2)::after {
+          content: url(../images/french-flag.svg);
+          display: inline-block;
+          height: 20px;
+          margin-left: .5em;
+          vertical-align: middle;
+          width: 25px; }
     footer #footer-upper #social {
       display: flex;
       height: 30px;
@@ -332,11 +342,22 @@ h1 {
   #introduction article {
     display: flex;
     flex-wrap: wrap;
+    font-weight: 500;
     margin: 0;
     padding: 0 1em;
     width: 45%; }
     #introduction article p {
       margin-bottom: 0; }
+      #introduction article p:last-child {
+        color: #499cfb;
+        font-style: italic; }
+        #introduction article p:last-child::before {
+          content: url(../images/french-flag.svg);
+          display: inline-block;
+          height: 24px;
+          margin-right: 1em;
+          vertical-align: middle;
+          width: 30px; }
       #introduction article p a {
         color: #383737;
         transition: color .3s; }
@@ -413,6 +434,18 @@ h1 {
   max-width: none; }
   #presentation h2 {
     margin-top: 1em; }
+  #presentation p {
+    margin: 1em auto;
+    max-width: 1200px;
+    text-align: center; }
+    #presentation p a {
+      color: #499cfb;
+      text-decoration: none; }
+    #presentation p:last-of-type {
+      font-style: italic;
+      font-weight: 500; }
+      #presentation p:last-of-type::before, #presentation p:last-of-type::after {
+        content: '-'; }
   #presentation ul {
     box-sizing: border-box;
     column-gap: 1em;
