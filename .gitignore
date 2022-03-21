@@ -1,9 +1,8 @@
-__pycache__
-*.map
-.www-teepy
-.cache
-.env
 *.egg-info
 *.map
-base.Makefile
+.cache
+.env
 .python-version
+.www-teepy
+__pycache__
+base.Makefile
