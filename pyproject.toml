@@ -5,3 +5,7 @@ line-length = 80
 line_length = 80
 profile = "black"
 combine_as_imports = true
+
+[tool.pyright]
+venv = ".env"
+venvPath = "."
