@@ -24,6 +24,7 @@ app.config.from_envvar("BACKOFFICE_CONFIG", silent=True)
 setlocale(LC_ALL, "fr_FR")
 
 MANDRILL_KEY = app.config.get("MANDRILL_KEY")
+CONTACT_RECIPIENT = app.config.get("CONTACT_RECIPIENT")
 
 
 def get_news():
@@ -79,7 +80,7 @@ def contact(name=None):
         return redirect(url_for("page", page="contact_confirmation"))
 
     message = {
-        "to": [{"email": "backoffice@lagestiondutierspayant.fr"}],
+        "to": [{"email": CONTACT_RECIPIENT}],
         "subject": "Prise de contact sur le site de BackOffice",
         "from_email": "contact@kozea.fr",
     }
