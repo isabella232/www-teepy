@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 
+import logging
 import socket
+from datetime import datetime
 from email.utils import parsedate_to_datetime
 from locale import LC_ALL, setlocale
 from urllib.request import urlopen
 from xml.etree import ElementTree
 
+import gspread
 import jinja2
 import mandrill
 from flask import (
@@ -23,8 +26,17 @@ app.config.from_envvar("BACKOFFICE_CONFIG", silent=True)
 
 setlocale(LC_ALL, "fr_FR")
 
+logging.basicConfig(
+    level=logging.DEBUG if app.debug else logging.INFO,
+    format="%(asctime)s %(name)s %(levelname)-8s %(message)s",
+)
+logger = logging.getLogger(__name__)
+
 MANDRILL_KEY = app.config.get("MANDRILL_KEY")
 CONTACT_RECIPIENT = app.config.get("CONTACT_RECIPIENT")
+CONTACT_SERVICE_ACCOUNT = app.config.get("CONTACT_SERVICE_ACCOUNT")
+CONTACT_SPREADSHEET_ID = app.config.get("CONTACT_SPREADSHEET_ID")
+CONTACT_BO_WORKSHEET_ID = app.config.get("CONTACT_BO_WORKSHEET_ID")
 
 
 def get_news():
@@ -54,6 +66,27 @@ def get_news():
             entry["image"] = image.attrib["url"]
         news.append(entry)
     return news
+
+
+def store_contact(object, name, email, company, phone, promotion, message, **_):
+    gc = gspread.service_account(CONTACT_SERVICE_ACCOUNT)
+
+    wks = gc.open_by_key(CONTACT_SPREADSHEET_ID).get_worksheet_by_id(
+        CONTACT_BO_WORKSHEET_ID
+    )
+
+    wks.append_row(
+        (
+            datetime.now().strftime("%d/%m/%Y %H:%M"),
+            object,
+            name,
+            company,
+            email,
+            phone,
+            promotion,
+            message,
+        )
+    )
 
 
 @app.route("/", endpoint="index")
@@ -127,10 +160,18 @@ def contact(name=None):
     else:
         abort(404)
 
-    if app.debug:
-        print(message)
-    else:
-        mandrill.Mandrill(MANDRILL_KEY).messages.send(message=message)
+    try:
+        if app.debug:
+            logger.debug(message)
+        else:
+            mandrill.Mandrill(MANDRILL_KEY).messages.send(message=message)
+    except Exception as e:
+        logger.error(f"Error while trying to send mail: {e}")
+
+    try:
+        store_contact(**form)
+    except Exception as e:
+        logger.error(f"Error while storing contact: {e}")
 
     if name == "whitepaper":
         return redirect(
