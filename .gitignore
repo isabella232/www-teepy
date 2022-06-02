@@ -6,3 +6,5 @@
 .www-teepy
 __pycache__
 base.Makefile
+config.custom.Makefile
+www-teepy-custom.cfg
