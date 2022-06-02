@@ -4,6 +4,8 @@ HOST ?= 0.0.0.0
 export PROJECT_NAME = teepy
 export FLASK_APP = $(PWD)/$(PROJECT_NAME).py
 export FLASK_ENV ?= development
+# export FLASK_DEBUG=0
+# export BACKOFFICE_CONFIG ?= $(PWD)/www-teepy.cfg
 
 # Python env
 PYTHON_ONLY = 1
