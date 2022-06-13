@@ -75,9 +75,12 @@ def store_contact(object, name, email, company, phone, promotion, message, **_):
         CONTACT_BO_WORKSHEET_ID
     )
 
+    contact_date = datetime.now()
+
     wks.append_row(
         (
-            datetime.now().strftime("%d/%m/%Y %H:%M"),
+            contact_date.strftime("%d/%m/%Y"),
+            contact_date.strftime("%H:%M"),
             object,
             name,
             company,
