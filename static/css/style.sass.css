@@ -62,17 +62,36 @@ body {
   line-height: 1.618em;
   margin: 0; }
 
+#zen_banner {
+  align-items: center;
+  background: linear-gradient(90deg, #fbb128 0%, #ff8f05 47%, #ff524d 100%);
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  max-width: none;
+  position: sticky;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+  #zen_banner a {
+    color: #fff;
+    font-size: .9em;
+    font-weight: 600;
+    transition: transform .3s; }
+    #zen_banner a:hover {
+      transform: translateY(-0.25rem); }
+
 nav {
   align-items: center;
   background: #383737;
   display: flex;
   flex-wrap: wrap;
   left: 0;
-  order: -1;
   padding: 1em 2em;
   position: sticky;
   right: 0;
-  top: 0;
+  top: 50px;
   z-index: 100; }
   nav ul {
     color: #fff;
@@ -1566,6 +1585,9 @@ h1 {
 @media screen and (max-width: 950px) {
   body::before {
     content: none; }
+  #zen_banner {
+    height: auto;
+    position: initial; }
   nav {
     position: initial; }
     nav h1, nav ul {

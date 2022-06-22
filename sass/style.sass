@@ -6,6 +6,7 @@ $grey: #383737
 $lightgrey: #e3e3e3
 $lightgrey-2: #f7f7f7
 $yellow: #faba49
+$zen-gradient: linear-gradient(90deg, hsla(39, 96%, 57%, 1) 0%, hsla(33, 100%, 51%, 1) 47%, hsla(2, 100%, 65%, 1) 100%)
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap')
 
 =button_action_principal
@@ -105,17 +106,38 @@ body
   line-height: 1.618em
   margin: 0
 
+#zen_banner
+  align-items: center
+  background: $zen-gradient
+  display: flex
+  height: 50px
+  justify-content: center
+  max-width: none
+  position: sticky
+  text-align: center
+  top: 0
+  width: 100%
+  z-index: 100
+
+  a
+    color: #fff
+    font-size: .9em
+    font-weight: 600
+    transition: transform .3s
+
+    &:hover
+      transform: translateY(-.25rem)
+
 nav
   align-items: center
   background: $grey
   display: flex
   flex-wrap: wrap
   left: 0
-  order: -1
   padding: 1em 2em
   position: sticky
   right: 0
-  top: 0
+  top: 50px
   z-index: 100
 
   ul
