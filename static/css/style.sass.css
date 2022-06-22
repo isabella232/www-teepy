@@ -308,9 +308,6 @@ footer {
         padding-right: 1em; }
 
 /* INDEX */
-header {
-  padding: 2em 0; }
-
 h1 {
   font-size: 0; }
   h1 a {
@@ -345,6 +342,56 @@ h1 {
       color: #fff; }
   #announce p strong {
     text-decoration-line: underline; }
+
+#zen_offer {
+  background: #f6f4e7;
+  max-width: none; }
+  #zen_offer #zen_offer_container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0; }
+    #zen_offer #zen_offer_container::after {
+      background: linear-gradient(90deg, #fbb128 0%, #ff8f05 47%, #ff524d 100%);
+      border-radius: 100%;
+      content: '';
+      display: block;
+      height: 250px;
+      margin: auto;
+      width: 250px; }
+    #zen_offer #zen_offer_container article {
+      flex: 1 60%;
+      margin: 0; }
+      #zen_offer #zen_offer_container article h2 {
+        background-image: linear-gradient(90deg, #fbb128 0%, #ff8f05 47%, #ff524d 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.75em;
+        margin-bottom: 0;
+        text-align: left; }
+      #zen_offer #zen_offer_container article h3 {
+        font-size: 1.35em;
+        line-height: 1.5; }
+      #zen_offer #zen_offer_container article a {
+        background: linear-gradient(90deg, #fbb128 0%, #ff8f05 47%, #ff524d 100%);
+        border-radius: 2rem;
+        color: #fff;
+        display: inline-block;
+        font-weight: 500;
+        padding: 1em 2em;
+        text-decoration: none;
+        transition: transform .3s; }
+        #zen_offer #zen_offer_container article a:hover {
+          transform: translateY(-0.25rem); }
+        #zen_offer #zen_offer_container article a::before {
+          background: #fff;
+          border-radius: 100%;
+          content: '';
+          display: inline-block;
+          height: 15px;
+          margin-right: .5em;
+          vertical-align: middle;
+          width: 15px; }
 
 #introduction {
   align-items: center;
@@ -383,7 +430,6 @@ h1 {
         #introduction article p a:hover {
           color: #499cfb; }
   #introduction h2 {
-    font-size: 2.75em;
     font-weight: 600;
     line-height: 1.5em;
     margin: 0;
@@ -1594,8 +1640,10 @@ h1 {
       flex: 1 100%; }
     nav ul {
       justify-content: flex-start; }
-  header {
-    padding: 0 2em; }
+  #zen_offer #zen_offer_container article {
+    padding: 0; }
+  #zen_offer #zen_offer_container::after {
+    content: none; }
   #introduction::after {
     content: none; }
   #introduction article {

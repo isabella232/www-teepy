@@ -17,7 +17,16 @@
       justify-content: flex-start
 
   header
-    padding: 0 2em
+    // Useless with zen offer in header section
+    // padding: 0 2em
+
+  #zen_offer
+    #zen_offer_container
+      article
+        padding: 0
+
+      &::after
+        content: none
 
   #introduction
     &::after

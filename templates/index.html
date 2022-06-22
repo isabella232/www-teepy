@@ -2,21 +2,38 @@
 
 {% block content %}
     <header>
-      <section id="introduction">
-        <article>
-          <h2>Simplifiez la gestion de votre tiers-payant</h2>
-          <p> Externalisez la gestion de votre tiers-payant et suivez l'évolution du montant
-            de vos impayés en toute autonomie avec la plateforme Backoffice,
-            développée par <a href="https://kozea.fr/" target="_blank">Kozea group</a>.
-          </p>
-          <p>Toutes nos prestations sont réalisées en France</p>
-        </article>
+      <section id="zen_offer">
+        <section id="zen_offer_container">
+          <article>
+            <h2>Profitez de notre offre zen !</h2>
+            <h3>Soyez serein tout l'été et déléguez la gestion de votre tiers-payant à nos experts.</h3>
+            <p>Palliez les congés de vos équipes ou le surcroît d'activité pendant la période estivale, confiez-nous la gestion de votre tiers-payant !</p>
+            <ul>
+              <li>Diagnostic offert</li>
+              <li>Contrat de 3 mois</li>
+              <li>Demande de devis possible du 1er juin au 30 septembre</li>
+              <li>À partir de 199€ HT/mois (incluant l'abonnement logiciel Kabeo)</li>
+            </ul>
+            <a href="{{ url_for('page', page='contact') }}#contact" id="contact_ask">J'en profite !</a>
+          </article>
+        </section>
       </section>
-      <article id="diagnosis">
-        <h3>Profitez d'un diagnostic rapide et sans engagement !</h3>
-        <a href="{{ url_for('page', page='contact') }}#contact" id="contact_ask">Nous contacter</a>
-      </article>
     </header>
+
+    <section id="introduction">
+      <article>
+        <h2>Simplifiez la gestion de votre tiers-payant</h2>
+        <p> Externalisez la gestion de votre tiers-payant et suivez l'évolution du montant
+          de vos impayés en toute autonomie avec la plateforme Backoffice,
+          développée par <a href="https://kozea.fr/" target="_blank">Kozea group</a>.
+        </p>
+        <p>Toutes nos prestations sont réalisées en France</p>
+      </article>
+    </section>
+    <article id="diagnosis">
+      <h3>Profitez d'un diagnostic rapide et sans engagement !</h3>
+      <a href="{{ url_for('page', page='contact') }}#contact" id="contact_ask">Nous contacter</a>
+    </article>
 
     <section id="presentation">
       <h2>Les services proposés par Backoffice</h2>
