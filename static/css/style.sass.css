@@ -1693,11 +1693,13 @@ h1 {
     padding: 0; }
   #zen_offer #zen_offer_container::after {
     content: none; }
-  #introduction::after {
-    content: none; }
-  #introduction article {
-    padding: 0 1em;
-    width: 100%; }
+  #introduction {
+    padding: 1em 2em; }
+    #introduction::after {
+      content: none; }
+    #introduction article {
+      padding: 0 1em;
+      width: 100%; }
   #diagnosis {
     flex-wrap: wrap;
     justify-content: center; }
