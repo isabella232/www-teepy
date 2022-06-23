@@ -352,8 +352,7 @@ h1 {
     flex-wrap: wrap;
     padding: 0; }
     #zen_offer #zen_offer_container::after {
-      background: linear-gradient(90deg, #fbb128 0%, #ff8f05 47%, #ff524d 100%);
-      border-radius: 100%;
+      background: url(../images/zen-logo.svg) no-repeat center;
       content: '';
       display: block;
       height: 250px;
@@ -372,6 +371,19 @@ h1 {
       #zen_offer #zen_offer_container article h3 {
         font-size: 1.35em;
         line-height: 1.5; }
+      #zen_offer #zen_offer_container article ul {
+        list-style: none;
+        padding-left: 0; }
+        #zen_offer #zen_offer_container article ul li {
+          font-weight: 500;
+          padding: .25em 0; }
+          #zen_offer #zen_offer_container article ul li::before {
+            content: url(../images/check-gradient.svg);
+            display: inline-block;
+            height: auto;
+            margin-right: .75em;
+            vertical-align: middle;
+            width: 15px; }
       #zen_offer #zen_offer_container article a {
         background: linear-gradient(90deg, #fbb128 0%, #ff8f05 47%, #ff524d 100%);
         border-radius: 2rem;
@@ -384,14 +396,13 @@ h1 {
         #zen_offer #zen_offer_container article a:hover {
           transform: translateY(-0.25rem); }
         #zen_offer #zen_offer_container article a::before {
-          background: #fff;
-          border-radius: 100%;
+          background: url(../images/sun.svg) no-repeat center;
           content: '';
           display: inline-block;
-          height: 15px;
+          height: 20px;
           margin-right: .5em;
           vertical-align: middle;
-          width: 15px; }
+          width: 20px; }
 
 #introduction {
   align-items: center;
