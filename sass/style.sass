@@ -1502,19 +1502,18 @@ h1
   align-items: baseline
   display: flex
   flex-wrap: wrap
-  padding-top: 0
 
-  &::before
-    background: url(../images/logo.svg) no-repeat center #fff
-    content: ""
-    display: block
-    height: 5em
-    margin: 2em 0
-    width: 100%
 
 #offer
-  background: $yellow
-  padding: 2em
+  display: flex
+  flex-wrap: wrap
+
+  img
+    object-fit: contain
+    width: 45%
+
+  article
+    flex: 1 50%
 
   h2
     line-height: 1.5em
@@ -1544,7 +1543,7 @@ h1
         display: inline-block
         margin-right: .5em
         vertical-align: middle
-        width: 30px
+        width: 25px
 
       @each $name in control, interoperability, traceability, decrease, catalog
         &##{$name}:before
@@ -1559,6 +1558,10 @@ h1
     margin: 2em 0 0
 
 #recap
+  background: $lightgrey-2
+  border-radius: 1em
+  padding: 2em
+
   ul
     box-sizing: border-box
     display: flex
@@ -1568,21 +1571,20 @@ h1
     padding-left: 0
 
     li
-      border: 1px solid $lightgrey
+      background: #fff
+      border: 2px solid #fff
       box-sizing: border-box
       display: flex
+      font-weight: 600
       height: auto
       justify-content: center
-      margin: 2px
+      margin: 1em
       text-align: center
       transition: border-color .3s
       width: 200px
 
       &:hover
-        border-color: $yellow
-
-        a
-          color: $yellow
+        border-color: $blue
 
       @each $name in feature_webtool, feature_outsourcing, feature_formation, feature_association
         &.#{$name} a:before
@@ -1599,18 +1601,46 @@ h1
         text-decoration: none
         transition: color .3s
 
-#offer, #recap
+#zen_offer_reminder
+  background: $sand
+  border-radius: 1em
   flex: 1 50%
+  padding: 2em
+
+  h2
+    background-image: $zen-gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+  ul
+    list-style: none
+    padding-left: 0
+
+    li
+      font-weight: 500
+      padding: .25em 0
+
+      &::before
+        content: url(../images/check-gradient.svg)
+        display: inline-block
+        height: auto
+        margin-right: .75em
+        vertical-align: middle
+        width: 15px
 
 #contact_form
   display: flex
+  flex: 1 50%
   flex-wrap: wrap
+  flex-direction: column
   justify-content: center
 
   p
     order: 2
 
   form
+    width: 100%
+
     label:last-of-type
       display: block
       font-size: .8em
@@ -1627,28 +1657,40 @@ h1
       &:hover
         color: darken($blue, 5%)
 
-  article
-    flex: 1 50%
-    order: 1
+#contact_details
+  &::before
+    background: url(../images/logo.svg) no-repeat center #fff
+    content: ""
+    display: block
+    height: 4em
+    margin: 1em 0
+    width: 100%
 
-    ul
-      list-style: none
-      margin: 0
+  ul
+    align-items: center
+    display: flex
+    flex-direction: column
+    list-style: none
+    padding-left: 0
 
-      li
-        &:first-of-type
-          font-weight: 600
+    li
+      padding: .25em 0
 
-        strong
+      &:first-of-type
+        font-size: 2em
+        font-weight: 600
+        margin: 1em 0
+
+      a
+        color: $grey
+        transition: color .3s
+
+        &:hover
           color: $yellow
 
-        a
-          color: $grey
-          transition: color .3s
 
-          &:hover
-            color: $yellow
-
+      strong
+        color: $yellow
 
 /* MENTIONS LÉGALES */
 #legal
