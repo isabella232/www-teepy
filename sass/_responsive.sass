@@ -3,6 +3,10 @@
     &::before
       content: none
 
+  #zen_banner
+    height: auto
+    position: initial
+
   nav
     position: initial
 
@@ -13,9 +17,20 @@
       justify-content: flex-start
 
   header
-    padding: 0 2em
+    // Useless with zen offer in header section
+    // padding: 0 2em
+
+  #zen_offer
+    #zen_offer_container
+      article
+        padding: 0
+
+      &::after
+        content: none
 
   #introduction
+    padding: 1em 2em
+
     &::after
       content: none
 
@@ -182,6 +197,12 @@
     #offer, #recap
       flex: 1 100%
 
+      img
+        display: none
+
+      article
+        padding: 0
+
     #contact_form
       article, form
         flex: 1 100%
@@ -192,6 +213,13 @@
 
         ul
           padding-left: 0
+  #recap
+    ul li
+      width: 100%
+
+  #contact_details
+    ul
+      align-items: flex-start
 
   #whitepaper
     form
