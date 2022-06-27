@@ -1481,15 +1481,24 @@ h1
         color: lighten($yellow, 5%)
 
     &:last-child
+      align-items: center
       background: $yellow
-      font-weight: 400
+      border-radius: 3px
+      display: flex
+      flex-wrap: wrap
+      font-size: 1.25em
+      font-weight: 600
       padding: 1em 2em
-      text-align: center
 
       a
-        color: $grey
-        font-weight: 600
-        text-transform: none
+        +button_action_principal
+        background: $grey
+        color: #FFF
+        font-size: .8em
+        margin-left: auto
+
+        &:hover
+          background: darken($grey, 5%)
 
 
 /* CONTACT */

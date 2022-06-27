@@ -1414,14 +1414,31 @@ h1 {
     color: #fbc362; }
 
 #recruitment p:last-child {
+  align-items: center;
   background: #faba49;
-  font-weight: 400;
-  padding: 1em 2em;
-  text-align: center; }
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.25em;
+  font-weight: 600;
+  padding: 1em 2em; }
   #recruitment p:last-child a {
-    color: #383737;
-    font-weight: 600;
-    text-transform: none; }
+    background: #499cfb;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: background 0.3s;
+    background: #383737;
+    color: #FFF;
+    font-size: .8em;
+    margin-left: auto; }
+    #recruitment p:last-child a:hover {
+      background: #308efa; }
+    #recruitment p:last-child a:hover {
+      background: #2b2a2a; }
 
 /* CONTACT */
 #contact {
@@ -1801,6 +1818,10 @@ h1 {
     #numbers section#hidden_cost dl {
       flex: 1 100%;
       margin: 0; }
+  #recruitment p:last-child {
+    justify-content: center; }
+    #recruitment p:last-child a {
+      margin: .5em auto; }
   #contact #offer, #contact #recap {
     flex: 1 100%; }
     #contact #offer img, #contact #recap img {
