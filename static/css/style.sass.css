@@ -1420,6 +1420,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   font-size: 1.25em;
+  justify-content: space-between;
   font-weight: 600;
   padding: 1em 2em; }
   #recruitment p:last-child a {
@@ -1433,8 +1434,7 @@ h1 {
     transition: background 0.3s;
     background: #383737;
     color: #FFF;
-    font-size: .8em;
-    margin-left: auto; }
+    font-size: .8em; }
     #recruitment p:last-child a:hover {
       background: #308efa; }
     #recruitment p:last-child a:hover {
