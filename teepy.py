@@ -34,6 +34,9 @@ logger = logging.getLogger(__name__)
 
 MANDRILL_KEY = app.config.get("MANDRILL_KEY")
 CONTACT_RECIPIENT = app.config.get("CONTACT_RECIPIENT")
+CONTACT_PARTNER_RECIPIENT = app.config.get(
+    "CONTACT_PARTNER_RECIPIENT", CONTACT_RECIPIENT
+)
 CONTACT_SERVICE_ACCOUNT = app.config.get("CONTACT_SERVICE_ACCOUNT")
 CONTACT_SPREADSHEET_ID = app.config.get("CONTACT_SPREADSHEET_ID")
 CONTACT_BO_WORKSHEET_ID = app.config.get("CONTACT_BO_WORKSHEET_ID")
@@ -115,8 +118,14 @@ def contact(name=None):
     if request.form.get("city"):
         return redirect(url_for("page", page="contact_confirmation"))
 
+    contact_recipient = (
+        CONTACT_RECIPIENT
+        if form.get("object") != "Recrutement"
+        else CONTACT_PARTNER_RECIPIENT
+    )
+
     message = {
-        "to": [{"email": CONTACT_RECIPIENT}],
+        "to": [{"email": contact_recipient}],
         "subject": "Prise de contact sur le site de BackOffice",
         "from_email": "contact@kozea.fr",
     }
