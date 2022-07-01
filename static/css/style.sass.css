@@ -162,6 +162,8 @@ form {
       margin-top: .5em; }
       form input[type="submit"]:hover {
         background: #308efa; }
+      form input[type="submit"]:disabled {
+        background: grey; }
 
 section, article {
   box-sizing: border-box;

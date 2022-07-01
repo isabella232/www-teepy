@@ -1,5 +1,14 @@
 {% extends "_layout.jinja2" %}
+{% block head %}
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <script type="text/javascript">
+    function recaptcha_callback(){
+      const submit = document.getElementById("btnSubmit")
+      submit.disabled = false
 
+    }
+  </script>
+{% endblock head %}
 {% block content %}
   <article id="contact">
     <section id="zen_offer_reminder">
@@ -42,6 +51,7 @@
         <input id="promotion" name="promotion" placeholder="Votre code promotionnel" />
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Votre message"></textarea>
+        <div class="h-captcha" data-sitekey="d1874e2f-4279-4e04-8adb-aaf6d9906bb1" data-callback="recaptcha_callback"></div>
         <label>
           <input name="data" type="checkbox" required="required" />
           J'accepte que les informations saisies soient exploitées par
@@ -55,7 +65,7 @@
             Voir notre politique de confidentialité dans les mentions légales.
           </a>
         </p>
-        <input type="submit" value="Envoyer" />
+        <input id="btnSubmit" type="submit" value="Envoyer" disabled/>
       </form>
       <p class="asterisk">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
     </section>

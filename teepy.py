@@ -11,6 +11,7 @@ from xml.etree import ElementTree
 import gspread
 import jinja2
 import mandrill
+import requests
 from flask import (
     Flask,
     Response,
@@ -40,6 +41,7 @@ CONTACT_PARTNER_RECIPIENT = app.config.get(
 CONTACT_SERVICE_ACCOUNT = app.config.get("CONTACT_SERVICE_ACCOUNT")
 CONTACT_SPREADSHEET_ID = app.config.get("CONTACT_SPREADSHEET_ID")
 CONTACT_BO_WORKSHEET_ID = app.config.get("CONTACT_BO_WORKSHEET_ID")
+VERIFY_URL = "https://hcaptcha.com/siteverify"
 
 
 def get_news():
@@ -95,6 +97,15 @@ def store_contact(object, name, email, company, phone, promotion, message, **_):
     )
 
 
+def is_captcha_valid():
+    data = {
+        "secret": app.config.get("HCAPTCHA_SECRET"),
+        "response": request.form.get("h-captcha-response"),
+    }
+    response = requests.post(VERIFY_URL, data=data)
+    return response.json()["success"]
+
+
 @app.route("/", endpoint="index")
 @app.route("/<page>")
 def page(page="index"):
@@ -115,7 +126,7 @@ def contact(name=None):
     form = request.form
 
     # Catch bots with a hidden field
-    if request.form.get("city"):
+    if request.form.get("city") or not is_captcha_valid():
         return redirect(url_for("page", page="contact_confirmation"))
 
     contact_recipient = (
